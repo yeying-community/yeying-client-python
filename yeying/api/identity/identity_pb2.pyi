@@ -12,7 +12,11 @@ class DepositRequest(_message.Message):
     BODY_FIELD_NUMBER: _ClassVar[int]
     header: _message_pb2.MessageHeader
     body: DepositRequestBody
-    def __init__(self, header: _Optional[_Union[_message_pb2.MessageHeader, _Mapping]] = ..., body: _Optional[_Union[DepositRequestBody, _Mapping]] = ...) -> None: ...
+    def __init__(
+        self,
+        header: _Optional[_Union[_message_pb2.MessageHeader, _Mapping]] = ...,
+        body: _Optional[_Union[DepositRequestBody, _Mapping]] = ...,
+    ) -> None: ...
 
 class DepositRequestBody(_message.Message):
     __slots__ = ("cipher", "protocol")
@@ -28,7 +32,11 @@ class DepositResponse(_message.Message):
     BODY_FIELD_NUMBER: _ClassVar[int]
     header: _message_pb2.MessageHeader
     body: DepositResponseBody
-    def __init__(self, header: _Optional[_Union[_message_pb2.MessageHeader, _Mapping]] = ..., body: _Optional[_Union[DepositResponseBody, _Mapping]] = ...) -> None: ...
+    def __init__(
+        self,
+        header: _Optional[_Union[_message_pb2.MessageHeader, _Mapping]] = ...,
+        body: _Optional[_Union[DepositResponseBody, _Mapping]] = ...,
+    ) -> None: ...
 
 class DepositResponseBody(_message.Message):
     __slots__ = ("status",)
@@ -66,7 +74,11 @@ class QueryRequest(_message.Message):
     BODY_FIELD_NUMBER: _ClassVar[int]
     header: _message_pb2.MessageHeader
     body: QueryRequestBody
-    def __init__(self, header: _Optional[_Union[_message_pb2.MessageHeader, _Mapping]] = ..., body: _Optional[_Union[QueryRequestBody, _Mapping]] = ...) -> None: ...
+    def __init__(
+        self,
+        header: _Optional[_Union[_message_pb2.MessageHeader, _Mapping]] = ...,
+        body: _Optional[_Union[QueryRequestBody, _Mapping]] = ...,
+    ) -> None: ...
 
 class QueryRequestBody(_message.Message):
     __slots__ = ("serviceCode",)
@@ -80,7 +92,11 @@ class QueryResponse(_message.Message):
     BODY_FIELD_NUMBER: _ClassVar[int]
     header: _message_pb2.MessageHeader
     body: QueryResponseBody
-    def __init__(self, header: _Optional[_Union[_message_pb2.MessageHeader, _Mapping]] = ..., body: _Optional[_Union[QueryResponseBody, _Mapping]] = ...) -> None: ...
+    def __init__(
+        self,
+        header: _Optional[_Union[_message_pb2.MessageHeader, _Mapping]] = ...,
+        body: _Optional[_Union[QueryResponseBody, _Mapping]] = ...,
+    ) -> None: ...
 
 class QueryResponseBody(_message.Message):
     __slots__ = ("status", "cipher", "protocol")
@@ -90,7 +106,12 @@ class QueryResponseBody(_message.Message):
     status: _message_pb2.ResponseStatus
     cipher: str
     protocol: str
-    def __init__(self, status: _Optional[_Union[_message_pb2.ResponseStatus, _Mapping]] = ..., cipher: _Optional[str] = ..., protocol: _Optional[str] = ...) -> None: ...
+    def __init__(
+        self,
+        status: _Optional[_Union[_message_pb2.ResponseStatus, _Mapping]] = ...,
+        cipher: _Optional[str] = ...,
+        protocol: _Optional[str] = ...,
+    ) -> None: ...
 
 class CancelRequest(_message.Message):
     __slots__ = ("header", "body")
@@ -98,7 +119,11 @@ class CancelRequest(_message.Message):
     BODY_FIELD_NUMBER: _ClassVar[int]
     header: _message_pb2.MessageHeader
     body: CancelRequestBody
-    def __init__(self, header: _Optional[_Union[_message_pb2.MessageHeader, _Mapping]] = ..., body: _Optional[_Union[CancelRequestBody, _Mapping]] = ...) -> None: ...
+    def __init__(
+        self,
+        header: _Optional[_Union[_message_pb2.MessageHeader, _Mapping]] = ...,
+        body: _Optional[_Union[CancelRequestBody, _Mapping]] = ...,
+    ) -> None: ...
 
 class CancelRequestBody(_message.Message):
     __slots__ = ("did",)
@@ -112,7 +137,11 @@ class CancelResponse(_message.Message):
     BODY_FIELD_NUMBER: _ClassVar[int]
     header: _message_pb2.MessageHeader
     body: CancelResponseBody
-    def __init__(self, header: _Optional[_Union[_message_pb2.MessageHeader, _Mapping]] = ..., body: _Optional[_Union[CancelResponseBody, _Mapping]] = ...) -> None: ...
+    def __init__(
+        self,
+        header: _Optional[_Union[_message_pb2.MessageHeader, _Mapping]] = ...,
+        body: _Optional[_Union[CancelResponseBody, _Mapping]] = ...,
+    ) -> None: ...
 
 class CancelResponseBody(_message.Message):
     __slots__ = ("status",)

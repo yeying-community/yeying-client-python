@@ -7,7 +7,24 @@ from typing import ClassVar as _ClassVar, Iterable as _Iterable, Optional as _Op
 DESCRIPTOR: _descriptor.FileDescriptor
 
 class ApplicationMetadata(_message.Message):
-    __slots__ = ("owner", "network", "address", "did", "version", "hash", "name", "code", "description", "location", "serviceCodes", "avatar", "createdAt", "updatedAt", "signature")
+    __slots__ = (
+        "owner",
+        "network",
+        "address",
+        "did",
+        "version",
+        "hash",
+        "name",
+        "code",
+        "description",
+        "location",
+        "serviceCodes",
+        "avatar",
+        "createdAt",
+        "updatedAt",
+        "signature",
+        "codePackagePath",
+    )
     OWNER_FIELD_NUMBER: _ClassVar[int]
     NETWORK_FIELD_NUMBER: _ClassVar[int]
     ADDRESS_FIELD_NUMBER: _ClassVar[int]
@@ -23,6 +40,7 @@ class ApplicationMetadata(_message.Message):
     CREATEDAT_FIELD_NUMBER: _ClassVar[int]
     UPDATEDAT_FIELD_NUMBER: _ClassVar[int]
     SIGNATURE_FIELD_NUMBER: _ClassVar[int]
+    CODEPACKAGEPATH_FIELD_NUMBER: _ClassVar[int]
     owner: str
     network: str
     address: str
@@ -38,10 +56,46 @@ class ApplicationMetadata(_message.Message):
     createdAt: str
     updatedAt: str
     signature: str
-    def __init__(self, owner: _Optional[str] = ..., network: _Optional[str] = ..., address: _Optional[str] = ..., did: _Optional[str] = ..., version: _Optional[int] = ..., hash: _Optional[str] = ..., name: _Optional[str] = ..., code: _Optional[_Union[_code_pb2.ApplicationCodeEnum, str]] = ..., description: _Optional[str] = ..., location: _Optional[str] = ..., serviceCodes: _Optional[_Iterable[_Union[_code_pb2.ServiceCodeEnum, str]]] = ..., avatar: _Optional[str] = ..., createdAt: _Optional[str] = ..., updatedAt: _Optional[str] = ..., signature: _Optional[str] = ...) -> None: ...
+    codePackagePath: str
+    def __init__(
+        self,
+        owner: _Optional[str] = ...,
+        network: _Optional[str] = ...,
+        address: _Optional[str] = ...,
+        did: _Optional[str] = ...,
+        version: _Optional[int] = ...,
+        hash: _Optional[str] = ...,
+        name: _Optional[str] = ...,
+        code: _Optional[_Union[_code_pb2.ApplicationCodeEnum, str]] = ...,
+        description: _Optional[str] = ...,
+        location: _Optional[str] = ...,
+        serviceCodes: _Optional[_Iterable[_Union[_code_pb2.ServiceCodeEnum, str]]] = ...,
+        avatar: _Optional[str] = ...,
+        createdAt: _Optional[str] = ...,
+        updatedAt: _Optional[str] = ...,
+        signature: _Optional[str] = ...,
+        codePackagePath: _Optional[str] = ...,
+    ) -> None: ...
 
 class ServiceMetadata(_message.Message):
-    __slots__ = ("owner", "network", "address", "did", "version", "name", "description", "code", "apiCodes", "proxy", "grpc", "avatar", "createdAt", "updatedAt", "signature")
+    __slots__ = (
+        "owner",
+        "network",
+        "address",
+        "did",
+        "version",
+        "name",
+        "description",
+        "code",
+        "apiCodes",
+        "proxy",
+        "grpc",
+        "avatar",
+        "createdAt",
+        "updatedAt",
+        "signature",
+        "codePackagePath",
+    )
     OWNER_FIELD_NUMBER: _ClassVar[int]
     NETWORK_FIELD_NUMBER: _ClassVar[int]
     ADDRESS_FIELD_NUMBER: _ClassVar[int]
@@ -57,6 +111,7 @@ class ServiceMetadata(_message.Message):
     CREATEDAT_FIELD_NUMBER: _ClassVar[int]
     UPDATEDAT_FIELD_NUMBER: _ClassVar[int]
     SIGNATURE_FIELD_NUMBER: _ClassVar[int]
+    CODEPACKAGEPATH_FIELD_NUMBER: _ClassVar[int]
     owner: str
     network: str
     address: str
@@ -72,4 +127,50 @@ class ServiceMetadata(_message.Message):
     createdAt: str
     updatedAt: str
     signature: str
-    def __init__(self, owner: _Optional[str] = ..., network: _Optional[str] = ..., address: _Optional[str] = ..., did: _Optional[str] = ..., version: _Optional[int] = ..., name: _Optional[str] = ..., description: _Optional[str] = ..., code: _Optional[_Union[_code_pb2.ServiceCodeEnum, str]] = ..., apiCodes: _Optional[_Iterable[_Union[_code_pb2.ApiCodeEnum, str]]] = ..., proxy: _Optional[str] = ..., grpc: _Optional[str] = ..., avatar: _Optional[str] = ..., createdAt: _Optional[str] = ..., updatedAt: _Optional[str] = ..., signature: _Optional[str] = ...) -> None: ...
+    codePackagePath: str
+    def __init__(
+        self,
+        owner: _Optional[str] = ...,
+        network: _Optional[str] = ...,
+        address: _Optional[str] = ...,
+        did: _Optional[str] = ...,
+        version: _Optional[int] = ...,
+        name: _Optional[str] = ...,
+        description: _Optional[str] = ...,
+        code: _Optional[_Union[_code_pb2.ServiceCodeEnum, str]] = ...,
+        apiCodes: _Optional[_Iterable[_Union[_code_pb2.ApiCodeEnum, str]]] = ...,
+        proxy: _Optional[str] = ...,
+        grpc: _Optional[str] = ...,
+        avatar: _Optional[str] = ...,
+        createdAt: _Optional[str] = ...,
+        updatedAt: _Optional[str] = ...,
+        signature: _Optional[str] = ...,
+        codePackagePath: _Optional[str] = ...,
+    ) -> None: ...
+
+class StateMetadata(_message.Message):
+    __slots__ = ("did", "version", "status", "signature", "createdAt", "updatedAt", "type")
+    DID_FIELD_NUMBER: _ClassVar[int]
+    VERSION_FIELD_NUMBER: _ClassVar[int]
+    STATUS_FIELD_NUMBER: _ClassVar[int]
+    SIGNATURE_FIELD_NUMBER: _ClassVar[int]
+    CREATEDAT_FIELD_NUMBER: _ClassVar[int]
+    UPDATEDAT_FIELD_NUMBER: _ClassVar[int]
+    TYPE_FIELD_NUMBER: _ClassVar[int]
+    did: str
+    version: int
+    status: _code_pb2.ApplicationStatusEnum
+    signature: str
+    createdAt: str
+    updatedAt: str
+    type: _code_pb2.AuditTypeEnum
+    def __init__(
+        self,
+        did: _Optional[str] = ...,
+        version: _Optional[int] = ...,
+        status: _Optional[_Union[_code_pb2.ApplicationStatusEnum, str]] = ...,
+        signature: _Optional[str] = ...,
+        createdAt: _Optional[str] = ...,
+        updatedAt: _Optional[str] = ...,
+        type: _Optional[_Union[_code_pb2.AuditTypeEnum, str]] = ...,
+    ) -> None: ...

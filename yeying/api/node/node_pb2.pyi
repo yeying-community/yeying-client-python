@@ -18,7 +18,11 @@ class HealthCheckResponse(_message.Message):
     BODY_FIELD_NUMBER: _ClassVar[int]
     header: _message_pb2.MessageHeader
     body: HealthCheckResponseBody
-    def __init__(self, header: _Optional[_Union[_message_pb2.MessageHeader, _Mapping]] = ..., body: _Optional[_Union[HealthCheckResponseBody, _Mapping]] = ...) -> None: ...
+    def __init__(
+        self,
+        header: _Optional[_Union[_message_pb2.MessageHeader, _Mapping]] = ...,
+        body: _Optional[_Union[HealthCheckResponseBody, _Mapping]] = ...,
+    ) -> None: ...
 
 class HealthCheckResponseBody(_message.Message):
     __slots__ = ("status",)
@@ -38,7 +42,11 @@ class WhoamiResponse(_message.Message):
     BODY_FIELD_NUMBER: _ClassVar[int]
     header: _message_pb2.MessageHeader
     body: WhoamiResponseBody
-    def __init__(self, header: _Optional[_Union[_message_pb2.MessageHeader, _Mapping]] = ..., body: _Optional[_Union[WhoamiResponseBody, _Mapping]] = ...) -> None: ...
+    def __init__(
+        self,
+        header: _Optional[_Union[_message_pb2.MessageHeader, _Mapping]] = ...,
+        body: _Optional[_Union[WhoamiResponseBody, _Mapping]] = ...,
+    ) -> None: ...
 
 class WhoamiResponseBody(_message.Message):
     __slots__ = ("status", "service")
@@ -46,4 +54,8 @@ class WhoamiResponseBody(_message.Message):
     SERVICE_FIELD_NUMBER: _ClassVar[int]
     status: _message_pb2.ResponseStatus
     service: _model_pb2.ServiceMetadata
-    def __init__(self, status: _Optional[_Union[_message_pb2.ResponseStatus, _Mapping]] = ..., service: _Optional[_Union[_model_pb2.ServiceMetadata, _Mapping]] = ...) -> None: ...
+    def __init__(
+        self,
+        status: _Optional[_Union[_message_pb2.ResponseStatus, _Mapping]] = ...,
+        service: _Optional[_Union[_model_pb2.ServiceMetadata, _Mapping]] = ...,
+    ) -> None: ...

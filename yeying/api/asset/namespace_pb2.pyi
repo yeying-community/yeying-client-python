@@ -2,7 +2,13 @@ from yeying.api.common import message_pb2 as _message_pb2
 from google.protobuf.internal import containers as _containers
 from google.protobuf import descriptor as _descriptor
 from google.protobuf import message as _message
-from typing import ClassVar as _ClassVar, Iterable as _Iterable, Mapping as _Mapping, Optional as _Optional, Union as _Union
+from typing import (
+    ClassVar as _ClassVar,
+    Iterable as _Iterable,
+    Mapping as _Mapping,
+    Optional as _Optional,
+    Union as _Union,
+)
 
 DESCRIPTOR: _descriptor.FileDescriptor
 
@@ -12,7 +18,11 @@ class SearchNamespaceRequest(_message.Message):
     BODY_FIELD_NUMBER: _ClassVar[int]
     header: _message_pb2.MessageHeader
     body: SearchNamespaceRequestBody
-    def __init__(self, header: _Optional[_Union[_message_pb2.MessageHeader, _Mapping]] = ..., body: _Optional[_Union[SearchNamespaceRequestBody, _Mapping]] = ...) -> None: ...
+    def __init__(
+        self,
+        header: _Optional[_Union[_message_pb2.MessageHeader, _Mapping]] = ...,
+        body: _Optional[_Union[SearchNamespaceRequestBody, _Mapping]] = ...,
+    ) -> None: ...
 
 class SearchNamespaceRequestBody(_message.Message):
     __slots__ = ("condition", "page")
@@ -20,7 +30,11 @@ class SearchNamespaceRequestBody(_message.Message):
     PAGE_FIELD_NUMBER: _ClassVar[int]
     condition: SearchNamespaceCondition
     page: _message_pb2.RequestPage
-    def __init__(self, condition: _Optional[_Union[SearchNamespaceCondition, _Mapping]] = ..., page: _Optional[_Union[_message_pb2.RequestPage, _Mapping]] = ...) -> None: ...
+    def __init__(
+        self,
+        condition: _Optional[_Union[SearchNamespaceCondition, _Mapping]] = ...,
+        page: _Optional[_Union[_message_pb2.RequestPage, _Mapping]] = ...,
+    ) -> None: ...
 
 class SearchNamespaceCondition(_message.Message):
     __slots__ = ("name",)
@@ -34,7 +48,11 @@ class NamespaceDetailRequest(_message.Message):
     BODY_FIELD_NUMBER: _ClassVar[int]
     header: _message_pb2.MessageHeader
     body: NamespaceDetailRequestBody
-    def __init__(self, header: _Optional[_Union[_message_pb2.MessageHeader, _Mapping]] = ..., body: _Optional[_Union[NamespaceDetailRequestBody, _Mapping]] = ...) -> None: ...
+    def __init__(
+        self,
+        header: _Optional[_Union[_message_pb2.MessageHeader, _Mapping]] = ...,
+        body: _Optional[_Union[NamespaceDetailRequestBody, _Mapping]] = ...,
+    ) -> None: ...
 
 class NamespaceDetailRequestBody(_message.Message):
     __slots__ = ("uid",)
@@ -48,7 +66,11 @@ class NamespaceDetailResponse(_message.Message):
     BODY_FIELD_NUMBER: _ClassVar[int]
     header: _message_pb2.MessageHeader
     body: NamespaceDetailResponseBody
-    def __init__(self, header: _Optional[_Union[_message_pb2.MessageHeader, _Mapping]] = ..., body: _Optional[_Union[NamespaceDetailResponseBody, _Mapping]] = ...) -> None: ...
+    def __init__(
+        self,
+        header: _Optional[_Union[_message_pb2.MessageHeader, _Mapping]] = ...,
+        body: _Optional[_Union[NamespaceDetailResponseBody, _Mapping]] = ...,
+    ) -> None: ...
 
 class NamespaceDetailResponseBody(_message.Message):
     __slots__ = ("status", "namespace")
@@ -56,7 +78,11 @@ class NamespaceDetailResponseBody(_message.Message):
     NAMESPACE_FIELD_NUMBER: _ClassVar[int]
     status: _message_pb2.ResponseStatus
     namespace: NamespaceMetadata
-    def __init__(self, status: _Optional[_Union[_message_pb2.ResponseStatus, _Mapping]] = ..., namespace: _Optional[_Union[NamespaceMetadata, _Mapping]] = ...) -> None: ...
+    def __init__(
+        self,
+        status: _Optional[_Union[_message_pb2.ResponseStatus, _Mapping]] = ...,
+        namespace: _Optional[_Union[NamespaceMetadata, _Mapping]] = ...,
+    ) -> None: ...
 
 class SearchNamespaceResponse(_message.Message):
     __slots__ = ("header", "body")
@@ -64,7 +90,11 @@ class SearchNamespaceResponse(_message.Message):
     BODY_FIELD_NUMBER: _ClassVar[int]
     header: _message_pb2.MessageHeader
     body: SearchNamespaceResponseBody
-    def __init__(self, header: _Optional[_Union[_message_pb2.MessageHeader, _Mapping]] = ..., body: _Optional[_Union[SearchNamespaceResponseBody, _Mapping]] = ...) -> None: ...
+    def __init__(
+        self,
+        header: _Optional[_Union[_message_pb2.MessageHeader, _Mapping]] = ...,
+        body: _Optional[_Union[SearchNamespaceResponseBody, _Mapping]] = ...,
+    ) -> None: ...
 
 class SearchNamespaceResponseBody(_message.Message):
     __slots__ = ("status", "namespaces")
@@ -72,7 +102,11 @@ class SearchNamespaceResponseBody(_message.Message):
     NAMESPACES_FIELD_NUMBER: _ClassVar[int]
     status: _message_pb2.ResponseStatus
     namespaces: _containers.RepeatedCompositeFieldContainer[NamespaceMetadata]
-    def __init__(self, status: _Optional[_Union[_message_pb2.ResponseStatus, _Mapping]] = ..., namespaces: _Optional[_Iterable[_Union[NamespaceMetadata, _Mapping]]] = ...) -> None: ...
+    def __init__(
+        self,
+        status: _Optional[_Union[_message_pb2.ResponseStatus, _Mapping]] = ...,
+        namespaces: _Optional[_Iterable[_Union[NamespaceMetadata, _Mapping]]] = ...,
+    ) -> None: ...
 
 class CreateNamespaceRequest(_message.Message):
     __slots__ = ("header", "body")
@@ -80,7 +114,11 @@ class CreateNamespaceRequest(_message.Message):
     BODY_FIELD_NUMBER: _ClassVar[int]
     header: _message_pb2.MessageHeader
     body: CreateNamespaceRequestBody
-    def __init__(self, header: _Optional[_Union[_message_pb2.MessageHeader, _Mapping]] = ..., body: _Optional[_Union[CreateNamespaceRequestBody, _Mapping]] = ...) -> None: ...
+    def __init__(
+        self,
+        header: _Optional[_Union[_message_pb2.MessageHeader, _Mapping]] = ...,
+        body: _Optional[_Union[CreateNamespaceRequestBody, _Mapping]] = ...,
+    ) -> None: ...
 
 class CreateNamespaceRequestBody(_message.Message):
     __slots__ = ("namespace",)
@@ -94,7 +132,11 @@ class CreateNamespaceResponse(_message.Message):
     BODY_FIELD_NUMBER: _ClassVar[int]
     header: _message_pb2.MessageHeader
     body: CreateNamespaceResponseBody
-    def __init__(self, header: _Optional[_Union[_message_pb2.MessageHeader, _Mapping]] = ..., body: _Optional[_Union[CreateNamespaceResponseBody, _Mapping]] = ...) -> None: ...
+    def __init__(
+        self,
+        header: _Optional[_Union[_message_pb2.MessageHeader, _Mapping]] = ...,
+        body: _Optional[_Union[CreateNamespaceResponseBody, _Mapping]] = ...,
+    ) -> None: ...
 
 class CreateNamespaceResponseBody(_message.Message):
     __slots__ = ("status", "namespace")
@@ -102,7 +144,11 @@ class CreateNamespaceResponseBody(_message.Message):
     NAMESPACE_FIELD_NUMBER: _ClassVar[int]
     status: _message_pb2.ResponseStatus
     namespace: NamespaceMetadata
-    def __init__(self, status: _Optional[_Union[_message_pb2.ResponseStatus, _Mapping]] = ..., namespace: _Optional[_Union[NamespaceMetadata, _Mapping]] = ...) -> None: ...
+    def __init__(
+        self,
+        status: _Optional[_Union[_message_pb2.ResponseStatus, _Mapping]] = ...,
+        namespace: _Optional[_Union[NamespaceMetadata, _Mapping]] = ...,
+    ) -> None: ...
 
 class UpdateNamespaceRequest(_message.Message):
     __slots__ = ("header", "body")
@@ -110,7 +156,11 @@ class UpdateNamespaceRequest(_message.Message):
     BODY_FIELD_NUMBER: _ClassVar[int]
     header: _message_pb2.MessageHeader
     body: UpdateNamespaceRequestBody
-    def __init__(self, header: _Optional[_Union[_message_pb2.MessageHeader, _Mapping]] = ..., body: _Optional[_Union[UpdateNamespaceRequestBody, _Mapping]] = ...) -> None: ...
+    def __init__(
+        self,
+        header: _Optional[_Union[_message_pb2.MessageHeader, _Mapping]] = ...,
+        body: _Optional[_Union[UpdateNamespaceRequestBody, _Mapping]] = ...,
+    ) -> None: ...
 
 class UpdateNamespaceRequestBody(_message.Message):
     __slots__ = ("namespace",)
@@ -124,7 +174,11 @@ class UpdateNamespaceResponse(_message.Message):
     BODY_FIELD_NUMBER: _ClassVar[int]
     header: _message_pb2.MessageHeader
     body: UpdateNamespaceResponseBody
-    def __init__(self, header: _Optional[_Union[_message_pb2.MessageHeader, _Mapping]] = ..., body: _Optional[_Union[UpdateNamespaceResponseBody, _Mapping]] = ...) -> None: ...
+    def __init__(
+        self,
+        header: _Optional[_Union[_message_pb2.MessageHeader, _Mapping]] = ...,
+        body: _Optional[_Union[UpdateNamespaceResponseBody, _Mapping]] = ...,
+    ) -> None: ...
 
 class UpdateNamespaceResponseBody(_message.Message):
     __slots__ = ("status", "namespace")
@@ -132,7 +186,11 @@ class UpdateNamespaceResponseBody(_message.Message):
     NAMESPACE_FIELD_NUMBER: _ClassVar[int]
     status: _message_pb2.ResponseStatus
     namespace: NamespaceMetadata
-    def __init__(self, status: _Optional[_Union[_message_pb2.ResponseStatus, _Mapping]] = ..., namespace: _Optional[_Union[NamespaceMetadata, _Mapping]] = ...) -> None: ...
+    def __init__(
+        self,
+        status: _Optional[_Union[_message_pb2.ResponseStatus, _Mapping]] = ...,
+        namespace: _Optional[_Union[NamespaceMetadata, _Mapping]] = ...,
+    ) -> None: ...
 
 class DeleteNamespaceRequest(_message.Message):
     __slots__ = ("header", "body")
@@ -140,7 +198,11 @@ class DeleteNamespaceRequest(_message.Message):
     BODY_FIELD_NUMBER: _ClassVar[int]
     header: _message_pb2.MessageHeader
     body: DeleteNamespaceRequestBody
-    def __init__(self, header: _Optional[_Union[_message_pb2.MessageHeader, _Mapping]] = ..., body: _Optional[_Union[DeleteNamespaceRequestBody, _Mapping]] = ...) -> None: ...
+    def __init__(
+        self,
+        header: _Optional[_Union[_message_pb2.MessageHeader, _Mapping]] = ...,
+        body: _Optional[_Union[DeleteNamespaceRequestBody, _Mapping]] = ...,
+    ) -> None: ...
 
 class DeleteNamespaceRequestBody(_message.Message):
     __slots__ = ("uid",)
@@ -154,7 +216,11 @@ class DeleteNamespaceResponse(_message.Message):
     BODY_FIELD_NUMBER: _ClassVar[int]
     header: _message_pb2.MessageHeader
     body: DeleteNamespaceResponseBody
-    def __init__(self, header: _Optional[_Union[_message_pb2.MessageHeader, _Mapping]] = ..., body: _Optional[_Union[DeleteNamespaceResponseBody, _Mapping]] = ...) -> None: ...
+    def __init__(
+        self,
+        header: _Optional[_Union[_message_pb2.MessageHeader, _Mapping]] = ...,
+        body: _Optional[_Union[DeleteNamespaceResponseBody, _Mapping]] = ...,
+    ) -> None: ...
 
 class DeleteNamespaceResponseBody(_message.Message):
     __slots__ = ("status",)
@@ -180,4 +246,14 @@ class NamespaceMetadata(_message.Message):
     createdAt: str
     updatedAt: str
     signature: str
-    def __init__(self, owner: _Optional[str] = ..., participants: _Optional[str] = ..., uid: _Optional[str] = ..., name: _Optional[str] = ..., description: _Optional[str] = ..., createdAt: _Optional[str] = ..., updatedAt: _Optional[str] = ..., signature: _Optional[str] = ...) -> None: ...
+    def __init__(
+        self,
+        owner: _Optional[str] = ...,
+        participants: _Optional[str] = ...,
+        uid: _Optional[str] = ...,
+        name: _Optional[str] = ...,
+        description: _Optional[str] = ...,
+        createdAt: _Optional[str] = ...,
+        updatedAt: _Optional[str] = ...,
+        signature: _Optional[str] = ...,
+    ) -> None: ...

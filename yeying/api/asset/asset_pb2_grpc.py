@@ -5,23 +5,24 @@ import warnings
 
 from yeying.api.asset import asset_pb2 as yeying_dot_api_dot_asset_dot_asset__pb2
 
-GRPC_GENERATED_VERSION = '1.68.1'
+GRPC_GENERATED_VERSION = "1.68.1"
 GRPC_VERSION = grpc.__version__
 _version_not_supported = False
 
 try:
     from grpc._utilities import first_version_is_lower
+
     _version_not_supported = first_version_is_lower(GRPC_VERSION, GRPC_GENERATED_VERSION)
 except ImportError:
     _version_not_supported = True
 
 if _version_not_supported:
     raise RuntimeError(
-        f'The grpc package installed is at version {GRPC_VERSION},'
-        + f' but the generated code in yeying/api/asset/asset_pb2_grpc.py depends on'
-        + f' grpcio>={GRPC_GENERATED_VERSION}.'
-        + f' Please upgrade your grpc module to grpcio>={GRPC_GENERATED_VERSION}'
-        + f' or downgrade your generated code using grpcio-tools<={GRPC_VERSION}.'
+        f"The grpc package installed is at version {GRPC_VERSION},"
+        + f" but the generated code in yeying/api/asset/asset_pb2_grpc.py depends on"
+        + f" grpcio>={GRPC_GENERATED_VERSION}."
+        + f" Please upgrade your grpc module to grpcio>={GRPC_GENERATED_VERSION}"
+        + f" or downgrade your generated code using grpcio-tools<={GRPC_VERSION}."
     )
 
 
@@ -62,30 +63,35 @@ class AssetStub(object):
             channel: A grpc.Channel.
         """
         self.Search = channel.unary_unary(
-                '/yeying.api.asset.Asset/Search',
-                request_serializer=yeying_dot_api_dot_asset_dot_asset__pb2.SearchAssetRequest.SerializeToString,
-                response_deserializer=yeying_dot_api_dot_asset_dot_asset__pb2.SearchAssetResponse.FromString,
-                _registered_method=True)
+            "/yeying.api.asset.Asset/Search",
+            request_serializer=yeying_dot_api_dot_asset_dot_asset__pb2.SearchAssetRequest.SerializeToString,
+            response_deserializer=yeying_dot_api_dot_asset_dot_asset__pb2.SearchAssetResponse.FromString,
+            _registered_method=True,
+        )
         self.Sign = channel.unary_unary(
-                '/yeying.api.asset.Asset/Sign',
-                request_serializer=yeying_dot_api_dot_asset_dot_asset__pb2.SignAssetRequest.SerializeToString,
-                response_deserializer=yeying_dot_api_dot_asset_dot_asset__pb2.SignAssetResponse.FromString,
-                _registered_method=True)
+            "/yeying.api.asset.Asset/Sign",
+            request_serializer=yeying_dot_api_dot_asset_dot_asset__pb2.SignAssetRequest.SerializeToString,
+            response_deserializer=yeying_dot_api_dot_asset_dot_asset__pb2.SignAssetResponse.FromString,
+            _registered_method=True,
+        )
         self.Update = channel.unary_unary(
-                '/yeying.api.asset.Asset/Update',
-                request_serializer=yeying_dot_api_dot_asset_dot_asset__pb2.UpdateAssetRequest.SerializeToString,
-                response_deserializer=yeying_dot_api_dot_asset_dot_asset__pb2.UpdateAssetResponse.FromString,
-                _registered_method=True)
+            "/yeying.api.asset.Asset/Update",
+            request_serializer=yeying_dot_api_dot_asset_dot_asset__pb2.UpdateAssetRequest.SerializeToString,
+            response_deserializer=yeying_dot_api_dot_asset_dot_asset__pb2.UpdateAssetResponse.FromString,
+            _registered_method=True,
+        )
         self.Detail = channel.unary_unary(
-                '/yeying.api.asset.Asset/Detail',
-                request_serializer=yeying_dot_api_dot_asset_dot_asset__pb2.AssetDetailRequest.SerializeToString,
-                response_deserializer=yeying_dot_api_dot_asset_dot_asset__pb2.AssetDetailResponse.FromString,
-                _registered_method=True)
+            "/yeying.api.asset.Asset/Detail",
+            request_serializer=yeying_dot_api_dot_asset_dot_asset__pb2.AssetDetailRequest.SerializeToString,
+            response_deserializer=yeying_dot_api_dot_asset_dot_asset__pb2.AssetDetailResponse.FromString,
+            _registered_method=True,
+        )
         self.Delete = channel.unary_unary(
-                '/yeying.api.asset.Asset/Delete',
-                request_serializer=yeying_dot_api_dot_asset_dot_asset__pb2.DeleteAssetRequest.SerializeToString,
-                response_deserializer=yeying_dot_api_dot_asset_dot_asset__pb2.DeleteAssetResponse.FromString,
-                _registered_method=True)
+            "/yeying.api.asset.Asset/Delete",
+            request_serializer=yeying_dot_api_dot_asset_dot_asset__pb2.DeleteAssetRequest.SerializeToString,
+            response_deserializer=yeying_dot_api_dot_asset_dot_asset__pb2.DeleteAssetResponse.FromString,
+            _registered_method=True,
+        )
 
 
 class AssetServicer(object):
@@ -123,8 +129,8 @@ class AssetServicer(object):
         检索数字内容，基于数字内容的元信息检索，比如哈希值、时间、类型、名称等, 如果什么条件都不传入，则按照默认的排序顺序，返回第一个10条记录。
         """
         context.set_code(grpc.StatusCode.UNIMPLEMENTED)
-        context.set_details('Method not implemented!')
-        raise NotImplementedError('Method not implemented!')
+        context.set_details("Method not implemented!")
+        raise NotImplementedError("Method not implemented!")
 
     def Sign(self, request, context):
         """*
@@ -132,16 +138,16 @@ class AssetServicer(object):
         1、根据规则，自动生成新的版本，资产身份不变，但是资产内容的哈希值会变
         """
         context.set_code(grpc.StatusCode.UNIMPLEMENTED)
-        context.set_details('Method not implemented!')
-        raise NotImplementedError('Method not implemented!')
+        context.set_details("Method not implemented!")
+        raise NotImplementedError("Method not implemented!")
 
     def Update(self, request, context):
         """*
         更新资产元信息
         """
         context.set_code(grpc.StatusCode.UNIMPLEMENTED)
-        context.set_details('Method not implemented!')
-        raise NotImplementedError('Method not implemented!')
+        context.set_details("Method not implemented!")
+        raise NotImplementedError("Method not implemented!")
 
     def Detail(self, request, context):
         """*
@@ -151,53 +157,52 @@ class AssetServicer(object):
         3、分散存储，如果资产过大，可能会被存储到不同的供应商
         """
         context.set_code(grpc.StatusCode.UNIMPLEMENTED)
-        context.set_details('Method not implemented!')
-        raise NotImplementedError('Method not implemented!')
+        context.set_details("Method not implemented!")
+        raise NotImplementedError("Method not implemented!")
 
     def Delete(self, request, context):
         """*
         删除资产，不回立即删除，而是放入回收站；资产支持多版本，在删除的时候，采取头或者尾部删除，不能从中间删除，确保版本的链条能够正常工作；
         """
         context.set_code(grpc.StatusCode.UNIMPLEMENTED)
-        context.set_details('Method not implemented!')
-        raise NotImplementedError('Method not implemented!')
+        context.set_details("Method not implemented!")
+        raise NotImplementedError("Method not implemented!")
 
 
 def add_AssetServicer_to_server(servicer, server):
     rpc_method_handlers = {
-            'Search': grpc.unary_unary_rpc_method_handler(
-                    servicer.Search,
-                    request_deserializer=yeying_dot_api_dot_asset_dot_asset__pb2.SearchAssetRequest.FromString,
-                    response_serializer=yeying_dot_api_dot_asset_dot_asset__pb2.SearchAssetResponse.SerializeToString,
-            ),
-            'Sign': grpc.unary_unary_rpc_method_handler(
-                    servicer.Sign,
-                    request_deserializer=yeying_dot_api_dot_asset_dot_asset__pb2.SignAssetRequest.FromString,
-                    response_serializer=yeying_dot_api_dot_asset_dot_asset__pb2.SignAssetResponse.SerializeToString,
-            ),
-            'Update': grpc.unary_unary_rpc_method_handler(
-                    servicer.Update,
-                    request_deserializer=yeying_dot_api_dot_asset_dot_asset__pb2.UpdateAssetRequest.FromString,
-                    response_serializer=yeying_dot_api_dot_asset_dot_asset__pb2.UpdateAssetResponse.SerializeToString,
-            ),
-            'Detail': grpc.unary_unary_rpc_method_handler(
-                    servicer.Detail,
-                    request_deserializer=yeying_dot_api_dot_asset_dot_asset__pb2.AssetDetailRequest.FromString,
-                    response_serializer=yeying_dot_api_dot_asset_dot_asset__pb2.AssetDetailResponse.SerializeToString,
-            ),
-            'Delete': grpc.unary_unary_rpc_method_handler(
-                    servicer.Delete,
-                    request_deserializer=yeying_dot_api_dot_asset_dot_asset__pb2.DeleteAssetRequest.FromString,
-                    response_serializer=yeying_dot_api_dot_asset_dot_asset__pb2.DeleteAssetResponse.SerializeToString,
-            ),
+        "Search": grpc.unary_unary_rpc_method_handler(
+            servicer.Search,
+            request_deserializer=yeying_dot_api_dot_asset_dot_asset__pb2.SearchAssetRequest.FromString,
+            response_serializer=yeying_dot_api_dot_asset_dot_asset__pb2.SearchAssetResponse.SerializeToString,
+        ),
+        "Sign": grpc.unary_unary_rpc_method_handler(
+            servicer.Sign,
+            request_deserializer=yeying_dot_api_dot_asset_dot_asset__pb2.SignAssetRequest.FromString,
+            response_serializer=yeying_dot_api_dot_asset_dot_asset__pb2.SignAssetResponse.SerializeToString,
+        ),
+        "Update": grpc.unary_unary_rpc_method_handler(
+            servicer.Update,
+            request_deserializer=yeying_dot_api_dot_asset_dot_asset__pb2.UpdateAssetRequest.FromString,
+            response_serializer=yeying_dot_api_dot_asset_dot_asset__pb2.UpdateAssetResponse.SerializeToString,
+        ),
+        "Detail": grpc.unary_unary_rpc_method_handler(
+            servicer.Detail,
+            request_deserializer=yeying_dot_api_dot_asset_dot_asset__pb2.AssetDetailRequest.FromString,
+            response_serializer=yeying_dot_api_dot_asset_dot_asset__pb2.AssetDetailResponse.SerializeToString,
+        ),
+        "Delete": grpc.unary_unary_rpc_method_handler(
+            servicer.Delete,
+            request_deserializer=yeying_dot_api_dot_asset_dot_asset__pb2.DeleteAssetRequest.FromString,
+            response_serializer=yeying_dot_api_dot_asset_dot_asset__pb2.DeleteAssetResponse.SerializeToString,
+        ),
     }
-    generic_handler = grpc.method_handlers_generic_handler(
-            'yeying.api.asset.Asset', rpc_method_handlers)
+    generic_handler = grpc.method_handlers_generic_handler("yeying.api.asset.Asset", rpc_method_handlers)
     server.add_generic_rpc_handlers((generic_handler,))
-    server.add_registered_method_handlers('yeying.api.asset.Asset', rpc_method_handlers)
+    server.add_registered_method_handlers("yeying.api.asset.Asset", rpc_method_handlers)
 
 
- # This class is part of an EXPERIMENTAL API.
+# This class is part of an EXPERIMENTAL API.
 class Asset(object):
     """*
 
@@ -229,20 +234,22 @@ class Asset(object):
     """
 
     @staticmethod
-    def Search(request,
-            target,
-            options=(),
-            channel_credentials=None,
-            call_credentials=None,
-            insecure=False,
-            compression=None,
-            wait_for_ready=None,
-            timeout=None,
-            metadata=None):
+    def Search(
+        request,
+        target,
+        options=(),
+        channel_credentials=None,
+        call_credentials=None,
+        insecure=False,
+        compression=None,
+        wait_for_ready=None,
+        timeout=None,
+        metadata=None,
+    ):
         return grpc.experimental.unary_unary(
             request,
             target,
-            '/yeying.api.asset.Asset/Search',
+            "/yeying.api.asset.Asset/Search",
             yeying_dot_api_dot_asset_dot_asset__pb2.SearchAssetRequest.SerializeToString,
             yeying_dot_api_dot_asset_dot_asset__pb2.SearchAssetResponse.FromString,
             options,
@@ -253,23 +260,26 @@ class Asset(object):
             wait_for_ready,
             timeout,
             metadata,
-            _registered_method=True)
+            _registered_method=True,
+        )
 
     @staticmethod
-    def Sign(request,
-            target,
-            options=(),
-            channel_credentials=None,
-            call_credentials=None,
-            insecure=False,
-            compression=None,
-            wait_for_ready=None,
-            timeout=None,
-            metadata=None):
+    def Sign(
+        request,
+        target,
+        options=(),
+        channel_credentials=None,
+        call_credentials=None,
+        insecure=False,
+        compression=None,
+        wait_for_ready=None,
+        timeout=None,
+        metadata=None,
+    ):
         return grpc.experimental.unary_unary(
             request,
             target,
-            '/yeying.api.asset.Asset/Sign',
+            "/yeying.api.asset.Asset/Sign",
             yeying_dot_api_dot_asset_dot_asset__pb2.SignAssetRequest.SerializeToString,
             yeying_dot_api_dot_asset_dot_asset__pb2.SignAssetResponse.FromString,
             options,
@@ -280,23 +290,26 @@ class Asset(object):
             wait_for_ready,
             timeout,
             metadata,
-            _registered_method=True)
+            _registered_method=True,
+        )
 
     @staticmethod
-    def Update(request,
-            target,
-            options=(),
-            channel_credentials=None,
-            call_credentials=None,
-            insecure=False,
-            compression=None,
-            wait_for_ready=None,
-            timeout=None,
-            metadata=None):
+    def Update(
+        request,
+        target,
+        options=(),
+        channel_credentials=None,
+        call_credentials=None,
+        insecure=False,
+        compression=None,
+        wait_for_ready=None,
+        timeout=None,
+        metadata=None,
+    ):
         return grpc.experimental.unary_unary(
             request,
             target,
-            '/yeying.api.asset.Asset/Update',
+            "/yeying.api.asset.Asset/Update",
             yeying_dot_api_dot_asset_dot_asset__pb2.UpdateAssetRequest.SerializeToString,
             yeying_dot_api_dot_asset_dot_asset__pb2.UpdateAssetResponse.FromString,
             options,
@@ -307,23 +320,26 @@ class Asset(object):
             wait_for_ready,
             timeout,
             metadata,
-            _registered_method=True)
+            _registered_method=True,
+        )
 
     @staticmethod
-    def Detail(request,
-            target,
-            options=(),
-            channel_credentials=None,
-            call_credentials=None,
-            insecure=False,
-            compression=None,
-            wait_for_ready=None,
-            timeout=None,
-            metadata=None):
+    def Detail(
+        request,
+        target,
+        options=(),
+        channel_credentials=None,
+        call_credentials=None,
+        insecure=False,
+        compression=None,
+        wait_for_ready=None,
+        timeout=None,
+        metadata=None,
+    ):
         return grpc.experimental.unary_unary(
             request,
             target,
-            '/yeying.api.asset.Asset/Detail',
+            "/yeying.api.asset.Asset/Detail",
             yeying_dot_api_dot_asset_dot_asset__pb2.AssetDetailRequest.SerializeToString,
             yeying_dot_api_dot_asset_dot_asset__pb2.AssetDetailResponse.FromString,
             options,
@@ -334,23 +350,26 @@ class Asset(object):
             wait_for_ready,
             timeout,
             metadata,
-            _registered_method=True)
+            _registered_method=True,
+        )
 
     @staticmethod
-    def Delete(request,
-            target,
-            options=(),
-            channel_credentials=None,
-            call_credentials=None,
-            insecure=False,
-            compression=None,
-            wait_for_ready=None,
-            timeout=None,
-            metadata=None):
+    def Delete(
+        request,
+        target,
+        options=(),
+        channel_credentials=None,
+        call_credentials=None,
+        insecure=False,
+        compression=None,
+        wait_for_ready=None,
+        timeout=None,
+        metadata=None,
+    ):
         return grpc.experimental.unary_unary(
             request,
             target,
-            '/yeying.api.asset.Asset/Delete',
+            "/yeying.api.asset.Asset/Delete",
             yeying_dot_api_dot_asset_dot_asset__pb2.DeleteAssetRequest.SerializeToString,
             yeying_dot_api_dot_asset_dot_asset__pb2.DeleteAssetResponse.FromString,
             options,
@@ -361,4 +380,5 @@ class Asset(object):
             wait_for_ready,
             timeout,
             metadata,
-            _registered_method=True)
+            _registered_method=True,
+        )

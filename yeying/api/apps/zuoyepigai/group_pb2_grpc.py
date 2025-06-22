@@ -5,23 +5,24 @@ import warnings
 
 from yeying.api.apps.zuoyepigai import group_pb2 as yeying_dot_api_dot_apps_dot_zuoyepigai_dot_group__pb2
 
-GRPC_GENERATED_VERSION = '1.68.1'
+GRPC_GENERATED_VERSION = "1.68.1"
 GRPC_VERSION = grpc.__version__
 _version_not_supported = False
 
 try:
     from grpc._utilities import first_version_is_lower
+
     _version_not_supported = first_version_is_lower(GRPC_VERSION, GRPC_GENERATED_VERSION)
 except ImportError:
     _version_not_supported = True
 
 if _version_not_supported:
     raise RuntimeError(
-        f'The grpc package installed is at version {GRPC_VERSION},'
-        + f' but the generated code in yeying/api/apps/zuoyepigai/group_pb2_grpc.py depends on'
-        + f' grpcio>={GRPC_GENERATED_VERSION}.'
-        + f' Please upgrade your grpc module to grpcio>={GRPC_GENERATED_VERSION}'
-        + f' or downgrade your generated code using grpcio-tools<={GRPC_VERSION}.'
+        f"The grpc package installed is at version {GRPC_VERSION},"
+        + f" but the generated code in yeying/api/apps/zuoyepigai/group_pb2_grpc.py depends on"
+        + f" grpcio>={GRPC_GENERATED_VERSION}."
+        + f" Please upgrade your grpc module to grpcio>={GRPC_GENERATED_VERSION}"
+        + f" or downgrade your generated code using grpcio-tools<={GRPC_VERSION}."
     )
 
 
@@ -38,30 +39,35 @@ class GroupStub(object):
             channel: A grpc.Channel.
         """
         self.Add = channel.unary_unary(
-                '/yeying.api.apps.zuoyepigai.Group/Add',
-                request_serializer=yeying_dot_api_dot_apps_dot_zuoyepigai_dot_group__pb2.AddGroupRequest.SerializeToString,
-                response_deserializer=yeying_dot_api_dot_apps_dot_zuoyepigai_dot_group__pb2.AddGroupResponse.FromString,
-                _registered_method=True)
+            "/yeying.api.apps.zuoyepigai.Group/Add",
+            request_serializer=yeying_dot_api_dot_apps_dot_zuoyepigai_dot_group__pb2.AddGroupRequest.SerializeToString,
+            response_deserializer=yeying_dot_api_dot_apps_dot_zuoyepigai_dot_group__pb2.AddGroupResponse.FromString,
+            _registered_method=True,
+        )
         self.Detail = channel.unary_unary(
-                '/yeying.api.apps.zuoyepigai.Group/Detail',
-                request_serializer=yeying_dot_api_dot_apps_dot_zuoyepigai_dot_group__pb2.DetailGroupRequest.SerializeToString,
-                response_deserializer=yeying_dot_api_dot_apps_dot_zuoyepigai_dot_group__pb2.DetailGroupResponse.FromString,
-                _registered_method=True)
+            "/yeying.api.apps.zuoyepigai.Group/Detail",
+            request_serializer=yeying_dot_api_dot_apps_dot_zuoyepigai_dot_group__pb2.DetailGroupRequest.SerializeToString,
+            response_deserializer=yeying_dot_api_dot_apps_dot_zuoyepigai_dot_group__pb2.DetailGroupResponse.FromString,
+            _registered_method=True,
+        )
         self.List = channel.unary_unary(
-                '/yeying.api.apps.zuoyepigai.Group/List',
-                request_serializer=yeying_dot_api_dot_apps_dot_zuoyepigai_dot_group__pb2.ListGroupRequest.SerializeToString,
-                response_deserializer=yeying_dot_api_dot_apps_dot_zuoyepigai_dot_group__pb2.ListGroupResponse.FromString,
-                _registered_method=True)
+            "/yeying.api.apps.zuoyepigai.Group/List",
+            request_serializer=yeying_dot_api_dot_apps_dot_zuoyepigai_dot_group__pb2.ListGroupRequest.SerializeToString,
+            response_deserializer=yeying_dot_api_dot_apps_dot_zuoyepigai_dot_group__pb2.ListGroupResponse.FromString,
+            _registered_method=True,
+        )
         self.Update = channel.unary_unary(
-                '/yeying.api.apps.zuoyepigai.Group/Update',
-                request_serializer=yeying_dot_api_dot_apps_dot_zuoyepigai_dot_group__pb2.UpdateGroupRequest.SerializeToString,
-                response_deserializer=yeying_dot_api_dot_apps_dot_zuoyepigai_dot_group__pb2.UpdateGroupResponse.FromString,
-                _registered_method=True)
+            "/yeying.api.apps.zuoyepigai.Group/Update",
+            request_serializer=yeying_dot_api_dot_apps_dot_zuoyepigai_dot_group__pb2.UpdateGroupRequest.SerializeToString,
+            response_deserializer=yeying_dot_api_dot_apps_dot_zuoyepigai_dot_group__pb2.UpdateGroupResponse.FromString,
+            _registered_method=True,
+        )
         self.Delete = channel.unary_unary(
-                '/yeying.api.apps.zuoyepigai.Group/Delete',
-                request_serializer=yeying_dot_api_dot_apps_dot_zuoyepigai_dot_group__pb2.DeleteGroupRequest.SerializeToString,
-                response_deserializer=yeying_dot_api_dot_apps_dot_zuoyepigai_dot_group__pb2.DeleteGroupResponse.FromString,
-                _registered_method=True)
+            "/yeying.api.apps.zuoyepigai.Group/Delete",
+            request_serializer=yeying_dot_api_dot_apps_dot_zuoyepigai_dot_group__pb2.DeleteGroupRequest.SerializeToString,
+            response_deserializer=yeying_dot_api_dot_apps_dot_zuoyepigai_dot_group__pb2.DeleteGroupResponse.FromString,
+            _registered_method=True,
+        )
 
 
 class GroupServicer(object):
@@ -71,76 +77,70 @@ class GroupServicer(object):
     """
 
     def Add(self, request, context):
-        """创建学生组
-        """
+        """创建学生组"""
         context.set_code(grpc.StatusCode.UNIMPLEMENTED)
-        context.set_details('Method not implemented!')
-        raise NotImplementedError('Method not implemented!')
+        context.set_details("Method not implemented!")
+        raise NotImplementedError("Method not implemented!")
 
     def Detail(self, request, context):
-        """学生组详情
-        """
+        """学生组详情"""
         context.set_code(grpc.StatusCode.UNIMPLEMENTED)
-        context.set_details('Method not implemented!')
-        raise NotImplementedError('Method not implemented!')
+        context.set_details("Method not implemented!")
+        raise NotImplementedError("Method not implemented!")
 
     def List(self, request, context):
-        """学生组列表
-        """
+        """学生组列表"""
         context.set_code(grpc.StatusCode.UNIMPLEMENTED)
-        context.set_details('Method not implemented!')
-        raise NotImplementedError('Method not implemented!')
+        context.set_details("Method not implemented!")
+        raise NotImplementedError("Method not implemented!")
 
     def Update(self, request, context):
-        """更新学生组
-        """
+        """更新学生组"""
         context.set_code(grpc.StatusCode.UNIMPLEMENTED)
-        context.set_details('Method not implemented!')
-        raise NotImplementedError('Method not implemented!')
+        context.set_details("Method not implemented!")
+        raise NotImplementedError("Method not implemented!")
 
     def Delete(self, request, context):
-        """删除学生组
-        """
+        """删除学生组"""
         context.set_code(grpc.StatusCode.UNIMPLEMENTED)
-        context.set_details('Method not implemented!')
-        raise NotImplementedError('Method not implemented!')
+        context.set_details("Method not implemented!")
+        raise NotImplementedError("Method not implemented!")
 
 
 def add_GroupServicer_to_server(servicer, server):
     rpc_method_handlers = {
-            'Add': grpc.unary_unary_rpc_method_handler(
-                    servicer.Add,
-                    request_deserializer=yeying_dot_api_dot_apps_dot_zuoyepigai_dot_group__pb2.AddGroupRequest.FromString,
-                    response_serializer=yeying_dot_api_dot_apps_dot_zuoyepigai_dot_group__pb2.AddGroupResponse.SerializeToString,
-            ),
-            'Detail': grpc.unary_unary_rpc_method_handler(
-                    servicer.Detail,
-                    request_deserializer=yeying_dot_api_dot_apps_dot_zuoyepigai_dot_group__pb2.DetailGroupRequest.FromString,
-                    response_serializer=yeying_dot_api_dot_apps_dot_zuoyepigai_dot_group__pb2.DetailGroupResponse.SerializeToString,
-            ),
-            'List': grpc.unary_unary_rpc_method_handler(
-                    servicer.List,
-                    request_deserializer=yeying_dot_api_dot_apps_dot_zuoyepigai_dot_group__pb2.ListGroupRequest.FromString,
-                    response_serializer=yeying_dot_api_dot_apps_dot_zuoyepigai_dot_group__pb2.ListGroupResponse.SerializeToString,
-            ),
-            'Update': grpc.unary_unary_rpc_method_handler(
-                    servicer.Update,
-                    request_deserializer=yeying_dot_api_dot_apps_dot_zuoyepigai_dot_group__pb2.UpdateGroupRequest.FromString,
-                    response_serializer=yeying_dot_api_dot_apps_dot_zuoyepigai_dot_group__pb2.UpdateGroupResponse.SerializeToString,
-            ),
-            'Delete': grpc.unary_unary_rpc_method_handler(
-                    servicer.Delete,
-                    request_deserializer=yeying_dot_api_dot_apps_dot_zuoyepigai_dot_group__pb2.DeleteGroupRequest.FromString,
-                    response_serializer=yeying_dot_api_dot_apps_dot_zuoyepigai_dot_group__pb2.DeleteGroupResponse.SerializeToString,
-            ),
+        "Add": grpc.unary_unary_rpc_method_handler(
+            servicer.Add,
+            request_deserializer=yeying_dot_api_dot_apps_dot_zuoyepigai_dot_group__pb2.AddGroupRequest.FromString,
+            response_serializer=yeying_dot_api_dot_apps_dot_zuoyepigai_dot_group__pb2.AddGroupResponse.SerializeToString,
+        ),
+        "Detail": grpc.unary_unary_rpc_method_handler(
+            servicer.Detail,
+            request_deserializer=yeying_dot_api_dot_apps_dot_zuoyepigai_dot_group__pb2.DetailGroupRequest.FromString,
+            response_serializer=yeying_dot_api_dot_apps_dot_zuoyepigai_dot_group__pb2.DetailGroupResponse.SerializeToString,
+        ),
+        "List": grpc.unary_unary_rpc_method_handler(
+            servicer.List,
+            request_deserializer=yeying_dot_api_dot_apps_dot_zuoyepigai_dot_group__pb2.ListGroupRequest.FromString,
+            response_serializer=yeying_dot_api_dot_apps_dot_zuoyepigai_dot_group__pb2.ListGroupResponse.SerializeToString,
+        ),
+        "Update": grpc.unary_unary_rpc_method_handler(
+            servicer.Update,
+            request_deserializer=yeying_dot_api_dot_apps_dot_zuoyepigai_dot_group__pb2.UpdateGroupRequest.FromString,
+            response_serializer=yeying_dot_api_dot_apps_dot_zuoyepigai_dot_group__pb2.UpdateGroupResponse.SerializeToString,
+        ),
+        "Delete": grpc.unary_unary_rpc_method_handler(
+            servicer.Delete,
+            request_deserializer=yeying_dot_api_dot_apps_dot_zuoyepigai_dot_group__pb2.DeleteGroupRequest.FromString,
+            response_serializer=yeying_dot_api_dot_apps_dot_zuoyepigai_dot_group__pb2.DeleteGroupResponse.SerializeToString,
+        ),
     }
-    generic_handler = grpc.method_handlers_generic_handler(
-            'yeying.api.apps.zuoyepigai.Group', rpc_method_handlers)
+    generic_handler = grpc.method_handlers_generic_handler("yeying.api.apps.zuoyepigai.Group", rpc_method_handlers)
     server.add_generic_rpc_handlers((generic_handler,))
-    server.add_registered_method_handlers('yeying.api.apps.zuoyepigai.Group', rpc_method_handlers)
+    server.add_registered_method_handlers("yeying.api.apps.zuoyepigai.Group", rpc_method_handlers)
 
 
- # This class is part of an EXPERIMENTAL API.
+# This class is part of an EXPERIMENTAL API.
 class Group(object):
     """*
     学生组
@@ -148,20 +148,22 @@ class Group(object):
     """
 
     @staticmethod
-    def Add(request,
-            target,
-            options=(),
-            channel_credentials=None,
-            call_credentials=None,
-            insecure=False,
-            compression=None,
-            wait_for_ready=None,
-            timeout=None,
-            metadata=None):
+    def Add(
+        request,
+        target,
+        options=(),
+        channel_credentials=None,
+        call_credentials=None,
+        insecure=False,
+        compression=None,
+        wait_for_ready=None,
+        timeout=None,
+        metadata=None,
+    ):
         return grpc.experimental.unary_unary(
             request,
             target,
-            '/yeying.api.apps.zuoyepigai.Group/Add',
+            "/yeying.api.apps.zuoyepigai.Group/Add",
             yeying_dot_api_dot_apps_dot_zuoyepigai_dot_group__pb2.AddGroupRequest.SerializeToString,
             yeying_dot_api_dot_apps_dot_zuoyepigai_dot_group__pb2.AddGroupResponse.FromString,
             options,
@@ -172,23 +174,26 @@ class Group(object):
             wait_for_ready,
             timeout,
             metadata,
-            _registered_method=True)
+            _registered_method=True,
+        )
 
     @staticmethod
-    def Detail(request,
-            target,
-            options=(),
-            channel_credentials=None,
-            call_credentials=None,
-            insecure=False,
-            compression=None,
-            wait_for_ready=None,
-            timeout=None,
-            metadata=None):
+    def Detail(
+        request,
+        target,
+        options=(),
+        channel_credentials=None,
+        call_credentials=None,
+        insecure=False,
+        compression=None,
+        wait_for_ready=None,
+        timeout=None,
+        metadata=None,
+    ):
         return grpc.experimental.unary_unary(
             request,
             target,
-            '/yeying.api.apps.zuoyepigai.Group/Detail',
+            "/yeying.api.apps.zuoyepigai.Group/Detail",
             yeying_dot_api_dot_apps_dot_zuoyepigai_dot_group__pb2.DetailGroupRequest.SerializeToString,
             yeying_dot_api_dot_apps_dot_zuoyepigai_dot_group__pb2.DetailGroupResponse.FromString,
             options,
@@ -199,23 +204,26 @@ class Group(object):
             wait_for_ready,
             timeout,
             metadata,
-            _registered_method=True)
+            _registered_method=True,
+        )
 
     @staticmethod
-    def List(request,
-            target,
-            options=(),
-            channel_credentials=None,
-            call_credentials=None,
-            insecure=False,
-            compression=None,
-            wait_for_ready=None,
-            timeout=None,
-            metadata=None):
+    def List(
+        request,
+        target,
+        options=(),
+        channel_credentials=None,
+        call_credentials=None,
+        insecure=False,
+        compression=None,
+        wait_for_ready=None,
+        timeout=None,
+        metadata=None,
+    ):
         return grpc.experimental.unary_unary(
             request,
             target,
-            '/yeying.api.apps.zuoyepigai.Group/List',
+            "/yeying.api.apps.zuoyepigai.Group/List",
             yeying_dot_api_dot_apps_dot_zuoyepigai_dot_group__pb2.ListGroupRequest.SerializeToString,
             yeying_dot_api_dot_apps_dot_zuoyepigai_dot_group__pb2.ListGroupResponse.FromString,
             options,
@@ -226,23 +234,26 @@ class Group(object):
             wait_for_ready,
             timeout,
             metadata,
-            _registered_method=True)
+            _registered_method=True,
+        )
 
     @staticmethod
-    def Update(request,
-            target,
-            options=(),
-            channel_credentials=None,
-            call_credentials=None,
-            insecure=False,
-            compression=None,
-            wait_for_ready=None,
-            timeout=None,
-            metadata=None):
+    def Update(
+        request,
+        target,
+        options=(),
+        channel_credentials=None,
+        call_credentials=None,
+        insecure=False,
+        compression=None,
+        wait_for_ready=None,
+        timeout=None,
+        metadata=None,
+    ):
         return grpc.experimental.unary_unary(
             request,
             target,
-            '/yeying.api.apps.zuoyepigai.Group/Update',
+            "/yeying.api.apps.zuoyepigai.Group/Update",
             yeying_dot_api_dot_apps_dot_zuoyepigai_dot_group__pb2.UpdateGroupRequest.SerializeToString,
             yeying_dot_api_dot_apps_dot_zuoyepigai_dot_group__pb2.UpdateGroupResponse.FromString,
             options,
@@ -253,23 +264,26 @@ class Group(object):
             wait_for_ready,
             timeout,
             metadata,
-            _registered_method=True)
+            _registered_method=True,
+        )
 
     @staticmethod
-    def Delete(request,
-            target,
-            options=(),
-            channel_credentials=None,
-            call_credentials=None,
-            insecure=False,
-            compression=None,
-            wait_for_ready=None,
-            timeout=None,
-            metadata=None):
+    def Delete(
+        request,
+        target,
+        options=(),
+        channel_credentials=None,
+        call_credentials=None,
+        insecure=False,
+        compression=None,
+        wait_for_ready=None,
+        timeout=None,
+        metadata=None,
+    ):
         return grpc.experimental.unary_unary(
             request,
             target,
-            '/yeying.api.apps.zuoyepigai.Group/Delete',
+            "/yeying.api.apps.zuoyepigai.Group/Delete",
             yeying_dot_api_dot_apps_dot_zuoyepigai_dot_group__pb2.DeleteGroupRequest.SerializeToString,
             yeying_dot_api_dot_apps_dot_zuoyepigai_dot_group__pb2.DeleteGroupResponse.FromString,
             options,
@@ -280,4 +294,5 @@ class Group(object):
             wait_for_ready,
             timeout,
             metadata,
-            _registered_method=True)
+            _registered_method=True,
+        )

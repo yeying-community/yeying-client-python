@@ -29,6 +29,7 @@ from .application_pb2 import DeleteApplicationResponseBody
 from .application_pb2 import AuditApplicationRequest
 from .application_pb2 import AuditApplicationRequestBody
 from .application_pb2 import AuditApplicationResponse
+from .application_pb2 import AuditApplicationResponseBody
 from .application_pb2_grpc import ApplicationServicer
 from .application_pb2_grpc import ApplicationStub
 from .application_pb2_grpc import add_ApplicationServicer_to_server

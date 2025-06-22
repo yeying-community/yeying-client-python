@@ -11,7 +11,11 @@ class SignRequest(_message.Message):
     BODY_FIELD_NUMBER: _ClassVar[int]
     header: _message_pb2.MessageHeader
     body: SignRequestBody
-    def __init__(self, header: _Optional[_Union[_message_pb2.MessageHeader, _Mapping]] = ..., body: _Optional[_Union[SignRequestBody, _Mapping]] = ...) -> None: ...
+    def __init__(
+        self,
+        header: _Optional[_Union[_message_pb2.MessageHeader, _Mapping]] = ...,
+        body: _Optional[_Union[SignRequestBody, _Mapping]] = ...,
+    ) -> None: ...
 
 class SignRequestBody(_message.Message):
     __slots__ = ("domain", "csr")
@@ -27,7 +31,11 @@ class SignResponse(_message.Message):
     BODY_FIELD_NUMBER: _ClassVar[int]
     header: _message_pb2.MessageHeader
     body: SignResponseBody
-    def __init__(self, header: _Optional[_Union[_message_pb2.MessageHeader, _Mapping]] = ..., body: _Optional[_Union[SignResponseBody, _Mapping]] = ...) -> None: ...
+    def __init__(
+        self,
+        header: _Optional[_Union[_message_pb2.MessageHeader, _Mapping]] = ...,
+        body: _Optional[_Union[SignResponseBody, _Mapping]] = ...,
+    ) -> None: ...
 
 class CertificateMetadata(_message.Message):
     __slots__ = ("crt", "ca")
@@ -43,7 +51,11 @@ class SignResponseBody(_message.Message):
     CERTIFICATE_FIELD_NUMBER: _ClassVar[int]
     status: _message_pb2.ResponseStatus
     certificate: CertificateMetadata
-    def __init__(self, status: _Optional[_Union[_message_pb2.ResponseStatus, _Mapping]] = ..., certificate: _Optional[_Union[CertificateMetadata, _Mapping]] = ...) -> None: ...
+    def __init__(
+        self,
+        status: _Optional[_Union[_message_pb2.ResponseStatus, _Mapping]] = ...,
+        certificate: _Optional[_Union[CertificateMetadata, _Mapping]] = ...,
+    ) -> None: ...
 
 class GetRequest(_message.Message):
     __slots__ = ("header",)
@@ -57,7 +69,11 @@ class GetResponse(_message.Message):
     BODY_FIELD_NUMBER: _ClassVar[int]
     header: _message_pb2.MessageHeader
     body: GetResponseBody
-    def __init__(self, header: _Optional[_Union[_message_pb2.MessageHeader, _Mapping]] = ..., body: _Optional[_Union[GetResponseBody, _Mapping]] = ...) -> None: ...
+    def __init__(
+        self,
+        header: _Optional[_Union[_message_pb2.MessageHeader, _Mapping]] = ...,
+        body: _Optional[_Union[GetResponseBody, _Mapping]] = ...,
+    ) -> None: ...
 
 class GetResponseBody(_message.Message):
     __slots__ = ("status", "certificate")
@@ -65,4 +81,8 @@ class GetResponseBody(_message.Message):
     CERTIFICATE_FIELD_NUMBER: _ClassVar[int]
     status: _message_pb2.ResponseStatus
     certificate: CertificateMetadata
-    def __init__(self, status: _Optional[_Union[_message_pb2.ResponseStatus, _Mapping]] = ..., certificate: _Optional[_Union[CertificateMetadata, _Mapping]] = ...) -> None: ...
+    def __init__(
+        self,
+        status: _Optional[_Union[_message_pb2.ResponseStatus, _Mapping]] = ...,
+        certificate: _Optional[_Union[CertificateMetadata, _Mapping]] = ...,
+    ) -> None: ...

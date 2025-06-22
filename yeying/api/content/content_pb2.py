@@ -9,13 +9,9 @@ from google.protobuf import descriptor_pool as _descriptor_pool
 from google.protobuf import runtime_version as _runtime_version
 from google.protobuf import symbol_database as _symbol_database
 from google.protobuf.internal import builder as _builder
+
 _runtime_version.ValidateProtobufRuntimeVersion(
-    _runtime_version.Domain.PUBLIC,
-    5,
-    28,
-    1,
-    '',
-    'yeying/api/content/content.proto'
+    _runtime_version.Domain.PUBLIC, 5, 28, 1, "", "yeying/api/content/content.proto"
 )
 # @@protoc_insertion_point(imports)
 
@@ -26,18 +22,20 @@ from yeying.api.common import message_pb2 as yeying_dot_api_dot_common_dot_messa
 from yeying.api.common import code_pb2 as yeying_dot_api_dot_common_dot_code__pb2
 
 
-DESCRIPTOR = _descriptor_pool.Default().AddSerializedFile(b'\n yeying/api/content/content.proto\x12\x12yeying.api.content\x1a\x1fyeying/api/common/message.proto\x1a\x1cyeying/api/common/code.proto\"C\n\x0fValidateRequest\x12\x30\n\x06header\x18\x01 \x01(\x0b\x32 .yeying.api.common.MessageHeader\"D\n\x10ValidateResponse\x12\x30\n\x06header\x18\x01 \x01(\x0b\x32 .yeying.api.common.MessageHeader2b\n\x07\x43ontent\x12W\n\x08validate\x12#.yeying.api.content.ValidateRequest\x1a$.yeying.api.content.ValidateResponse\"\x00\x42\x14Z\x12yeying/api/contentb\x06proto3')
+DESCRIPTOR = _descriptor_pool.Default().AddSerializedFile(
+    b'\n yeying/api/content/content.proto\x12\x12yeying.api.content\x1a\x1fyeying/api/common/message.proto\x1a\x1cyeying/api/common/code.proto"C\n\x0fValidateRequest\x12\x30\n\x06header\x18\x01 \x01(\x0b\x32 .yeying.api.common.MessageHeader"D\n\x10ValidateResponse\x12\x30\n\x06header\x18\x01 \x01(\x0b\x32 .yeying.api.common.MessageHeader2b\n\x07\x43ontent\x12W\n\x08validate\x12#.yeying.api.content.ValidateRequest\x1a$.yeying.api.content.ValidateResponse"\x00\x42\x14Z\x12yeying/api/contentb\x06proto3'
+)
 
 _globals = globals()
 _builder.BuildMessageAndEnumDescriptors(DESCRIPTOR, _globals)
-_builder.BuildTopDescriptorsAndMessages(DESCRIPTOR, 'yeying.api.content.content_pb2', _globals)
+_builder.BuildTopDescriptorsAndMessages(DESCRIPTOR, "yeying.api.content.content_pb2", _globals)
 if not _descriptor._USE_C_DESCRIPTORS:
-  _globals['DESCRIPTOR']._loaded_options = None
-  _globals['DESCRIPTOR']._serialized_options = b'Z\022yeying/api/content'
-  _globals['_VALIDATEREQUEST']._serialized_start=119
-  _globals['_VALIDATEREQUEST']._serialized_end=186
-  _globals['_VALIDATERESPONSE']._serialized_start=188
-  _globals['_VALIDATERESPONSE']._serialized_end=256
-  _globals['_CONTENT']._serialized_start=258
-  _globals['_CONTENT']._serialized_end=356
+    _globals["DESCRIPTOR"]._loaded_options = None
+    _globals["DESCRIPTOR"]._serialized_options = b"Z\022yeying/api/content"
+    _globals["_VALIDATEREQUEST"]._serialized_start = 119
+    _globals["_VALIDATEREQUEST"]._serialized_end = 186
+    _globals["_VALIDATERESPONSE"]._serialized_start = 188
+    _globals["_VALIDATERESPONSE"]._serialized_end = 256
+    _globals["_CONTENT"]._serialized_start = 258
+    _globals["_CONTENT"]._serialized_end = 356
 # @@protoc_insertion_point(module_scope)

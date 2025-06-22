@@ -5,23 +5,24 @@ import warnings
 
 from yeying.api.warehouse import warehouse_pb2 as yeying_dot_api_dot_warehouse_dot_warehouse__pb2
 
-GRPC_GENERATED_VERSION = '1.68.1'
+GRPC_GENERATED_VERSION = "1.68.1"
 GRPC_VERSION = grpc.__version__
 _version_not_supported = False
 
 try:
     from grpc._utilities import first_version_is_lower
+
     _version_not_supported = first_version_is_lower(GRPC_VERSION, GRPC_GENERATED_VERSION)
 except ImportError:
     _version_not_supported = True
 
 if _version_not_supported:
     raise RuntimeError(
-        f'The grpc package installed is at version {GRPC_VERSION},'
-        + f' but the generated code in yeying/api/warehouse/warehouse_pb2_grpc.py depends on'
-        + f' grpcio>={GRPC_GENERATED_VERSION}.'
-        + f' Please upgrade your grpc module to grpcio>={GRPC_GENERATED_VERSION}'
-        + f' or downgrade your generated code using grpcio-tools<={GRPC_VERSION}.'
+        f"The grpc package installed is at version {GRPC_VERSION},"
+        + f" but the generated code in yeying/api/warehouse/warehouse_pb2_grpc.py depends on"
+        + f" grpcio>={GRPC_GENERATED_VERSION}."
+        + f" Please upgrade your grpc module to grpcio>={GRPC_GENERATED_VERSION}"
+        + f" or downgrade your generated code using grpcio-tools<={GRPC_VERSION}."
     )
 
 
@@ -48,15 +49,17 @@ class WarehouseStub(object):
             channel: A grpc.Channel.
         """
         self.GetState = channel.unary_unary(
-                '/yeying.api.store.Warehouse/GetState',
-                request_serializer=yeying_dot_api_dot_warehouse_dot_warehouse__pb2.GetStateRequest.SerializeToString,
-                response_deserializer=yeying_dot_api_dot_warehouse_dot_warehouse__pb2.GetStateResponse.FromString,
-                _registered_method=True)
+            "/yeying.api.store.Warehouse/GetState",
+            request_serializer=yeying_dot_api_dot_warehouse_dot_warehouse__pb2.GetStateRequest.SerializeToString,
+            response_deserializer=yeying_dot_api_dot_warehouse_dot_warehouse__pb2.GetStateResponse.FromString,
+            _registered_method=True,
+        )
         self.Transfer = channel.unary_unary(
-                '/yeying.api.store.Warehouse/Transfer',
-                request_serializer=yeying_dot_api_dot_warehouse_dot_warehouse__pb2.TransferRequest.SerializeToString,
-                response_deserializer=yeying_dot_api_dot_warehouse_dot_warehouse__pb2.GetStateResponse.FromString,
-                _registered_method=True)
+            "/yeying.api.store.Warehouse/Transfer",
+            request_serializer=yeying_dot_api_dot_warehouse_dot_warehouse__pb2.TransferRequest.SerializeToString,
+            response_deserializer=yeying_dot_api_dot_warehouse_dot_warehouse__pb2.GetStateResponse.FromString,
+            _registered_method=True,
+        )
 
 
 class WarehouseServicer(object):
@@ -80,36 +83,35 @@ class WarehouseServicer(object):
         仓库和仓库之间同步数字资产，或者用户和仓库者之间
         """
         context.set_code(grpc.StatusCode.UNIMPLEMENTED)
-        context.set_details('Method not implemented!')
-        raise NotImplementedError('Method not implemented!')
+        context.set_details("Method not implemented!")
+        raise NotImplementedError("Method not implemented!")
 
     def Transfer(self, request, context):
         """Missing associated documentation comment in .proto file."""
         context.set_code(grpc.StatusCode.UNIMPLEMENTED)
-        context.set_details('Method not implemented!')
-        raise NotImplementedError('Method not implemented!')
+        context.set_details("Method not implemented!")
+        raise NotImplementedError("Method not implemented!")
 
 
 def add_WarehouseServicer_to_server(servicer, server):
     rpc_method_handlers = {
-            'GetState': grpc.unary_unary_rpc_method_handler(
-                    servicer.GetState,
-                    request_deserializer=yeying_dot_api_dot_warehouse_dot_warehouse__pb2.GetStateRequest.FromString,
-                    response_serializer=yeying_dot_api_dot_warehouse_dot_warehouse__pb2.GetStateResponse.SerializeToString,
-            ),
-            'Transfer': grpc.unary_unary_rpc_method_handler(
-                    servicer.Transfer,
-                    request_deserializer=yeying_dot_api_dot_warehouse_dot_warehouse__pb2.TransferRequest.FromString,
-                    response_serializer=yeying_dot_api_dot_warehouse_dot_warehouse__pb2.GetStateResponse.SerializeToString,
-            ),
+        "GetState": grpc.unary_unary_rpc_method_handler(
+            servicer.GetState,
+            request_deserializer=yeying_dot_api_dot_warehouse_dot_warehouse__pb2.GetStateRequest.FromString,
+            response_serializer=yeying_dot_api_dot_warehouse_dot_warehouse__pb2.GetStateResponse.SerializeToString,
+        ),
+        "Transfer": grpc.unary_unary_rpc_method_handler(
+            servicer.Transfer,
+            request_deserializer=yeying_dot_api_dot_warehouse_dot_warehouse__pb2.TransferRequest.FromString,
+            response_serializer=yeying_dot_api_dot_warehouse_dot_warehouse__pb2.GetStateResponse.SerializeToString,
+        ),
     }
-    generic_handler = grpc.method_handlers_generic_handler(
-            'yeying.api.store.Warehouse', rpc_method_handlers)
+    generic_handler = grpc.method_handlers_generic_handler("yeying.api.store.Warehouse", rpc_method_handlers)
     server.add_generic_rpc_handlers((generic_handler,))
-    server.add_registered_method_handlers('yeying.api.store.Warehouse', rpc_method_handlers)
+    server.add_registered_method_handlers("yeying.api.store.Warehouse", rpc_method_handlers)
 
 
- # This class is part of an EXPERIMENTAL API.
+# This class is part of an EXPERIMENTAL API.
 class Warehouse(object):
     """*
 
@@ -127,20 +129,22 @@ class Warehouse(object):
     """
 
     @staticmethod
-    def GetState(request,
-            target,
-            options=(),
-            channel_credentials=None,
-            call_credentials=None,
-            insecure=False,
-            compression=None,
-            wait_for_ready=None,
-            timeout=None,
-            metadata=None):
+    def GetState(
+        request,
+        target,
+        options=(),
+        channel_credentials=None,
+        call_credentials=None,
+        insecure=False,
+        compression=None,
+        wait_for_ready=None,
+        timeout=None,
+        metadata=None,
+    ):
         return grpc.experimental.unary_unary(
             request,
             target,
-            '/yeying.api.store.Warehouse/GetState',
+            "/yeying.api.store.Warehouse/GetState",
             yeying_dot_api_dot_warehouse_dot_warehouse__pb2.GetStateRequest.SerializeToString,
             yeying_dot_api_dot_warehouse_dot_warehouse__pb2.GetStateResponse.FromString,
             options,
@@ -151,23 +155,26 @@ class Warehouse(object):
             wait_for_ready,
             timeout,
             metadata,
-            _registered_method=True)
+            _registered_method=True,
+        )
 
     @staticmethod
-    def Transfer(request,
-            target,
-            options=(),
-            channel_credentials=None,
-            call_credentials=None,
-            insecure=False,
-            compression=None,
-            wait_for_ready=None,
-            timeout=None,
-            metadata=None):
+    def Transfer(
+        request,
+        target,
+        options=(),
+        channel_credentials=None,
+        call_credentials=None,
+        insecure=False,
+        compression=None,
+        wait_for_ready=None,
+        timeout=None,
+        metadata=None,
+    ):
         return grpc.experimental.unary_unary(
             request,
             target,
-            '/yeying.api.store.Warehouse/Transfer',
+            "/yeying.api.store.Warehouse/Transfer",
             yeying_dot_api_dot_warehouse_dot_warehouse__pb2.TransferRequest.SerializeToString,
             yeying_dot_api_dot_warehouse_dot_warehouse__pb2.GetStateResponse.FromString,
             options,
@@ -178,4 +185,5 @@ class Warehouse(object):
             wait_for_ready,
             timeout,
             metadata,
-            _registered_method=True)
+            _registered_method=True,
+        )

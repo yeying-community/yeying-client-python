@@ -19,6 +19,7 @@ class TaskStatusEnum(int, metaclass=_enum_type_wrapper.EnumTypeWrapper):
     WAIT_REVISE: _ClassVar[TaskStatusEnum]
     REVISE: _ClassVar[TaskStatusEnum]
     FINISH_REVISE: _ClassVar[TaskStatusEnum]
+
 QUESTION: ImageContentTypeEnum
 ANSWER: ImageContentTypeEnum
 QA: ImageContentTypeEnum

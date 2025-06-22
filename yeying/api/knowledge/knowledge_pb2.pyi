@@ -4,13 +4,20 @@ from google.protobuf.internal import containers as _containers
 from google.protobuf.internal import enum_type_wrapper as _enum_type_wrapper
 from google.protobuf import descriptor as _descriptor
 from google.protobuf import message as _message
-from typing import ClassVar as _ClassVar, Iterable as _Iterable, Mapping as _Mapping, Optional as _Optional, Union as _Union
+from typing import (
+    ClassVar as _ClassVar,
+    Iterable as _Iterable,
+    Mapping as _Mapping,
+    Optional as _Optional,
+    Union as _Union,
+)
 
 DESCRIPTOR: _descriptor.FileDescriptor
 
 class ContentType(int, metaclass=_enum_type_wrapper.EnumTypeWrapper):
     __slots__ = ()
     ARTICLE: _ClassVar[ContentType]
+
 ARTICLE: ContentType
 
 class SearchRequest(_message.Message):
@@ -43,7 +50,17 @@ class KnowledgeMetadata(_message.Message):
     keyword: str
     summary: str
     content: str
-    def __init__(self, format: _Optional[_Union[_code_pb2.DigitalFormatEnum, str]] = ..., hash: _Optional[str] = ..., author: _Optional[str] = ..., source: _Optional[str] = ..., publishTime: _Optional[str] = ..., keyword: _Optional[str] = ..., summary: _Optional[str] = ..., content: _Optional[str] = ...) -> None: ...
+    def __init__(
+        self,
+        format: _Optional[_Union[_code_pb2.DigitalFormatEnum, str]] = ...,
+        hash: _Optional[str] = ...,
+        author: _Optional[str] = ...,
+        source: _Optional[str] = ...,
+        publishTime: _Optional[str] = ...,
+        keyword: _Optional[str] = ...,
+        summary: _Optional[str] = ...,
+        content: _Optional[str] = ...,
+    ) -> None: ...
 
 class AppendMetadata(_message.Message):
     __slots__ = ("hash", "subscriber", "content")
@@ -53,7 +70,9 @@ class AppendMetadata(_message.Message):
     hash: str
     subscriber: str
     content: str
-    def __init__(self, hash: _Optional[str] = ..., subscriber: _Optional[str] = ..., content: _Optional[str] = ...) -> None: ...
+    def __init__(
+        self, hash: _Optional[str] = ..., subscriber: _Optional[str] = ..., content: _Optional[str] = ...
+    ) -> None: ...
 
 class AppendRequest(_message.Message):
     __slots__ = ("appendMetadata",)

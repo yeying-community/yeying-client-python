@@ -5,23 +5,24 @@ import warnings
 
 from yeying.api.asset import block_pb2 as yeying_dot_api_dot_asset_dot_block__pb2
 
-GRPC_GENERATED_VERSION = '1.68.1'
+GRPC_GENERATED_VERSION = "1.68.1"
 GRPC_VERSION = grpc.__version__
 _version_not_supported = False
 
 try:
     from grpc._utilities import first_version_is_lower
+
     _version_not_supported = first_version_is_lower(GRPC_VERSION, GRPC_GENERATED_VERSION)
 except ImportError:
     _version_not_supported = True
 
 if _version_not_supported:
     raise RuntimeError(
-        f'The grpc package installed is at version {GRPC_VERSION},'
-        + f' but the generated code in yeying/api/asset/block_pb2_grpc.py depends on'
-        + f' grpcio>={GRPC_GENERATED_VERSION}.'
-        + f' Please upgrade your grpc module to grpcio>={GRPC_GENERATED_VERSION}'
-        + f' or downgrade your generated code using grpcio-tools<={GRPC_VERSION}.'
+        f"The grpc package installed is at version {GRPC_VERSION},"
+        + f" but the generated code in yeying/api/asset/block_pb2_grpc.py depends on"
+        + f" grpcio>={GRPC_GENERATED_VERSION}."
+        + f" Please upgrade your grpc module to grpcio>={GRPC_GENERATED_VERSION}"
+        + f" or downgrade your generated code using grpcio-tools<={GRPC_VERSION}."
     )
 
 
@@ -39,30 +40,35 @@ class BlockStub(object):
             channel: A grpc.Channel.
         """
         self.Put = channel.unary_unary(
-                '/yeying.api.asset.Block/Put',
-                request_serializer=yeying_dot_api_dot_asset_dot_block__pb2.PutBlockRequest.SerializeToString,
-                response_deserializer=yeying_dot_api_dot_asset_dot_block__pb2.PutBlockResponse.FromString,
-                _registered_method=True)
+            "/yeying.api.asset.Block/Put",
+            request_serializer=yeying_dot_api_dot_asset_dot_block__pb2.PutBlockRequest.SerializeToString,
+            response_deserializer=yeying_dot_api_dot_asset_dot_block__pb2.PutBlockResponse.FromString,
+            _registered_method=True,
+        )
         self.StreamPut = channel.stream_stream(
-                '/yeying.api.asset.Block/StreamPut',
-                request_serializer=yeying_dot_api_dot_asset_dot_block__pb2.StreamPutBlockRequest.SerializeToString,
-                response_deserializer=yeying_dot_api_dot_asset_dot_block__pb2.StreamPutBlockResponse.FromString,
-                _registered_method=True)
+            "/yeying.api.asset.Block/StreamPut",
+            request_serializer=yeying_dot_api_dot_asset_dot_block__pb2.StreamPutBlockRequest.SerializeToString,
+            response_deserializer=yeying_dot_api_dot_asset_dot_block__pb2.StreamPutBlockResponse.FromString,
+            _registered_method=True,
+        )
         self.Confirm = channel.unary_unary(
-                '/yeying.api.asset.Block/Confirm',
-                request_serializer=yeying_dot_api_dot_asset_dot_block__pb2.ConfirmBlockRequest.SerializeToString,
-                response_deserializer=yeying_dot_api_dot_asset_dot_block__pb2.ConfirmBlockResponse.FromString,
-                _registered_method=True)
+            "/yeying.api.asset.Block/Confirm",
+            request_serializer=yeying_dot_api_dot_asset_dot_block__pb2.ConfirmBlockRequest.SerializeToString,
+            response_deserializer=yeying_dot_api_dot_asset_dot_block__pb2.ConfirmBlockResponse.FromString,
+            _registered_method=True,
+        )
         self.Get = channel.unary_unary(
-                '/yeying.api.asset.Block/Get',
-                request_serializer=yeying_dot_api_dot_asset_dot_block__pb2.GetBlockRequest.SerializeToString,
-                response_deserializer=yeying_dot_api_dot_asset_dot_block__pb2.GetBlockResponse.FromString,
-                _registered_method=True)
+            "/yeying.api.asset.Block/Get",
+            request_serializer=yeying_dot_api_dot_asset_dot_block__pb2.GetBlockRequest.SerializeToString,
+            response_deserializer=yeying_dot_api_dot_asset_dot_block__pb2.GetBlockResponse.FromString,
+            _registered_method=True,
+        )
         self.StreamGet = channel.stream_stream(
-                '/yeying.api.asset.Block/StreamGet',
-                request_serializer=yeying_dot_api_dot_asset_dot_block__pb2.StreamGetBlockRequest.SerializeToString,
-                response_deserializer=yeying_dot_api_dot_asset_dot_block__pb2.StreamGetBlockResponse.FromString,
-                _registered_method=True)
+            "/yeying.api.asset.Block/StreamGet",
+            request_serializer=yeying_dot_api_dot_asset_dot_block__pb2.StreamGetBlockRequest.SerializeToString,
+            response_deserializer=yeying_dot_api_dot_asset_dot_block__pb2.StreamGetBlockResponse.FromString,
+            _registered_method=True,
+        )
 
 
 class BlockServicer(object):
@@ -79,77 +85,76 @@ class BlockServicer(object):
         形成版本。
         """
         context.set_code(grpc.StatusCode.UNIMPLEMENTED)
-        context.set_details('Method not implemented!')
-        raise NotImplementedError('Method not implemented!')
+        context.set_details("Method not implemented!")
+        raise NotImplementedError("Method not implemented!")
 
     def StreamPut(self, request_iterator, context):
         """*
         按块流式上传，1，发送chunk的简要信息；2，上传资产块的内容；3，确认资产块的完整信息；
         """
         context.set_code(grpc.StatusCode.UNIMPLEMENTED)
-        context.set_details('Method not implemented!')
-        raise NotImplementedError('Method not implemented!')
+        context.set_details("Method not implemented!")
+        raise NotImplementedError("Method not implemented!")
 
     def Confirm(self, request, context):
         """*
         检查该用户的资产块是否已经存在，如果存在则返回资产块元信息，如果不存在但是块哈希已存在则创建该用户的资产块
         """
         context.set_code(grpc.StatusCode.UNIMPLEMENTED)
-        context.set_details('Method not implemented!')
-        raise NotImplementedError('Method not implemented!')
+        context.set_details("Method not implemented!")
+        raise NotImplementedError("Method not implemented!")
 
     def Get(self, request, context):
         """*
         前端浏览器不支持server stream，提供一个非流式的下载接口
         """
         context.set_code(grpc.StatusCode.UNIMPLEMENTED)
-        context.set_details('Method not implemented!')
-        raise NotImplementedError('Method not implemented!')
+        context.set_details("Method not implemented!")
+        raise NotImplementedError("Method not implemented!")
 
     def StreamGet(self, request_iterator, context):
         """*
         分块出库数字内容
         """
         context.set_code(grpc.StatusCode.UNIMPLEMENTED)
-        context.set_details('Method not implemented!')
-        raise NotImplementedError('Method not implemented!')
+        context.set_details("Method not implemented!")
+        raise NotImplementedError("Method not implemented!")
 
 
 def add_BlockServicer_to_server(servicer, server):
     rpc_method_handlers = {
-            'Put': grpc.unary_unary_rpc_method_handler(
-                    servicer.Put,
-                    request_deserializer=yeying_dot_api_dot_asset_dot_block__pb2.PutBlockRequest.FromString,
-                    response_serializer=yeying_dot_api_dot_asset_dot_block__pb2.PutBlockResponse.SerializeToString,
-            ),
-            'StreamPut': grpc.stream_stream_rpc_method_handler(
-                    servicer.StreamPut,
-                    request_deserializer=yeying_dot_api_dot_asset_dot_block__pb2.StreamPutBlockRequest.FromString,
-                    response_serializer=yeying_dot_api_dot_asset_dot_block__pb2.StreamPutBlockResponse.SerializeToString,
-            ),
-            'Confirm': grpc.unary_unary_rpc_method_handler(
-                    servicer.Confirm,
-                    request_deserializer=yeying_dot_api_dot_asset_dot_block__pb2.ConfirmBlockRequest.FromString,
-                    response_serializer=yeying_dot_api_dot_asset_dot_block__pb2.ConfirmBlockResponse.SerializeToString,
-            ),
-            'Get': grpc.unary_unary_rpc_method_handler(
-                    servicer.Get,
-                    request_deserializer=yeying_dot_api_dot_asset_dot_block__pb2.GetBlockRequest.FromString,
-                    response_serializer=yeying_dot_api_dot_asset_dot_block__pb2.GetBlockResponse.SerializeToString,
-            ),
-            'StreamGet': grpc.stream_stream_rpc_method_handler(
-                    servicer.StreamGet,
-                    request_deserializer=yeying_dot_api_dot_asset_dot_block__pb2.StreamGetBlockRequest.FromString,
-                    response_serializer=yeying_dot_api_dot_asset_dot_block__pb2.StreamGetBlockResponse.SerializeToString,
-            ),
+        "Put": grpc.unary_unary_rpc_method_handler(
+            servicer.Put,
+            request_deserializer=yeying_dot_api_dot_asset_dot_block__pb2.PutBlockRequest.FromString,
+            response_serializer=yeying_dot_api_dot_asset_dot_block__pb2.PutBlockResponse.SerializeToString,
+        ),
+        "StreamPut": grpc.stream_stream_rpc_method_handler(
+            servicer.StreamPut,
+            request_deserializer=yeying_dot_api_dot_asset_dot_block__pb2.StreamPutBlockRequest.FromString,
+            response_serializer=yeying_dot_api_dot_asset_dot_block__pb2.StreamPutBlockResponse.SerializeToString,
+        ),
+        "Confirm": grpc.unary_unary_rpc_method_handler(
+            servicer.Confirm,
+            request_deserializer=yeying_dot_api_dot_asset_dot_block__pb2.ConfirmBlockRequest.FromString,
+            response_serializer=yeying_dot_api_dot_asset_dot_block__pb2.ConfirmBlockResponse.SerializeToString,
+        ),
+        "Get": grpc.unary_unary_rpc_method_handler(
+            servicer.Get,
+            request_deserializer=yeying_dot_api_dot_asset_dot_block__pb2.GetBlockRequest.FromString,
+            response_serializer=yeying_dot_api_dot_asset_dot_block__pb2.GetBlockResponse.SerializeToString,
+        ),
+        "StreamGet": grpc.stream_stream_rpc_method_handler(
+            servicer.StreamGet,
+            request_deserializer=yeying_dot_api_dot_asset_dot_block__pb2.StreamGetBlockRequest.FromString,
+            response_serializer=yeying_dot_api_dot_asset_dot_block__pb2.StreamGetBlockResponse.SerializeToString,
+        ),
     }
-    generic_handler = grpc.method_handlers_generic_handler(
-            'yeying.api.asset.Block', rpc_method_handlers)
+    generic_handler = grpc.method_handlers_generic_handler("yeying.api.asset.Block", rpc_method_handlers)
     server.add_generic_rpc_handlers((generic_handler,))
-    server.add_registered_method_handlers('yeying.api.asset.Block', rpc_method_handlers)
+    server.add_registered_method_handlers("yeying.api.asset.Block", rpc_method_handlers)
 
 
- # This class is part of an EXPERIMENTAL API.
+# This class is part of an EXPERIMENTAL API.
 class Block(object):
     """*
     站在存储供应商的角度，数据和资产是有区别，数据有可能是有价值，也可能没有价值，但是存储供应商是没有感知，只有用户能够感知到。当用户和存储供应商之间签
@@ -158,20 +163,22 @@ class Block(object):
     """
 
     @staticmethod
-    def Put(request,
-            target,
-            options=(),
-            channel_credentials=None,
-            call_credentials=None,
-            insecure=False,
-            compression=None,
-            wait_for_ready=None,
-            timeout=None,
-            metadata=None):
+    def Put(
+        request,
+        target,
+        options=(),
+        channel_credentials=None,
+        call_credentials=None,
+        insecure=False,
+        compression=None,
+        wait_for_ready=None,
+        timeout=None,
+        metadata=None,
+    ):
         return grpc.experimental.unary_unary(
             request,
             target,
-            '/yeying.api.asset.Block/Put',
+            "/yeying.api.asset.Block/Put",
             yeying_dot_api_dot_asset_dot_block__pb2.PutBlockRequest.SerializeToString,
             yeying_dot_api_dot_asset_dot_block__pb2.PutBlockResponse.FromString,
             options,
@@ -182,23 +189,26 @@ class Block(object):
             wait_for_ready,
             timeout,
             metadata,
-            _registered_method=True)
+            _registered_method=True,
+        )
 
     @staticmethod
-    def StreamPut(request_iterator,
-            target,
-            options=(),
-            channel_credentials=None,
-            call_credentials=None,
-            insecure=False,
-            compression=None,
-            wait_for_ready=None,
-            timeout=None,
-            metadata=None):
+    def StreamPut(
+        request_iterator,
+        target,
+        options=(),
+        channel_credentials=None,
+        call_credentials=None,
+        insecure=False,
+        compression=None,
+        wait_for_ready=None,
+        timeout=None,
+        metadata=None,
+    ):
         return grpc.experimental.stream_stream(
             request_iterator,
             target,
-            '/yeying.api.asset.Block/StreamPut',
+            "/yeying.api.asset.Block/StreamPut",
             yeying_dot_api_dot_asset_dot_block__pb2.StreamPutBlockRequest.SerializeToString,
             yeying_dot_api_dot_asset_dot_block__pb2.StreamPutBlockResponse.FromString,
             options,
@@ -209,23 +219,26 @@ class Block(object):
             wait_for_ready,
             timeout,
             metadata,
-            _registered_method=True)
+            _registered_method=True,
+        )
 
     @staticmethod
-    def Confirm(request,
-            target,
-            options=(),
-            channel_credentials=None,
-            call_credentials=None,
-            insecure=False,
-            compression=None,
-            wait_for_ready=None,
-            timeout=None,
-            metadata=None):
+    def Confirm(
+        request,
+        target,
+        options=(),
+        channel_credentials=None,
+        call_credentials=None,
+        insecure=False,
+        compression=None,
+        wait_for_ready=None,
+        timeout=None,
+        metadata=None,
+    ):
         return grpc.experimental.unary_unary(
             request,
             target,
-            '/yeying.api.asset.Block/Confirm',
+            "/yeying.api.asset.Block/Confirm",
             yeying_dot_api_dot_asset_dot_block__pb2.ConfirmBlockRequest.SerializeToString,
             yeying_dot_api_dot_asset_dot_block__pb2.ConfirmBlockResponse.FromString,
             options,
@@ -236,23 +249,26 @@ class Block(object):
             wait_for_ready,
             timeout,
             metadata,
-            _registered_method=True)
+            _registered_method=True,
+        )
 
     @staticmethod
-    def Get(request,
-            target,
-            options=(),
-            channel_credentials=None,
-            call_credentials=None,
-            insecure=False,
-            compression=None,
-            wait_for_ready=None,
-            timeout=None,
-            metadata=None):
+    def Get(
+        request,
+        target,
+        options=(),
+        channel_credentials=None,
+        call_credentials=None,
+        insecure=False,
+        compression=None,
+        wait_for_ready=None,
+        timeout=None,
+        metadata=None,
+    ):
         return grpc.experimental.unary_unary(
             request,
             target,
-            '/yeying.api.asset.Block/Get',
+            "/yeying.api.asset.Block/Get",
             yeying_dot_api_dot_asset_dot_block__pb2.GetBlockRequest.SerializeToString,
             yeying_dot_api_dot_asset_dot_block__pb2.GetBlockResponse.FromString,
             options,
@@ -263,23 +279,26 @@ class Block(object):
             wait_for_ready,
             timeout,
             metadata,
-            _registered_method=True)
+            _registered_method=True,
+        )
 
     @staticmethod
-    def StreamGet(request_iterator,
-            target,
-            options=(),
-            channel_credentials=None,
-            call_credentials=None,
-            insecure=False,
-            compression=None,
-            wait_for_ready=None,
-            timeout=None,
-            metadata=None):
+    def StreamGet(
+        request_iterator,
+        target,
+        options=(),
+        channel_credentials=None,
+        call_credentials=None,
+        insecure=False,
+        compression=None,
+        wait_for_ready=None,
+        timeout=None,
+        metadata=None,
+    ):
         return grpc.experimental.stream_stream(
             request_iterator,
             target,
-            '/yeying.api.asset.Block/StreamGet',
+            "/yeying.api.asset.Block/StreamGet",
             yeying_dot_api_dot_asset_dot_block__pb2.StreamGetBlockRequest.SerializeToString,
             yeying_dot_api_dot_asset_dot_block__pb2.StreamGetBlockResponse.FromString,
             options,
@@ -290,4 +309,5 @@ class Block(object):
             wait_for_ready,
             timeout,
             metadata,
-            _registered_method=True)
+            _registered_method=True,
+        )

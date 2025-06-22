@@ -113,12 +113,20 @@ class ParticipantTypeEnum(int, metaclass=_enum_type_wrapper.EnumTypeWrapper):
     PARTICIPANT_TYPE_SERVICE: _ClassVar[ParticipantTypeEnum]
     PARTICIPANT_TYPE_PEOPLE: _ClassVar[ParticipantTypeEnum]
 
+class AuditTypeEnum(int, metaclass=_enum_type_wrapper.EnumTypeWrapper):
+    __slots__ = ()
+    AUDIT_TYPE_APPLICATION: _ClassVar[AuditTypeEnum]
+    AUDIT_TYPE_SERVICE: _ClassVar[AuditTypeEnum]
+    AUDIT_TYPE_UNKNOWN: _ClassVar[AuditTypeEnum]
+
 class ApplicationStatusEnum(int, metaclass=_enum_type_wrapper.EnumTypeWrapper):
     __slots__ = ()
     APPLICATION_STATUS_UNKNOWN: _ClassVar[ApplicationStatusEnum]
     APPLICATION_STATUS_CREATED: _ClassVar[ApplicationStatusEnum]
     APPLICATION_STATUS_AUDITED: _ClassVar[ApplicationStatusEnum]
     APPLICATION_STATUS_REFUSED: _ClassVar[ApplicationStatusEnum]
+    APPLICATION_STATUS_OFFLINE: _ClassVar[ApplicationStatusEnum]
+    APPLICATION_STATUS_ONLINE: _ClassVar[ApplicationStatusEnum]
 
 class CipherTypeEnum(int, metaclass=_enum_type_wrapper.EnumTypeWrapper):
     __slots__ = ()
@@ -130,6 +138,7 @@ class AuthenticateTypeEnum(int, metaclass=_enum_type_wrapper.EnumTypeWrapper):
     AUTHENTICATE_TYPE_UNKNOWN: _ClassVar[AuthenticateTypeEnum]
     AUTHENTICATE_TYPE_CERT: _ClassVar[AuthenticateTypeEnum]
     AUTHENTICATE_TYPE_TOKEN: _ClassVar[AuthenticateTypeEnum]
+
 RESPONSE_CODE_UNKNOWN: ResponseCodeEnum
 OK: ResponseCodeEnum
 INVALID_ARGUMENT: ResponseCodeEnum
@@ -203,10 +212,15 @@ SESSION_ROLE_ADMIN: SessionRoleEnum
 PARTICIPANT_TYPE_UNKNOWN: ParticipantTypeEnum
 PARTICIPANT_TYPE_SERVICE: ParticipantTypeEnum
 PARTICIPANT_TYPE_PEOPLE: ParticipantTypeEnum
+AUDIT_TYPE_APPLICATION: AuditTypeEnum
+AUDIT_TYPE_SERVICE: AuditTypeEnum
+AUDIT_TYPE_UNKNOWN: AuditTypeEnum
 APPLICATION_STATUS_UNKNOWN: ApplicationStatusEnum
 APPLICATION_STATUS_CREATED: ApplicationStatusEnum
 APPLICATION_STATUS_AUDITED: ApplicationStatusEnum
 APPLICATION_STATUS_REFUSED: ApplicationStatusEnum
+APPLICATION_STATUS_OFFLINE: ApplicationStatusEnum
+APPLICATION_STATUS_ONLINE: ApplicationStatusEnum
 CIPHER_TYPE_UNKNOWN: CipherTypeEnum
 CIPHER_TYPE_AES_GCM_256: CipherTypeEnum
 AUTHENTICATE_TYPE_UNKNOWN: AuthenticateTypeEnum
