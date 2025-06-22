@@ -11,6 +11,7 @@ from .code_pb2 import ContentFormatEnum
 from .code_pb2 import SessionSceneEnum
 from .code_pb2 import SessionRoleEnum
 from .code_pb2 import ParticipantTypeEnum
+from .code_pb2 import AuditTypeEnum
 from .code_pb2 import ApplicationStatusEnum
 from .code_pb2 import CipherTypeEnum
 from .code_pb2 import AuthenticateTypeEnum
@@ -20,3 +21,4 @@ from .message_pb2 import ResponsePage
 from .message_pb2 import RequestPage
 from .model_pb2 import ApplicationMetadata
 from .model_pb2 import ServiceMetadata
+from .model_pb2 import StateMetadata

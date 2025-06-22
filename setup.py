@@ -3,7 +3,7 @@ import os
 from setuptools import find_packages
 from setuptools import setup
 
-install_requires = []
+install_requires = ["pytest", "mnemonic", "web3"]
 
 exclude_file_patterns = ["*.gif"]
 version = {}
@@ -21,9 +21,5 @@ setup(
     packages=find_packages(where=".", exclude=exclude_file_patterns),
     # package_data={"": ["*.so", "*.jar", "templates/**/*", "static/**/*"]},
     include_package_data=True,
-    entry_points={
-        "console_scripts": [
-
-        ]
-    },
+    entry_points={"console_scripts": []},
 )

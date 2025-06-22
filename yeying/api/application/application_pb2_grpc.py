@@ -5,23 +5,24 @@ import warnings
 
 from yeying.api.application import application_pb2 as yeying_dot_api_dot_application_dot_application__pb2
 
-GRPC_GENERATED_VERSION = '1.68.1'
+GRPC_GENERATED_VERSION = "1.68.1"
 GRPC_VERSION = grpc.__version__
 _version_not_supported = False
 
 try:
     from grpc._utilities import first_version_is_lower
+
     _version_not_supported = first_version_is_lower(GRPC_VERSION, GRPC_GENERATED_VERSION)
 except ImportError:
     _version_not_supported = True
 
 if _version_not_supported:
     raise RuntimeError(
-        f'The grpc package installed is at version {GRPC_VERSION},'
-        + f' but the generated code in yeying/api/application/application_pb2_grpc.py depends on'
-        + f' grpcio>={GRPC_GENERATED_VERSION}.'
-        + f' Please upgrade your grpc module to grpcio>={GRPC_GENERATED_VERSION}'
-        + f' or downgrade your generated code using grpcio-tools<={GRPC_VERSION}.'
+        f"The grpc package installed is at version {GRPC_VERSION},"
+        + f" but the generated code in yeying/api/application/application_pb2_grpc.py depends on"
+        + f" grpcio>={GRPC_GENERATED_VERSION}."
+        + f" Please upgrade your grpc module to grpcio>={GRPC_GENERATED_VERSION}"
+        + f" or downgrade your generated code using grpcio-tools<={GRPC_VERSION}."
     )
 
 
@@ -38,40 +39,47 @@ class ApplicationStub(object):
             channel: A grpc.Channel.
         """
         self.Search = channel.unary_unary(
-                '/yeying.api.application.Application/Search',
-                request_serializer=yeying_dot_api_dot_application_dot_application__pb2.SearchApplicationRequest.SerializeToString,
-                response_deserializer=yeying_dot_api_dot_application_dot_application__pb2.SearchApplicationResponse.FromString,
-                _registered_method=True)
+            "/yeying.api.application.Application/Search",
+            request_serializer=yeying_dot_api_dot_application_dot_application__pb2.SearchApplicationRequest.SerializeToString,
+            response_deserializer=yeying_dot_api_dot_application_dot_application__pb2.SearchApplicationResponse.FromString,
+            _registered_method=True,
+        )
         self.Audit = channel.unary_unary(
-                '/yeying.api.application.Application/Audit',
-                request_serializer=yeying_dot_api_dot_application_dot_application__pb2.AuditApplicationRequest.SerializeToString,
-                response_deserializer=yeying_dot_api_dot_application_dot_application__pb2.AuditApplicationResponse.FromString,
-                _registered_method=True)
+            "/yeying.api.application.Application/Audit",
+            request_serializer=yeying_dot_api_dot_application_dot_application__pb2.AuditApplicationRequest.SerializeToString,
+            response_deserializer=yeying_dot_api_dot_application_dot_application__pb2.AuditApplicationResponse.FromString,
+            _registered_method=True,
+        )
         self.Create = channel.unary_unary(
-                '/yeying.api.application.Application/Create',
-                request_serializer=yeying_dot_api_dot_application_dot_application__pb2.CreateApplicationRequest.SerializeToString,
-                response_deserializer=yeying_dot_api_dot_application_dot_application__pb2.CreateApplicationResponse.FromString,
-                _registered_method=True)
+            "/yeying.api.application.Application/Create",
+            request_serializer=yeying_dot_api_dot_application_dot_application__pb2.CreateApplicationRequest.SerializeToString,
+            response_deserializer=yeying_dot_api_dot_application_dot_application__pb2.CreateApplicationResponse.FromString,
+            _registered_method=True,
+        )
         self.Detail = channel.unary_unary(
-                '/yeying.api.application.Application/Detail',
-                request_serializer=yeying_dot_api_dot_application_dot_application__pb2.ApplicationDetailRequest.SerializeToString,
-                response_deserializer=yeying_dot_api_dot_application_dot_application__pb2.ApplicationDetailResponse.FromString,
-                _registered_method=True)
+            "/yeying.api.application.Application/Detail",
+            request_serializer=yeying_dot_api_dot_application_dot_application__pb2.ApplicationDetailRequest.SerializeToString,
+            response_deserializer=yeying_dot_api_dot_application_dot_application__pb2.ApplicationDetailResponse.FromString,
+            _registered_method=True,
+        )
         self.Offline = channel.unary_unary(
-                '/yeying.api.application.Application/Offline',
-                request_serializer=yeying_dot_api_dot_application_dot_application__pb2.OfflineApplicationRequest.SerializeToString,
-                response_deserializer=yeying_dot_api_dot_application_dot_application__pb2.OfflineApplicationResponse.FromString,
-                _registered_method=True)
+            "/yeying.api.application.Application/Offline",
+            request_serializer=yeying_dot_api_dot_application_dot_application__pb2.OfflineApplicationRequest.SerializeToString,
+            response_deserializer=yeying_dot_api_dot_application_dot_application__pb2.OfflineApplicationResponse.FromString,
+            _registered_method=True,
+        )
         self.Online = channel.unary_unary(
-                '/yeying.api.application.Application/Online',
-                request_serializer=yeying_dot_api_dot_application_dot_application__pb2.OnlineApplicationRequest.SerializeToString,
-                response_deserializer=yeying_dot_api_dot_application_dot_application__pb2.OnlineApplicationResponse.FromString,
-                _registered_method=True)
+            "/yeying.api.application.Application/Online",
+            request_serializer=yeying_dot_api_dot_application_dot_application__pb2.OnlineApplicationRequest.SerializeToString,
+            response_deserializer=yeying_dot_api_dot_application_dot_application__pb2.OnlineApplicationResponse.FromString,
+            _registered_method=True,
+        )
         self.Delete = channel.unary_unary(
-                '/yeying.api.application.Application/Delete',
-                request_serializer=yeying_dot_api_dot_application_dot_application__pb2.DeleteApplicationRequest.SerializeToString,
-                response_deserializer=yeying_dot_api_dot_application_dot_application__pb2.DeleteApplicationResponse.FromString,
-                _registered_method=True)
+            "/yeying.api.application.Application/Delete",
+            request_serializer=yeying_dot_api_dot_application_dot_application__pb2.DeleteApplicationRequest.SerializeToString,
+            response_deserializer=yeying_dot_api_dot_application_dot_application__pb2.DeleteApplicationResponse.FromString,
+            _registered_method=True,
+        )
 
 
 class ApplicationServicer(object):
@@ -81,100 +89,92 @@ class ApplicationServicer(object):
     """
 
     def Search(self, request, context):
-        """搜索应用 
-        """
+        """搜索应用"""
         context.set_code(grpc.StatusCode.UNIMPLEMENTED)
-        context.set_details('Method not implemented!')
-        raise NotImplementedError('Method not implemented!')
+        context.set_details("Method not implemented!")
+        raise NotImplementedError("Method not implemented!")
 
     def Audit(self, request, context):
-        """应用审计 
-        """
+        """应用审计"""
         context.set_code(grpc.StatusCode.UNIMPLEMENTED)
-        context.set_details('Method not implemented!')
-        raise NotImplementedError('Method not implemented!')
+        context.set_details("Method not implemented!")
+        raise NotImplementedError("Method not implemented!")
 
     def Create(self, request, context):
-        """创建应用 
-        """
+        """创建应用"""
         context.set_code(grpc.StatusCode.UNIMPLEMENTED)
-        context.set_details('Method not implemented!')
-        raise NotImplementedError('Method not implemented!')
+        context.set_details("Method not implemented!")
+        raise NotImplementedError("Method not implemented!")
 
     def Detail(self, request, context):
-        """应用详情 
-        """
+        """应用详情"""
         context.set_code(grpc.StatusCode.UNIMPLEMENTED)
-        context.set_details('Method not implemented!')
-        raise NotImplementedError('Method not implemented!')
+        context.set_details("Method not implemented!")
+        raise NotImplementedError("Method not implemented!")
 
     def Offline(self, request, context):
-        """下架应用 
-        """
+        """下架应用"""
         context.set_code(grpc.StatusCode.UNIMPLEMENTED)
-        context.set_details('Method not implemented!')
-        raise NotImplementedError('Method not implemented!')
+        context.set_details("Method not implemented!")
+        raise NotImplementedError("Method not implemented!")
 
     def Online(self, request, context):
-        """上架应用 
-        """
+        """上架应用"""
         context.set_code(grpc.StatusCode.UNIMPLEMENTED)
-        context.set_details('Method not implemented!')
-        raise NotImplementedError('Method not implemented!')
+        context.set_details("Method not implemented!")
+        raise NotImplementedError("Method not implemented!")
 
     def Delete(self, request, context):
-        """删除应用 
-        """
+        """删除应用"""
         context.set_code(grpc.StatusCode.UNIMPLEMENTED)
-        context.set_details('Method not implemented!')
-        raise NotImplementedError('Method not implemented!')
+        context.set_details("Method not implemented!")
+        raise NotImplementedError("Method not implemented!")
 
 
 def add_ApplicationServicer_to_server(servicer, server):
     rpc_method_handlers = {
-            'Search': grpc.unary_unary_rpc_method_handler(
-                    servicer.Search,
-                    request_deserializer=yeying_dot_api_dot_application_dot_application__pb2.SearchApplicationRequest.FromString,
-                    response_serializer=yeying_dot_api_dot_application_dot_application__pb2.SearchApplicationResponse.SerializeToString,
-            ),
-            'Audit': grpc.unary_unary_rpc_method_handler(
-                    servicer.Audit,
-                    request_deserializer=yeying_dot_api_dot_application_dot_application__pb2.AuditApplicationRequest.FromString,
-                    response_serializer=yeying_dot_api_dot_application_dot_application__pb2.AuditApplicationResponse.SerializeToString,
-            ),
-            'Create': grpc.unary_unary_rpc_method_handler(
-                    servicer.Create,
-                    request_deserializer=yeying_dot_api_dot_application_dot_application__pb2.CreateApplicationRequest.FromString,
-                    response_serializer=yeying_dot_api_dot_application_dot_application__pb2.CreateApplicationResponse.SerializeToString,
-            ),
-            'Detail': grpc.unary_unary_rpc_method_handler(
-                    servicer.Detail,
-                    request_deserializer=yeying_dot_api_dot_application_dot_application__pb2.ApplicationDetailRequest.FromString,
-                    response_serializer=yeying_dot_api_dot_application_dot_application__pb2.ApplicationDetailResponse.SerializeToString,
-            ),
-            'Offline': grpc.unary_unary_rpc_method_handler(
-                    servicer.Offline,
-                    request_deserializer=yeying_dot_api_dot_application_dot_application__pb2.OfflineApplicationRequest.FromString,
-                    response_serializer=yeying_dot_api_dot_application_dot_application__pb2.OfflineApplicationResponse.SerializeToString,
-            ),
-            'Online': grpc.unary_unary_rpc_method_handler(
-                    servicer.Online,
-                    request_deserializer=yeying_dot_api_dot_application_dot_application__pb2.OnlineApplicationRequest.FromString,
-                    response_serializer=yeying_dot_api_dot_application_dot_application__pb2.OnlineApplicationResponse.SerializeToString,
-            ),
-            'Delete': grpc.unary_unary_rpc_method_handler(
-                    servicer.Delete,
-                    request_deserializer=yeying_dot_api_dot_application_dot_application__pb2.DeleteApplicationRequest.FromString,
-                    response_serializer=yeying_dot_api_dot_application_dot_application__pb2.DeleteApplicationResponse.SerializeToString,
-            ),
+        "Search": grpc.unary_unary_rpc_method_handler(
+            servicer.Search,
+            request_deserializer=yeying_dot_api_dot_application_dot_application__pb2.SearchApplicationRequest.FromString,
+            response_serializer=yeying_dot_api_dot_application_dot_application__pb2.SearchApplicationResponse.SerializeToString,
+        ),
+        "Audit": grpc.unary_unary_rpc_method_handler(
+            servicer.Audit,
+            request_deserializer=yeying_dot_api_dot_application_dot_application__pb2.AuditApplicationRequest.FromString,
+            response_serializer=yeying_dot_api_dot_application_dot_application__pb2.AuditApplicationResponse.SerializeToString,
+        ),
+        "Create": grpc.unary_unary_rpc_method_handler(
+            servicer.Create,
+            request_deserializer=yeying_dot_api_dot_application_dot_application__pb2.CreateApplicationRequest.FromString,
+            response_serializer=yeying_dot_api_dot_application_dot_application__pb2.CreateApplicationResponse.SerializeToString,
+        ),
+        "Detail": grpc.unary_unary_rpc_method_handler(
+            servicer.Detail,
+            request_deserializer=yeying_dot_api_dot_application_dot_application__pb2.ApplicationDetailRequest.FromString,
+            response_serializer=yeying_dot_api_dot_application_dot_application__pb2.ApplicationDetailResponse.SerializeToString,
+        ),
+        "Offline": grpc.unary_unary_rpc_method_handler(
+            servicer.Offline,
+            request_deserializer=yeying_dot_api_dot_application_dot_application__pb2.OfflineApplicationRequest.FromString,
+            response_serializer=yeying_dot_api_dot_application_dot_application__pb2.OfflineApplicationResponse.SerializeToString,
+        ),
+        "Online": grpc.unary_unary_rpc_method_handler(
+            servicer.Online,
+            request_deserializer=yeying_dot_api_dot_application_dot_application__pb2.OnlineApplicationRequest.FromString,
+            response_serializer=yeying_dot_api_dot_application_dot_application__pb2.OnlineApplicationResponse.SerializeToString,
+        ),
+        "Delete": grpc.unary_unary_rpc_method_handler(
+            servicer.Delete,
+            request_deserializer=yeying_dot_api_dot_application_dot_application__pb2.DeleteApplicationRequest.FromString,
+            response_serializer=yeying_dot_api_dot_application_dot_application__pb2.DeleteApplicationResponse.SerializeToString,
+        ),
     }
-    generic_handler = grpc.method_handlers_generic_handler(
-            'yeying.api.application.Application', rpc_method_handlers)
+    generic_handler = grpc.method_handlers_generic_handler("yeying.api.application.Application", rpc_method_handlers)
     server.add_generic_rpc_handlers((generic_handler,))
-    server.add_registered_method_handlers('yeying.api.application.Application', rpc_method_handlers)
+    server.add_registered_method_handlers("yeying.api.application.Application", rpc_method_handlers)
 
 
- # This class is part of an EXPERIMENTAL API.
+# This class is part of an EXPERIMENTAL API.
 class Application(object):
     """*
     节点自带的应用和后面发布的应用，夜莺社区提供一个节点和一组组网协议。当然其他的社团或者个人，也可以基于源代码，发布自己的节点和一组组网协议，当然
@@ -182,20 +182,22 @@ class Application(object):
     """
 
     @staticmethod
-    def Search(request,
-            target,
-            options=(),
-            channel_credentials=None,
-            call_credentials=None,
-            insecure=False,
-            compression=None,
-            wait_for_ready=None,
-            timeout=None,
-            metadata=None):
+    def Search(
+        request,
+        target,
+        options=(),
+        channel_credentials=None,
+        call_credentials=None,
+        insecure=False,
+        compression=None,
+        wait_for_ready=None,
+        timeout=None,
+        metadata=None,
+    ):
         return grpc.experimental.unary_unary(
             request,
             target,
-            '/yeying.api.application.Application/Search',
+            "/yeying.api.application.Application/Search",
             yeying_dot_api_dot_application_dot_application__pb2.SearchApplicationRequest.SerializeToString,
             yeying_dot_api_dot_application_dot_application__pb2.SearchApplicationResponse.FromString,
             options,
@@ -206,23 +208,26 @@ class Application(object):
             wait_for_ready,
             timeout,
             metadata,
-            _registered_method=True)
+            _registered_method=True,
+        )
 
     @staticmethod
-    def Audit(request,
-            target,
-            options=(),
-            channel_credentials=None,
-            call_credentials=None,
-            insecure=False,
-            compression=None,
-            wait_for_ready=None,
-            timeout=None,
-            metadata=None):
+    def Audit(
+        request,
+        target,
+        options=(),
+        channel_credentials=None,
+        call_credentials=None,
+        insecure=False,
+        compression=None,
+        wait_for_ready=None,
+        timeout=None,
+        metadata=None,
+    ):
         return grpc.experimental.unary_unary(
             request,
             target,
-            '/yeying.api.application.Application/Audit',
+            "/yeying.api.application.Application/Audit",
             yeying_dot_api_dot_application_dot_application__pb2.AuditApplicationRequest.SerializeToString,
             yeying_dot_api_dot_application_dot_application__pb2.AuditApplicationResponse.FromString,
             options,
@@ -233,23 +238,26 @@ class Application(object):
             wait_for_ready,
             timeout,
             metadata,
-            _registered_method=True)
+            _registered_method=True,
+        )
 
     @staticmethod
-    def Create(request,
-            target,
-            options=(),
-            channel_credentials=None,
-            call_credentials=None,
-            insecure=False,
-            compression=None,
-            wait_for_ready=None,
-            timeout=None,
-            metadata=None):
+    def Create(
+        request,
+        target,
+        options=(),
+        channel_credentials=None,
+        call_credentials=None,
+        insecure=False,
+        compression=None,
+        wait_for_ready=None,
+        timeout=None,
+        metadata=None,
+    ):
         return grpc.experimental.unary_unary(
             request,
             target,
-            '/yeying.api.application.Application/Create',
+            "/yeying.api.application.Application/Create",
             yeying_dot_api_dot_application_dot_application__pb2.CreateApplicationRequest.SerializeToString,
             yeying_dot_api_dot_application_dot_application__pb2.CreateApplicationResponse.FromString,
             options,
@@ -260,23 +268,26 @@ class Application(object):
             wait_for_ready,
             timeout,
             metadata,
-            _registered_method=True)
+            _registered_method=True,
+        )
 
     @staticmethod
-    def Detail(request,
-            target,
-            options=(),
-            channel_credentials=None,
-            call_credentials=None,
-            insecure=False,
-            compression=None,
-            wait_for_ready=None,
-            timeout=None,
-            metadata=None):
+    def Detail(
+        request,
+        target,
+        options=(),
+        channel_credentials=None,
+        call_credentials=None,
+        insecure=False,
+        compression=None,
+        wait_for_ready=None,
+        timeout=None,
+        metadata=None,
+    ):
         return grpc.experimental.unary_unary(
             request,
             target,
-            '/yeying.api.application.Application/Detail',
+            "/yeying.api.application.Application/Detail",
             yeying_dot_api_dot_application_dot_application__pb2.ApplicationDetailRequest.SerializeToString,
             yeying_dot_api_dot_application_dot_application__pb2.ApplicationDetailResponse.FromString,
             options,
@@ -287,23 +298,26 @@ class Application(object):
             wait_for_ready,
             timeout,
             metadata,
-            _registered_method=True)
+            _registered_method=True,
+        )
 
     @staticmethod
-    def Offline(request,
-            target,
-            options=(),
-            channel_credentials=None,
-            call_credentials=None,
-            insecure=False,
-            compression=None,
-            wait_for_ready=None,
-            timeout=None,
-            metadata=None):
+    def Offline(
+        request,
+        target,
+        options=(),
+        channel_credentials=None,
+        call_credentials=None,
+        insecure=False,
+        compression=None,
+        wait_for_ready=None,
+        timeout=None,
+        metadata=None,
+    ):
         return grpc.experimental.unary_unary(
             request,
             target,
-            '/yeying.api.application.Application/Offline',
+            "/yeying.api.application.Application/Offline",
             yeying_dot_api_dot_application_dot_application__pb2.OfflineApplicationRequest.SerializeToString,
             yeying_dot_api_dot_application_dot_application__pb2.OfflineApplicationResponse.FromString,
             options,
@@ -314,23 +328,26 @@ class Application(object):
             wait_for_ready,
             timeout,
             metadata,
-            _registered_method=True)
+            _registered_method=True,
+        )
 
     @staticmethod
-    def Online(request,
-            target,
-            options=(),
-            channel_credentials=None,
-            call_credentials=None,
-            insecure=False,
-            compression=None,
-            wait_for_ready=None,
-            timeout=None,
-            metadata=None):
+    def Online(
+        request,
+        target,
+        options=(),
+        channel_credentials=None,
+        call_credentials=None,
+        insecure=False,
+        compression=None,
+        wait_for_ready=None,
+        timeout=None,
+        metadata=None,
+    ):
         return grpc.experimental.unary_unary(
             request,
             target,
-            '/yeying.api.application.Application/Online',
+            "/yeying.api.application.Application/Online",
             yeying_dot_api_dot_application_dot_application__pb2.OnlineApplicationRequest.SerializeToString,
             yeying_dot_api_dot_application_dot_application__pb2.OnlineApplicationResponse.FromString,
             options,
@@ -341,23 +358,26 @@ class Application(object):
             wait_for_ready,
             timeout,
             metadata,
-            _registered_method=True)
+            _registered_method=True,
+        )
 
     @staticmethod
-    def Delete(request,
-            target,
-            options=(),
-            channel_credentials=None,
-            call_credentials=None,
-            insecure=False,
-            compression=None,
-            wait_for_ready=None,
-            timeout=None,
-            metadata=None):
+    def Delete(
+        request,
+        target,
+        options=(),
+        channel_credentials=None,
+        call_credentials=None,
+        insecure=False,
+        compression=None,
+        wait_for_ready=None,
+        timeout=None,
+        metadata=None,
+    ):
         return grpc.experimental.unary_unary(
             request,
             target,
-            '/yeying.api.application.Application/Delete',
+            "/yeying.api.application.Application/Delete",
             yeying_dot_api_dot_application_dot_application__pb2.DeleteApplicationRequest.SerializeToString,
             yeying_dot_api_dot_application_dot_application__pb2.DeleteApplicationResponse.FromString,
             options,
@@ -368,4 +388,5 @@ class Application(object):
             wait_for_ready,
             timeout,
             metadata,
-            _registered_method=True)
+            _registered_method=True,
+        )

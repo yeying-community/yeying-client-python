@@ -5,23 +5,24 @@ import warnings
 
 from yeying.api.apps.zuoyepigai import mistakes_pb2 as yeying_dot_api_dot_apps_dot_zuoyepigai_dot_mistakes__pb2
 
-GRPC_GENERATED_VERSION = '1.68.1'
+GRPC_GENERATED_VERSION = "1.68.1"
 GRPC_VERSION = grpc.__version__
 _version_not_supported = False
 
 try:
     from grpc._utilities import first_version_is_lower
+
     _version_not_supported = first_version_is_lower(GRPC_VERSION, GRPC_GENERATED_VERSION)
 except ImportError:
     _version_not_supported = True
 
 if _version_not_supported:
     raise RuntimeError(
-        f'The grpc package installed is at version {GRPC_VERSION},'
-        + f' but the generated code in yeying/api/apps/zuoyepigai/mistakes_pb2_grpc.py depends on'
-        + f' grpcio>={GRPC_GENERATED_VERSION}.'
-        + f' Please upgrade your grpc module to grpcio>={GRPC_GENERATED_VERSION}'
-        + f' or downgrade your generated code using grpcio-tools<={GRPC_VERSION}.'
+        f"The grpc package installed is at version {GRPC_VERSION},"
+        + f" but the generated code in yeying/api/apps/zuoyepigai/mistakes_pb2_grpc.py depends on"
+        + f" grpcio>={GRPC_GENERATED_VERSION}."
+        + f" Please upgrade your grpc module to grpcio>={GRPC_GENERATED_VERSION}"
+        + f" or downgrade your generated code using grpcio-tools<={GRPC_VERSION}."
     )
 
 
@@ -37,35 +38,41 @@ class MistakesStub(object):
             channel: A grpc.Channel.
         """
         self.List = channel.unary_unary(
-                '/yeying.api.apps.zuoyepigai.Mistakes/List',
-                request_serializer=yeying_dot_api_dot_apps_dot_zuoyepigai_dot_mistakes__pb2.MistakesListRequest.SerializeToString,
-                response_deserializer=yeying_dot_api_dot_apps_dot_zuoyepigai_dot_mistakes__pb2.MistakesListResponse.FromString,
-                _registered_method=True)
+            "/yeying.api.apps.zuoyepigai.Mistakes/List",
+            request_serializer=yeying_dot_api_dot_apps_dot_zuoyepigai_dot_mistakes__pb2.MistakesListRequest.SerializeToString,
+            response_deserializer=yeying_dot_api_dot_apps_dot_zuoyepigai_dot_mistakes__pb2.MistakesListResponse.FromString,
+            _registered_method=True,
+        )
         self.Detail = channel.unary_unary(
-                '/yeying.api.apps.zuoyepigai.Mistakes/Detail',
-                request_serializer=yeying_dot_api_dot_apps_dot_zuoyepigai_dot_mistakes__pb2.MistakesDetailRequest.SerializeToString,
-                response_deserializer=yeying_dot_api_dot_apps_dot_zuoyepigai_dot_mistakes__pb2.MistakesDetailResponse.FromString,
-                _registered_method=True)
+            "/yeying.api.apps.zuoyepigai.Mistakes/Detail",
+            request_serializer=yeying_dot_api_dot_apps_dot_zuoyepigai_dot_mistakes__pb2.MistakesDetailRequest.SerializeToString,
+            response_deserializer=yeying_dot_api_dot_apps_dot_zuoyepigai_dot_mistakes__pb2.MistakesDetailResponse.FromString,
+            _registered_method=True,
+        )
         self.Analysis = channel.unary_unary(
-                '/yeying.api.apps.zuoyepigai.Mistakes/Analysis',
-                request_serializer=yeying_dot_api_dot_apps_dot_zuoyepigai_dot_mistakes__pb2.MistakesAnalysisRequest.SerializeToString,
-                response_deserializer=yeying_dot_api_dot_apps_dot_zuoyepigai_dot_mistakes__pb2.MistakesAnalysisResponse.FromString,
-                _registered_method=True)
+            "/yeying.api.apps.zuoyepigai.Mistakes/Analysis",
+            request_serializer=yeying_dot_api_dot_apps_dot_zuoyepigai_dot_mistakes__pb2.MistakesAnalysisRequest.SerializeToString,
+            response_deserializer=yeying_dot_api_dot_apps_dot_zuoyepigai_dot_mistakes__pb2.MistakesAnalysisResponse.FromString,
+            _registered_method=True,
+        )
         self.MakeCorrection = channel.unary_unary(
-                '/yeying.api.apps.zuoyepigai.Mistakes/MakeCorrection',
-                request_serializer=yeying_dot_api_dot_apps_dot_zuoyepigai_dot_mistakes__pb2.MakeCorrectionRequest.SerializeToString,
-                response_deserializer=yeying_dot_api_dot_apps_dot_zuoyepigai_dot_mistakes__pb2.MakeCorrectionResponse.FromString,
-                _registered_method=True)
+            "/yeying.api.apps.zuoyepigai.Mistakes/MakeCorrection",
+            request_serializer=yeying_dot_api_dot_apps_dot_zuoyepigai_dot_mistakes__pb2.MakeCorrectionRequest.SerializeToString,
+            response_deserializer=yeying_dot_api_dot_apps_dot_zuoyepigai_dot_mistakes__pb2.MakeCorrectionResponse.FromString,
+            _registered_method=True,
+        )
         self.Print = channel.unary_unary(
-                '/yeying.api.apps.zuoyepigai.Mistakes/Print',
-                request_serializer=yeying_dot_api_dot_apps_dot_zuoyepigai_dot_mistakes__pb2.MistakesPrintRequest.SerializeToString,
-                response_deserializer=yeying_dot_api_dot_apps_dot_zuoyepigai_dot_mistakes__pb2.MistakesPrintResponse.FromString,
-                _registered_method=True)
+            "/yeying.api.apps.zuoyepigai.Mistakes/Print",
+            request_serializer=yeying_dot_api_dot_apps_dot_zuoyepigai_dot_mistakes__pb2.MistakesPrintRequest.SerializeToString,
+            response_deserializer=yeying_dot_api_dot_apps_dot_zuoyepigai_dot_mistakes__pb2.MistakesPrintResponse.FromString,
+            _registered_method=True,
+        )
         self.Submit = channel.unary_unary(
-                '/yeying.api.apps.zuoyepigai.Mistakes/Submit',
-                request_serializer=yeying_dot_api_dot_apps_dot_zuoyepigai_dot_mistakes__pb2.MistakesSubmitRequest.SerializeToString,
-                response_deserializer=yeying_dot_api_dot_apps_dot_zuoyepigai_dot_mistakes__pb2.MistakesSubmitResponse.FromString,
-                _registered_method=True)
+            "/yeying.api.apps.zuoyepigai.Mistakes/Submit",
+            request_serializer=yeying_dot_api_dot_apps_dot_zuoyepigai_dot_mistakes__pb2.MistakesSubmitRequest.SerializeToString,
+            response_deserializer=yeying_dot_api_dot_apps_dot_zuoyepigai_dot_mistakes__pb2.MistakesSubmitResponse.FromString,
+            _registered_method=True,
+        )
 
 
 class MistakesServicer(object):
@@ -74,108 +81,103 @@ class MistakesServicer(object):
     """
 
     def List(self, request, context):
-        """列表
-        """
+        """列表"""
         context.set_code(grpc.StatusCode.UNIMPLEMENTED)
-        context.set_details('Method not implemented!')
-        raise NotImplementedError('Method not implemented!')
+        context.set_details("Method not implemented!")
+        raise NotImplementedError("Method not implemented!")
 
     def Detail(self, request, context):
-        """详情
-        """
+        """详情"""
         context.set_code(grpc.StatusCode.UNIMPLEMENTED)
-        context.set_details('Method not implemented!')
-        raise NotImplementedError('Method not implemented!')
+        context.set_details("Method not implemented!")
+        raise NotImplementedError("Method not implemented!")
 
     def Analysis(self, request, context):
-        """错误分析
-        """
+        """错误分析"""
         context.set_code(grpc.StatusCode.UNIMPLEMENTED)
-        context.set_details('Method not implemented!')
-        raise NotImplementedError('Method not implemented!')
+        context.set_details("Method not implemented!")
+        raise NotImplementedError("Method not implemented!")
 
     def MakeCorrection(self, request, context):
-        """错误订正
-        """
+        """错误订正"""
         context.set_code(grpc.StatusCode.UNIMPLEMENTED)
-        context.set_details('Method not implemented!')
-        raise NotImplementedError('Method not implemented!')
+        context.set_details("Method not implemented!")
+        raise NotImplementedError("Method not implemented!")
 
     def Print(self, request, context):
-        """打印错题题目
-        """
+        """打印错题题目"""
         context.set_code(grpc.StatusCode.UNIMPLEMENTED)
-        context.set_details('Method not implemented!')
-        raise NotImplementedError('Method not implemented!')
+        context.set_details("Method not implemented!")
+        raise NotImplementedError("Method not implemented!")
 
     def Submit(self, request, context):
-        """提交订正的题目，重新生成图片，提交大模型批改
-        """
+        """提交订正的题目，重新生成图片，提交大模型批改"""
         context.set_code(grpc.StatusCode.UNIMPLEMENTED)
-        context.set_details('Method not implemented!')
-        raise NotImplementedError('Method not implemented!')
+        context.set_details("Method not implemented!")
+        raise NotImplementedError("Method not implemented!")
 
 
 def add_MistakesServicer_to_server(servicer, server):
     rpc_method_handlers = {
-            'List': grpc.unary_unary_rpc_method_handler(
-                    servicer.List,
-                    request_deserializer=yeying_dot_api_dot_apps_dot_zuoyepigai_dot_mistakes__pb2.MistakesListRequest.FromString,
-                    response_serializer=yeying_dot_api_dot_apps_dot_zuoyepigai_dot_mistakes__pb2.MistakesListResponse.SerializeToString,
-            ),
-            'Detail': grpc.unary_unary_rpc_method_handler(
-                    servicer.Detail,
-                    request_deserializer=yeying_dot_api_dot_apps_dot_zuoyepigai_dot_mistakes__pb2.MistakesDetailRequest.FromString,
-                    response_serializer=yeying_dot_api_dot_apps_dot_zuoyepigai_dot_mistakes__pb2.MistakesDetailResponse.SerializeToString,
-            ),
-            'Analysis': grpc.unary_unary_rpc_method_handler(
-                    servicer.Analysis,
-                    request_deserializer=yeying_dot_api_dot_apps_dot_zuoyepigai_dot_mistakes__pb2.MistakesAnalysisRequest.FromString,
-                    response_serializer=yeying_dot_api_dot_apps_dot_zuoyepigai_dot_mistakes__pb2.MistakesAnalysisResponse.SerializeToString,
-            ),
-            'MakeCorrection': grpc.unary_unary_rpc_method_handler(
-                    servicer.MakeCorrection,
-                    request_deserializer=yeying_dot_api_dot_apps_dot_zuoyepigai_dot_mistakes__pb2.MakeCorrectionRequest.FromString,
-                    response_serializer=yeying_dot_api_dot_apps_dot_zuoyepigai_dot_mistakes__pb2.MakeCorrectionResponse.SerializeToString,
-            ),
-            'Print': grpc.unary_unary_rpc_method_handler(
-                    servicer.Print,
-                    request_deserializer=yeying_dot_api_dot_apps_dot_zuoyepigai_dot_mistakes__pb2.MistakesPrintRequest.FromString,
-                    response_serializer=yeying_dot_api_dot_apps_dot_zuoyepigai_dot_mistakes__pb2.MistakesPrintResponse.SerializeToString,
-            ),
-            'Submit': grpc.unary_unary_rpc_method_handler(
-                    servicer.Submit,
-                    request_deserializer=yeying_dot_api_dot_apps_dot_zuoyepigai_dot_mistakes__pb2.MistakesSubmitRequest.FromString,
-                    response_serializer=yeying_dot_api_dot_apps_dot_zuoyepigai_dot_mistakes__pb2.MistakesSubmitResponse.SerializeToString,
-            ),
+        "List": grpc.unary_unary_rpc_method_handler(
+            servicer.List,
+            request_deserializer=yeying_dot_api_dot_apps_dot_zuoyepigai_dot_mistakes__pb2.MistakesListRequest.FromString,
+            response_serializer=yeying_dot_api_dot_apps_dot_zuoyepigai_dot_mistakes__pb2.MistakesListResponse.SerializeToString,
+        ),
+        "Detail": grpc.unary_unary_rpc_method_handler(
+            servicer.Detail,
+            request_deserializer=yeying_dot_api_dot_apps_dot_zuoyepigai_dot_mistakes__pb2.MistakesDetailRequest.FromString,
+            response_serializer=yeying_dot_api_dot_apps_dot_zuoyepigai_dot_mistakes__pb2.MistakesDetailResponse.SerializeToString,
+        ),
+        "Analysis": grpc.unary_unary_rpc_method_handler(
+            servicer.Analysis,
+            request_deserializer=yeying_dot_api_dot_apps_dot_zuoyepigai_dot_mistakes__pb2.MistakesAnalysisRequest.FromString,
+            response_serializer=yeying_dot_api_dot_apps_dot_zuoyepigai_dot_mistakes__pb2.MistakesAnalysisResponse.SerializeToString,
+        ),
+        "MakeCorrection": grpc.unary_unary_rpc_method_handler(
+            servicer.MakeCorrection,
+            request_deserializer=yeying_dot_api_dot_apps_dot_zuoyepigai_dot_mistakes__pb2.MakeCorrectionRequest.FromString,
+            response_serializer=yeying_dot_api_dot_apps_dot_zuoyepigai_dot_mistakes__pb2.MakeCorrectionResponse.SerializeToString,
+        ),
+        "Print": grpc.unary_unary_rpc_method_handler(
+            servicer.Print,
+            request_deserializer=yeying_dot_api_dot_apps_dot_zuoyepigai_dot_mistakes__pb2.MistakesPrintRequest.FromString,
+            response_serializer=yeying_dot_api_dot_apps_dot_zuoyepigai_dot_mistakes__pb2.MistakesPrintResponse.SerializeToString,
+        ),
+        "Submit": grpc.unary_unary_rpc_method_handler(
+            servicer.Submit,
+            request_deserializer=yeying_dot_api_dot_apps_dot_zuoyepigai_dot_mistakes__pb2.MistakesSubmitRequest.FromString,
+            response_serializer=yeying_dot_api_dot_apps_dot_zuoyepigai_dot_mistakes__pb2.MistakesSubmitResponse.SerializeToString,
+        ),
     }
-    generic_handler = grpc.method_handlers_generic_handler(
-            'yeying.api.apps.zuoyepigai.Mistakes', rpc_method_handlers)
+    generic_handler = grpc.method_handlers_generic_handler("yeying.api.apps.zuoyepigai.Mistakes", rpc_method_handlers)
     server.add_generic_rpc_handlers((generic_handler,))
-    server.add_registered_method_handlers('yeying.api.apps.zuoyepigai.Mistakes', rpc_method_handlers)
+    server.add_registered_method_handlers("yeying.api.apps.zuoyepigai.Mistakes", rpc_method_handlers)
 
 
- # This class is part of an EXPERIMENTAL API.
+# This class is part of an EXPERIMENTAL API.
 class Mistakes(object):
     """*
     错题管理
     """
 
     @staticmethod
-    def List(request,
-            target,
-            options=(),
-            channel_credentials=None,
-            call_credentials=None,
-            insecure=False,
-            compression=None,
-            wait_for_ready=None,
-            timeout=None,
-            metadata=None):
+    def List(
+        request,
+        target,
+        options=(),
+        channel_credentials=None,
+        call_credentials=None,
+        insecure=False,
+        compression=None,
+        wait_for_ready=None,
+        timeout=None,
+        metadata=None,
+    ):
         return grpc.experimental.unary_unary(
             request,
             target,
-            '/yeying.api.apps.zuoyepigai.Mistakes/List',
+            "/yeying.api.apps.zuoyepigai.Mistakes/List",
             yeying_dot_api_dot_apps_dot_zuoyepigai_dot_mistakes__pb2.MistakesListRequest.SerializeToString,
             yeying_dot_api_dot_apps_dot_zuoyepigai_dot_mistakes__pb2.MistakesListResponse.FromString,
             options,
@@ -186,23 +188,26 @@ class Mistakes(object):
             wait_for_ready,
             timeout,
             metadata,
-            _registered_method=True)
+            _registered_method=True,
+        )
 
     @staticmethod
-    def Detail(request,
-            target,
-            options=(),
-            channel_credentials=None,
-            call_credentials=None,
-            insecure=False,
-            compression=None,
-            wait_for_ready=None,
-            timeout=None,
-            metadata=None):
+    def Detail(
+        request,
+        target,
+        options=(),
+        channel_credentials=None,
+        call_credentials=None,
+        insecure=False,
+        compression=None,
+        wait_for_ready=None,
+        timeout=None,
+        metadata=None,
+    ):
         return grpc.experimental.unary_unary(
             request,
             target,
-            '/yeying.api.apps.zuoyepigai.Mistakes/Detail',
+            "/yeying.api.apps.zuoyepigai.Mistakes/Detail",
             yeying_dot_api_dot_apps_dot_zuoyepigai_dot_mistakes__pb2.MistakesDetailRequest.SerializeToString,
             yeying_dot_api_dot_apps_dot_zuoyepigai_dot_mistakes__pb2.MistakesDetailResponse.FromString,
             options,
@@ -213,23 +218,26 @@ class Mistakes(object):
             wait_for_ready,
             timeout,
             metadata,
-            _registered_method=True)
+            _registered_method=True,
+        )
 
     @staticmethod
-    def Analysis(request,
-            target,
-            options=(),
-            channel_credentials=None,
-            call_credentials=None,
-            insecure=False,
-            compression=None,
-            wait_for_ready=None,
-            timeout=None,
-            metadata=None):
+    def Analysis(
+        request,
+        target,
+        options=(),
+        channel_credentials=None,
+        call_credentials=None,
+        insecure=False,
+        compression=None,
+        wait_for_ready=None,
+        timeout=None,
+        metadata=None,
+    ):
         return grpc.experimental.unary_unary(
             request,
             target,
-            '/yeying.api.apps.zuoyepigai.Mistakes/Analysis',
+            "/yeying.api.apps.zuoyepigai.Mistakes/Analysis",
             yeying_dot_api_dot_apps_dot_zuoyepigai_dot_mistakes__pb2.MistakesAnalysisRequest.SerializeToString,
             yeying_dot_api_dot_apps_dot_zuoyepigai_dot_mistakes__pb2.MistakesAnalysisResponse.FromString,
             options,
@@ -240,23 +248,26 @@ class Mistakes(object):
             wait_for_ready,
             timeout,
             metadata,
-            _registered_method=True)
+            _registered_method=True,
+        )
 
     @staticmethod
-    def MakeCorrection(request,
-            target,
-            options=(),
-            channel_credentials=None,
-            call_credentials=None,
-            insecure=False,
-            compression=None,
-            wait_for_ready=None,
-            timeout=None,
-            metadata=None):
+    def MakeCorrection(
+        request,
+        target,
+        options=(),
+        channel_credentials=None,
+        call_credentials=None,
+        insecure=False,
+        compression=None,
+        wait_for_ready=None,
+        timeout=None,
+        metadata=None,
+    ):
         return grpc.experimental.unary_unary(
             request,
             target,
-            '/yeying.api.apps.zuoyepigai.Mistakes/MakeCorrection',
+            "/yeying.api.apps.zuoyepigai.Mistakes/MakeCorrection",
             yeying_dot_api_dot_apps_dot_zuoyepigai_dot_mistakes__pb2.MakeCorrectionRequest.SerializeToString,
             yeying_dot_api_dot_apps_dot_zuoyepigai_dot_mistakes__pb2.MakeCorrectionResponse.FromString,
             options,
@@ -267,23 +278,26 @@ class Mistakes(object):
             wait_for_ready,
             timeout,
             metadata,
-            _registered_method=True)
+            _registered_method=True,
+        )
 
     @staticmethod
-    def Print(request,
-            target,
-            options=(),
-            channel_credentials=None,
-            call_credentials=None,
-            insecure=False,
-            compression=None,
-            wait_for_ready=None,
-            timeout=None,
-            metadata=None):
+    def Print(
+        request,
+        target,
+        options=(),
+        channel_credentials=None,
+        call_credentials=None,
+        insecure=False,
+        compression=None,
+        wait_for_ready=None,
+        timeout=None,
+        metadata=None,
+    ):
         return grpc.experimental.unary_unary(
             request,
             target,
-            '/yeying.api.apps.zuoyepigai.Mistakes/Print',
+            "/yeying.api.apps.zuoyepigai.Mistakes/Print",
             yeying_dot_api_dot_apps_dot_zuoyepigai_dot_mistakes__pb2.MistakesPrintRequest.SerializeToString,
             yeying_dot_api_dot_apps_dot_zuoyepigai_dot_mistakes__pb2.MistakesPrintResponse.FromString,
             options,
@@ -294,23 +308,26 @@ class Mistakes(object):
             wait_for_ready,
             timeout,
             metadata,
-            _registered_method=True)
+            _registered_method=True,
+        )
 
     @staticmethod
-    def Submit(request,
-            target,
-            options=(),
-            channel_credentials=None,
-            call_credentials=None,
-            insecure=False,
-            compression=None,
-            wait_for_ready=None,
-            timeout=None,
-            metadata=None):
+    def Submit(
+        request,
+        target,
+        options=(),
+        channel_credentials=None,
+        call_credentials=None,
+        insecure=False,
+        compression=None,
+        wait_for_ready=None,
+        timeout=None,
+        metadata=None,
+    ):
         return grpc.experimental.unary_unary(
             request,
             target,
-            '/yeying.api.apps.zuoyepigai.Mistakes/Submit',
+            "/yeying.api.apps.zuoyepigai.Mistakes/Submit",
             yeying_dot_api_dot_apps_dot_zuoyepigai_dot_mistakes__pb2.MistakesSubmitRequest.SerializeToString,
             yeying_dot_api_dot_apps_dot_zuoyepigai_dot_mistakes__pb2.MistakesSubmitResponse.FromString,
             options,
@@ -321,4 +338,5 @@ class Mistakes(object):
             wait_for_ready,
             timeout,
             metadata,
-            _registered_method=True)
+            _registered_method=True,
+        )

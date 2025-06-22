@@ -5,23 +5,24 @@ import warnings
 
 from yeying.api.apps.zuoyepigai import warehouse_pb2 as yeying_dot_api_dot_apps_dot_zuoyepigai_dot_warehouse__pb2
 
-GRPC_GENERATED_VERSION = '1.68.1'
+GRPC_GENERATED_VERSION = "1.68.1"
 GRPC_VERSION = grpc.__version__
 _version_not_supported = False
 
 try:
     from grpc._utilities import first_version_is_lower
+
     _version_not_supported = first_version_is_lower(GRPC_VERSION, GRPC_GENERATED_VERSION)
 except ImportError:
     _version_not_supported = True
 
 if _version_not_supported:
     raise RuntimeError(
-        f'The grpc package installed is at version {GRPC_VERSION},'
-        + f' but the generated code in yeying/api/apps/zuoyepigai/warehouse_pb2_grpc.py depends on'
-        + f' grpcio>={GRPC_GENERATED_VERSION}.'
-        + f' Please upgrade your grpc module to grpcio>={GRPC_GENERATED_VERSION}'
-        + f' or downgrade your generated code using grpcio-tools<={GRPC_VERSION}.'
+        f"The grpc package installed is at version {GRPC_VERSION},"
+        + f" but the generated code in yeying/api/apps/zuoyepigai/warehouse_pb2_grpc.py depends on"
+        + f" grpcio>={GRPC_GENERATED_VERSION}."
+        + f" Please upgrade your grpc module to grpcio>={GRPC_GENERATED_VERSION}"
+        + f" or downgrade your generated code using grpcio-tools<={GRPC_VERSION}."
     )
 
 
@@ -37,20 +38,23 @@ class WarehouseStub(object):
             channel: A grpc.Channel.
         """
         self.Add = channel.unary_unary(
-                '/yeying.api.apps.zuoyepigai.Warehouse/Add',
-                request_serializer=yeying_dot_api_dot_apps_dot_zuoyepigai_dot_warehouse__pb2.AddWarehouseRequest.SerializeToString,
-                response_deserializer=yeying_dot_api_dot_apps_dot_zuoyepigai_dot_warehouse__pb2.AddWarehouseResponse.FromString,
-                _registered_method=True)
+            "/yeying.api.apps.zuoyepigai.Warehouse/Add",
+            request_serializer=yeying_dot_api_dot_apps_dot_zuoyepigai_dot_warehouse__pb2.AddWarehouseRequest.SerializeToString,
+            response_deserializer=yeying_dot_api_dot_apps_dot_zuoyepigai_dot_warehouse__pb2.AddWarehouseResponse.FromString,
+            _registered_method=True,
+        )
         self.List = channel.unary_unary(
-                '/yeying.api.apps.zuoyepigai.Warehouse/List',
-                request_serializer=yeying_dot_api_dot_apps_dot_zuoyepigai_dot_warehouse__pb2.ListWarehouseRequest.SerializeToString,
-                response_deserializer=yeying_dot_api_dot_apps_dot_zuoyepigai_dot_warehouse__pb2.ListWarehouseResponse.FromString,
-                _registered_method=True)
+            "/yeying.api.apps.zuoyepigai.Warehouse/List",
+            request_serializer=yeying_dot_api_dot_apps_dot_zuoyepigai_dot_warehouse__pb2.ListWarehouseRequest.SerializeToString,
+            response_deserializer=yeying_dot_api_dot_apps_dot_zuoyepigai_dot_warehouse__pb2.ListWarehouseResponse.FromString,
+            _registered_method=True,
+        )
         self.Detail = channel.unary_unary(
-                '/yeying.api.apps.zuoyepigai.Warehouse/Detail',
-                request_serializer=yeying_dot_api_dot_apps_dot_zuoyepigai_dot_warehouse__pb2.DetailWarehouseRequest.SerializeToString,
-                response_deserializer=yeying_dot_api_dot_apps_dot_zuoyepigai_dot_warehouse__pb2.DetailWarehouseResponse.FromString,
-                _registered_method=True)
+            "/yeying.api.apps.zuoyepigai.Warehouse/Detail",
+            request_serializer=yeying_dot_api_dot_apps_dot_zuoyepigai_dot_warehouse__pb2.DetailWarehouseRequest.SerializeToString,
+            response_deserializer=yeying_dot_api_dot_apps_dot_zuoyepigai_dot_warehouse__pb2.DetailWarehouseResponse.FromString,
+            _registered_method=True,
+        )
 
 
 class WarehouseServicer(object):
@@ -66,71 +70,72 @@ class WarehouseServicer(object):
         3: 上传已作答的试卷
         """
         context.set_code(grpc.StatusCode.UNIMPLEMENTED)
-        context.set_details('Method not implemented!')
-        raise NotImplementedError('Method not implemented!')
+        context.set_details("Method not implemented!")
+        raise NotImplementedError("Method not implemented!")
 
     def List(self, request, context):
         """*
         资产列表
         """
         context.set_code(grpc.StatusCode.UNIMPLEMENTED)
-        context.set_details('Method not implemented!')
-        raise NotImplementedError('Method not implemented!')
+        context.set_details("Method not implemented!")
+        raise NotImplementedError("Method not implemented!")
 
     def Detail(self, request, context):
         """*
         资产列表
         """
         context.set_code(grpc.StatusCode.UNIMPLEMENTED)
-        context.set_details('Method not implemented!')
-        raise NotImplementedError('Method not implemented!')
+        context.set_details("Method not implemented!")
+        raise NotImplementedError("Method not implemented!")
 
 
 def add_WarehouseServicer_to_server(servicer, server):
     rpc_method_handlers = {
-            'Add': grpc.unary_unary_rpc_method_handler(
-                    servicer.Add,
-                    request_deserializer=yeying_dot_api_dot_apps_dot_zuoyepigai_dot_warehouse__pb2.AddWarehouseRequest.FromString,
-                    response_serializer=yeying_dot_api_dot_apps_dot_zuoyepigai_dot_warehouse__pb2.AddWarehouseResponse.SerializeToString,
-            ),
-            'List': grpc.unary_unary_rpc_method_handler(
-                    servicer.List,
-                    request_deserializer=yeying_dot_api_dot_apps_dot_zuoyepigai_dot_warehouse__pb2.ListWarehouseRequest.FromString,
-                    response_serializer=yeying_dot_api_dot_apps_dot_zuoyepigai_dot_warehouse__pb2.ListWarehouseResponse.SerializeToString,
-            ),
-            'Detail': grpc.unary_unary_rpc_method_handler(
-                    servicer.Detail,
-                    request_deserializer=yeying_dot_api_dot_apps_dot_zuoyepigai_dot_warehouse__pb2.DetailWarehouseRequest.FromString,
-                    response_serializer=yeying_dot_api_dot_apps_dot_zuoyepigai_dot_warehouse__pb2.DetailWarehouseResponse.SerializeToString,
-            ),
+        "Add": grpc.unary_unary_rpc_method_handler(
+            servicer.Add,
+            request_deserializer=yeying_dot_api_dot_apps_dot_zuoyepigai_dot_warehouse__pb2.AddWarehouseRequest.FromString,
+            response_serializer=yeying_dot_api_dot_apps_dot_zuoyepigai_dot_warehouse__pb2.AddWarehouseResponse.SerializeToString,
+        ),
+        "List": grpc.unary_unary_rpc_method_handler(
+            servicer.List,
+            request_deserializer=yeying_dot_api_dot_apps_dot_zuoyepigai_dot_warehouse__pb2.ListWarehouseRequest.FromString,
+            response_serializer=yeying_dot_api_dot_apps_dot_zuoyepigai_dot_warehouse__pb2.ListWarehouseResponse.SerializeToString,
+        ),
+        "Detail": grpc.unary_unary_rpc_method_handler(
+            servicer.Detail,
+            request_deserializer=yeying_dot_api_dot_apps_dot_zuoyepigai_dot_warehouse__pb2.DetailWarehouseRequest.FromString,
+            response_serializer=yeying_dot_api_dot_apps_dot_zuoyepigai_dot_warehouse__pb2.DetailWarehouseResponse.SerializeToString,
+        ),
     }
-    generic_handler = grpc.method_handlers_generic_handler(
-            'yeying.api.apps.zuoyepigai.Warehouse', rpc_method_handlers)
+    generic_handler = grpc.method_handlers_generic_handler("yeying.api.apps.zuoyepigai.Warehouse", rpc_method_handlers)
     server.add_generic_rpc_handlers((generic_handler,))
-    server.add_registered_method_handlers('yeying.api.apps.zuoyepigai.Warehouse', rpc_method_handlers)
+    server.add_registered_method_handlers("yeying.api.apps.zuoyepigai.Warehouse", rpc_method_handlers)
 
 
- # This class is part of an EXPERIMENTAL API.
+# This class is part of an EXPERIMENTAL API.
 class Warehouse(object):
     """*
     资产仓库管理
     """
 
     @staticmethod
-    def Add(request,
-            target,
-            options=(),
-            channel_credentials=None,
-            call_credentials=None,
-            insecure=False,
-            compression=None,
-            wait_for_ready=None,
-            timeout=None,
-            metadata=None):
+    def Add(
+        request,
+        target,
+        options=(),
+        channel_credentials=None,
+        call_credentials=None,
+        insecure=False,
+        compression=None,
+        wait_for_ready=None,
+        timeout=None,
+        metadata=None,
+    ):
         return grpc.experimental.unary_unary(
             request,
             target,
-            '/yeying.api.apps.zuoyepigai.Warehouse/Add',
+            "/yeying.api.apps.zuoyepigai.Warehouse/Add",
             yeying_dot_api_dot_apps_dot_zuoyepigai_dot_warehouse__pb2.AddWarehouseRequest.SerializeToString,
             yeying_dot_api_dot_apps_dot_zuoyepigai_dot_warehouse__pb2.AddWarehouseResponse.FromString,
             options,
@@ -141,23 +146,26 @@ class Warehouse(object):
             wait_for_ready,
             timeout,
             metadata,
-            _registered_method=True)
+            _registered_method=True,
+        )
 
     @staticmethod
-    def List(request,
-            target,
-            options=(),
-            channel_credentials=None,
-            call_credentials=None,
-            insecure=False,
-            compression=None,
-            wait_for_ready=None,
-            timeout=None,
-            metadata=None):
+    def List(
+        request,
+        target,
+        options=(),
+        channel_credentials=None,
+        call_credentials=None,
+        insecure=False,
+        compression=None,
+        wait_for_ready=None,
+        timeout=None,
+        metadata=None,
+    ):
         return grpc.experimental.unary_unary(
             request,
             target,
-            '/yeying.api.apps.zuoyepigai.Warehouse/List',
+            "/yeying.api.apps.zuoyepigai.Warehouse/List",
             yeying_dot_api_dot_apps_dot_zuoyepigai_dot_warehouse__pb2.ListWarehouseRequest.SerializeToString,
             yeying_dot_api_dot_apps_dot_zuoyepigai_dot_warehouse__pb2.ListWarehouseResponse.FromString,
             options,
@@ -168,23 +176,26 @@ class Warehouse(object):
             wait_for_ready,
             timeout,
             metadata,
-            _registered_method=True)
+            _registered_method=True,
+        )
 
     @staticmethod
-    def Detail(request,
-            target,
-            options=(),
-            channel_credentials=None,
-            call_credentials=None,
-            insecure=False,
-            compression=None,
-            wait_for_ready=None,
-            timeout=None,
-            metadata=None):
+    def Detail(
+        request,
+        target,
+        options=(),
+        channel_credentials=None,
+        call_credentials=None,
+        insecure=False,
+        compression=None,
+        wait_for_ready=None,
+        timeout=None,
+        metadata=None,
+    ):
         return grpc.experimental.unary_unary(
             request,
             target,
-            '/yeying.api.apps.zuoyepigai.Warehouse/Detail',
+            "/yeying.api.apps.zuoyepigai.Warehouse/Detail",
             yeying_dot_api_dot_apps_dot_zuoyepigai_dot_warehouse__pb2.DetailWarehouseRequest.SerializeToString,
             yeying_dot_api_dot_apps_dot_zuoyepigai_dot_warehouse__pb2.DetailWarehouseResponse.FromString,
             options,
@@ -195,4 +206,5 @@ class Warehouse(object):
             wait_for_ready,
             timeout,
             metadata,
-            _registered_method=True)
+            _registered_method=True,
+        )

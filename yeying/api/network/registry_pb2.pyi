@@ -3,7 +3,13 @@ from google.protobuf.internal import containers as _containers
 from google.protobuf.internal import enum_type_wrapper as _enum_type_wrapper
 from google.protobuf import descriptor as _descriptor
 from google.protobuf import message as _message
-from typing import ClassVar as _ClassVar, Iterable as _Iterable, Mapping as _Mapping, Optional as _Optional, Union as _Union
+from typing import (
+    ClassVar as _ClassVar,
+    Iterable as _Iterable,
+    Mapping as _Mapping,
+    Optional as _Optional,
+    Union as _Union,
+)
 
 DESCRIPTOR: _descriptor.FileDescriptor
 
@@ -11,6 +17,7 @@ class RegisterStatus(int, metaclass=_enum_type_wrapper.EnumTypeWrapper):
     __slots__ = ()
     SUCCESS: _ClassVar[RegisterStatus]
     REGISTERED: _ClassVar[RegisterStatus]
+
 SUCCESS: RegisterStatus
 REGISTERED: RegisterStatus
 
@@ -32,7 +39,12 @@ class ExitRequest(_message.Message):
     did: str
     peer: Peer
     contract: Contract
-    def __init__(self, did: _Optional[str] = ..., peer: _Optional[_Union[Peer, _Mapping]] = ..., contract: _Optional[_Union[Contract, _Mapping]] = ...) -> None: ...
+    def __init__(
+        self,
+        did: _Optional[str] = ...,
+        peer: _Optional[_Union[Peer, _Mapping]] = ...,
+        contract: _Optional[_Union[Contract, _Mapping]] = ...,
+    ) -> None: ...
 
 class Peer(_message.Message):
     __slots__ = ("id",)
@@ -54,7 +66,12 @@ class JoinRequest(_message.Message):
     did: str
     peer: Peer
     contract: Contract
-    def __init__(self, did: _Optional[str] = ..., peer: _Optional[_Union[Peer, _Mapping]] = ..., contract: _Optional[_Union[Contract, _Mapping]] = ...) -> None: ...
+    def __init__(
+        self,
+        did: _Optional[str] = ...,
+        peer: _Optional[_Union[Peer, _Mapping]] = ...,
+        contract: _Optional[_Union[Contract, _Mapping]] = ...,
+    ) -> None: ...
 
 class JoinResponse(_message.Message):
     __slots__ = ("status", "contract")
@@ -62,7 +79,11 @@ class JoinResponse(_message.Message):
     CONTRACT_FIELD_NUMBER: _ClassVar[int]
     status: RegisterStatus
     contract: Contract
-    def __init__(self, status: _Optional[_Union[RegisterStatus, str]] = ..., contract: _Optional[_Union[Contract, _Mapping]] = ...) -> None: ...
+    def __init__(
+        self,
+        status: _Optional[_Union[RegisterStatus, str]] = ...,
+        contract: _Optional[_Union[Contract, _Mapping]] = ...,
+    ) -> None: ...
 
 class Contract(_message.Message):
     __slots__ = ("address",)

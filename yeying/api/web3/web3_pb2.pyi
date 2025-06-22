@@ -2,7 +2,13 @@ from google.protobuf.internal import containers as _containers
 from google.protobuf.internal import enum_type_wrapper as _enum_type_wrapper
 from google.protobuf import descriptor as _descriptor
 from google.protobuf import message as _message
-from typing import ClassVar as _ClassVar, Iterable as _Iterable, Mapping as _Mapping, Optional as _Optional, Union as _Union
+from typing import (
+    ClassVar as _ClassVar,
+    Iterable as _Iterable,
+    Mapping as _Mapping,
+    Optional as _Optional,
+    Union as _Union,
+)
 
 DESCRIPTOR: _descriptor.FileDescriptor
 
@@ -19,6 +25,7 @@ class NetworkTypeEnum(int, metaclass=_enum_type_wrapper.EnumTypeWrapper):
     __slots__ = ()
     NETWORK_TYPE_UNKNOWN: _ClassVar[NetworkTypeEnum]
     NETWORK_TYPE_YEYING: _ClassVar[NetworkTypeEnum]
+
 IDENTITY_CODE_UNKNOWN: IdentityCodeEnum
 IDENTITY_CODE_PERSONAL: IdentityCodeEnum
 IDENTITY_CODE_ORGANIZATION: IdentityCodeEnum
@@ -29,7 +36,17 @@ NETWORK_TYPE_UNKNOWN: NetworkTypeEnum
 NETWORK_TYPE_YEYING: NetworkTypeEnum
 
 class Identity(_message.Message):
-    __slots__ = ("metadata", "blockAddress", "securityConfig", "registry", "signature", "personalExtend", "serviceExtend", "organizationExtend", "applicationExtend")
+    __slots__ = (
+        "metadata",
+        "blockAddress",
+        "securityConfig",
+        "registry",
+        "signature",
+        "personalExtend",
+        "serviceExtend",
+        "organizationExtend",
+        "applicationExtend",
+    )
     METADATA_FIELD_NUMBER: _ClassVar[int]
     BLOCKADDRESS_FIELD_NUMBER: _ClassVar[int]
     SECURITYCONFIG_FIELD_NUMBER: _ClassVar[int]
@@ -48,7 +65,18 @@ class Identity(_message.Message):
     serviceExtend: IdentityServiceExtend
     organizationExtend: IdentityOrganizationExtend
     applicationExtend: IdentityApplicationExtend
-    def __init__(self, metadata: _Optional[_Union[IdentityMetadata, _Mapping]] = ..., blockAddress: _Optional[str] = ..., securityConfig: _Optional[_Union[SecurityConfig, _Mapping]] = ..., registry: _Optional[_Union[Registry, _Mapping]] = ..., signature: _Optional[str] = ..., personalExtend: _Optional[_Union[IdentityPersonalExtend, _Mapping]] = ..., serviceExtend: _Optional[_Union[IdentityServiceExtend, _Mapping]] = ..., organizationExtend: _Optional[_Union[IdentityOrganizationExtend, _Mapping]] = ..., applicationExtend: _Optional[_Union[IdentityApplicationExtend, _Mapping]] = ...) -> None: ...
+    def __init__(
+        self,
+        metadata: _Optional[_Union[IdentityMetadata, _Mapping]] = ...,
+        blockAddress: _Optional[str] = ...,
+        securityConfig: _Optional[_Union[SecurityConfig, _Mapping]] = ...,
+        registry: _Optional[_Union[Registry, _Mapping]] = ...,
+        signature: _Optional[str] = ...,
+        personalExtend: _Optional[_Union[IdentityPersonalExtend, _Mapping]] = ...,
+        serviceExtend: _Optional[_Union[IdentityServiceExtend, _Mapping]] = ...,
+        organizationExtend: _Optional[_Union[IdentityOrganizationExtend, _Mapping]] = ...,
+        applicationExtend: _Optional[_Union[IdentityApplicationExtend, _Mapping]] = ...,
+    ) -> None: ...
 
 class Registry(_message.Message):
     __slots__ = ("nodes",)
@@ -57,7 +85,19 @@ class Registry(_message.Message):
     def __init__(self, nodes: _Optional[_Iterable[str]] = ...) -> None: ...
 
 class IdentityMetadata(_message.Message):
-    __slots__ = ("parent", "network", "did", "version", "address", "name", "description", "code", "avatar", "createdAt", "updatedAt")
+    __slots__ = (
+        "parent",
+        "network",
+        "did",
+        "version",
+        "address",
+        "name",
+        "description",
+        "code",
+        "avatar",
+        "createdAt",
+        "updatedAt",
+    )
     PARENT_FIELD_NUMBER: _ClassVar[int]
     NETWORK_FIELD_NUMBER: _ClassVar[int]
     DID_FIELD_NUMBER: _ClassVar[int]
@@ -80,7 +120,20 @@ class IdentityMetadata(_message.Message):
     avatar: str
     createdAt: str
     updatedAt: str
-    def __init__(self, parent: _Optional[str] = ..., network: _Optional[_Union[NetworkTypeEnum, str]] = ..., did: _Optional[str] = ..., version: _Optional[int] = ..., address: _Optional[str] = ..., name: _Optional[str] = ..., description: _Optional[str] = ..., code: _Optional[_Union[IdentityCodeEnum, str]] = ..., avatar: _Optional[str] = ..., createdAt: _Optional[str] = ..., updatedAt: _Optional[str] = ...) -> None: ...
+    def __init__(
+        self,
+        parent: _Optional[str] = ...,
+        network: _Optional[_Union[NetworkTypeEnum, str]] = ...,
+        did: _Optional[str] = ...,
+        version: _Optional[int] = ...,
+        address: _Optional[str] = ...,
+        name: _Optional[str] = ...,
+        description: _Optional[str] = ...,
+        code: _Optional[_Union[IdentityCodeEnum, str]] = ...,
+        avatar: _Optional[str] = ...,
+        createdAt: _Optional[str] = ...,
+        updatedAt: _Optional[str] = ...,
+    ) -> None: ...
 
 class BlockAddress(_message.Message):
     __slots__ = ("identifier", "address", "privateKey", "publicKey", "mnemonic")
@@ -94,7 +147,14 @@ class BlockAddress(_message.Message):
     privateKey: str
     publicKey: str
     mnemonic: Mnemonic
-    def __init__(self, identifier: _Optional[str] = ..., address: _Optional[str] = ..., privateKey: _Optional[str] = ..., publicKey: _Optional[str] = ..., mnemonic: _Optional[_Union[Mnemonic, _Mapping]] = ...) -> None: ...
+    def __init__(
+        self,
+        identifier: _Optional[str] = ...,
+        address: _Optional[str] = ...,
+        privateKey: _Optional[str] = ...,
+        publicKey: _Optional[str] = ...,
+        mnemonic: _Optional[_Union[Mnemonic, _Mapping]] = ...,
+    ) -> None: ...
 
 class Mnemonic(_message.Message):
     __slots__ = ("phrase", "path", "locale", "password")
@@ -106,7 +166,13 @@ class Mnemonic(_message.Message):
     path: str
     locale: str
     password: str
-    def __init__(self, phrase: _Optional[str] = ..., path: _Optional[str] = ..., locale: _Optional[str] = ..., password: _Optional[str] = ...) -> None: ...
+    def __init__(
+        self,
+        phrase: _Optional[str] = ...,
+        path: _Optional[str] = ...,
+        locale: _Optional[str] = ...,
+        password: _Optional[str] = ...,
+    ) -> None: ...
 
 class IdentityServiceExtend(_message.Message):
     __slots__ = ("code", "apiCodes", "proxy", "grpc", "extend")
@@ -120,7 +186,14 @@ class IdentityServiceExtend(_message.Message):
     proxy: str
     grpc: str
     extend: str
-    def __init__(self, code: _Optional[str] = ..., apiCodes: _Optional[str] = ..., proxy: _Optional[str] = ..., grpc: _Optional[str] = ..., extend: _Optional[str] = ...) -> None: ...
+    def __init__(
+        self,
+        code: _Optional[str] = ...,
+        apiCodes: _Optional[str] = ...,
+        proxy: _Optional[str] = ...,
+        grpc: _Optional[str] = ...,
+        extend: _Optional[str] = ...,
+    ) -> None: ...
 
 class IdentityOrganizationExtend(_message.Message):
     __slots__ = ("address", "code", "extend")
@@ -130,7 +203,9 @@ class IdentityOrganizationExtend(_message.Message):
     address: str
     code: str
     extend: str
-    def __init__(self, address: _Optional[str] = ..., code: _Optional[str] = ..., extend: _Optional[str] = ...) -> None: ...
+    def __init__(
+        self, address: _Optional[str] = ..., code: _Optional[str] = ..., extend: _Optional[str] = ...
+    ) -> None: ...
 
 class IdentityPersonalExtend(_message.Message):
     __slots__ = ("email", "telephone", "extend")
@@ -140,7 +215,9 @@ class IdentityPersonalExtend(_message.Message):
     email: str
     telephone: str
     extend: str
-    def __init__(self, email: _Optional[str] = ..., telephone: _Optional[str] = ..., extend: _Optional[str] = ...) -> None: ...
+    def __init__(
+        self, email: _Optional[str] = ..., telephone: _Optional[str] = ..., extend: _Optional[str] = ...
+    ) -> None: ...
 
 class IdentityApplicationExtend(_message.Message):
     __slots__ = ("code", "serviceCodes", "location", "hash", "extend")
@@ -154,7 +231,14 @@ class IdentityApplicationExtend(_message.Message):
     location: str
     hash: str
     extend: str
-    def __init__(self, code: _Optional[str] = ..., serviceCodes: _Optional[str] = ..., location: _Optional[str] = ..., hash: _Optional[str] = ..., extend: _Optional[str] = ...) -> None: ...
+    def __init__(
+        self,
+        code: _Optional[str] = ...,
+        serviceCodes: _Optional[str] = ...,
+        location: _Optional[str] = ...,
+        hash: _Optional[str] = ...,
+        extend: _Optional[str] = ...,
+    ) -> None: ...
 
 class SecurityConfig(_message.Message):
     __slots__ = ("algorithm",)

@@ -19,7 +19,15 @@ class MessageHeader(_message.Message):
     nonce: str
     timestamp: str
     version: int
-    def __init__(self, did: _Optional[str] = ..., authType: _Optional[_Union[_code_pb2.AuthenticateTypeEnum, str]] = ..., authContent: _Optional[str] = ..., nonce: _Optional[str] = ..., timestamp: _Optional[str] = ..., version: _Optional[int] = ...) -> None: ...
+    def __init__(
+        self,
+        did: _Optional[str] = ...,
+        authType: _Optional[_Union[_code_pb2.AuthenticateTypeEnum, str]] = ...,
+        authContent: _Optional[str] = ...,
+        nonce: _Optional[str] = ...,
+        timestamp: _Optional[str] = ...,
+        version: _Optional[int] = ...,
+    ) -> None: ...
 
 class ResponseStatus(_message.Message):
     __slots__ = ("code", "message")
@@ -27,7 +35,9 @@ class ResponseStatus(_message.Message):
     MESSAGE_FIELD_NUMBER: _ClassVar[int]
     code: _code_pb2.ResponseCodeEnum
     message: str
-    def __init__(self, code: _Optional[_Union[_code_pb2.ResponseCodeEnum, str]] = ..., message: _Optional[str] = ...) -> None: ...
+    def __init__(
+        self, code: _Optional[_Union[_code_pb2.ResponseCodeEnum, str]] = ..., message: _Optional[str] = ...
+    ) -> None: ...
 
 class ResponsePage(_message.Message):
     __slots__ = ("total", "page", "pageSize")
@@ -37,7 +47,9 @@ class ResponsePage(_message.Message):
     total: int
     page: int
     pageSize: int
-    def __init__(self, total: _Optional[int] = ..., page: _Optional[int] = ..., pageSize: _Optional[int] = ...) -> None: ...
+    def __init__(
+        self, total: _Optional[int] = ..., page: _Optional[int] = ..., pageSize: _Optional[int] = ...
+    ) -> None: ...
 
 class RequestPage(_message.Message):
     __slots__ = ("page", "pageSize")

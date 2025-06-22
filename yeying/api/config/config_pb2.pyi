@@ -11,6 +11,7 @@ class ConfigTypeEnum(int, metaclass=_enum_type_wrapper.EnumTypeWrapper):
     CONFIG_TYPE_UNKNOWN: _ClassVar[ConfigTypeEnum]
     CONFIG_TYPE_SYSTEM: _ClassVar[ConfigTypeEnum]
     CONFIG_TYPE_USER: _ClassVar[ConfigTypeEnum]
+
 CONFIG_TYPE_UNKNOWN: ConfigTypeEnum
 CONFIG_TYPE_SYSTEM: ConfigTypeEnum
 CONFIG_TYPE_USER: ConfigTypeEnum
@@ -21,7 +22,11 @@ class GetConfigRequest(_message.Message):
     BODY_FIELD_NUMBER: _ClassVar[int]
     header: _message_pb2.MessageHeader
     body: GetConfigRequestBody
-    def __init__(self, header: _Optional[_Union[_message_pb2.MessageHeader, _Mapping]] = ..., body: _Optional[_Union[GetConfigRequestBody, _Mapping]] = ...) -> None: ...
+    def __init__(
+        self,
+        header: _Optional[_Union[_message_pb2.MessageHeader, _Mapping]] = ...,
+        body: _Optional[_Union[GetConfigRequestBody, _Mapping]] = ...,
+    ) -> None: ...
 
 class GetConfigRequestBody(_message.Message):
     __slots__ = ("key", "type")
@@ -37,7 +42,11 @@ class GetConfigResponse(_message.Message):
     BODY_FIELD_NUMBER: _ClassVar[int]
     header: _message_pb2.MessageHeader
     body: GetConfigResponseBody
-    def __init__(self, header: _Optional[_Union[_message_pb2.MessageHeader, _Mapping]] = ..., body: _Optional[_Union[GetConfigResponseBody, _Mapping]] = ...) -> None: ...
+    def __init__(
+        self,
+        header: _Optional[_Union[_message_pb2.MessageHeader, _Mapping]] = ...,
+        body: _Optional[_Union[GetConfigResponseBody, _Mapping]] = ...,
+    ) -> None: ...
 
 class GetConfigResponseBody(_message.Message):
     __slots__ = ("status", "config")
@@ -45,7 +54,11 @@ class GetConfigResponseBody(_message.Message):
     CONFIG_FIELD_NUMBER: _ClassVar[int]
     status: _message_pb2.ResponseStatus
     config: ConfigMetadata
-    def __init__(self, status: _Optional[_Union[_message_pb2.ResponseStatus, _Mapping]] = ..., config: _Optional[_Union[ConfigMetadata, _Mapping]] = ...) -> None: ...
+    def __init__(
+        self,
+        status: _Optional[_Union[_message_pb2.ResponseStatus, _Mapping]] = ...,
+        config: _Optional[_Union[ConfigMetadata, _Mapping]] = ...,
+    ) -> None: ...
 
 class SetConfigRequest(_message.Message):
     __slots__ = ("header", "body")
@@ -53,7 +66,11 @@ class SetConfigRequest(_message.Message):
     BODY_FIELD_NUMBER: _ClassVar[int]
     header: _message_pb2.MessageHeader
     body: SetConfigRequestBody
-    def __init__(self, header: _Optional[_Union[_message_pb2.MessageHeader, _Mapping]] = ..., body: _Optional[_Union[SetConfigRequestBody, _Mapping]] = ...) -> None: ...
+    def __init__(
+        self,
+        header: _Optional[_Union[_message_pb2.MessageHeader, _Mapping]] = ...,
+        body: _Optional[_Union[SetConfigRequestBody, _Mapping]] = ...,
+    ) -> None: ...
 
 class SetConfigRequestBody(_message.Message):
     __slots__ = ("config",)
@@ -67,7 +84,11 @@ class SetConfigResponse(_message.Message):
     BODY_FIELD_NUMBER: _ClassVar[int]
     header: _message_pb2.MessageHeader
     body: SetConfigResponseBody
-    def __init__(self, header: _Optional[_Union[_message_pb2.MessageHeader, _Mapping]] = ..., body: _Optional[_Union[SetConfigResponseBody, _Mapping]] = ...) -> None: ...
+    def __init__(
+        self,
+        header: _Optional[_Union[_message_pb2.MessageHeader, _Mapping]] = ...,
+        body: _Optional[_Union[SetConfigResponseBody, _Mapping]] = ...,
+    ) -> None: ...
 
 class SetConfigResponseBody(_message.Message):
     __slots__ = ("status", "config")
@@ -75,7 +96,11 @@ class SetConfigResponseBody(_message.Message):
     CONFIG_FIELD_NUMBER: _ClassVar[int]
     status: _message_pb2.ResponseStatus
     config: ConfigMetadata
-    def __init__(self, status: _Optional[_Union[_message_pb2.ResponseStatus, _Mapping]] = ..., config: _Optional[_Union[ConfigMetadata, _Mapping]] = ...) -> None: ...
+    def __init__(
+        self,
+        status: _Optional[_Union[_message_pb2.ResponseStatus, _Mapping]] = ...,
+        config: _Optional[_Union[ConfigMetadata, _Mapping]] = ...,
+    ) -> None: ...
 
 class ConfigMetadata(_message.Message):
     __slots__ = ("owner", "key", "value", "createdAt", "updatedAt", "signature")
@@ -91,4 +116,12 @@ class ConfigMetadata(_message.Message):
     createdAt: str
     updatedAt: str
     signature: str
-    def __init__(self, owner: _Optional[str] = ..., key: _Optional[str] = ..., value: _Optional[str] = ..., createdAt: _Optional[str] = ..., updatedAt: _Optional[str] = ..., signature: _Optional[str] = ...) -> None: ...
+    def __init__(
+        self,
+        owner: _Optional[str] = ...,
+        key: _Optional[str] = ...,
+        value: _Optional[str] = ...,
+        createdAt: _Optional[str] = ...,
+        updatedAt: _Optional[str] = ...,
+        signature: _Optional[str] = ...,
+    ) -> None: ...

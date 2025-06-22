@@ -5,23 +5,24 @@ import warnings
 
 from yeying.api.asset import link_pb2 as yeying_dot_api_dot_asset_dot_link__pb2
 
-GRPC_GENERATED_VERSION = '1.68.1'
+GRPC_GENERATED_VERSION = "1.68.1"
 GRPC_VERSION = grpc.__version__
 _version_not_supported = False
 
 try:
     from grpc._utilities import first_version_is_lower
+
     _version_not_supported = first_version_is_lower(GRPC_VERSION, GRPC_GENERATED_VERSION)
 except ImportError:
     _version_not_supported = True
 
 if _version_not_supported:
     raise RuntimeError(
-        f'The grpc package installed is at version {GRPC_VERSION},'
-        + f' but the generated code in yeying/api/asset/link_pb2_grpc.py depends on'
-        + f' grpcio>={GRPC_GENERATED_VERSION}.'
-        + f' Please upgrade your grpc module to grpcio>={GRPC_GENERATED_VERSION}'
-        + f' or downgrade your generated code using grpcio-tools<={GRPC_VERSION}.'
+        f"The grpc package installed is at version {GRPC_VERSION},"
+        + f" but the generated code in yeying/api/asset/link_pb2_grpc.py depends on"
+        + f" grpcio>={GRPC_GENERATED_VERSION}."
+        + f" Please upgrade your grpc module to grpcio>={GRPC_GENERATED_VERSION}"
+        + f" or downgrade your generated code using grpcio-tools<={GRPC_VERSION}."
     )
 
 
@@ -35,141 +36,142 @@ class LinkStub(object):
             channel: A grpc.Channel.
         """
         self.Create = channel.unary_unary(
-                '/yeying.api.asset.Link/Create',
-                request_serializer=yeying_dot_api_dot_asset_dot_link__pb2.CreateLinkRequest.SerializeToString,
-                response_deserializer=yeying_dot_api_dot_asset_dot_link__pb2.CreateLinkResponse.FromString,
-                _registered_method=True)
+            "/yeying.api.asset.Link/Create",
+            request_serializer=yeying_dot_api_dot_asset_dot_link__pb2.CreateLinkRequest.SerializeToString,
+            response_deserializer=yeying_dot_api_dot_asset_dot_link__pb2.CreateLinkResponse.FromString,
+            _registered_method=True,
+        )
         self.Search = channel.unary_unary(
-                '/yeying.api.asset.Link/Search',
-                request_serializer=yeying_dot_api_dot_asset_dot_link__pb2.SearchLinkRequest.SerializeToString,
-                response_deserializer=yeying_dot_api_dot_asset_dot_link__pb2.SearchLinkResponse.FromString,
-                _registered_method=True)
+            "/yeying.api.asset.Link/Search",
+            request_serializer=yeying_dot_api_dot_asset_dot_link__pb2.SearchLinkRequest.SerializeToString,
+            response_deserializer=yeying_dot_api_dot_asset_dot_link__pb2.SearchLinkResponse.FromString,
+            _registered_method=True,
+        )
         self.Detail = channel.unary_unary(
-                '/yeying.api.asset.Link/Detail',
-                request_serializer=yeying_dot_api_dot_asset_dot_link__pb2.LinkDetailRequest.SerializeToString,
-                response_deserializer=yeying_dot_api_dot_asset_dot_link__pb2.LinkDetailResponse.FromString,
-                _registered_method=True)
+            "/yeying.api.asset.Link/Detail",
+            request_serializer=yeying_dot_api_dot_asset_dot_link__pb2.LinkDetailRequest.SerializeToString,
+            response_deserializer=yeying_dot_api_dot_asset_dot_link__pb2.LinkDetailResponse.FromString,
+            _registered_method=True,
+        )
         self.Visitor = channel.unary_unary(
-                '/yeying.api.asset.Link/Visitor',
-                request_serializer=yeying_dot_api_dot_asset_dot_link__pb2.LinkVisitorRequest.SerializeToString,
-                response_deserializer=yeying_dot_api_dot_asset_dot_link__pb2.LinkVisitorResponse.FromString,
-                _registered_method=True)
+            "/yeying.api.asset.Link/Visitor",
+            request_serializer=yeying_dot_api_dot_asset_dot_link__pb2.LinkVisitorRequest.SerializeToString,
+            response_deserializer=yeying_dot_api_dot_asset_dot_link__pb2.LinkVisitorResponse.FromString,
+            _registered_method=True,
+        )
         self.Disable = channel.unary_unary(
-                '/yeying.api.asset.Link/Disable',
-                request_serializer=yeying_dot_api_dot_asset_dot_link__pb2.DisableLinkRequest.SerializeToString,
-                response_deserializer=yeying_dot_api_dot_asset_dot_link__pb2.DisableLinkResponse.FromString,
-                _registered_method=True)
+            "/yeying.api.asset.Link/Disable",
+            request_serializer=yeying_dot_api_dot_asset_dot_link__pb2.DisableLinkRequest.SerializeToString,
+            response_deserializer=yeying_dot_api_dot_asset_dot_link__pb2.DisableLinkResponse.FromString,
+            _registered_method=True,
+        )
         self.Update = channel.unary_unary(
-                '/yeying.api.asset.Link/Update',
-                request_serializer=yeying_dot_api_dot_asset_dot_link__pb2.UpdateLinkRequest.SerializeToString,
-                response_deserializer=yeying_dot_api_dot_asset_dot_link__pb2.UpdateLinkResponse.FromString,
-                _registered_method=True)
+            "/yeying.api.asset.Link/Update",
+            request_serializer=yeying_dot_api_dot_asset_dot_link__pb2.UpdateLinkRequest.SerializeToString,
+            response_deserializer=yeying_dot_api_dot_asset_dot_link__pb2.UpdateLinkResponse.FromString,
+            _registered_method=True,
+        )
 
 
 class LinkServicer(object):
     """Missing associated documentation comment in .proto file."""
 
     def Create(self, request, context):
-        """创建资产分享链接
-        """
+        """创建资产分享链接"""
         context.set_code(grpc.StatusCode.UNIMPLEMENTED)
-        context.set_details('Method not implemented!')
-        raise NotImplementedError('Method not implemented!')
+        context.set_details("Method not implemented!")
+        raise NotImplementedError("Method not implemented!")
 
     def Search(self, request, context):
-        """搜索资产分享链接
-        """
+        """搜索资产分享链接"""
         context.set_code(grpc.StatusCode.UNIMPLEMENTED)
-        context.set_details('Method not implemented!')
-        raise NotImplementedError('Method not implemented!')
+        context.set_details("Method not implemented!")
+        raise NotImplementedError("Method not implemented!")
 
     def Detail(self, request, context):
-        """获得分享链接明细
-        """
+        """获得分享链接明细"""
         context.set_code(grpc.StatusCode.UNIMPLEMENTED)
-        context.set_details('Method not implemented!')
-        raise NotImplementedError('Method not implemented!')
+        context.set_details("Method not implemented!")
+        raise NotImplementedError("Method not implemented!")
 
     def Visitor(self, request, context):
-        """分享链接的访问信息
-        """
+        """分享链接的访问信息"""
         context.set_code(grpc.StatusCode.UNIMPLEMENTED)
-        context.set_details('Method not implemented!')
-        raise NotImplementedError('Method not implemented!')
+        context.set_details("Method not implemented!")
+        raise NotImplementedError("Method not implemented!")
 
     def Disable(self, request, context):
-        """取消分享
-        """
+        """取消分享"""
         context.set_code(grpc.StatusCode.UNIMPLEMENTED)
-        context.set_details('Method not implemented!')
-        raise NotImplementedError('Method not implemented!')
+        context.set_details("Method not implemented!")
+        raise NotImplementedError("Method not implemented!")
 
     def Update(self, request, context):
-        """更新资产分享链接，实现变更、取消等功能
-        """
+        """更新资产分享链接，实现变更、取消等功能"""
         context.set_code(grpc.StatusCode.UNIMPLEMENTED)
-        context.set_details('Method not implemented!')
-        raise NotImplementedError('Method not implemented!')
+        context.set_details("Method not implemented!")
+        raise NotImplementedError("Method not implemented!")
 
 
 def add_LinkServicer_to_server(servicer, server):
     rpc_method_handlers = {
-            'Create': grpc.unary_unary_rpc_method_handler(
-                    servicer.Create,
-                    request_deserializer=yeying_dot_api_dot_asset_dot_link__pb2.CreateLinkRequest.FromString,
-                    response_serializer=yeying_dot_api_dot_asset_dot_link__pb2.CreateLinkResponse.SerializeToString,
-            ),
-            'Search': grpc.unary_unary_rpc_method_handler(
-                    servicer.Search,
-                    request_deserializer=yeying_dot_api_dot_asset_dot_link__pb2.SearchLinkRequest.FromString,
-                    response_serializer=yeying_dot_api_dot_asset_dot_link__pb2.SearchLinkResponse.SerializeToString,
-            ),
-            'Detail': grpc.unary_unary_rpc_method_handler(
-                    servicer.Detail,
-                    request_deserializer=yeying_dot_api_dot_asset_dot_link__pb2.LinkDetailRequest.FromString,
-                    response_serializer=yeying_dot_api_dot_asset_dot_link__pb2.LinkDetailResponse.SerializeToString,
-            ),
-            'Visitor': grpc.unary_unary_rpc_method_handler(
-                    servicer.Visitor,
-                    request_deserializer=yeying_dot_api_dot_asset_dot_link__pb2.LinkVisitorRequest.FromString,
-                    response_serializer=yeying_dot_api_dot_asset_dot_link__pb2.LinkVisitorResponse.SerializeToString,
-            ),
-            'Disable': grpc.unary_unary_rpc_method_handler(
-                    servicer.Disable,
-                    request_deserializer=yeying_dot_api_dot_asset_dot_link__pb2.DisableLinkRequest.FromString,
-                    response_serializer=yeying_dot_api_dot_asset_dot_link__pb2.DisableLinkResponse.SerializeToString,
-            ),
-            'Update': grpc.unary_unary_rpc_method_handler(
-                    servicer.Update,
-                    request_deserializer=yeying_dot_api_dot_asset_dot_link__pb2.UpdateLinkRequest.FromString,
-                    response_serializer=yeying_dot_api_dot_asset_dot_link__pb2.UpdateLinkResponse.SerializeToString,
-            ),
+        "Create": grpc.unary_unary_rpc_method_handler(
+            servicer.Create,
+            request_deserializer=yeying_dot_api_dot_asset_dot_link__pb2.CreateLinkRequest.FromString,
+            response_serializer=yeying_dot_api_dot_asset_dot_link__pb2.CreateLinkResponse.SerializeToString,
+        ),
+        "Search": grpc.unary_unary_rpc_method_handler(
+            servicer.Search,
+            request_deserializer=yeying_dot_api_dot_asset_dot_link__pb2.SearchLinkRequest.FromString,
+            response_serializer=yeying_dot_api_dot_asset_dot_link__pb2.SearchLinkResponse.SerializeToString,
+        ),
+        "Detail": grpc.unary_unary_rpc_method_handler(
+            servicer.Detail,
+            request_deserializer=yeying_dot_api_dot_asset_dot_link__pb2.LinkDetailRequest.FromString,
+            response_serializer=yeying_dot_api_dot_asset_dot_link__pb2.LinkDetailResponse.SerializeToString,
+        ),
+        "Visitor": grpc.unary_unary_rpc_method_handler(
+            servicer.Visitor,
+            request_deserializer=yeying_dot_api_dot_asset_dot_link__pb2.LinkVisitorRequest.FromString,
+            response_serializer=yeying_dot_api_dot_asset_dot_link__pb2.LinkVisitorResponse.SerializeToString,
+        ),
+        "Disable": grpc.unary_unary_rpc_method_handler(
+            servicer.Disable,
+            request_deserializer=yeying_dot_api_dot_asset_dot_link__pb2.DisableLinkRequest.FromString,
+            response_serializer=yeying_dot_api_dot_asset_dot_link__pb2.DisableLinkResponse.SerializeToString,
+        ),
+        "Update": grpc.unary_unary_rpc_method_handler(
+            servicer.Update,
+            request_deserializer=yeying_dot_api_dot_asset_dot_link__pb2.UpdateLinkRequest.FromString,
+            response_serializer=yeying_dot_api_dot_asset_dot_link__pb2.UpdateLinkResponse.SerializeToString,
+        ),
     }
-    generic_handler = grpc.method_handlers_generic_handler(
-            'yeying.api.asset.Link', rpc_method_handlers)
+    generic_handler = grpc.method_handlers_generic_handler("yeying.api.asset.Link", rpc_method_handlers)
     server.add_generic_rpc_handlers((generic_handler,))
-    server.add_registered_method_handlers('yeying.api.asset.Link', rpc_method_handlers)
+    server.add_registered_method_handlers("yeying.api.asset.Link", rpc_method_handlers)
 
 
- # This class is part of an EXPERIMENTAL API.
+# This class is part of an EXPERIMENTAL API.
 class Link(object):
     """Missing associated documentation comment in .proto file."""
 
     @staticmethod
-    def Create(request,
-            target,
-            options=(),
-            channel_credentials=None,
-            call_credentials=None,
-            insecure=False,
-            compression=None,
-            wait_for_ready=None,
-            timeout=None,
-            metadata=None):
+    def Create(
+        request,
+        target,
+        options=(),
+        channel_credentials=None,
+        call_credentials=None,
+        insecure=False,
+        compression=None,
+        wait_for_ready=None,
+        timeout=None,
+        metadata=None,
+    ):
         return grpc.experimental.unary_unary(
             request,
             target,
-            '/yeying.api.asset.Link/Create',
+            "/yeying.api.asset.Link/Create",
             yeying_dot_api_dot_asset_dot_link__pb2.CreateLinkRequest.SerializeToString,
             yeying_dot_api_dot_asset_dot_link__pb2.CreateLinkResponse.FromString,
             options,
@@ -180,23 +182,26 @@ class Link(object):
             wait_for_ready,
             timeout,
             metadata,
-            _registered_method=True)
+            _registered_method=True,
+        )
 
     @staticmethod
-    def Search(request,
-            target,
-            options=(),
-            channel_credentials=None,
-            call_credentials=None,
-            insecure=False,
-            compression=None,
-            wait_for_ready=None,
-            timeout=None,
-            metadata=None):
+    def Search(
+        request,
+        target,
+        options=(),
+        channel_credentials=None,
+        call_credentials=None,
+        insecure=False,
+        compression=None,
+        wait_for_ready=None,
+        timeout=None,
+        metadata=None,
+    ):
         return grpc.experimental.unary_unary(
             request,
             target,
-            '/yeying.api.asset.Link/Search',
+            "/yeying.api.asset.Link/Search",
             yeying_dot_api_dot_asset_dot_link__pb2.SearchLinkRequest.SerializeToString,
             yeying_dot_api_dot_asset_dot_link__pb2.SearchLinkResponse.FromString,
             options,
@@ -207,23 +212,26 @@ class Link(object):
             wait_for_ready,
             timeout,
             metadata,
-            _registered_method=True)
+            _registered_method=True,
+        )
 
     @staticmethod
-    def Detail(request,
-            target,
-            options=(),
-            channel_credentials=None,
-            call_credentials=None,
-            insecure=False,
-            compression=None,
-            wait_for_ready=None,
-            timeout=None,
-            metadata=None):
+    def Detail(
+        request,
+        target,
+        options=(),
+        channel_credentials=None,
+        call_credentials=None,
+        insecure=False,
+        compression=None,
+        wait_for_ready=None,
+        timeout=None,
+        metadata=None,
+    ):
         return grpc.experimental.unary_unary(
             request,
             target,
-            '/yeying.api.asset.Link/Detail',
+            "/yeying.api.asset.Link/Detail",
             yeying_dot_api_dot_asset_dot_link__pb2.LinkDetailRequest.SerializeToString,
             yeying_dot_api_dot_asset_dot_link__pb2.LinkDetailResponse.FromString,
             options,
@@ -234,23 +242,26 @@ class Link(object):
             wait_for_ready,
             timeout,
             metadata,
-            _registered_method=True)
+            _registered_method=True,
+        )
 
     @staticmethod
-    def Visitor(request,
-            target,
-            options=(),
-            channel_credentials=None,
-            call_credentials=None,
-            insecure=False,
-            compression=None,
-            wait_for_ready=None,
-            timeout=None,
-            metadata=None):
+    def Visitor(
+        request,
+        target,
+        options=(),
+        channel_credentials=None,
+        call_credentials=None,
+        insecure=False,
+        compression=None,
+        wait_for_ready=None,
+        timeout=None,
+        metadata=None,
+    ):
         return grpc.experimental.unary_unary(
             request,
             target,
-            '/yeying.api.asset.Link/Visitor',
+            "/yeying.api.asset.Link/Visitor",
             yeying_dot_api_dot_asset_dot_link__pb2.LinkVisitorRequest.SerializeToString,
             yeying_dot_api_dot_asset_dot_link__pb2.LinkVisitorResponse.FromString,
             options,
@@ -261,23 +272,26 @@ class Link(object):
             wait_for_ready,
             timeout,
             metadata,
-            _registered_method=True)
+            _registered_method=True,
+        )
 
     @staticmethod
-    def Disable(request,
-            target,
-            options=(),
-            channel_credentials=None,
-            call_credentials=None,
-            insecure=False,
-            compression=None,
-            wait_for_ready=None,
-            timeout=None,
-            metadata=None):
+    def Disable(
+        request,
+        target,
+        options=(),
+        channel_credentials=None,
+        call_credentials=None,
+        insecure=False,
+        compression=None,
+        wait_for_ready=None,
+        timeout=None,
+        metadata=None,
+    ):
         return grpc.experimental.unary_unary(
             request,
             target,
-            '/yeying.api.asset.Link/Disable',
+            "/yeying.api.asset.Link/Disable",
             yeying_dot_api_dot_asset_dot_link__pb2.DisableLinkRequest.SerializeToString,
             yeying_dot_api_dot_asset_dot_link__pb2.DisableLinkResponse.FromString,
             options,
@@ -288,23 +302,26 @@ class Link(object):
             wait_for_ready,
             timeout,
             metadata,
-            _registered_method=True)
+            _registered_method=True,
+        )
 
     @staticmethod
-    def Update(request,
-            target,
-            options=(),
-            channel_credentials=None,
-            call_credentials=None,
-            insecure=False,
-            compression=None,
-            wait_for_ready=None,
-            timeout=None,
-            metadata=None):
+    def Update(
+        request,
+        target,
+        options=(),
+        channel_credentials=None,
+        call_credentials=None,
+        insecure=False,
+        compression=None,
+        wait_for_ready=None,
+        timeout=None,
+        metadata=None,
+    ):
         return grpc.experimental.unary_unary(
             request,
             target,
-            '/yeying.api.asset.Link/Update',
+            "/yeying.api.asset.Link/Update",
             yeying_dot_api_dot_asset_dot_link__pb2.UpdateLinkRequest.SerializeToString,
             yeying_dot_api_dot_asset_dot_link__pb2.UpdateLinkResponse.FromString,
             options,
@@ -315,4 +332,5 @@ class Link(object):
             wait_for_ready,
             timeout,
             metadata,
-            _registered_method=True)
+            _registered_method=True,
+        )

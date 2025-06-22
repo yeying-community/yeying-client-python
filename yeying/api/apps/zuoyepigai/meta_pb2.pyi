@@ -2,7 +2,13 @@ from yeying.api.apps.zuoyepigai import imagecontent_pb2 as _imagecontent_pb2
 from google.protobuf.internal import containers as _containers
 from google.protobuf import descriptor as _descriptor
 from google.protobuf import message as _message
-from typing import ClassVar as _ClassVar, Iterable as _Iterable, Mapping as _Mapping, Optional as _Optional, Union as _Union
+from typing import (
+    ClassVar as _ClassVar,
+    Iterable as _Iterable,
+    Mapping as _Mapping,
+    Optional as _Optional,
+    Union as _Union,
+)
 
 DESCRIPTOR: _descriptor.FileDescriptor
 
@@ -24,10 +30,32 @@ class GroupMetaData(_message.Message):
     isDeleted: bool
     teacherDid: str
     studentName: str
-    def __init__(self, uid: _Optional[str] = ..., did: _Optional[str] = ..., groupName: _Optional[str] = ..., createdAt: _Optional[int] = ..., updatedAt: _Optional[int] = ..., isDeleted: bool = ..., teacherDid: _Optional[str] = ..., studentName: _Optional[str] = ...) -> None: ...
+    def __init__(
+        self,
+        uid: _Optional[str] = ...,
+        did: _Optional[str] = ...,
+        groupName: _Optional[str] = ...,
+        createdAt: _Optional[int] = ...,
+        updatedAt: _Optional[int] = ...,
+        isDeleted: bool = ...,
+        teacherDid: _Optional[str] = ...,
+        studentName: _Optional[str] = ...,
+    ) -> None: ...
 
 class ArchiveMetadata(_message.Message):
-    __slots__ = ("uid", "name", "studentDid", "teacherDid", "subject", "createdAt", "updatedAt", "isDeleted", "telephone", "email", "status")
+    __slots__ = (
+        "uid",
+        "name",
+        "studentDid",
+        "teacherDid",
+        "subject",
+        "createdAt",
+        "updatedAt",
+        "isDeleted",
+        "telephone",
+        "email",
+        "status",
+    )
     UID_FIELD_NUMBER: _ClassVar[int]
     NAME_FIELD_NUMBER: _ClassVar[int]
     STUDENTDID_FIELD_NUMBER: _ClassVar[int]
@@ -50,7 +78,20 @@ class ArchiveMetadata(_message.Message):
     telephone: str
     email: str
     status: str
-    def __init__(self, uid: _Optional[str] = ..., name: _Optional[str] = ..., studentDid: _Optional[str] = ..., teacherDid: _Optional[str] = ..., subject: _Optional[str] = ..., createdAt: _Optional[int] = ..., updatedAt: _Optional[int] = ..., isDeleted: bool = ..., telephone: _Optional[str] = ..., email: _Optional[str] = ..., status: _Optional[str] = ...) -> None: ...
+    def __init__(
+        self,
+        uid: _Optional[str] = ...,
+        name: _Optional[str] = ...,
+        studentDid: _Optional[str] = ...,
+        teacherDid: _Optional[str] = ...,
+        subject: _Optional[str] = ...,
+        createdAt: _Optional[int] = ...,
+        updatedAt: _Optional[int] = ...,
+        isDeleted: bool = ...,
+        telephone: _Optional[str] = ...,
+        email: _Optional[str] = ...,
+        status: _Optional[str] = ...,
+    ) -> None: ...
 
 class HomeworkMetadata(_message.Message):
     __slots__ = ("uid", "did", "subject", "testPaperUid", "createdAt", "updatedAt", "isDeleted")
@@ -68,7 +109,16 @@ class HomeworkMetadata(_message.Message):
     createdAt: int
     updatedAt: int
     isDeleted: bool
-    def __init__(self, uid: _Optional[str] = ..., did: _Optional[str] = ..., subject: _Optional[str] = ..., testPaperUid: _Optional[str] = ..., createdAt: _Optional[int] = ..., updatedAt: _Optional[int] = ..., isDeleted: bool = ...) -> None: ...
+    def __init__(
+        self,
+        uid: _Optional[str] = ...,
+        did: _Optional[str] = ...,
+        subject: _Optional[str] = ...,
+        testPaperUid: _Optional[str] = ...,
+        createdAt: _Optional[int] = ...,
+        updatedAt: _Optional[int] = ...,
+        isDeleted: bool = ...,
+    ) -> None: ...
 
 class MistakesMetadata(_message.Message):
     __slots__ = ("uid", "question", "answer", "createdAt", "updatedAt", "isDeleted")
@@ -84,7 +134,15 @@ class MistakesMetadata(_message.Message):
     createdAt: int
     updatedAt: int
     isDeleted: bool
-    def __init__(self, uid: _Optional[str] = ..., question: _Optional[str] = ..., answer: _Optional[str] = ..., createdAt: _Optional[int] = ..., updatedAt: _Optional[int] = ..., isDeleted: bool = ...) -> None: ...
+    def __init__(
+        self,
+        uid: _Optional[str] = ...,
+        question: _Optional[str] = ...,
+        answer: _Optional[str] = ...,
+        createdAt: _Optional[int] = ...,
+        updatedAt: _Optional[int] = ...,
+        isDeleted: bool = ...,
+    ) -> None: ...
 
 class MessageMetadata(_message.Message):
     __slots__ = ("uid", "title", "type", "content", "createdAt", "updatedAt", "isDeleted")
@@ -102,10 +160,32 @@ class MessageMetadata(_message.Message):
     createdAt: int
     updatedAt: int
     isDeleted: bool
-    def __init__(self, uid: _Optional[str] = ..., title: _Optional[str] = ..., type: _Optional[int] = ..., content: _Optional[str] = ..., createdAt: _Optional[int] = ..., updatedAt: _Optional[int] = ..., isDeleted: bool = ...) -> None: ...
+    def __init__(
+        self,
+        uid: _Optional[str] = ...,
+        title: _Optional[str] = ...,
+        type: _Optional[int] = ...,
+        content: _Optional[str] = ...,
+        createdAt: _Optional[int] = ...,
+        updatedAt: _Optional[int] = ...,
+        isDeleted: bool = ...,
+    ) -> None: ...
 
 class TaskMetadata(_message.Message):
-    __slots__ = ("uid", "name", "description", "tagUid", "did", "studentDidList", "createdAt", "updatedAt", "startTime", "endTime", "isDeleted", "status")
+    __slots__ = (
+        "uid",
+        "name",
+        "description",
+        "tagUid",
+        "did",
+        "studentDidList",
+        "createdAt",
+        "updatedAt",
+        "startTime",
+        "endTime",
+        "isDeleted",
+        "status",
+    )
     UID_FIELD_NUMBER: _ClassVar[int]
     NAME_FIELD_NUMBER: _ClassVar[int]
     DESCRIPTION_FIELD_NUMBER: _ClassVar[int]
@@ -130,7 +210,21 @@ class TaskMetadata(_message.Message):
     endTime: int
     isDeleted: bool
     status: _imagecontent_pb2.TaskStatusEnum
-    def __init__(self, uid: _Optional[str] = ..., name: _Optional[str] = ..., description: _Optional[str] = ..., tagUid: _Optional[str] = ..., did: _Optional[str] = ..., studentDidList: _Optional[str] = ..., createdAt: _Optional[int] = ..., updatedAt: _Optional[int] = ..., startTime: _Optional[int] = ..., endTime: _Optional[int] = ..., isDeleted: bool = ..., status: _Optional[_Union[_imagecontent_pb2.TaskStatusEnum, str]] = ...) -> None: ...
+    def __init__(
+        self,
+        uid: _Optional[str] = ...,
+        name: _Optional[str] = ...,
+        description: _Optional[str] = ...,
+        tagUid: _Optional[str] = ...,
+        did: _Optional[str] = ...,
+        studentDidList: _Optional[str] = ...,
+        createdAt: _Optional[int] = ...,
+        updatedAt: _Optional[int] = ...,
+        startTime: _Optional[int] = ...,
+        endTime: _Optional[int] = ...,
+        isDeleted: bool = ...,
+        status: _Optional[_Union[_imagecontent_pb2.TaskStatusEnum, str]] = ...,
+    ) -> None: ...
 
 class TagCountMeta(_message.Message):
     __slots__ = ("tagUid", "tagName", "count")
@@ -140,7 +234,9 @@ class TagCountMeta(_message.Message):
     tagUid: str
     tagName: str
     count: int
-    def __init__(self, tagUid: _Optional[str] = ..., tagName: _Optional[str] = ..., count: _Optional[int] = ...) -> None: ...
+    def __init__(
+        self, tagUid: _Optional[str] = ..., tagName: _Optional[str] = ..., count: _Optional[int] = ...
+    ) -> None: ...
 
 class TaskTagMetadata(_message.Message):
     __slots__ = ("uid", "name", "did", "createdAt", "updatedAt", "isDeleted")
@@ -156,10 +252,29 @@ class TaskTagMetadata(_message.Message):
     createdAt: int
     updatedAt: int
     isDeleted: bool
-    def __init__(self, uid: _Optional[str] = ..., name: _Optional[str] = ..., did: _Optional[str] = ..., createdAt: _Optional[int] = ..., updatedAt: _Optional[int] = ..., isDeleted: bool = ...) -> None: ...
+    def __init__(
+        self,
+        uid: _Optional[str] = ...,
+        name: _Optional[str] = ...,
+        did: _Optional[str] = ...,
+        createdAt: _Optional[int] = ...,
+        updatedAt: _Optional[int] = ...,
+        isDeleted: bool = ...,
+    ) -> None: ...
 
 class WarehouseMetadata(_message.Message):
-    __slots__ = ("uid", "did", "url", "urlMetaData", "taskUid", "type", "createdAt", "updatedAt", "isDeleted", "urlIndex")
+    __slots__ = (
+        "uid",
+        "did",
+        "url",
+        "urlMetaData",
+        "taskUid",
+        "type",
+        "createdAt",
+        "updatedAt",
+        "isDeleted",
+        "urlIndex",
+    )
     UID_FIELD_NUMBER: _ClassVar[int]
     DID_FIELD_NUMBER: _ClassVar[int]
     URL_FIELD_NUMBER: _ClassVar[int]
@@ -180,7 +295,19 @@ class WarehouseMetadata(_message.Message):
     updatedAt: int
     isDeleted: bool
     urlIndex: int
-    def __init__(self, uid: _Optional[str] = ..., did: _Optional[str] = ..., url: _Optional[str] = ..., urlMetaData: _Optional[_Iterable[_Union[UrlMetaData, _Mapping]]] = ..., taskUid: _Optional[str] = ..., type: _Optional[_Union[_imagecontent_pb2.ImageContentTypeEnum, str]] = ..., createdAt: _Optional[int] = ..., updatedAt: _Optional[int] = ..., isDeleted: bool = ..., urlIndex: _Optional[int] = ...) -> None: ...
+    def __init__(
+        self,
+        uid: _Optional[str] = ...,
+        did: _Optional[str] = ...,
+        url: _Optional[str] = ...,
+        urlMetaData: _Optional[_Iterable[_Union[UrlMetaData, _Mapping]]] = ...,
+        taskUid: _Optional[str] = ...,
+        type: _Optional[_Union[_imagecontent_pb2.ImageContentTypeEnum, str]] = ...,
+        createdAt: _Optional[int] = ...,
+        updatedAt: _Optional[int] = ...,
+        isDeleted: bool = ...,
+        urlIndex: _Optional[int] = ...,
+    ) -> None: ...
 
 class UrlMetaData(_message.Message):
     __slots__ = ("index", "url")

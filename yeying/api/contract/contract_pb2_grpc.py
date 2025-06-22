@@ -5,23 +5,24 @@ import warnings
 
 from yeying.api.contract import contract_pb2 as yeying_dot_api_dot_contract_dot_contract__pb2
 
-GRPC_GENERATED_VERSION = '1.68.1'
+GRPC_GENERATED_VERSION = "1.68.1"
 GRPC_VERSION = grpc.__version__
 _version_not_supported = False
 
 try:
     from grpc._utilities import first_version_is_lower
+
     _version_not_supported = first_version_is_lower(GRPC_VERSION, GRPC_GENERATED_VERSION)
 except ImportError:
     _version_not_supported = True
 
 if _version_not_supported:
     raise RuntimeError(
-        f'The grpc package installed is at version {GRPC_VERSION},'
-        + f' but the generated code in yeying/api/contract/contract_pb2_grpc.py depends on'
-        + f' grpcio>={GRPC_GENERATED_VERSION}.'
-        + f' Please upgrade your grpc module to grpcio>={GRPC_GENERATED_VERSION}'
-        + f' or downgrade your generated code using grpcio-tools<={GRPC_VERSION}.'
+        f"The grpc package installed is at version {GRPC_VERSION},"
+        + f" but the generated code in yeying/api/contract/contract_pb2_grpc.py depends on"
+        + f" grpcio>={GRPC_GENERATED_VERSION}."
+        + f" Please upgrade your grpc module to grpcio>={GRPC_GENERATED_VERSION}"
+        + f" or downgrade your generated code using grpcio-tools<={GRPC_VERSION}."
     )
 
 
@@ -35,25 +36,29 @@ class WalletStub(object):
             channel: A grpc.Channel.
         """
         self.createAddress = channel.unary_unary(
-                '/Wallet/createAddress',
-                request_serializer=yeying_dot_api_dot_contract_dot_contract__pb2.CreateAddressRequest.SerializeToString,
-                response_deserializer=yeying_dot_api_dot_contract_dot_contract__pb2.CreateAddressResponse.FromString,
-                _registered_method=True)
+            "/Wallet/createAddress",
+            request_serializer=yeying_dot_api_dot_contract_dot_contract__pb2.CreateAddressRequest.SerializeToString,
+            response_deserializer=yeying_dot_api_dot_contract_dot_contract__pb2.CreateAddressResponse.FromString,
+            _registered_method=True,
+        )
         self.transaction = channel.unary_unary(
-                '/Wallet/transaction',
-                request_serializer=yeying_dot_api_dot_contract_dot_contract__pb2.TransactionRequest.SerializeToString,
-                response_deserializer=yeying_dot_api_dot_contract_dot_contract__pb2.TransactionResponse.FromString,
-                _registered_method=True)
+            "/Wallet/transaction",
+            request_serializer=yeying_dot_api_dot_contract_dot_contract__pb2.TransactionRequest.SerializeToString,
+            response_deserializer=yeying_dot_api_dot_contract_dot_contract__pb2.TransactionResponse.FromString,
+            _registered_method=True,
+        )
         self.balance = channel.unary_unary(
-                '/Wallet/balance',
-                request_serializer=yeying_dot_api_dot_contract_dot_contract__pb2.BalanceRequest.SerializeToString,
-                response_deserializer=yeying_dot_api_dot_contract_dot_contract__pb2.BalanceResponse.FromString,
-                _registered_method=True)
+            "/Wallet/balance",
+            request_serializer=yeying_dot_api_dot_contract_dot_contract__pb2.BalanceRequest.SerializeToString,
+            response_deserializer=yeying_dot_api_dot_contract_dot_contract__pb2.BalanceResponse.FromString,
+            _registered_method=True,
+        )
         self.walletInfo = channel.unary_unary(
-                '/Wallet/walletInfo',
-                request_serializer=yeying_dot_api_dot_contract_dot_contract__pb2.WalletInfoRequest.SerializeToString,
-                response_deserializer=yeying_dot_api_dot_contract_dot_contract__pb2.WalletInfoResponse.FromString,
-                _registered_method=True)
+            "/Wallet/walletInfo",
+            request_serializer=yeying_dot_api_dot_contract_dot_contract__pb2.WalletInfoRequest.SerializeToString,
+            response_deserializer=yeying_dot_api_dot_contract_dot_contract__pb2.WalletInfoResponse.FromString,
+            _registered_method=True,
+        )
 
 
 class WalletServicer(object):
@@ -62,76 +67,77 @@ class WalletServicer(object):
     def createAddress(self, request, context):
         """Missing associated documentation comment in .proto file."""
         context.set_code(grpc.StatusCode.UNIMPLEMENTED)
-        context.set_details('Method not implemented!')
-        raise NotImplementedError('Method not implemented!')
+        context.set_details("Method not implemented!")
+        raise NotImplementedError("Method not implemented!")
 
     def transaction(self, request, context):
         """Missing associated documentation comment in .proto file."""
         context.set_code(grpc.StatusCode.UNIMPLEMENTED)
-        context.set_details('Method not implemented!')
-        raise NotImplementedError('Method not implemented!')
+        context.set_details("Method not implemented!")
+        raise NotImplementedError("Method not implemented!")
 
     def balance(self, request, context):
         """Missing associated documentation comment in .proto file."""
         context.set_code(grpc.StatusCode.UNIMPLEMENTED)
-        context.set_details('Method not implemented!')
-        raise NotImplementedError('Method not implemented!')
+        context.set_details("Method not implemented!")
+        raise NotImplementedError("Method not implemented!")
 
     def walletInfo(self, request, context):
         """Missing associated documentation comment in .proto file."""
         context.set_code(grpc.StatusCode.UNIMPLEMENTED)
-        context.set_details('Method not implemented!')
-        raise NotImplementedError('Method not implemented!')
+        context.set_details("Method not implemented!")
+        raise NotImplementedError("Method not implemented!")
 
 
 def add_WalletServicer_to_server(servicer, server):
     rpc_method_handlers = {
-            'createAddress': grpc.unary_unary_rpc_method_handler(
-                    servicer.createAddress,
-                    request_deserializer=yeying_dot_api_dot_contract_dot_contract__pb2.CreateAddressRequest.FromString,
-                    response_serializer=yeying_dot_api_dot_contract_dot_contract__pb2.CreateAddressResponse.SerializeToString,
-            ),
-            'transaction': grpc.unary_unary_rpc_method_handler(
-                    servicer.transaction,
-                    request_deserializer=yeying_dot_api_dot_contract_dot_contract__pb2.TransactionRequest.FromString,
-                    response_serializer=yeying_dot_api_dot_contract_dot_contract__pb2.TransactionResponse.SerializeToString,
-            ),
-            'balance': grpc.unary_unary_rpc_method_handler(
-                    servicer.balance,
-                    request_deserializer=yeying_dot_api_dot_contract_dot_contract__pb2.BalanceRequest.FromString,
-                    response_serializer=yeying_dot_api_dot_contract_dot_contract__pb2.BalanceResponse.SerializeToString,
-            ),
-            'walletInfo': grpc.unary_unary_rpc_method_handler(
-                    servicer.walletInfo,
-                    request_deserializer=yeying_dot_api_dot_contract_dot_contract__pb2.WalletInfoRequest.FromString,
-                    response_serializer=yeying_dot_api_dot_contract_dot_contract__pb2.WalletInfoResponse.SerializeToString,
-            ),
+        "createAddress": grpc.unary_unary_rpc_method_handler(
+            servicer.createAddress,
+            request_deserializer=yeying_dot_api_dot_contract_dot_contract__pb2.CreateAddressRequest.FromString,
+            response_serializer=yeying_dot_api_dot_contract_dot_contract__pb2.CreateAddressResponse.SerializeToString,
+        ),
+        "transaction": grpc.unary_unary_rpc_method_handler(
+            servicer.transaction,
+            request_deserializer=yeying_dot_api_dot_contract_dot_contract__pb2.TransactionRequest.FromString,
+            response_serializer=yeying_dot_api_dot_contract_dot_contract__pb2.TransactionResponse.SerializeToString,
+        ),
+        "balance": grpc.unary_unary_rpc_method_handler(
+            servicer.balance,
+            request_deserializer=yeying_dot_api_dot_contract_dot_contract__pb2.BalanceRequest.FromString,
+            response_serializer=yeying_dot_api_dot_contract_dot_contract__pb2.BalanceResponse.SerializeToString,
+        ),
+        "walletInfo": grpc.unary_unary_rpc_method_handler(
+            servicer.walletInfo,
+            request_deserializer=yeying_dot_api_dot_contract_dot_contract__pb2.WalletInfoRequest.FromString,
+            response_serializer=yeying_dot_api_dot_contract_dot_contract__pb2.WalletInfoResponse.SerializeToString,
+        ),
     }
-    generic_handler = grpc.method_handlers_generic_handler(
-            'Wallet', rpc_method_handlers)
+    generic_handler = grpc.method_handlers_generic_handler("Wallet", rpc_method_handlers)
     server.add_generic_rpc_handlers((generic_handler,))
-    server.add_registered_method_handlers('Wallet', rpc_method_handlers)
+    server.add_registered_method_handlers("Wallet", rpc_method_handlers)
 
 
- # This class is part of an EXPERIMENTAL API.
+# This class is part of an EXPERIMENTAL API.
 class Wallet(object):
     """Missing associated documentation comment in .proto file."""
 
     @staticmethod
-    def createAddress(request,
-            target,
-            options=(),
-            channel_credentials=None,
-            call_credentials=None,
-            insecure=False,
-            compression=None,
-            wait_for_ready=None,
-            timeout=None,
-            metadata=None):
+    def createAddress(
+        request,
+        target,
+        options=(),
+        channel_credentials=None,
+        call_credentials=None,
+        insecure=False,
+        compression=None,
+        wait_for_ready=None,
+        timeout=None,
+        metadata=None,
+    ):
         return grpc.experimental.unary_unary(
             request,
             target,
-            '/Wallet/createAddress',
+            "/Wallet/createAddress",
             yeying_dot_api_dot_contract_dot_contract__pb2.CreateAddressRequest.SerializeToString,
             yeying_dot_api_dot_contract_dot_contract__pb2.CreateAddressResponse.FromString,
             options,
@@ -142,23 +148,26 @@ class Wallet(object):
             wait_for_ready,
             timeout,
             metadata,
-            _registered_method=True)
+            _registered_method=True,
+        )
 
     @staticmethod
-    def transaction(request,
-            target,
-            options=(),
-            channel_credentials=None,
-            call_credentials=None,
-            insecure=False,
-            compression=None,
-            wait_for_ready=None,
-            timeout=None,
-            metadata=None):
+    def transaction(
+        request,
+        target,
+        options=(),
+        channel_credentials=None,
+        call_credentials=None,
+        insecure=False,
+        compression=None,
+        wait_for_ready=None,
+        timeout=None,
+        metadata=None,
+    ):
         return grpc.experimental.unary_unary(
             request,
             target,
-            '/Wallet/transaction',
+            "/Wallet/transaction",
             yeying_dot_api_dot_contract_dot_contract__pb2.TransactionRequest.SerializeToString,
             yeying_dot_api_dot_contract_dot_contract__pb2.TransactionResponse.FromString,
             options,
@@ -169,23 +178,26 @@ class Wallet(object):
             wait_for_ready,
             timeout,
             metadata,
-            _registered_method=True)
+            _registered_method=True,
+        )
 
     @staticmethod
-    def balance(request,
-            target,
-            options=(),
-            channel_credentials=None,
-            call_credentials=None,
-            insecure=False,
-            compression=None,
-            wait_for_ready=None,
-            timeout=None,
-            metadata=None):
+    def balance(
+        request,
+        target,
+        options=(),
+        channel_credentials=None,
+        call_credentials=None,
+        insecure=False,
+        compression=None,
+        wait_for_ready=None,
+        timeout=None,
+        metadata=None,
+    ):
         return grpc.experimental.unary_unary(
             request,
             target,
-            '/Wallet/balance',
+            "/Wallet/balance",
             yeying_dot_api_dot_contract_dot_contract__pb2.BalanceRequest.SerializeToString,
             yeying_dot_api_dot_contract_dot_contract__pb2.BalanceResponse.FromString,
             options,
@@ -196,23 +208,26 @@ class Wallet(object):
             wait_for_ready,
             timeout,
             metadata,
-            _registered_method=True)
+            _registered_method=True,
+        )
 
     @staticmethod
-    def walletInfo(request,
-            target,
-            options=(),
-            channel_credentials=None,
-            call_credentials=None,
-            insecure=False,
-            compression=None,
-            wait_for_ready=None,
-            timeout=None,
-            metadata=None):
+    def walletInfo(
+        request,
+        target,
+        options=(),
+        channel_credentials=None,
+        call_credentials=None,
+        insecure=False,
+        compression=None,
+        wait_for_ready=None,
+        timeout=None,
+        metadata=None,
+    ):
         return grpc.experimental.unary_unary(
             request,
             target,
-            '/Wallet/walletInfo',
+            "/Wallet/walletInfo",
             yeying_dot_api_dot_contract_dot_contract__pb2.WalletInfoRequest.SerializeToString,
             yeying_dot_api_dot_contract_dot_contract__pb2.WalletInfoResponse.FromString,
             options,
@@ -223,4 +238,5 @@ class Wallet(object):
             wait_for_ready,
             timeout,
             metadata,
-            _registered_method=True)
+            _registered_method=True,
+        )

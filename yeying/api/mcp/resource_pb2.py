@@ -9,13 +9,9 @@ from google.protobuf import descriptor_pool as _descriptor_pool
 from google.protobuf import runtime_version as _runtime_version
 from google.protobuf import symbol_database as _symbol_database
 from google.protobuf.internal import builder as _builder
+
 _runtime_version.ValidateProtobufRuntimeVersion(
-    _runtime_version.Domain.PUBLIC,
-    5,
-    28,
-    1,
-    '',
-    'yeying/api/mcp/resource.proto'
+    _runtime_version.Domain.PUBLIC, 5, 28, 1, "", "yeying/api/mcp/resource.proto"
 )
 # @@protoc_insertion_point(imports)
 
@@ -26,14 +22,16 @@ from yeying.api.common import message_pb2 as yeying_dot_api_dot_common_dot_messa
 from yeying.api.common import code_pb2 as yeying_dot_api_dot_common_dot_code__pb2
 
 
-DESCRIPTOR = _descriptor_pool.Default().AddSerializedFile(b'\n\x1dyeying/api/mcp/resource.proto\x12\x0eyeying.api.mcp\x1a\x1fyeying/api/common/message.proto\x1a\x1cyeying/api/common/code.proto2\n\n\x08ResourceB\x10Z\x0eyeying/api/mcpb\x06proto3')
+DESCRIPTOR = _descriptor_pool.Default().AddSerializedFile(
+    b"\n\x1dyeying/api/mcp/resource.proto\x12\x0eyeying.api.mcp\x1a\x1fyeying/api/common/message.proto\x1a\x1cyeying/api/common/code.proto2\n\n\x08ResourceB\x10Z\x0eyeying/api/mcpb\x06proto3"
+)
 
 _globals = globals()
 _builder.BuildMessageAndEnumDescriptors(DESCRIPTOR, _globals)
-_builder.BuildTopDescriptorsAndMessages(DESCRIPTOR, 'yeying.api.mcp.resource_pb2', _globals)
+_builder.BuildTopDescriptorsAndMessages(DESCRIPTOR, "yeying.api.mcp.resource_pb2", _globals)
 if not _descriptor._USE_C_DESCRIPTORS:
-  _globals['DESCRIPTOR']._loaded_options = None
-  _globals['DESCRIPTOR']._serialized_options = b'Z\016yeying/api/mcp'
-  _globals['_RESOURCE']._serialized_start=112
-  _globals['_RESOURCE']._serialized_end=122
+    _globals["DESCRIPTOR"]._loaded_options = None
+    _globals["DESCRIPTOR"]._serialized_options = b"Z\016yeying/api/mcp"
+    _globals["_RESOURCE"]._serialized_start = 112
+    _globals["_RESOURCE"]._serialized_end = 122
 # @@protoc_insertion_point(module_scope)

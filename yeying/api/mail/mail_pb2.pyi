@@ -11,7 +11,11 @@ class SendMailRequest(_message.Message):
     BODY_FIELD_NUMBER: _ClassVar[int]
     header: _message_pb2.MessageHeader
     body: SendMailRequestBody
-    def __init__(self, header: _Optional[_Union[_message_pb2.MessageHeader, _Mapping]] = ..., body: _Optional[_Union[SendMailRequestBody, _Mapping]] = ...) -> None: ...
+    def __init__(
+        self,
+        header: _Optional[_Union[_message_pb2.MessageHeader, _Mapping]] = ...,
+        body: _Optional[_Union[SendMailRequestBody, _Mapping]] = ...,
+    ) -> None: ...
 
 class SendMailRequestBody(_message.Message):
     __slots__ = ("toMail",)
@@ -25,7 +29,11 @@ class SendMailResponse(_message.Message):
     BODY_FIELD_NUMBER: _ClassVar[int]
     header: _message_pb2.MessageHeader
     body: SendMailResponseBody
-    def __init__(self, header: _Optional[_Union[_message_pb2.MessageHeader, _Mapping]] = ..., body: _Optional[_Union[SendMailResponseBody, _Mapping]] = ...) -> None: ...
+    def __init__(
+        self,
+        header: _Optional[_Union[_message_pb2.MessageHeader, _Mapping]] = ...,
+        body: _Optional[_Union[SendMailResponseBody, _Mapping]] = ...,
+    ) -> None: ...
 
 class SendMailResponseBody(_message.Message):
     __slots__ = ("status",)
@@ -39,7 +47,11 @@ class VerifyMailRequest(_message.Message):
     BODY_FIELD_NUMBER: _ClassVar[int]
     header: _message_pb2.MessageHeader
     body: VerifyMailRequestBody
-    def __init__(self, header: _Optional[_Union[_message_pb2.MessageHeader, _Mapping]] = ..., body: _Optional[_Union[VerifyMailRequestBody, _Mapping]] = ...) -> None: ...
+    def __init__(
+        self,
+        header: _Optional[_Union[_message_pb2.MessageHeader, _Mapping]] = ...,
+        body: _Optional[_Union[VerifyMailRequestBody, _Mapping]] = ...,
+    ) -> None: ...
 
 class VerifyMailRequestBody(_message.Message):
     __slots__ = ("toMail", "code")
@@ -55,7 +67,11 @@ class VerifyMailResponse(_message.Message):
     BODY_FIELD_NUMBER: _ClassVar[int]
     header: _message_pb2.MessageHeader
     body: VerifyMailResponseBody
-    def __init__(self, header: _Optional[_Union[_message_pb2.MessageHeader, _Mapping]] = ..., body: _Optional[_Union[VerifyMailResponseBody, _Mapping]] = ...) -> None: ...
+    def __init__(
+        self,
+        header: _Optional[_Union[_message_pb2.MessageHeader, _Mapping]] = ...,
+        body: _Optional[_Union[VerifyMailResponseBody, _Mapping]] = ...,
+    ) -> None: ...
 
 class VerifyMailResponseBody(_message.Message):
     __slots__ = ("status",)

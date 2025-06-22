@@ -3,7 +3,13 @@ from google.protobuf.internal import containers as _containers
 from google.protobuf.internal import enum_type_wrapper as _enum_type_wrapper
 from google.protobuf import descriptor as _descriptor
 from google.protobuf import message as _message
-from typing import ClassVar as _ClassVar, Iterable as _Iterable, Mapping as _Mapping, Optional as _Optional, Union as _Union
+from typing import (
+    ClassVar as _ClassVar,
+    Iterable as _Iterable,
+    Mapping as _Mapping,
+    Optional as _Optional,
+    Union as _Union,
+)
 
 DESCRIPTOR: _descriptor.FileDescriptor
 
@@ -27,6 +33,7 @@ class NotifyActionEnum(int, metaclass=_enum_type_wrapper.EnumTypeWrapper):
     NOTIFY_ACTION_ADD: _ClassVar[NotifyActionEnum]
     NOTIFY_ACTION_DEL: _ClassVar[NotifyActionEnum]
     NOTIFY_ACTION_MOD: _ClassVar[NotifyActionEnum]
+
 EVENT_TYPE_UNKNOWN: EventTypeEnum
 EVENT_TYPE_REMIND: EventTypeEnum
 EVENT_TYPE_NOTIFY: EventTypeEnum
@@ -41,7 +48,22 @@ NOTIFY_ACTION_DEL: NotifyActionEnum
 NOTIFY_ACTION_MOD: NotifyActionEnum
 
 class EventMetadata(_message.Message):
-    __slots__ = ("uid", "type", "producers", "consumers", "signature", "extend", "createdAt", "processedAt", "notifyContent", "applyContent", "customContent", "notifyOpinion", "applyOpinion", "customOpinion")
+    __slots__ = (
+        "uid",
+        "type",
+        "producers",
+        "consumers",
+        "signature",
+        "extend",
+        "createdAt",
+        "processedAt",
+        "notifyContent",
+        "applyContent",
+        "customContent",
+        "notifyOpinion",
+        "applyOpinion",
+        "customOpinion",
+    )
     UID_FIELD_NUMBER: _ClassVar[int]
     TYPE_FIELD_NUMBER: _ClassVar[int]
     PRODUCERS_FIELD_NUMBER: _ClassVar[int]
@@ -70,10 +92,37 @@ class EventMetadata(_message.Message):
     notifyOpinion: NotifyOpinion
     applyOpinion: ApplyOpinion
     customOpinion: CustomOpinion
-    def __init__(self, uid: _Optional[str] = ..., type: _Optional[_Union[EventTypeEnum, str]] = ..., producers: _Optional[_Iterable[str]] = ..., consumers: _Optional[_Iterable[str]] = ..., signature: _Optional[_Union[EventSignature, _Mapping]] = ..., extend: _Optional[str] = ..., createdAt: _Optional[str] = ..., processedAt: _Optional[str] = ..., notifyContent: _Optional[_Union[NotifyContent, _Mapping]] = ..., applyContent: _Optional[_Union[ApplyContent, _Mapping]] = ..., customContent: _Optional[_Union[CustomContent, _Mapping]] = ..., notifyOpinion: _Optional[_Union[NotifyOpinion, _Mapping]] = ..., applyOpinion: _Optional[_Union[ApplyOpinion, _Mapping]] = ..., customOpinion: _Optional[_Union[CustomOpinion, _Mapping]] = ...) -> None: ...
+    def __init__(
+        self,
+        uid: _Optional[str] = ...,
+        type: _Optional[_Union[EventTypeEnum, str]] = ...,
+        producers: _Optional[_Iterable[str]] = ...,
+        consumers: _Optional[_Iterable[str]] = ...,
+        signature: _Optional[_Union[EventSignature, _Mapping]] = ...,
+        extend: _Optional[str] = ...,
+        createdAt: _Optional[str] = ...,
+        processedAt: _Optional[str] = ...,
+        notifyContent: _Optional[_Union[NotifyContent, _Mapping]] = ...,
+        applyContent: _Optional[_Union[ApplyContent, _Mapping]] = ...,
+        customContent: _Optional[_Union[CustomContent, _Mapping]] = ...,
+        notifyOpinion: _Optional[_Union[NotifyOpinion, _Mapping]] = ...,
+        applyOpinion: _Optional[_Union[ApplyOpinion, _Mapping]] = ...,
+        customOpinion: _Optional[_Union[CustomOpinion, _Mapping]] = ...,
+    ) -> None: ...
 
 class SignatureObject(_message.Message):
-    __slots__ = ("uid", "type", "producers", "consumers", "signature", "extend", "createdAt", "processedAt", "opinion", "content")
+    __slots__ = (
+        "uid",
+        "type",
+        "producers",
+        "consumers",
+        "signature",
+        "extend",
+        "createdAt",
+        "processedAt",
+        "opinion",
+        "content",
+    )
     UID_FIELD_NUMBER: _ClassVar[int]
     TYPE_FIELD_NUMBER: _ClassVar[int]
     PRODUCERS_FIELD_NUMBER: _ClassVar[int]
@@ -94,7 +143,19 @@ class SignatureObject(_message.Message):
     processedAt: str
     opinion: bytes
     content: bytes
-    def __init__(self, uid: _Optional[str] = ..., type: _Optional[_Union[EventTypeEnum, str]] = ..., producers: _Optional[_Iterable[str]] = ..., consumers: _Optional[_Iterable[str]] = ..., signature: _Optional[bytes] = ..., extend: _Optional[str] = ..., createdAt: _Optional[str] = ..., processedAt: _Optional[str] = ..., opinion: _Optional[bytes] = ..., content: _Optional[bytes] = ...) -> None: ...
+    def __init__(
+        self,
+        uid: _Optional[str] = ...,
+        type: _Optional[_Union[EventTypeEnum, str]] = ...,
+        producers: _Optional[_Iterable[str]] = ...,
+        consumers: _Optional[_Iterable[str]] = ...,
+        signature: _Optional[bytes] = ...,
+        extend: _Optional[str] = ...,
+        createdAt: _Optional[str] = ...,
+        processedAt: _Optional[str] = ...,
+        opinion: _Optional[bytes] = ...,
+        content: _Optional[bytes] = ...,
+    ) -> None: ...
 
 class EventSignature(_message.Message):
     __slots__ = ("producers", "consumers")
@@ -102,7 +163,9 @@ class EventSignature(_message.Message):
     CONSUMERS_FIELD_NUMBER: _ClassVar[int]
     producers: _containers.RepeatedScalarFieldContainer[str]
     consumers: _containers.RepeatedScalarFieldContainer[str]
-    def __init__(self, producers: _Optional[_Iterable[str]] = ..., consumers: _Optional[_Iterable[str]] = ...) -> None: ...
+    def __init__(
+        self, producers: _Optional[_Iterable[str]] = ..., consumers: _Optional[_Iterable[str]] = ...
+    ) -> None: ...
 
 class CustomContent(_message.Message):
     __slots__ = ("name", "object")
@@ -124,7 +187,9 @@ class NotifyContent(_message.Message):
     ITEMS_FIELD_NUMBER: _ClassVar[int]
     name: str
     items: _containers.RepeatedCompositeFieldContainer[NotifyItem]
-    def __init__(self, name: _Optional[str] = ..., items: _Optional[_Iterable[_Union[NotifyItem, _Mapping]]] = ...) -> None: ...
+    def __init__(
+        self, name: _Optional[str] = ..., items: _Optional[_Iterable[_Union[NotifyItem, _Mapping]]] = ...
+    ) -> None: ...
 
 class NotifyItem(_message.Message):
     __slots__ = ("uid", "action")
@@ -140,7 +205,11 @@ class ProduceRequest(_message.Message):
     BODY_FIELD_NUMBER: _ClassVar[int]
     header: _message_pb2.MessageHeader
     body: ProduceRequestBody
-    def __init__(self, header: _Optional[_Union[_message_pb2.MessageHeader, _Mapping]] = ..., body: _Optional[_Union[ProduceRequestBody, _Mapping]] = ...) -> None: ...
+    def __init__(
+        self,
+        header: _Optional[_Union[_message_pb2.MessageHeader, _Mapping]] = ...,
+        body: _Optional[_Union[ProduceRequestBody, _Mapping]] = ...,
+    ) -> None: ...
 
 class ProduceRequestBody(_message.Message):
     __slots__ = ("event",)
@@ -154,7 +223,11 @@ class ProduceResponse(_message.Message):
     BODY_FIELD_NUMBER: _ClassVar[int]
     header: _message_pb2.MessageHeader
     body: ProduceResponseBody
-    def __init__(self, header: _Optional[_Union[_message_pb2.MessageHeader, _Mapping]] = ..., body: _Optional[_Union[ProduceResponseBody, _Mapping]] = ...) -> None: ...
+    def __init__(
+        self,
+        header: _Optional[_Union[_message_pb2.MessageHeader, _Mapping]] = ...,
+        body: _Optional[_Union[ProduceResponseBody, _Mapping]] = ...,
+    ) -> None: ...
 
 class ProduceResponseBody(_message.Message):
     __slots__ = ("status",)
@@ -168,7 +241,11 @@ class ConsumeRequest(_message.Message):
     BODY_FIELD_NUMBER: _ClassVar[int]
     header: _message_pb2.MessageHeader
     body: ConsumeRequestBody
-    def __init__(self, header: _Optional[_Union[_message_pb2.MessageHeader, _Mapping]] = ..., body: _Optional[_Union[ConsumeRequestBody, _Mapping]] = ...) -> None: ...
+    def __init__(
+        self,
+        header: _Optional[_Union[_message_pb2.MessageHeader, _Mapping]] = ...,
+        body: _Optional[_Union[ConsumeRequestBody, _Mapping]] = ...,
+    ) -> None: ...
 
 class ConsumeRequestBody(_message.Message):
     __slots__ = ("metadata",)
@@ -190,7 +267,12 @@ class ApplyOpinion(_message.Message):
     action: ApplyActionEnum
     cause: str
     processed: str
-    def __init__(self, action: _Optional[_Union[ApplyActionEnum, str]] = ..., cause: _Optional[str] = ..., processed: _Optional[str] = ...) -> None: ...
+    def __init__(
+        self,
+        action: _Optional[_Union[ApplyActionEnum, str]] = ...,
+        cause: _Optional[str] = ...,
+        processed: _Optional[str] = ...,
+    ) -> None: ...
 
 class CustomOpinion(_message.Message):
     __slots__ = ("name", "object")
@@ -206,7 +288,11 @@ class ConsumeResponse(_message.Message):
     BODY_FIELD_NUMBER: _ClassVar[int]
     header: _message_pb2.MessageHeader
     body: ConsumeResponseBody
-    def __init__(self, header: _Optional[_Union[_message_pb2.MessageHeader, _Mapping]] = ..., body: _Optional[_Union[ConsumeResponseBody, _Mapping]] = ...) -> None: ...
+    def __init__(
+        self,
+        header: _Optional[_Union[_message_pb2.MessageHeader, _Mapping]] = ...,
+        body: _Optional[_Union[ConsumeResponseBody, _Mapping]] = ...,
+    ) -> None: ...
 
 class ConsumeResponseBody(_message.Message):
     __slots__ = ("status",)

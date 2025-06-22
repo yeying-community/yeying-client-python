@@ -9,13 +9,9 @@ from google.protobuf import descriptor_pool as _descriptor_pool
 from google.protobuf import runtime_version as _runtime_version
 from google.protobuf import symbol_database as _symbol_database
 from google.protobuf.internal import builder as _builder
+
 _runtime_version.ValidateProtobufRuntimeVersion(
-    _runtime_version.Domain.PUBLIC,
-    5,
-    28,
-    1,
-    '',
-    'yeying/api/service/service.proto'
+    _runtime_version.Domain.PUBLIC, 5, 28, 1, "", "yeying/api/service/service.proto"
 )
 # @@protoc_insertion_point(imports)
 
@@ -27,40 +23,66 @@ from yeying.api.common import code_pb2 as yeying_dot_api_dot_common_dot_code__pb
 from yeying.api.common import model_pb2 as yeying_dot_api_dot_common_dot_model__pb2
 
 
-DESCRIPTOR = _descriptor_pool.Default().AddSerializedFile(b'\n yeying/api/service/service.proto\x12\x12yeying.api.service\x1a\x1fyeying/api/common/message.proto\x1a\x1cyeying/api/common/code.proto\x1a\x1dyeying/api/common/model.proto\"\x88\x01\n\x16RegisterServiceRequest\x12\x30\n\x06header\x18\x01 \x01(\x0b\x32 .yeying.api.common.MessageHeader\x12<\n\x04\x62ody\x18\x02 \x01(\x0b\x32..yeying.api.service.RegisterServiceRequestBody\"Q\n\x1aRegisterServiceRequestBody\x12\x33\n\x07service\x18\x01 \x01(\x0b\x32\".yeying.api.common.ServiceMetadata\"\x8a\x01\n\x17RegisterServiceResponse\x12\x30\n\x06header\x18\x01 \x01(\x0b\x32 .yeying.api.common.MessageHeader\x12=\n\x04\x62ody\x18\x02 \x01(\x0b\x32/.yeying.api.service.RegisterServiceResponseBody\"\x85\x01\n\x1bRegisterServiceResponseBody\x12\x31\n\x06status\x18\x01 \x01(\x0b\x32!.yeying.api.common.ResponseStatus\x12\x33\n\x07service\x18\x02 \x01(\x0b\x32\".yeying.api.common.ServiceMetadata\"\x84\x01\n\x14SearchServiceRequest\x12\x30\n\x06header\x18\x01 \x01(\x0b\x32 .yeying.api.common.MessageHeader\x12:\n\x04\x62ody\x18\x02 \x01(\x0b\x32,.yeying.api.service.SearchServiceRequestBody\"\x87\x01\n\x18SearchServiceRequestBody\x12=\n\tcondition\x18\x01 \x01(\x0b\x32*.yeying.api.service.SearchServiceCondition\x12,\n\x04page\x18\x02 \x01(\x0b\x32\x1e.yeying.api.common.RequestPage\"Y\n\x16SearchServiceCondition\x12\x30\n\x04\x63ode\x18\x01 \x01(\x0e\x32\".yeying.api.common.ServiceCodeEnum\x12\r\n\x05owner\x18\x02 \x01(\t\"\x86\x01\n\x15SearchServiceResponse\x12\x30\n\x06header\x18\x01 \x01(\x0b\x32 .yeying.api.common.MessageHeader\x12;\n\x04\x62ody\x18\x02 \x01(\x0b\x32-.yeying.api.service.SearchServiceResponseBody\"\xb3\x01\n\x19SearchServiceResponseBody\x12\x31\n\x06status\x18\x01 \x01(\x0b\x32!.yeying.api.common.ResponseStatus\x12\x34\n\x08services\x18\x02 \x03(\x0b\x32\".yeying.api.common.ServiceMetadata\x12-\n\x04page\x18\x03 \x01(\x0b\x32\x1f.yeying.api.common.ResponsePage\"\x8c\x01\n\x18UnregisterServiceRequest\x12\x30\n\x06header\x18\x01 \x01(\x0b\x32 .yeying.api.common.MessageHeader\x12>\n\x04\x62ody\x18\x02 \x01(\x0b\x32\x30.yeying.api.service.UnregisterServiceRequestBody\"<\n\x1cUnregisterServiceRequestBody\x12\x0b\n\x03\x64id\x18\x01 \x01(\t\x12\x0f\n\x07version\x18\x02 \x01(\r\"\x8e\x01\n\x19UnregisterServiceResponse\x12\x30\n\x06header\x18\x01 \x01(\x0b\x32 .yeying.api.common.MessageHeader\x12?\n\x04\x62ody\x18\x02 \x01(\x0b\x32\x31.yeying.api.service.UnregisterServiceResponseBody\"R\n\x1dUnregisterServiceResponseBody\x12\x31\n\x06status\x18\x01 \x01(\x0b\x32!.yeying.api.common.ResponseStatus2\xbe\x02\n\x07Service\x12\x65\n\x08Register\x12*.yeying.api.service.RegisterServiceRequest\x1a+.yeying.api.service.RegisterServiceResponse\"\x00\x12_\n\x06Search\x12(.yeying.api.service.SearchServiceRequest\x1a).yeying.api.service.SearchServiceResponse\"\x00\x12k\n\nUnregister\x12,.yeying.api.service.UnregisterServiceRequest\x1a-.yeying.api.service.UnregisterServiceResponse\"\x00\x42\x14Z\x12yeying/api/serviceb\x06proto3')
+DESCRIPTOR = _descriptor_pool.Default().AddSerializedFile(
+    b'\n yeying/api/service/service.proto\x12\x12yeying.api.service\x1a\x1fyeying/api/common/message.proto\x1a\x1cyeying/api/common/code.proto\x1a\x1dyeying/api/common/model.proto"\x84\x01\n\x14\x43reateServiceRequest\x12\x30\n\x06header\x18\x01 \x01(\x0b\x32 .yeying.api.common.MessageHeader\x12:\n\x04\x62ody\x18\x02 \x01(\x0b\x32,.yeying.api.service.CreateServiceRequestBody"O\n\x18\x43reateServiceRequestBody\x12\x33\n\x07service\x18\x01 \x01(\x0b\x32".yeying.api.common.ServiceMetadata"\x86\x01\n\x15\x43reateServiceResponse\x12\x30\n\x06header\x18\x01 \x01(\x0b\x32 .yeying.api.common.MessageHeader\x12;\n\x04\x62ody\x18\x02 \x01(\x0b\x32-.yeying.api.service.CreateServiceResponseBody"\x83\x01\n\x19\x43reateServiceResponseBody\x12\x31\n\x06status\x18\x01 \x01(\x0b\x32!.yeying.api.common.ResponseStatus\x12\x33\n\x07service\x18\x02 \x01(\x0b\x32".yeying.api.common.ServiceMetadata"\x84\x01\n\x14\x44\x65tailServiceRequest\x12\x30\n\x06header\x18\x01 \x01(\x0b\x32 .yeying.api.common.MessageHeader\x12:\n\x04\x62ody\x18\x02 \x01(\x0b\x32,.yeying.api.service.DetailServiceRequestBody"8\n\x18\x44\x65tailServiceRequestBody\x12\x0b\n\x03\x64id\x18\x01 \x01(\t\x12\x0f\n\x07version\x18\x02 \x01(\r"\x86\x01\n\x15\x44\x65tailServiceResponse\x12\x30\n\x06header\x18\x01 \x01(\x0b\x32 .yeying.api.common.MessageHeader\x12;\n\x04\x62ody\x18\x02 \x01(\x0b\x32-.yeying.api.service.DetailServiceResponseBody"\x83\x01\n\x19\x44\x65tailServiceResponseBody\x12\x31\n\x06status\x18\x01 \x01(\x0b\x32!.yeying.api.common.ResponseStatus\x12\x33\n\x07service\x18\x02 \x01(\x0b\x32".yeying.api.common.ServiceMetadata"\x84\x01\n\x14SearchServiceRequest\x12\x30\n\x06header\x18\x01 \x01(\x0b\x32 .yeying.api.common.MessageHeader\x12:\n\x04\x62ody\x18\x02 \x01(\x0b\x32,.yeying.api.service.SearchServiceRequestBody"\x87\x01\n\x18SearchServiceRequestBody\x12=\n\tcondition\x18\x01 \x01(\x0b\x32*.yeying.api.service.SearchServiceCondition\x12,\n\x04page\x18\x02 \x01(\x0b\x32\x1e.yeying.api.common.RequestPage"x\n\x16SearchServiceCondition\x12\x30\n\x04\x63ode\x18\x01 \x01(\x0e\x32".yeying.api.common.ServiceCodeEnum\x12\r\n\x05owner\x18\x02 \x01(\t\x12\x0c\n\x04name\x18\x03 \x01(\t\x12\x0f\n\x07keyword\x18\x04 \x01(\t"\x86\x01\n\x15SearchServiceResponse\x12\x30\n\x06header\x18\x01 \x01(\x0b\x32 .yeying.api.common.MessageHeader\x12;\n\x04\x62ody\x18\x02 \x01(\x0b\x32-.yeying.api.service.SearchServiceResponseBody"\xb3\x01\n\x19SearchServiceResponseBody\x12\x31\n\x06status\x18\x01 \x01(\x0b\x32!.yeying.api.common.ResponseStatus\x12\x34\n\x08services\x18\x02 \x03(\x0b\x32".yeying.api.common.ServiceMetadata\x12-\n\x04page\x18\x03 \x01(\x0b\x32\x1f.yeying.api.common.ResponsePage"\x84\x01\n\x14OnlineServiceRequest\x12\x30\n\x06header\x18\x01 \x01(\x0b\x32 .yeying.api.common.MessageHeader\x12:\n\x04\x62ody\x18\x02 \x01(\x0b\x32,.yeying.api.service.OnlineServiceRequestBody"8\n\x18OnlineServiceRequestBody\x12\x0b\n\x03\x64id\x18\x01 \x01(\t\x12\x0f\n\x07version\x18\x02 \x01(\r"\x86\x01\n\x15OnlineServiceResponse\x12\x30\n\x06header\x18\x01 \x01(\x0b\x32 .yeying.api.common.MessageHeader\x12;\n\x04\x62ody\x18\x02 \x01(\x0b\x32-.yeying.api.service.OnlineServiceResponseBody"\x83\x01\n\x19OnlineServiceResponseBody\x12\x31\n\x06status\x18\x01 \x01(\x0b\x32!.yeying.api.common.ResponseStatus\x12\x33\n\x07service\x18\x02 \x01(\x0b\x32".yeying.api.common.ServiceMetadata"\x86\x01\n\x15OfflineServiceRequest\x12\x30\n\x06header\x18\x01 \x01(\x0b\x32 .yeying.api.common.MessageHeader\x12;\n\x04\x62ody\x18\x02 \x01(\x0b\x32-.yeying.api.service.OfflineServiceRequestBody"9\n\x19OfflineServiceRequestBody\x12\x0b\n\x03\x64id\x18\x01 \x01(\t\x12\x0f\n\x07version\x18\x02 \x01(\r"\x88\x01\n\x16OfflineServiceResponse\x12\x30\n\x06header\x18\x01 \x01(\x0b\x32 .yeying.api.common.MessageHeader\x12<\n\x04\x62ody\x18\x02 \x01(\x0b\x32..yeying.api.service.OfflineServiceResponseBody"\x84\x01\n\x1aOfflineServiceResponseBody\x12\x31\n\x06status\x18\x01 \x01(\x0b\x32!.yeying.api.common.ResponseStatus\x12\x33\n\x07service\x18\x02 \x01(\x0b\x32".yeying.api.common.ServiceMetadata"\x84\x01\n\x14\x44\x65leteServiceRequest\x12\x30\n\x06header\x18\x01 \x01(\x0b\x32 .yeying.api.common.MessageHeader\x12:\n\x04\x62ody\x18\x02 \x01(\x0b\x32,.yeying.api.service.DeleteServiceRequestBody"8\n\x18\x44\x65leteServiceRequestBody\x12\x0b\n\x03\x64id\x18\x01 \x01(\t\x12\x0f\n\x07version\x18\x02 \x01(\r"\x86\x01\n\x15\x44\x65leteServiceResponse\x12\x30\n\x06header\x18\x01 \x01(\x0b\x32 .yeying.api.common.MessageHeader\x12;\n\x04\x62ody\x18\x02 \x01(\x0b\x32-.yeying.api.service.DeleteServiceResponseBody"N\n\x19\x44\x65leteServiceResponseBody\x12\x31\n\x06status\x18\x01 \x01(\x0b\x32!.yeying.api.common.ResponseStatus2\xd2\x04\n\x07Service\x12_\n\x06\x43reate\x12(.yeying.api.service.CreateServiceRequest\x1a).yeying.api.service.CreateServiceResponse"\x00\x12_\n\x06\x44\x65tail\x12(.yeying.api.service.DetailServiceRequest\x1a).yeying.api.service.DetailServiceResponse"\x00\x12_\n\x06Search\x12(.yeying.api.service.SearchServiceRequest\x1a).yeying.api.service.SearchServiceResponse"\x00\x12_\n\x06Online\x12(.yeying.api.service.OnlineServiceRequest\x1a).yeying.api.service.OnlineServiceResponse"\x00\x12\x62\n\x07Offline\x12).yeying.api.service.OfflineServiceRequest\x1a*.yeying.api.service.OfflineServiceResponse"\x00\x12_\n\x06\x44\x65lete\x12(.yeying.api.service.DeleteServiceRequest\x1a).yeying.api.service.DeleteServiceResponse"\x00\x42\x14Z\x12yeying/api/serviceb\x06proto3'
+)
 
 _globals = globals()
 _builder.BuildMessageAndEnumDescriptors(DESCRIPTOR, _globals)
-_builder.BuildTopDescriptorsAndMessages(DESCRIPTOR, 'yeying.api.service.service_pb2', _globals)
+_builder.BuildTopDescriptorsAndMessages(DESCRIPTOR, "yeying.api.service.service_pb2", _globals)
 if not _descriptor._USE_C_DESCRIPTORS:
-  _globals['DESCRIPTOR']._loaded_options = None
-  _globals['DESCRIPTOR']._serialized_options = b'Z\022yeying/api/service'
-  _globals['_REGISTERSERVICEREQUEST']._serialized_start=151
-  _globals['_REGISTERSERVICEREQUEST']._serialized_end=287
-  _globals['_REGISTERSERVICEREQUESTBODY']._serialized_start=289
-  _globals['_REGISTERSERVICEREQUESTBODY']._serialized_end=370
-  _globals['_REGISTERSERVICERESPONSE']._serialized_start=373
-  _globals['_REGISTERSERVICERESPONSE']._serialized_end=511
-  _globals['_REGISTERSERVICERESPONSEBODY']._serialized_start=514
-  _globals['_REGISTERSERVICERESPONSEBODY']._serialized_end=647
-  _globals['_SEARCHSERVICEREQUEST']._serialized_start=650
-  _globals['_SEARCHSERVICEREQUEST']._serialized_end=782
-  _globals['_SEARCHSERVICEREQUESTBODY']._serialized_start=785
-  _globals['_SEARCHSERVICEREQUESTBODY']._serialized_end=920
-  _globals['_SEARCHSERVICECONDITION']._serialized_start=922
-  _globals['_SEARCHSERVICECONDITION']._serialized_end=1011
-  _globals['_SEARCHSERVICERESPONSE']._serialized_start=1014
-  _globals['_SEARCHSERVICERESPONSE']._serialized_end=1148
-  _globals['_SEARCHSERVICERESPONSEBODY']._serialized_start=1151
-  _globals['_SEARCHSERVICERESPONSEBODY']._serialized_end=1330
-  _globals['_UNREGISTERSERVICEREQUEST']._serialized_start=1333
-  _globals['_UNREGISTERSERVICEREQUEST']._serialized_end=1473
-  _globals['_UNREGISTERSERVICEREQUESTBODY']._serialized_start=1475
-  _globals['_UNREGISTERSERVICEREQUESTBODY']._serialized_end=1535
-  _globals['_UNREGISTERSERVICERESPONSE']._serialized_start=1538
-  _globals['_UNREGISTERSERVICERESPONSE']._serialized_end=1680
-  _globals['_UNREGISTERSERVICERESPONSEBODY']._serialized_start=1682
-  _globals['_UNREGISTERSERVICERESPONSEBODY']._serialized_end=1764
-  _globals['_SERVICE']._serialized_start=1767
-  _globals['_SERVICE']._serialized_end=2085
+    _globals["DESCRIPTOR"]._loaded_options = None
+    _globals["DESCRIPTOR"]._serialized_options = b"Z\022yeying/api/service"
+    _globals["_CREATESERVICEREQUEST"]._serialized_start = 151
+    _globals["_CREATESERVICEREQUEST"]._serialized_end = 283
+    _globals["_CREATESERVICEREQUESTBODY"]._serialized_start = 285
+    _globals["_CREATESERVICEREQUESTBODY"]._serialized_end = 364
+    _globals["_CREATESERVICERESPONSE"]._serialized_start = 367
+    _globals["_CREATESERVICERESPONSE"]._serialized_end = 501
+    _globals["_CREATESERVICERESPONSEBODY"]._serialized_start = 504
+    _globals["_CREATESERVICERESPONSEBODY"]._serialized_end = 635
+    _globals["_DETAILSERVICEREQUEST"]._serialized_start = 638
+    _globals["_DETAILSERVICEREQUEST"]._serialized_end = 770
+    _globals["_DETAILSERVICEREQUESTBODY"]._serialized_start = 772
+    _globals["_DETAILSERVICEREQUESTBODY"]._serialized_end = 828
+    _globals["_DETAILSERVICERESPONSE"]._serialized_start = 831
+    _globals["_DETAILSERVICERESPONSE"]._serialized_end = 965
+    _globals["_DETAILSERVICERESPONSEBODY"]._serialized_start = 968
+    _globals["_DETAILSERVICERESPONSEBODY"]._serialized_end = 1099
+    _globals["_SEARCHSERVICEREQUEST"]._serialized_start = 1102
+    _globals["_SEARCHSERVICEREQUEST"]._serialized_end = 1234
+    _globals["_SEARCHSERVICEREQUESTBODY"]._serialized_start = 1237
+    _globals["_SEARCHSERVICEREQUESTBODY"]._serialized_end = 1372
+    _globals["_SEARCHSERVICECONDITION"]._serialized_start = 1374
+    _globals["_SEARCHSERVICECONDITION"]._serialized_end = 1494
+    _globals["_SEARCHSERVICERESPONSE"]._serialized_start = 1497
+    _globals["_SEARCHSERVICERESPONSE"]._serialized_end = 1631
+    _globals["_SEARCHSERVICERESPONSEBODY"]._serialized_start = 1634
+    _globals["_SEARCHSERVICERESPONSEBODY"]._serialized_end = 1813
+    _globals["_ONLINESERVICEREQUEST"]._serialized_start = 1816
+    _globals["_ONLINESERVICEREQUEST"]._serialized_end = 1948
+    _globals["_ONLINESERVICEREQUESTBODY"]._serialized_start = 1950
+    _globals["_ONLINESERVICEREQUESTBODY"]._serialized_end = 2006
+    _globals["_ONLINESERVICERESPONSE"]._serialized_start = 2009
+    _globals["_ONLINESERVICERESPONSE"]._serialized_end = 2143
+    _globals["_ONLINESERVICERESPONSEBODY"]._serialized_start = 2146
+    _globals["_ONLINESERVICERESPONSEBODY"]._serialized_end = 2277
+    _globals["_OFFLINESERVICEREQUEST"]._serialized_start = 2280
+    _globals["_OFFLINESERVICEREQUEST"]._serialized_end = 2414
+    _globals["_OFFLINESERVICEREQUESTBODY"]._serialized_start = 2416
+    _globals["_OFFLINESERVICEREQUESTBODY"]._serialized_end = 2473
+    _globals["_OFFLINESERVICERESPONSE"]._serialized_start = 2476
+    _globals["_OFFLINESERVICERESPONSE"]._serialized_end = 2612
+    _globals["_OFFLINESERVICERESPONSEBODY"]._serialized_start = 2615
+    _globals["_OFFLINESERVICERESPONSEBODY"]._serialized_end = 2747
+    _globals["_DELETESERVICEREQUEST"]._serialized_start = 2750
+    _globals["_DELETESERVICEREQUEST"]._serialized_end = 2882
+    _globals["_DELETESERVICEREQUESTBODY"]._serialized_start = 2884
+    _globals["_DELETESERVICEREQUESTBODY"]._serialized_end = 2940
+    _globals["_DELETESERVICERESPONSE"]._serialized_start = 2943
+    _globals["_DELETESERVICERESPONSE"]._serialized_end = 3077
+    _globals["_DELETESERVICERESPONSEBODY"]._serialized_start = 3079
+    _globals["_DELETESERVICERESPONSEBODY"]._serialized_end = 3157
+    _globals["_SERVICE"]._serialized_start = 3160
+    _globals["_SERVICE"]._serialized_end = 3754
 # @@protoc_insertion_point(module_scope)

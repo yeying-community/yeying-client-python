@@ -11,6 +11,7 @@ class SupportCodeEnum(int, metaclass=_enum_type_wrapper.EnumTypeWrapper):
     SUPPORT_CODE_FAQ: _ClassVar[SupportCodeEnum]
     SUPPORT_CODE_CSR: _ClassVar[SupportCodeEnum]
     SUPPORT_CODE_IVR: _ClassVar[SupportCodeEnum]
+
 SUPPORT_CODE_FAQ: SupportCodeEnum
 SUPPORT_CODE_CSR: SupportCodeEnum
 SUPPORT_CODE_IVR: SupportCodeEnum
@@ -21,7 +22,11 @@ class CollectSupportRequest(_message.Message):
     BODY_FIELD_NUMBER: _ClassVar[int]
     header: _message_pb2.MessageHeader
     body: CollectSupportRequestBody
-    def __init__(self, header: _Optional[_Union[_message_pb2.MessageHeader, _Mapping]] = ..., body: _Optional[_Union[CollectSupportRequestBody, _Mapping]] = ...) -> None: ...
+    def __init__(
+        self,
+        header: _Optional[_Union[_message_pb2.MessageHeader, _Mapping]] = ...,
+        body: _Optional[_Union[CollectSupportRequestBody, _Mapping]] = ...,
+    ) -> None: ...
 
 class CollectSupportRequestBody(_message.Message):
     __slots__ = ("code", "faq")
@@ -29,7 +34,9 @@ class CollectSupportRequestBody(_message.Message):
     FAQ_FIELD_NUMBER: _ClassVar[int]
     code: SupportCodeEnum
     faq: FaqMetadata
-    def __init__(self, code: _Optional[_Union[SupportCodeEnum, str]] = ..., faq: _Optional[_Union[FaqMetadata, _Mapping]] = ...) -> None: ...
+    def __init__(
+        self, code: _Optional[_Union[SupportCodeEnum, str]] = ..., faq: _Optional[_Union[FaqMetadata, _Mapping]] = ...
+    ) -> None: ...
 
 class FaqMetadata(_message.Message):
     __slots__ = ("did", "email", "type", "description", "createdAt", "signature")
@@ -45,7 +52,15 @@ class FaqMetadata(_message.Message):
     description: str
     createdAt: str
     signature: str
-    def __init__(self, did: _Optional[str] = ..., email: _Optional[str] = ..., type: _Optional[str] = ..., description: _Optional[str] = ..., createdAt: _Optional[str] = ..., signature: _Optional[str] = ...) -> None: ...
+    def __init__(
+        self,
+        did: _Optional[str] = ...,
+        email: _Optional[str] = ...,
+        type: _Optional[str] = ...,
+        description: _Optional[str] = ...,
+        createdAt: _Optional[str] = ...,
+        signature: _Optional[str] = ...,
+    ) -> None: ...
 
 class CollectSupportResponse(_message.Message):
     __slots__ = ("header", "body")
@@ -53,7 +68,11 @@ class CollectSupportResponse(_message.Message):
     BODY_FIELD_NUMBER: _ClassVar[int]
     header: _message_pb2.MessageHeader
     body: CollectSupportResponseBody
-    def __init__(self, header: _Optional[_Union[_message_pb2.MessageHeader, _Mapping]] = ..., body: _Optional[_Union[CollectSupportResponseBody, _Mapping]] = ...) -> None: ...
+    def __init__(
+        self,
+        header: _Optional[_Union[_message_pb2.MessageHeader, _Mapping]] = ...,
+        body: _Optional[_Union[CollectSupportResponseBody, _Mapping]] = ...,
+    ) -> None: ...
 
 class CollectSupportResponseBody(_message.Message):
     __slots__ = ("status",)

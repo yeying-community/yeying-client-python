@@ -5,23 +5,24 @@ import warnings
 
 from yeying.api.identity import identity_pb2 as yeying_dot_api_dot_identity_dot_identity__pb2
 
-GRPC_GENERATED_VERSION = '1.68.1'
+GRPC_GENERATED_VERSION = "1.68.1"
 GRPC_VERSION = grpc.__version__
 _version_not_supported = False
 
 try:
     from grpc._utilities import first_version_is_lower
+
     _version_not_supported = first_version_is_lower(GRPC_VERSION, GRPC_GENERATED_VERSION)
 except ImportError:
     _version_not_supported = True
 
 if _version_not_supported:
     raise RuntimeError(
-        f'The grpc package installed is at version {GRPC_VERSION},'
-        + f' but the generated code in yeying/api/identity/identity_pb2_grpc.py depends on'
-        + f' grpcio>={GRPC_GENERATED_VERSION}.'
-        + f' Please upgrade your grpc module to grpcio>={GRPC_GENERATED_VERSION}'
-        + f' or downgrade your generated code using grpcio-tools<={GRPC_VERSION}.'
+        f"The grpc package installed is at version {GRPC_VERSION},"
+        + f" but the generated code in yeying/api/identity/identity_pb2_grpc.py depends on"
+        + f" grpcio>={GRPC_GENERATED_VERSION}."
+        + f" Please upgrade your grpc module to grpcio>={GRPC_GENERATED_VERSION}"
+        + f" or downgrade your generated code using grpcio-tools<={GRPC_VERSION}."
     )
 
 
@@ -42,30 +43,35 @@ class IdentityStub(object):
             channel: A grpc.Channel.
         """
         self.Deposit = channel.unary_unary(
-                '/yeying.api.identity.Identity/Deposit',
-                request_serializer=yeying_dot_api_dot_identity_dot_identity__pb2.DepositRequest.SerializeToString,
-                response_deserializer=yeying_dot_api_dot_identity_dot_identity__pb2.DepositResponse.FromString,
-                _registered_method=True)
+            "/yeying.api.identity.Identity/Deposit",
+            request_serializer=yeying_dot_api_dot_identity_dot_identity__pb2.DepositRequest.SerializeToString,
+            response_deserializer=yeying_dot_api_dot_identity_dot_identity__pb2.DepositResponse.FromString,
+            _registered_method=True,
+        )
         self.Retrieve = channel.unary_unary(
-                '/yeying.api.identity.Identity/Retrieve',
-                request_serializer=yeying_dot_api_dot_identity_dot_identity__pb2.RetrieveRequest.SerializeToString,
-                response_deserializer=yeying_dot_api_dot_identity_dot_identity__pb2.RetrieveResponse.FromString,
-                _registered_method=True)
+            "/yeying.api.identity.Identity/Retrieve",
+            request_serializer=yeying_dot_api_dot_identity_dot_identity__pb2.RetrieveRequest.SerializeToString,
+            response_deserializer=yeying_dot_api_dot_identity_dot_identity__pb2.RetrieveResponse.FromString,
+            _registered_method=True,
+        )
         self.Query = channel.unary_unary(
-                '/yeying.api.identity.Identity/Query',
-                request_serializer=yeying_dot_api_dot_identity_dot_identity__pb2.QueryRequest.SerializeToString,
-                response_deserializer=yeying_dot_api_dot_identity_dot_identity__pb2.QueryResponse.FromString,
-                _registered_method=True)
+            "/yeying.api.identity.Identity/Query",
+            request_serializer=yeying_dot_api_dot_identity_dot_identity__pb2.QueryRequest.SerializeToString,
+            response_deserializer=yeying_dot_api_dot_identity_dot_identity__pb2.QueryResponse.FromString,
+            _registered_method=True,
+        )
         self.Share = channel.unary_unary(
-                '/yeying.api.identity.Identity/Share',
-                request_serializer=yeying_dot_api_dot_identity_dot_identity__pb2.ShareRequest.SerializeToString,
-                response_deserializer=yeying_dot_api_dot_identity_dot_identity__pb2.ShareResponse.FromString,
-                _registered_method=True)
+            "/yeying.api.identity.Identity/Share",
+            request_serializer=yeying_dot_api_dot_identity_dot_identity__pb2.ShareRequest.SerializeToString,
+            response_deserializer=yeying_dot_api_dot_identity_dot_identity__pb2.ShareResponse.FromString,
+            _registered_method=True,
+        )
         self.Cancel = channel.unary_unary(
-                '/yeying.api.identity.Identity/Cancel',
-                request_serializer=yeying_dot_api_dot_identity_dot_identity__pb2.CancelRequest.SerializeToString,
-                response_deserializer=yeying_dot_api_dot_identity_dot_identity__pb2.CancelResponse.FromString,
-                _registered_method=True)
+            "/yeying.api.identity.Identity/Cancel",
+            request_serializer=yeying_dot_api_dot_identity_dot_identity__pb2.CancelRequest.SerializeToString,
+            response_deserializer=yeying_dot_api_dot_identity_dot_identity__pb2.CancelResponse.FromString,
+            _registered_method=True,
+        )
 
 
 class IdentityServicer(object):
@@ -79,76 +85,70 @@ class IdentityServicer(object):
     """
 
     def Deposit(self, request, context):
-        """身份托管
-        """
+        """身份托管"""
         context.set_code(grpc.StatusCode.UNIMPLEMENTED)
-        context.set_details('Method not implemented!')
-        raise NotImplementedError('Method not implemented!')
+        context.set_details("Method not implemented!")
+        raise NotImplementedError("Method not implemented!")
 
     def Retrieve(self, request, context):
-        """取回身份
-        """
+        """取回身份"""
         context.set_code(grpc.StatusCode.UNIMPLEMENTED)
-        context.set_details('Method not implemented!')
-        raise NotImplementedError('Method not implemented!')
+        context.set_details("Method not implemented!")
+        raise NotImplementedError("Method not implemented!")
 
     def Query(self, request, context):
-        """查询身份名片
-        """
+        """查询身份名片"""
         context.set_code(grpc.StatusCode.UNIMPLEMENTED)
-        context.set_details('Method not implemented!')
-        raise NotImplementedError('Method not implemented!')
+        context.set_details("Method not implemented!")
+        raise NotImplementedError("Method not implemented!")
 
     def Share(self, request, context):
-        """分享身份名片
-        """
+        """分享身份名片"""
         context.set_code(grpc.StatusCode.UNIMPLEMENTED)
-        context.set_details('Method not implemented!')
-        raise NotImplementedError('Method not implemented!')
+        context.set_details("Method not implemented!")
+        raise NotImplementedError("Method not implemented!")
 
     def Cancel(self, request, context):
-        """取消托管
-        """
+        """取消托管"""
         context.set_code(grpc.StatusCode.UNIMPLEMENTED)
-        context.set_details('Method not implemented!')
-        raise NotImplementedError('Method not implemented!')
+        context.set_details("Method not implemented!")
+        raise NotImplementedError("Method not implemented!")
 
 
 def add_IdentityServicer_to_server(servicer, server):
     rpc_method_handlers = {
-            'Deposit': grpc.unary_unary_rpc_method_handler(
-                    servicer.Deposit,
-                    request_deserializer=yeying_dot_api_dot_identity_dot_identity__pb2.DepositRequest.FromString,
-                    response_serializer=yeying_dot_api_dot_identity_dot_identity__pb2.DepositResponse.SerializeToString,
-            ),
-            'Retrieve': grpc.unary_unary_rpc_method_handler(
-                    servicer.Retrieve,
-                    request_deserializer=yeying_dot_api_dot_identity_dot_identity__pb2.RetrieveRequest.FromString,
-                    response_serializer=yeying_dot_api_dot_identity_dot_identity__pb2.RetrieveResponse.SerializeToString,
-            ),
-            'Query': grpc.unary_unary_rpc_method_handler(
-                    servicer.Query,
-                    request_deserializer=yeying_dot_api_dot_identity_dot_identity__pb2.QueryRequest.FromString,
-                    response_serializer=yeying_dot_api_dot_identity_dot_identity__pb2.QueryResponse.SerializeToString,
-            ),
-            'Share': grpc.unary_unary_rpc_method_handler(
-                    servicer.Share,
-                    request_deserializer=yeying_dot_api_dot_identity_dot_identity__pb2.ShareRequest.FromString,
-                    response_serializer=yeying_dot_api_dot_identity_dot_identity__pb2.ShareResponse.SerializeToString,
-            ),
-            'Cancel': grpc.unary_unary_rpc_method_handler(
-                    servicer.Cancel,
-                    request_deserializer=yeying_dot_api_dot_identity_dot_identity__pb2.CancelRequest.FromString,
-                    response_serializer=yeying_dot_api_dot_identity_dot_identity__pb2.CancelResponse.SerializeToString,
-            ),
+        "Deposit": grpc.unary_unary_rpc_method_handler(
+            servicer.Deposit,
+            request_deserializer=yeying_dot_api_dot_identity_dot_identity__pb2.DepositRequest.FromString,
+            response_serializer=yeying_dot_api_dot_identity_dot_identity__pb2.DepositResponse.SerializeToString,
+        ),
+        "Retrieve": grpc.unary_unary_rpc_method_handler(
+            servicer.Retrieve,
+            request_deserializer=yeying_dot_api_dot_identity_dot_identity__pb2.RetrieveRequest.FromString,
+            response_serializer=yeying_dot_api_dot_identity_dot_identity__pb2.RetrieveResponse.SerializeToString,
+        ),
+        "Query": grpc.unary_unary_rpc_method_handler(
+            servicer.Query,
+            request_deserializer=yeying_dot_api_dot_identity_dot_identity__pb2.QueryRequest.FromString,
+            response_serializer=yeying_dot_api_dot_identity_dot_identity__pb2.QueryResponse.SerializeToString,
+        ),
+        "Share": grpc.unary_unary_rpc_method_handler(
+            servicer.Share,
+            request_deserializer=yeying_dot_api_dot_identity_dot_identity__pb2.ShareRequest.FromString,
+            response_serializer=yeying_dot_api_dot_identity_dot_identity__pb2.ShareResponse.SerializeToString,
+        ),
+        "Cancel": grpc.unary_unary_rpc_method_handler(
+            servicer.Cancel,
+            request_deserializer=yeying_dot_api_dot_identity_dot_identity__pb2.CancelRequest.FromString,
+            response_serializer=yeying_dot_api_dot_identity_dot_identity__pb2.CancelResponse.SerializeToString,
+        ),
     }
-    generic_handler = grpc.method_handlers_generic_handler(
-            'yeying.api.identity.Identity', rpc_method_handlers)
+    generic_handler = grpc.method_handlers_generic_handler("yeying.api.identity.Identity", rpc_method_handlers)
     server.add_generic_rpc_handlers((generic_handler,))
-    server.add_registered_method_handlers('yeying.api.identity.Identity', rpc_method_handlers)
+    server.add_registered_method_handlers("yeying.api.identity.Identity", rpc_method_handlers)
 
 
- # This class is part of an EXPERIMENTAL API.
+# This class is part of an EXPERIMENTAL API.
 class Identity(object):
     """提供身份托管和维护服务，目前还不支持托管加密的身份，需要有资质，需要补齐的能力；
     1、至少二要素身份认证；
@@ -160,20 +160,22 @@ class Identity(object):
     """
 
     @staticmethod
-    def Deposit(request,
-            target,
-            options=(),
-            channel_credentials=None,
-            call_credentials=None,
-            insecure=False,
-            compression=None,
-            wait_for_ready=None,
-            timeout=None,
-            metadata=None):
+    def Deposit(
+        request,
+        target,
+        options=(),
+        channel_credentials=None,
+        call_credentials=None,
+        insecure=False,
+        compression=None,
+        wait_for_ready=None,
+        timeout=None,
+        metadata=None,
+    ):
         return grpc.experimental.unary_unary(
             request,
             target,
-            '/yeying.api.identity.Identity/Deposit',
+            "/yeying.api.identity.Identity/Deposit",
             yeying_dot_api_dot_identity_dot_identity__pb2.DepositRequest.SerializeToString,
             yeying_dot_api_dot_identity_dot_identity__pb2.DepositResponse.FromString,
             options,
@@ -184,23 +186,26 @@ class Identity(object):
             wait_for_ready,
             timeout,
             metadata,
-            _registered_method=True)
+            _registered_method=True,
+        )
 
     @staticmethod
-    def Retrieve(request,
-            target,
-            options=(),
-            channel_credentials=None,
-            call_credentials=None,
-            insecure=False,
-            compression=None,
-            wait_for_ready=None,
-            timeout=None,
-            metadata=None):
+    def Retrieve(
+        request,
+        target,
+        options=(),
+        channel_credentials=None,
+        call_credentials=None,
+        insecure=False,
+        compression=None,
+        wait_for_ready=None,
+        timeout=None,
+        metadata=None,
+    ):
         return grpc.experimental.unary_unary(
             request,
             target,
-            '/yeying.api.identity.Identity/Retrieve',
+            "/yeying.api.identity.Identity/Retrieve",
             yeying_dot_api_dot_identity_dot_identity__pb2.RetrieveRequest.SerializeToString,
             yeying_dot_api_dot_identity_dot_identity__pb2.RetrieveResponse.FromString,
             options,
@@ -211,23 +216,26 @@ class Identity(object):
             wait_for_ready,
             timeout,
             metadata,
-            _registered_method=True)
+            _registered_method=True,
+        )
 
     @staticmethod
-    def Query(request,
-            target,
-            options=(),
-            channel_credentials=None,
-            call_credentials=None,
-            insecure=False,
-            compression=None,
-            wait_for_ready=None,
-            timeout=None,
-            metadata=None):
+    def Query(
+        request,
+        target,
+        options=(),
+        channel_credentials=None,
+        call_credentials=None,
+        insecure=False,
+        compression=None,
+        wait_for_ready=None,
+        timeout=None,
+        metadata=None,
+    ):
         return grpc.experimental.unary_unary(
             request,
             target,
-            '/yeying.api.identity.Identity/Query',
+            "/yeying.api.identity.Identity/Query",
             yeying_dot_api_dot_identity_dot_identity__pb2.QueryRequest.SerializeToString,
             yeying_dot_api_dot_identity_dot_identity__pb2.QueryResponse.FromString,
             options,
@@ -238,23 +246,26 @@ class Identity(object):
             wait_for_ready,
             timeout,
             metadata,
-            _registered_method=True)
+            _registered_method=True,
+        )
 
     @staticmethod
-    def Share(request,
-            target,
-            options=(),
-            channel_credentials=None,
-            call_credentials=None,
-            insecure=False,
-            compression=None,
-            wait_for_ready=None,
-            timeout=None,
-            metadata=None):
+    def Share(
+        request,
+        target,
+        options=(),
+        channel_credentials=None,
+        call_credentials=None,
+        insecure=False,
+        compression=None,
+        wait_for_ready=None,
+        timeout=None,
+        metadata=None,
+    ):
         return grpc.experimental.unary_unary(
             request,
             target,
-            '/yeying.api.identity.Identity/Share',
+            "/yeying.api.identity.Identity/Share",
             yeying_dot_api_dot_identity_dot_identity__pb2.ShareRequest.SerializeToString,
             yeying_dot_api_dot_identity_dot_identity__pb2.ShareResponse.FromString,
             options,
@@ -265,23 +276,26 @@ class Identity(object):
             wait_for_ready,
             timeout,
             metadata,
-            _registered_method=True)
+            _registered_method=True,
+        )
 
     @staticmethod
-    def Cancel(request,
-            target,
-            options=(),
-            channel_credentials=None,
-            call_credentials=None,
-            insecure=False,
-            compression=None,
-            wait_for_ready=None,
-            timeout=None,
-            metadata=None):
+    def Cancel(
+        request,
+        target,
+        options=(),
+        channel_credentials=None,
+        call_credentials=None,
+        insecure=False,
+        compression=None,
+        wait_for_ready=None,
+        timeout=None,
+        metadata=None,
+    ):
         return grpc.experimental.unary_unary(
             request,
             target,
-            '/yeying.api.identity.Identity/Cancel',
+            "/yeying.api.identity.Identity/Cancel",
             yeying_dot_api_dot_identity_dot_identity__pb2.CancelRequest.SerializeToString,
             yeying_dot_api_dot_identity_dot_identity__pb2.CancelResponse.FromString,
             options,
@@ -292,4 +306,5 @@ class Identity(object):
             wait_for_ready,
             timeout,
             metadata,
-            _registered_method=True)
+            _registered_method=True,
+        )

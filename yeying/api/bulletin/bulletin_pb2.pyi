@@ -4,13 +4,20 @@ from google.protobuf.internal import containers as _containers
 from google.protobuf.internal import enum_type_wrapper as _enum_type_wrapper
 from google.protobuf import descriptor as _descriptor
 from google.protobuf import message as _message
-from typing import ClassVar as _ClassVar, Iterable as _Iterable, Mapping as _Mapping, Optional as _Optional, Union as _Union
+from typing import (
+    ClassVar as _ClassVar,
+    Iterable as _Iterable,
+    Mapping as _Mapping,
+    Optional as _Optional,
+    Union as _Union,
+)
 
 DESCRIPTOR: _descriptor.FileDescriptor
 
 class BulletinCodeEnum(int, metaclass=_enum_type_wrapper.EnumTypeWrapper):
     __slots__ = ()
     BULLETIN_CODE_SOLUTION: _ClassVar[BulletinCodeEnum]
+
 BULLETIN_CODE_SOLUTION: BulletinCodeEnum
 
 class BulletinListRequest(_message.Message):
@@ -19,7 +26,11 @@ class BulletinListRequest(_message.Message):
     BODY_FIELD_NUMBER: _ClassVar[int]
     header: _message_pb2.MessageHeader
     body: BulletinListRequestBody
-    def __init__(self, header: _Optional[_Union[_message_pb2.MessageHeader, _Mapping]] = ..., body: _Optional[_Union[BulletinListRequestBody, _Mapping]] = ...) -> None: ...
+    def __init__(
+        self,
+        header: _Optional[_Union[_message_pb2.MessageHeader, _Mapping]] = ...,
+        body: _Optional[_Union[BulletinListRequestBody, _Mapping]] = ...,
+    ) -> None: ...
 
 class BulletinListRequestBody(_message.Message):
     __slots__ = ("code", "language", "page")
@@ -29,7 +40,12 @@ class BulletinListRequestBody(_message.Message):
     code: BulletinCodeEnum
     language: _code_pb2.LanguageCodeEnum
     page: _message_pb2.RequestPage
-    def __init__(self, code: _Optional[_Union[BulletinCodeEnum, str]] = ..., language: _Optional[_Union[_code_pb2.LanguageCodeEnum, str]] = ..., page: _Optional[_Union[_message_pb2.RequestPage, _Mapping]] = ...) -> None: ...
+    def __init__(
+        self,
+        code: _Optional[_Union[BulletinCodeEnum, str]] = ...,
+        language: _Optional[_Union[_code_pb2.LanguageCodeEnum, str]] = ...,
+        page: _Optional[_Union[_message_pb2.RequestPage, _Mapping]] = ...,
+    ) -> None: ...
 
 class BulletinListResponse(_message.Message):
     __slots__ = ("header", "body")
@@ -37,7 +53,11 @@ class BulletinListResponse(_message.Message):
     BODY_FIELD_NUMBER: _ClassVar[int]
     header: _message_pb2.MessageHeader
     body: BulletinListResponseBody
-    def __init__(self, header: _Optional[_Union[_message_pb2.MessageHeader, _Mapping]] = ..., body: _Optional[_Union[BulletinListResponseBody, _Mapping]] = ...) -> None: ...
+    def __init__(
+        self,
+        header: _Optional[_Union[_message_pb2.MessageHeader, _Mapping]] = ...,
+        body: _Optional[_Union[BulletinListResponseBody, _Mapping]] = ...,
+    ) -> None: ...
 
 class BulletinListResponseBody(_message.Message):
     __slots__ = ("status", "solutions", "page")
@@ -47,7 +67,12 @@ class BulletinListResponseBody(_message.Message):
     status: _message_pb2.ResponseStatus
     solutions: _containers.RepeatedCompositeFieldContainer[SolutionMetadata]
     page: _message_pb2.ResponsePage
-    def __init__(self, status: _Optional[_Union[_message_pb2.ResponseStatus, _Mapping]] = ..., solutions: _Optional[_Iterable[_Union[SolutionMetadata, _Mapping]]] = ..., page: _Optional[_Union[_message_pb2.ResponsePage, _Mapping]] = ...) -> None: ...
+    def __init__(
+        self,
+        status: _Optional[_Union[_message_pb2.ResponseStatus, _Mapping]] = ...,
+        solutions: _Optional[_Iterable[_Union[SolutionMetadata, _Mapping]]] = ...,
+        page: _Optional[_Union[_message_pb2.ResponsePage, _Mapping]] = ...,
+    ) -> None: ...
 
 class SolutionMetadata(_message.Message):
     __slots__ = ("publisher", "language", "uid", "name", "description", "createdAt", "cards", "signature")
@@ -67,7 +92,17 @@ class SolutionMetadata(_message.Message):
     createdAt: str
     cards: _containers.RepeatedCompositeFieldContainer[SolutionCard]
     signature: str
-    def __init__(self, publisher: _Optional[str] = ..., language: _Optional[_Union[_code_pb2.LanguageCodeEnum, str]] = ..., uid: _Optional[str] = ..., name: _Optional[str] = ..., description: _Optional[str] = ..., createdAt: _Optional[str] = ..., cards: _Optional[_Iterable[_Union[SolutionCard, _Mapping]]] = ..., signature: _Optional[str] = ...) -> None: ...
+    def __init__(
+        self,
+        publisher: _Optional[str] = ...,
+        language: _Optional[_Union[_code_pb2.LanguageCodeEnum, str]] = ...,
+        uid: _Optional[str] = ...,
+        name: _Optional[str] = ...,
+        description: _Optional[str] = ...,
+        createdAt: _Optional[str] = ...,
+        cards: _Optional[_Iterable[_Union[SolutionCard, _Mapping]]] = ...,
+        signature: _Optional[str] = ...,
+    ) -> None: ...
 
 class SolutionCard(_message.Message):
     __slots__ = ("name", "price", "variables")
@@ -77,4 +112,6 @@ class SolutionCard(_message.Message):
     name: str
     price: str
     variables: str
-    def __init__(self, name: _Optional[str] = ..., price: _Optional[str] = ..., variables: _Optional[str] = ...) -> None: ...
+    def __init__(
+        self, name: _Optional[str] = ..., price: _Optional[str] = ..., variables: _Optional[str] = ...
+    ) -> None: ...

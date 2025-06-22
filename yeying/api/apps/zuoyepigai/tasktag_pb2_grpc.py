@@ -5,23 +5,24 @@ import warnings
 
 from yeying.api.apps.zuoyepigai import tasktag_pb2 as yeying_dot_api_dot_apps_dot_zuoyepigai_dot_tasktag__pb2
 
-GRPC_GENERATED_VERSION = '1.68.1'
+GRPC_GENERATED_VERSION = "1.68.1"
 GRPC_VERSION = grpc.__version__
 _version_not_supported = False
 
 try:
     from grpc._utilities import first_version_is_lower
+
     _version_not_supported = first_version_is_lower(GRPC_VERSION, GRPC_GENERATED_VERSION)
 except ImportError:
     _version_not_supported = True
 
 if _version_not_supported:
     raise RuntimeError(
-        f'The grpc package installed is at version {GRPC_VERSION},'
-        + f' but the generated code in yeying/api/apps/zuoyepigai/tasktag_pb2_grpc.py depends on'
-        + f' grpcio>={GRPC_GENERATED_VERSION}.'
-        + f' Please upgrade your grpc module to grpcio>={GRPC_GENERATED_VERSION}'
-        + f' or downgrade your generated code using grpcio-tools<={GRPC_VERSION}.'
+        f"The grpc package installed is at version {GRPC_VERSION},"
+        + f" but the generated code in yeying/api/apps/zuoyepigai/tasktag_pb2_grpc.py depends on"
+        + f" grpcio>={GRPC_GENERATED_VERSION}."
+        + f" Please upgrade your grpc module to grpcio>={GRPC_GENERATED_VERSION}"
+        + f" or downgrade your generated code using grpcio-tools<={GRPC_VERSION}."
     )
 
 
@@ -38,30 +39,35 @@ class TaskTagStub(object):
             channel: A grpc.Channel.
         """
         self.Add = channel.unary_unary(
-                '/yeying.api.apps.zuoyepigai.TaskTag/Add',
-                request_serializer=yeying_dot_api_dot_apps_dot_zuoyepigai_dot_tasktag__pb2.AddTaskTagRequest.SerializeToString,
-                response_deserializer=yeying_dot_api_dot_apps_dot_zuoyepigai_dot_tasktag__pb2.AddTaskTagResponse.FromString,
-                _registered_method=True)
+            "/yeying.api.apps.zuoyepigai.TaskTag/Add",
+            request_serializer=yeying_dot_api_dot_apps_dot_zuoyepigai_dot_tasktag__pb2.AddTaskTagRequest.SerializeToString,
+            response_deserializer=yeying_dot_api_dot_apps_dot_zuoyepigai_dot_tasktag__pb2.AddTaskTagResponse.FromString,
+            _registered_method=True,
+        )
         self.Detail = channel.unary_unary(
-                '/yeying.api.apps.zuoyepigai.TaskTag/Detail',
-                request_serializer=yeying_dot_api_dot_apps_dot_zuoyepigai_dot_tasktag__pb2.DetailTaskTagRequest.SerializeToString,
-                response_deserializer=yeying_dot_api_dot_apps_dot_zuoyepigai_dot_tasktag__pb2.DetailTaskTagResponse.FromString,
-                _registered_method=True)
+            "/yeying.api.apps.zuoyepigai.TaskTag/Detail",
+            request_serializer=yeying_dot_api_dot_apps_dot_zuoyepigai_dot_tasktag__pb2.DetailTaskTagRequest.SerializeToString,
+            response_deserializer=yeying_dot_api_dot_apps_dot_zuoyepigai_dot_tasktag__pb2.DetailTaskTagResponse.FromString,
+            _registered_method=True,
+        )
         self.List = channel.unary_unary(
-                '/yeying.api.apps.zuoyepigai.TaskTag/List',
-                request_serializer=yeying_dot_api_dot_apps_dot_zuoyepigai_dot_tasktag__pb2.ListTaskTagRequest.SerializeToString,
-                response_deserializer=yeying_dot_api_dot_apps_dot_zuoyepigai_dot_tasktag__pb2.ListTaskTagResponse.FromString,
-                _registered_method=True)
+            "/yeying.api.apps.zuoyepigai.TaskTag/List",
+            request_serializer=yeying_dot_api_dot_apps_dot_zuoyepigai_dot_tasktag__pb2.ListTaskTagRequest.SerializeToString,
+            response_deserializer=yeying_dot_api_dot_apps_dot_zuoyepigai_dot_tasktag__pb2.ListTaskTagResponse.FromString,
+            _registered_method=True,
+        )
         self.Update = channel.unary_unary(
-                '/yeying.api.apps.zuoyepigai.TaskTag/Update',
-                request_serializer=yeying_dot_api_dot_apps_dot_zuoyepigai_dot_tasktag__pb2.UpdateTaskTagRequest.SerializeToString,
-                response_deserializer=yeying_dot_api_dot_apps_dot_zuoyepigai_dot_tasktag__pb2.UpdateTaskTagResponse.FromString,
-                _registered_method=True)
+            "/yeying.api.apps.zuoyepigai.TaskTag/Update",
+            request_serializer=yeying_dot_api_dot_apps_dot_zuoyepigai_dot_tasktag__pb2.UpdateTaskTagRequest.SerializeToString,
+            response_deserializer=yeying_dot_api_dot_apps_dot_zuoyepigai_dot_tasktag__pb2.UpdateTaskTagResponse.FromString,
+            _registered_method=True,
+        )
         self.Delete = channel.unary_unary(
-                '/yeying.api.apps.zuoyepigai.TaskTag/Delete',
-                request_serializer=yeying_dot_api_dot_apps_dot_zuoyepigai_dot_tasktag__pb2.DeleteTaskTagRequest.SerializeToString,
-                response_deserializer=yeying_dot_api_dot_apps_dot_zuoyepigai_dot_tasktag__pb2.DeleteTaskTagResponse.FromString,
-                _registered_method=True)
+            "/yeying.api.apps.zuoyepigai.TaskTag/Delete",
+            request_serializer=yeying_dot_api_dot_apps_dot_zuoyepigai_dot_tasktag__pb2.DeleteTaskTagRequest.SerializeToString,
+            response_deserializer=yeying_dot_api_dot_apps_dot_zuoyepigai_dot_tasktag__pb2.DeleteTaskTagResponse.FromString,
+            _registered_method=True,
+        )
 
 
 class TaskTagServicer(object):
@@ -71,76 +77,70 @@ class TaskTagServicer(object):
     """
 
     def Add(self, request, context):
-        """创建任务标签：由老师负创建教学任务标签
-        """
+        """创建任务标签：由老师负创建教学任务标签"""
         context.set_code(grpc.StatusCode.UNIMPLEMENTED)
-        context.set_details('Method not implemented!')
-        raise NotImplementedError('Method not implemented!')
+        context.set_details("Method not implemented!")
+        raise NotImplementedError("Method not implemented!")
 
     def Detail(self, request, context):
-        """任务标签详情
-        """
+        """任务标签详情"""
         context.set_code(grpc.StatusCode.UNIMPLEMENTED)
-        context.set_details('Method not implemented!')
-        raise NotImplementedError('Method not implemented!')
+        context.set_details("Method not implemented!")
+        raise NotImplementedError("Method not implemented!")
 
     def List(self, request, context):
-        """任务标签列表
-        """
+        """任务标签列表"""
         context.set_code(grpc.StatusCode.UNIMPLEMENTED)
-        context.set_details('Method not implemented!')
-        raise NotImplementedError('Method not implemented!')
+        context.set_details("Method not implemented!")
+        raise NotImplementedError("Method not implemented!")
 
     def Update(self, request, context):
-        """更新任务标签
-        """
+        """更新任务标签"""
         context.set_code(grpc.StatusCode.UNIMPLEMENTED)
-        context.set_details('Method not implemented!')
-        raise NotImplementedError('Method not implemented!')
+        context.set_details("Method not implemented!")
+        raise NotImplementedError("Method not implemented!")
 
     def Delete(self, request, context):
-        """删除任务标签
-        """
+        """删除任务标签"""
         context.set_code(grpc.StatusCode.UNIMPLEMENTED)
-        context.set_details('Method not implemented!')
-        raise NotImplementedError('Method not implemented!')
+        context.set_details("Method not implemented!")
+        raise NotImplementedError("Method not implemented!")
 
 
 def add_TaskTagServicer_to_server(servicer, server):
     rpc_method_handlers = {
-            'Add': grpc.unary_unary_rpc_method_handler(
-                    servicer.Add,
-                    request_deserializer=yeying_dot_api_dot_apps_dot_zuoyepigai_dot_tasktag__pb2.AddTaskTagRequest.FromString,
-                    response_serializer=yeying_dot_api_dot_apps_dot_zuoyepigai_dot_tasktag__pb2.AddTaskTagResponse.SerializeToString,
-            ),
-            'Detail': grpc.unary_unary_rpc_method_handler(
-                    servicer.Detail,
-                    request_deserializer=yeying_dot_api_dot_apps_dot_zuoyepigai_dot_tasktag__pb2.DetailTaskTagRequest.FromString,
-                    response_serializer=yeying_dot_api_dot_apps_dot_zuoyepigai_dot_tasktag__pb2.DetailTaskTagResponse.SerializeToString,
-            ),
-            'List': grpc.unary_unary_rpc_method_handler(
-                    servicer.List,
-                    request_deserializer=yeying_dot_api_dot_apps_dot_zuoyepigai_dot_tasktag__pb2.ListTaskTagRequest.FromString,
-                    response_serializer=yeying_dot_api_dot_apps_dot_zuoyepigai_dot_tasktag__pb2.ListTaskTagResponse.SerializeToString,
-            ),
-            'Update': grpc.unary_unary_rpc_method_handler(
-                    servicer.Update,
-                    request_deserializer=yeying_dot_api_dot_apps_dot_zuoyepigai_dot_tasktag__pb2.UpdateTaskTagRequest.FromString,
-                    response_serializer=yeying_dot_api_dot_apps_dot_zuoyepigai_dot_tasktag__pb2.UpdateTaskTagResponse.SerializeToString,
-            ),
-            'Delete': grpc.unary_unary_rpc_method_handler(
-                    servicer.Delete,
-                    request_deserializer=yeying_dot_api_dot_apps_dot_zuoyepigai_dot_tasktag__pb2.DeleteTaskTagRequest.FromString,
-                    response_serializer=yeying_dot_api_dot_apps_dot_zuoyepigai_dot_tasktag__pb2.DeleteTaskTagResponse.SerializeToString,
-            ),
+        "Add": grpc.unary_unary_rpc_method_handler(
+            servicer.Add,
+            request_deserializer=yeying_dot_api_dot_apps_dot_zuoyepigai_dot_tasktag__pb2.AddTaskTagRequest.FromString,
+            response_serializer=yeying_dot_api_dot_apps_dot_zuoyepigai_dot_tasktag__pb2.AddTaskTagResponse.SerializeToString,
+        ),
+        "Detail": grpc.unary_unary_rpc_method_handler(
+            servicer.Detail,
+            request_deserializer=yeying_dot_api_dot_apps_dot_zuoyepigai_dot_tasktag__pb2.DetailTaskTagRequest.FromString,
+            response_serializer=yeying_dot_api_dot_apps_dot_zuoyepigai_dot_tasktag__pb2.DetailTaskTagResponse.SerializeToString,
+        ),
+        "List": grpc.unary_unary_rpc_method_handler(
+            servicer.List,
+            request_deserializer=yeying_dot_api_dot_apps_dot_zuoyepigai_dot_tasktag__pb2.ListTaskTagRequest.FromString,
+            response_serializer=yeying_dot_api_dot_apps_dot_zuoyepigai_dot_tasktag__pb2.ListTaskTagResponse.SerializeToString,
+        ),
+        "Update": grpc.unary_unary_rpc_method_handler(
+            servicer.Update,
+            request_deserializer=yeying_dot_api_dot_apps_dot_zuoyepigai_dot_tasktag__pb2.UpdateTaskTagRequest.FromString,
+            response_serializer=yeying_dot_api_dot_apps_dot_zuoyepigai_dot_tasktag__pb2.UpdateTaskTagResponse.SerializeToString,
+        ),
+        "Delete": grpc.unary_unary_rpc_method_handler(
+            servicer.Delete,
+            request_deserializer=yeying_dot_api_dot_apps_dot_zuoyepigai_dot_tasktag__pb2.DeleteTaskTagRequest.FromString,
+            response_serializer=yeying_dot_api_dot_apps_dot_zuoyepigai_dot_tasktag__pb2.DeleteTaskTagResponse.SerializeToString,
+        ),
     }
-    generic_handler = grpc.method_handlers_generic_handler(
-            'yeying.api.apps.zuoyepigai.TaskTag', rpc_method_handlers)
+    generic_handler = grpc.method_handlers_generic_handler("yeying.api.apps.zuoyepigai.TaskTag", rpc_method_handlers)
     server.add_generic_rpc_handlers((generic_handler,))
-    server.add_registered_method_handlers('yeying.api.apps.zuoyepigai.TaskTag', rpc_method_handlers)
+    server.add_registered_method_handlers("yeying.api.apps.zuoyepigai.TaskTag", rpc_method_handlers)
 
 
- # This class is part of an EXPERIMENTAL API.
+# This class is part of an EXPERIMENTAL API.
 class TaskTag(object):
     """*
     教学任务标签管理
@@ -148,20 +148,22 @@ class TaskTag(object):
     """
 
     @staticmethod
-    def Add(request,
-            target,
-            options=(),
-            channel_credentials=None,
-            call_credentials=None,
-            insecure=False,
-            compression=None,
-            wait_for_ready=None,
-            timeout=None,
-            metadata=None):
+    def Add(
+        request,
+        target,
+        options=(),
+        channel_credentials=None,
+        call_credentials=None,
+        insecure=False,
+        compression=None,
+        wait_for_ready=None,
+        timeout=None,
+        metadata=None,
+    ):
         return grpc.experimental.unary_unary(
             request,
             target,
-            '/yeying.api.apps.zuoyepigai.TaskTag/Add',
+            "/yeying.api.apps.zuoyepigai.TaskTag/Add",
             yeying_dot_api_dot_apps_dot_zuoyepigai_dot_tasktag__pb2.AddTaskTagRequest.SerializeToString,
             yeying_dot_api_dot_apps_dot_zuoyepigai_dot_tasktag__pb2.AddTaskTagResponse.FromString,
             options,
@@ -172,23 +174,26 @@ class TaskTag(object):
             wait_for_ready,
             timeout,
             metadata,
-            _registered_method=True)
+            _registered_method=True,
+        )
 
     @staticmethod
-    def Detail(request,
-            target,
-            options=(),
-            channel_credentials=None,
-            call_credentials=None,
-            insecure=False,
-            compression=None,
-            wait_for_ready=None,
-            timeout=None,
-            metadata=None):
+    def Detail(
+        request,
+        target,
+        options=(),
+        channel_credentials=None,
+        call_credentials=None,
+        insecure=False,
+        compression=None,
+        wait_for_ready=None,
+        timeout=None,
+        metadata=None,
+    ):
         return grpc.experimental.unary_unary(
             request,
             target,
-            '/yeying.api.apps.zuoyepigai.TaskTag/Detail',
+            "/yeying.api.apps.zuoyepigai.TaskTag/Detail",
             yeying_dot_api_dot_apps_dot_zuoyepigai_dot_tasktag__pb2.DetailTaskTagRequest.SerializeToString,
             yeying_dot_api_dot_apps_dot_zuoyepigai_dot_tasktag__pb2.DetailTaskTagResponse.FromString,
             options,
@@ -199,23 +204,26 @@ class TaskTag(object):
             wait_for_ready,
             timeout,
             metadata,
-            _registered_method=True)
+            _registered_method=True,
+        )
 
     @staticmethod
-    def List(request,
-            target,
-            options=(),
-            channel_credentials=None,
-            call_credentials=None,
-            insecure=False,
-            compression=None,
-            wait_for_ready=None,
-            timeout=None,
-            metadata=None):
+    def List(
+        request,
+        target,
+        options=(),
+        channel_credentials=None,
+        call_credentials=None,
+        insecure=False,
+        compression=None,
+        wait_for_ready=None,
+        timeout=None,
+        metadata=None,
+    ):
         return grpc.experimental.unary_unary(
             request,
             target,
-            '/yeying.api.apps.zuoyepigai.TaskTag/List',
+            "/yeying.api.apps.zuoyepigai.TaskTag/List",
             yeying_dot_api_dot_apps_dot_zuoyepigai_dot_tasktag__pb2.ListTaskTagRequest.SerializeToString,
             yeying_dot_api_dot_apps_dot_zuoyepigai_dot_tasktag__pb2.ListTaskTagResponse.FromString,
             options,
@@ -226,23 +234,26 @@ class TaskTag(object):
             wait_for_ready,
             timeout,
             metadata,
-            _registered_method=True)
+            _registered_method=True,
+        )
 
     @staticmethod
-    def Update(request,
-            target,
-            options=(),
-            channel_credentials=None,
-            call_credentials=None,
-            insecure=False,
-            compression=None,
-            wait_for_ready=None,
-            timeout=None,
-            metadata=None):
+    def Update(
+        request,
+        target,
+        options=(),
+        channel_credentials=None,
+        call_credentials=None,
+        insecure=False,
+        compression=None,
+        wait_for_ready=None,
+        timeout=None,
+        metadata=None,
+    ):
         return grpc.experimental.unary_unary(
             request,
             target,
-            '/yeying.api.apps.zuoyepigai.TaskTag/Update',
+            "/yeying.api.apps.zuoyepigai.TaskTag/Update",
             yeying_dot_api_dot_apps_dot_zuoyepigai_dot_tasktag__pb2.UpdateTaskTagRequest.SerializeToString,
             yeying_dot_api_dot_apps_dot_zuoyepigai_dot_tasktag__pb2.UpdateTaskTagResponse.FromString,
             options,
@@ -253,23 +264,26 @@ class TaskTag(object):
             wait_for_ready,
             timeout,
             metadata,
-            _registered_method=True)
+            _registered_method=True,
+        )
 
     @staticmethod
-    def Delete(request,
-            target,
-            options=(),
-            channel_credentials=None,
-            call_credentials=None,
-            insecure=False,
-            compression=None,
-            wait_for_ready=None,
-            timeout=None,
-            metadata=None):
+    def Delete(
+        request,
+        target,
+        options=(),
+        channel_credentials=None,
+        call_credentials=None,
+        insecure=False,
+        compression=None,
+        wait_for_ready=None,
+        timeout=None,
+        metadata=None,
+    ):
         return grpc.experimental.unary_unary(
             request,
             target,
-            '/yeying.api.apps.zuoyepigai.TaskTag/Delete',
+            "/yeying.api.apps.zuoyepigai.TaskTag/Delete",
             yeying_dot_api_dot_apps_dot_zuoyepigai_dot_tasktag__pb2.DeleteTaskTagRequest.SerializeToString,
             yeying_dot_api_dot_apps_dot_zuoyepigai_dot_tasktag__pb2.DeleteTaskTagResponse.FromString,
             options,
@@ -280,4 +294,5 @@ class TaskTag(object):
             wait_for_ready,
             timeout,
             metadata,
-            _registered_method=True)
+            _registered_method=True,
+        )
