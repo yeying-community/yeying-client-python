@@ -11,7 +11,7 @@ class BaseProvider(object):
     def __init__(self, **kw):
         """
         获取 api 地址
-        :param kw:
+        :param kw:option: ProviderOption
         """
         self.option: ProviderOption = kw.get("option")
         self.authenticate: Authenticate = Authenticate(self.option.block_address)
