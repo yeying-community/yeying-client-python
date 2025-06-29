@@ -7,11 +7,12 @@
 import argparse
 import os.path
 from yeying.api.asset import asset_pb2
-from yeying.api.web3 import BlockAddress
+from yeying.api.web3 import BlockAddress, Identity
 from yeying.client.downloader import DownloadResult
 from yeying.client.model.file import File
 from yeying.client.model.option import ProviderOption
 from yeying.client.provider.asset_provider import AssetProvider
+from yeying.client.tool.identity_service import load, decrypt_block_address
 from yeying.client.uploader import UploadResult
 from yeying.client import uploader, downloader
 from google.protobuf.json_format import ParseDict, MessageToJson
@@ -25,17 +26,23 @@ def arg_parse():
     put_parser = sub_parser.add_parser("put", help="上传资源")
     put_parser.add_argument(dest="source", help="local file path")
     put_parser.add_argument(dest="namespace_id", help="namespace_id")
+    put_parser.add_argument(dest="identity_file", help="identity file")
+    put_parser.add_argument(dest="password", help="password")
 
     # 下载服务端资源
     get_parser = sub_parser.add_parser("get", help="下载资源")
     get_parser.add_argument(dest="namespace_id", help="namespace_id")
     get_parser.add_argument(dest="hash", help="hash")
     get_parser.add_argument(dest="output", help="local file out path")
+    get_parser.add_argument(dest="identity_file", help="identity file")
+    get_parser.add_argument(dest="password", help="password")
 
     # 删除服务端资源
     delete_parser = sub_parser.add_parser("delete", help="删除资源")
     delete_parser.add_argument(dest="namespace_id", help="namespace_id")
     delete_parser.add_argument(dest="hash", help="hash")
+    delete_parser.add_argument(dest="identity_file", help="identity file")
+    delete_parser.add_argument(dest="password", help="password")
 
     args = parser.parse_args()
     return args, parser
@@ -158,6 +165,13 @@ def main():
     # 使用 ParseDict 填充数据
     ParseDict(identify_data, block_address)
 
+    identity_file = args.identity_file
+    if not os.path.exists(identity_file):
+        raise Exception(f"identity_file not exists {identity_file}")
+
+    identity: Identity = load(identity_file)
+    block_address = decrypt_block_address(identity.blockAddress, identity.securityConfig.algorithm, args.password)
+    print(f"block_address={block_address}")
     option = ProviderOption(
         proxy=get_proxy(),
         block_address=block_address
