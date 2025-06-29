@@ -1,4 +1,6 @@
 # -*- coding:utf-8 -*-
+import re
+
 from yeying.client.model.option import ProviderOption
 from yeying.client.tool.authenticate import Authenticate
 from yeying.client.utils import log_utils
@@ -14,4 +16,5 @@ class BaseProvider(object):
         :param kw:option: ProviderOption
         """
         self.option: ProviderOption = kw.get("option")
+        self.option.proxy = re.sub(r'^https?://', '', self.option.proxy)
         self.authenticate: Authenticate = Authenticate(self.option.block_address)
