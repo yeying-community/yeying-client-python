@@ -13,7 +13,9 @@ from yeying.client.utils import log_utils
 
 log = log_utils.get_logger(__name__)
 
-
+"""
+用于与区块链交互，提供数据的获取和存储功能
+"""
 class BlockProvider(BaseProvider):
 
     def __init__(self, **kw):
@@ -22,9 +24,18 @@ class BlockProvider(BaseProvider):
         self.block_client = block_pb2_grpc.BlockStub(grpc.insecure_channel(self.option.proxy))
 
     def get_owner(self) -> str:
+        """
+        获取当前用户的 DID（所有者）
+        :return:返回当前用户的 DID
+        """
         return self.authenticate.get_did()
 
     def confirm(self, block: block_pb2.BlockMetadata) -> block_pb2.ConfirmBlockResponse:
+        """
+        发送确认请求到后端服务，并验证返回的块元数据签名
+        :param block:块元数据对象
+        :return:返回确认块的响应体
+        """
         body = block_pb2.ConfirmBlockRequestBody(block=block)
         header = self.authenticate.create_header(body=body)
         request = block_pb2.ConfirmBlockRequest(header=header, body=body)
@@ -36,6 +47,12 @@ class BlockProvider(BaseProvider):
         return response
 
     def get(self, namespace_id: str, _hash: str) -> block_pb2.GetBlockResponse:
+        """
+        获取资产块数据。
+        :param namespace_id:资产块命名空间
+        :param _hash:要获取的资产块哈希值
+        :return:区块数据详情，包括数据和元数据
+        """
         body = block_pb2.GetBlockRequestBody(namespaceId=namespace_id, hash=_hash)
         header = self.authenticate.create_header(body=body)
         request = block_pb2.GetBlockRequest(header=header, body=body)
@@ -45,6 +62,12 @@ class BlockProvider(BaseProvider):
         return response
 
     def put(self, namespace_id: str, data: bytes) -> block_pb2.PutBlockResponse:
+        """
+        上传块数据,发送块数据和元数据到后端服务，并验证返回的块元数据签名
+        :param namespace_id:命名空间ID
+        :param data:块数据
+        :return:资产块元信息
+        """
         # 签名
         block = block_pb2.BlockMetadata(
             namespaceId=namespace_id,

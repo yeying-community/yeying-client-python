@@ -11,6 +11,7 @@ from yeying.api.web3 import BlockAddress
 from yeying.client.downloader import DownloadResult
 from yeying.client.model.file import File
 from yeying.client.model.option import ProviderOption
+from yeying.client.provider.asset_provider import AssetProvider
 from yeying.client.uploader import UploadResult
 from yeying.client import uploader, downloader
 from google.protobuf.json_format import ParseDict, MessageToJson
@@ -30,6 +31,12 @@ def arg_parse():
     get_parser.add_argument(dest="namespace_id", help="namespace_id")
     get_parser.add_argument(dest="hash", help="hash")
     get_parser.add_argument(dest="output", help="local file out path")
+
+    # 删除服务端资源
+    delete_parser = sub_parser.add_parser("delete", help="删除资源")
+    delete_parser.add_argument(dest="namespace_id", help="namespace_id")
+    delete_parser.add_argument(dest="hash", help="hash")
+
     args = parser.parse_args()
     return args, parser
 
@@ -131,6 +138,16 @@ class Mnemonic:
         self.password = password
 
 
+def delete(args, option):
+    print("start delete")
+    print(f"namespace_id={args.namespace_id}")
+    print(f"hash={args.hash}")
+    print(f"proxy={option.proxy}")
+    delete_client = AssetProvider(option=option)
+    response: asset_pb2.DeleteAssetResponse = delete_client.delete(args.namespace_id, args.hash)
+    print(f"delete success. code={response.body.status.code}")
+
+
 def main():
     args, parser = arg_parse()
     identify_data = get_identify()["blockAddress"]
@@ -150,6 +167,8 @@ def main():
         upload(args, option)
     elif args.command == "get":
         download(args, option)
+    elif args.command == "delete":
+        delete(args, option)
     else:
         parser.print_help()
 
