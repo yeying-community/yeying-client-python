@@ -1,20 +1,27 @@
 # -*- coding:utf-8 -*-
 import io
+import os.path
 import time
 from io import BytesIO, SEEK_SET, SEEK_CUR, SEEK_END
-from client.utils.digital_format_utils import get_digital_format_by_name
+from yeying.client.utils.digital_format_utils import get_digital_format_by_name
 
 
 class File:
     """模拟 JavaScript File 对象的 Python 实现"""
 
-    def __init__(self, name: str, size: int, stream: bytes, last_modified: int = None):
+    def __init__(self, name: str, size: int, stream, last_modified: int = None):
+        if isinstance(stream, str) and os.path.exists(stream):
+            with open(stream, 'rb') as file:
+                self.stream = file.read()
+        elif isinstance(stream, bytes):
+            self.stream = stream
+        else:
+            raise TypeError("stream must be file path or bytes")
         self.name = name
         self.size = size
-        self.stream = stream
         self._position = 0
         self.type = get_digital_format_by_name(name)
-        self.buffered_reader = io.BufferedReader(io.BytesIO(stream))
+        self.buffered_reader = io.BufferedReader(io.BytesIO(self.stream))
         self.last_modified = last_modified or int(time.time() * 1000)
 
     def get_last_modified(self) -> int:

@@ -1,7 +1,7 @@
 # -*- coding:utf-8 -*-
-from client.model.option import ProviderOption
-from client.provider.config_provider import ConfigProvider
-from client.utils import log_utils
+from yeying.client.model.option import ProviderOption
+from yeying.client.provider.config_provider import ConfigProvider
+from yeying.client.utils import log_utils
 import pytest
 
 from yeying.api.web3 import BlockAddress

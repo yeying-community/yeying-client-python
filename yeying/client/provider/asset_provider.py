@@ -1,8 +1,11 @@
 # -*- coding:utf-8 -*-
-from client.provider.base_provider import BaseProvider
+from google.protobuf.json_format import MessageToJson
+
+from yeying.api.common import ResponseCodeEnum
+from yeying.client.provider.base_provider import BaseProvider
 from yeying.api.asset import asset_pb2_grpc, asset_pb2
 import grpc
-from client.utils import log_utils
+from yeying.client.utils import log_utils
 
 log = log_utils.get_logger(__name__)
 
@@ -28,13 +31,20 @@ class AssetProvider(BaseProvider):
         :throws NotFound 资产不存在
         :throws ServiceUnavailable 服务不可用
         """
+        asset.signature = self.authenticate.sign_data(asset.SerializeToString())
         body = asset_pb2.SignAssetRequestBody(asset=asset)
         header = self.authenticate.create_header(body=body)
         request = asset_pb2.SignAssetRequest(header=header, body=body)
-        return self.asset_client.Sign(request)
+        response: asset_pb2.SignAssetResponse = self.asset_client.Sign(request)
+        if ResponseCodeEnum.OK != response.body.status.code:
+            raise Exception(f"sign error, response={MessageToJson(response)}")
+        return response
 
     def detail(self, namespace_id: str, _hash: str) -> asset_pb2.AssetDetailResponse:
         body = asset_pb2.AssetDetailRequestBody(hash=_hash, namespaceId=namespace_id)
         header = self.authenticate.create_header(body=body)
         request = asset_pb2.AssetDetailRequest(header=header, body=body)
-        return self.asset_client.Detail(request)
+        response: asset_pb2.AssetDetailResponse = self.asset_client.Detail(request)
+        if ResponseCodeEnum.OK != response.body.status.code:
+            raise Exception(f"detail error, response={MessageToJson(response)}")
+        return response

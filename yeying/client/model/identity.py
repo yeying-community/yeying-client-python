@@ -1,7 +1,7 @@
 import codecs
 from typing import Optional, Union
 
-from client.utils.signature_utils import verify
+from yeying.client.utils.signature_utils import verify
 from yeying.api.web3 import (
     NetworkTypeEnum,
     IdentityCodeEnum,
@@ -151,22 +151,80 @@ mnemo_fr = Mnemonic("french")  # 法语 (LangFr)
 mnemo_it = Mnemonic("italian")  # 意大利语 (LangIt)
 mnemo_ja = Mnemonic("japanese")  # 日语 (LangJa)
 mnemo_ko = Mnemonic("korean")  # 韩语 (LangKo)
-mnemo_zh = Mnemonic("chinese-traditional")  # 中文繁体 (LangZh)
-mnemo_tw = Mnemonic("chinese-traditional")  # 中文繁体 (LangZh)
+mnemo_zh = Mnemonic("chinese_simplified")  # 中文简体 (LangZh)
+mnemo_tw = Mnemonic("chinese_traditional")  # 中文繁体 (LangTw)
 
 
 # 创建全局词表字典
-wordlists: dict[str, Wordlist] = {
-    "en": mnemo_en.wordlist(),
-    "es": mnemo_es.wordlist(),
-    "fr": mnemo_fr.wordlist(),
-    "it": mnemo_it.wordlist(),
-    "ja": mnemo_ja.wordlist(),
-    "ko": mnemo_ko.wordlist(),
-    "zh_cn": mnemo_zh.wordlist(),
-    "zh_tw": mnemo_tw.wordlist(),
+wordlists: dict[str, list[str]] = {
+    "en": mnemo_en.wordlist,
+    "es": mnemo_es.wordlist,
+    "fr": mnemo_fr.wordlist,
+    "it": mnemo_it.wordlist,
+    "ja": mnemo_ja.wordlist,
+    "ko": mnemo_ko.wordlist,
+    "zh_cn": mnemo_zh.wordlist,
+    "zh_tw": mnemo_tw.wordlist,
 }
 
+from mnemonic import Mnemonic
+from bip44 import Wallet
+from bip44.utils import get_eth_addr
+
+
+def create_random_wallet(password: str = "", path: str = "m/44'/60'/0'/0/0", language: str = "english"):
+    """
+    创建随机 HD 钱包（等效于 ethers.HDNodeWallet.createRandom）
+
+    参数:
+        password: 加密助记词的密码
+        path: BIP44 派生路径 (默认以太坊路径)
+        language: 助记词语言 (默认英语)
+
+    返回:
+        {
+            "mnemonic": 助记词,
+            "privateKey": 私钥,
+            "publicKey": 公钥,
+            "address": 以太坊地址,
+            "path": 派生路径
+        }
+    """
+    # 1. 生成随机助记词
+    mnemo = Mnemonic(language)
+    mnemonic_phrase = mnemo.generate(strength=128)  # 128位强度 = 12个单词
+
+    # 2. 创建 HD 钱包
+    wallet = Wallet(mnemonic_phrase, passphrase=password)
+
+    # 3. 根据路径派生密钥
+    private_key = wallet.derive_secret_key(path)
+    public_key = wallet.derive_public_key(path)
+
+    # 4. 生成以太坊地址
+    address = get_eth_addr(public_key)
+
+    return {
+        "mnemonic": mnemonic_phrase,
+        "privateKey": private_key.hex(),
+        "publicKey": public_key.hex(),
+        "address": address,
+        "path": path
+    }
+
+
+# 示例用法
+if __name__ == "__main__":
+    wallet = create_random_wallet(
+        password="my-strong-password",
+        path="m/44'/60'/0'/0/0"
+    )
+
+    print("助记词:", wallet["mnemonic"])
+    print("私钥:", wallet["privateKey"])
+    print("公钥:", wallet["publicKey"])
+    print("地址:", wallet["address"])
+    print("路径:", wallet["path"])
 
 def create_block_address(
     network: NetworkTypeEnum = NetworkTypeEnum.NETWORK_TYPE_YEYING,
@@ -174,7 +232,7 @@ def create_block_address(
     password: str = "",
     path: str = defaultPath,
 ) -> BlockAddress:
-    wordlist: Wordlist
+    wordlist: list[str]
     # 根据语言代码选择对应的词汇表
     if language == "LANGUAGE_CODE_ZH_CH":
         wordlist = wordlists["zh_cn"]
@@ -184,7 +242,7 @@ def create_block_address(
         wordlist = wordlists["zh_cn"]  # 默认中文
 
     # 使用 HDNodeWallet 创建一个随机的钱包
-    wallet = HDNodeWallet.createRandom(password, path, wordlist)
+    wallet = create_random_wallet(password, path, "chinese_simplified")
 
     # 构建并返回 BlockAddress 对象
     return buildBlockAddress(network, wallet, path)

@@ -1,9 +1,9 @@
-from client.model.exception import PermissionDeniedException, InvalidArgumentException
-from client.model.identity import convert_did_to_publickey, encode_key
-from client.utils.date_utils import get_current_utc_string, is_expired
-from client.utils.object_utils import composite
-from client.utils.signature_utils import verify, sign
-from client.utils.string_utils import generate_uuid
+from yeying.client.model.exception import PermissionDeniedException, InvalidArgumentException
+from yeying.client.model.identity import convert_did_to_publickey, encode_key
+from yeying.client.utils.date_utils import get_current_utc_string, is_expired
+from yeying.client.utils.object_utils import composite
+from yeying.client.utils.signature_utils import verify, sign
+from yeying.client.utils.string_utils import generate_uuid
 from yeying.api.common import AuthenticateTypeEnum, MessageHeader
 from yeying.api.web3 import BlockAddress
 

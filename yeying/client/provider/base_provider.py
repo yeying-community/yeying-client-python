@@ -1,7 +1,7 @@
 # -*- coding:utf-8 -*-
-from client.model.option import ProviderOption
-from client.tool.authenticate import Authenticate
-from client.utils import log_utils
+from yeying.client.model.option import ProviderOption
+from yeying.client.tool.authenticate import Authenticate
+from yeying.client.utils import log_utils
 
 log = log_utils.get_logger(__name__)
 
