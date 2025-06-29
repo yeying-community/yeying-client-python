@@ -1,8 +1,11 @@
 # -*- coding:utf-8 -*-
-from client.provider.base_provider import BaseProvider
+from google.protobuf.json_format import MessageToJson
+
+from yeying.api.common import ResponseCodeEnum
+from yeying.client.provider.base_provider import BaseProvider
 from yeying.api.config import config_pb2_grpc, config_pb2
 import grpc
-from client.utils import log_utils
+from yeying.client.utils import log_utils
 
 log = log_utils.get_logger(__name__)
 
@@ -32,7 +35,11 @@ class ConfigProvider(BaseProvider):
         body = config_pb2.GetConfigRequestBody(key=key, type=config_type)
         header = self.authenticate.create_header(body=body)
         request = config_pb2.GetConfigRequest(header=header, body=body)
-        return self.config_client.Get(request)
+        response: config_pb2.GetConfigResponse = self.config_client.Get(request)
+
+        if ResponseCodeEnum.OK != response.body.status.code:
+            raise Exception(f"get error, response={MessageToJson(response)}")
+        return response
 
     def set(self, config: config_pb2.ConfigMetadata) -> config_pb2.SetConfigResponse:
         """
@@ -43,4 +50,8 @@ class ConfigProvider(BaseProvider):
         body = config_pb2.SetConfigRequestBody(config=config)
         header = self.authenticate.create_header(body=body)
         request = config_pb2.SetConfigRequest(header=header, body=body)
-        return self.config_client.Set(request)
+        response: config_pb2.SetConfigResponse = self.config_client.Set(request)
+
+        if ResponseCodeEnum.OK != response.body.status.code:
+            raise Exception(f"set error, response={MessageToJson(response)}")
+        return response
