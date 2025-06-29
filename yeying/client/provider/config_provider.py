@@ -1,5 +1,6 @@
 # -*- coding:utf-8 -*-
 from google.protobuf.json_format import MessageToJson
+from yeying.client.utils.date_utils import get_current_utc_string
 
 from yeying.api.common import ResponseCodeEnum
 from yeying.client.provider.base_provider import BaseProvider
@@ -41,12 +42,21 @@ class ConfigProvider(BaseProvider):
             raise Exception(f"get error, response={MessageToJson(response)}")
         return response
 
-    def set(self, config: config_pb2.ConfigMetadata) -> config_pb2.SetConfigResponse:
+    def set(self, key: str, value: str) -> config_pb2.SetConfigResponse:
         """
         kv 配置添加
-        :param config: config 配置信息
+        :param key: key 配置信息
+        :param value: value 配置信息
         :return: config_pb2.GetConfigResponse
         """
+        config: config_pb2.ConfigMetadata = config_pb2.ConfigMetadata(
+            key=key,
+            value=value,
+            owner=self.authenticate.get_did(),
+            createdAt=get_current_utc_string(),
+            updatedAt=get_current_utc_string(),
+        )
+        config.signature = self.authenticate.sign_data(config.SerializeToString())
         body = config_pb2.SetConfigRequestBody(config=config)
         header = self.authenticate.create_header(body=body)
         request = config_pb2.SetConfigRequest(header=header, body=body)

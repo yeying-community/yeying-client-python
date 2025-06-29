@@ -16,3 +16,39 @@
 ## pytest 执行命令
 
     pytest -s --log-cli-level=INFO --show-capture=all
+
+## 资产仓库接口调用顺序
+
+    ### 申请资产空间 / 使用现有的资产空间
+    
+        1: 创建资产仓库空间
+
+        2: 获取到资产空间对应的 ID，后续文件上传 / 文件下载需要将其作为入参
+
+    ### 文件上传接口调用
+
+        1: cmd 命令方式调用
+
+            # yeying_cmd put ${本地目录/本地文件} ${资产仓库空间 ID} ${身份文件-waresource.id}
+            yeying_cmd put /Users/youxuehu/SDK/yeying-apps/yeying-client-python/.idea/ 96274d7e-0aae-4736-8f34-940a26f2f92a waresource.id
+
+        2: 代码调用
+
+    ### 文件下载接口调用
+
+        1: cmd 命令方式调用
+
+            # yeying_cmd get ${资产仓库空间 ID} ${文件上传返回的 hash} ${本地文件输出路径}  ${身份文件-waresource.id}
+            # yeying_cmd get 96274d7e-0aae-4736-8f34-940a26f2f92a 55392b23b75e3a5e039232cce80f8b91ba6bf31d66057085afc6f522349c4281 xxxxxxx.tar.gz waresource.id
+
+        2: 代码调用
+    
+    ### 文件复制
+
+    ### 文件分享
+
+    ### 文件删除
+
+    
+
+
