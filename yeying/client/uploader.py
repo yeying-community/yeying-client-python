@@ -4,12 +4,14 @@ from typing import List
 
 from google.protobuf.json_format import MessageToJson
 
+from yeying.api.web3 import SecurityAlgorithm
 from yeying.client.model.digest import Digest
 from yeying.client.model.file import File
 from yeying.client.model.option import ProviderOption
 from yeying.client.provider.asset_provider import AssetProvider
 from yeying.client.provider.block_provider import BlockProvider
 from yeying.client.provider.config_provider import ConfigProvider
+from yeying.client.tool.crypto_service import AssetCipher
 from yeying.client.utils.date_utils import get_current_iso_string
 from yeying.client.utils.digital_format_utils import get_digital_format_by_name
 from yeying.client.utils.signature_utils import encode_hex, decode_hex
@@ -44,7 +46,9 @@ UploadCallback = Callable[[UploadResult], None]
 """
 class Uploader(object):
 
-    def __init__(self, option: ProviderOption):
+    def __init__(self, option: ProviderOption, algorithm: SecurityAlgorithm):
+        # 数据块加密
+        self.asset_cipher = AssetCipher(option.block_address, algorithm)
         # 资产元信息
         self.asset_provider = AssetProvider(option=option)
         # 文件操作
@@ -114,14 +118,13 @@ class Uploader(object):
             end = min(file.size, start + self.chunkSize)
             log.info(f"Try to read the index={index} chunk, size={end - start}")
             data = file.slice(start, end)
-            print(f"打印={len(data.stream())}")
-            asset_digest.update(data.stream())
+            data_stream = data.stream()
+            print(f"打印={len(data_stream)}")
+            asset_digest.update(data_stream)
             if encrypted:
-                # // 对数据进行加密（可选）
-                # todo
-                # data = await this.assetCipher.encrypt(data)
-                pass
-            put_res = self.block_provider.put(namespace_id=namespace_id, data=data.stream())
+                # 对数据进行加密（可选）
+                data_stream = self.asset_cipher.encrypt(data_stream)
+            put_res = self.block_provider.put(namespace_id=namespace_id, data=data_stream)
             print(f"put_res={MessageToJson(put_res)}")
             merge_digest.update(decode_hex(put_res.body.block.hash))
             chunk_list[index] = put_res.body.block.hash
