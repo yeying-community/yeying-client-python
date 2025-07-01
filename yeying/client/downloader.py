@@ -1,10 +1,12 @@
 # -*- coding:utf-8 -*-
+from yeying.api.web3 import SecurityAlgorithm
 from yeying.client.model.option import ProviderOption
 from yeying.client.provider.asset_provider import AssetProvider
 from yeying.client.provider.block_provider import BlockProvider
 from yeying.client.provider.config_provider import ConfigProvider
 from yeying.api.asset import BlockMetadata
 from yeying.api.config import ConfigTypeEnum
+from yeying.client.tool.crypto_service import AssetCipher
 from yeying.client.utils import log_utils
 from typing import Callable, TypedDict
 
@@ -35,7 +37,9 @@ DownloadCallback = Callable[[DownloadResult], None]
 """
 class Downloader(object):
 
-    def __init__(self, option: ProviderOption):
+    def __init__(self, option: ProviderOption, algorithm: SecurityAlgorithm):
+        # 数据块加密
+        self.asset_cipher = AssetCipher(option.block_address, algorithm)
         # 资产元信息
         self.asset_provider = AssetProvider(option=option)
         # 文件操作
@@ -66,8 +70,7 @@ class Downloader(object):
             detail = BlockDetail(block=get_res.body.block, data=get_res.data)
             if asset.isEncrypted:
                 # 如果资产加密，解密数据块
-                # detail.data = await this.assetCipher.decrypt(detail.data)
-                pass
+                detail.data = self.asset_cipher.decrypt(detail.data)
             if block_callback:
                 result = DownloadResult(block=detail.block, data=detail.data, progress=Progress(total=asset.chunkCount, completed=i+1))
                 block_callback(result)
