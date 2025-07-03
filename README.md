@@ -15,7 +15,7 @@
 
 ## pytest 执行命令
 
-    pytest -s --log-cli-level=INFO --show-capture=all
+    pytest -s --log-cli-level=INFO --show-capture=all -v --durations=0
 
 ## 资产仓库接口调用顺序
 

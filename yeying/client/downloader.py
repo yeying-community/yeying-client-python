@@ -4,7 +4,7 @@ from yeying.client.model.option import ProviderOption
 from yeying.client.provider.asset_provider import AssetProvider
 from yeying.client.provider.block_provider import BlockProvider
 from yeying.client.provider.config_provider import ConfigProvider
-from yeying.api.asset import BlockMetadata
+from yeying.api.asset import BlockMetadata, asset_pb2
 from yeying.api.config import ConfigTypeEnum
 from yeying.client.tool.crypto_service import AssetCipher
 from yeying.client.utils import log_utils
@@ -59,13 +59,14 @@ class Downloader(object):
         namespace_id: str,
         _hash: str,
         block_callback: DownloadCallback = None,
-    ):
+    ) -> asset_pb2.AssetMetadata:
         log.info("start download file")
         detail_res = self.asset_provider.detail(namespace_id, _hash)
         asset = detail_res.body.asset
         for i in range(asset.chunkCount):
             if self.is_abort:
-                return
+                log.warn("download is abort")
+                return asset_pb2.AssetMetadata()
             get_res = self.block_provider.get(namespace_id, asset.chunks[i])
             detail = BlockDetail(block=get_res.body.block, data=get_res.data)
             if asset.isEncrypted:
