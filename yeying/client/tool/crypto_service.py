@@ -7,14 +7,7 @@ from cryptography.hazmat.primitives.kdf.hkdf import HKDF
 from cryptography.hazmat.backends import default_backend
 from cryptography.exceptions import InvalidTag
 from ecdsa import SECP256k1, SigningKey, VerifyingKey
-from typing import TypedDict
-
 from yeying.api.web3 import BlockAddress, Mnemonic, SecurityAlgorithm
-
-
-# class SecurityAlgorithm(TypedDict):
-#     name: str
-#     iv: str
 
 
 class CipherTypeEnum(Enum):
@@ -122,7 +115,8 @@ class AssetCipher:
         ).derive(raw_key)
 
         # 获取算法名称和IV
-        cipher_type = CipherTypeEnum[security_algorithm.name]
+        algo_name: str = "CIPHER_TYPE_AES_GCM_256" if security_algorithm.name in ["CIPHER_TYPE_AES_GCM_256", "AES-GCM"] else "CIPHER_TYPE_AES_GCM_256"
+        cipher_type: CipherTypeEnum = CipherTypeEnum[algo_name]
         self._algorithm_name = convert_to_algorithm_name(cipher_type)
         self._iv = decode_base64(security_algorithm.iv)
 

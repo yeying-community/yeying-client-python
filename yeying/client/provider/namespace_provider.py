@@ -6,7 +6,7 @@ from google.protobuf.json_format import MessageToJson
 from yeying.client.provider.config_provider import ConfigProvider
 from yeying.client.utils.date_utils import get_current_utc_string
 
-from yeying.api.asset import namespace_pb2_grpc, namespace_pb2
+from yeying.api.asset import namespace_pb2_grpc, namespace_pb2, SearchNamespaceCondition
 from yeying.api.common import ResponseCodeEnum, message_pb2
 from yeying.client.provider.base_provider import BaseProvider
 from yeying.api.config import config_pb2
@@ -30,14 +30,14 @@ class NamespaceProvider(BaseProvider):
         # 字典配置
         self.config_provider = ConfigProvider(option=self.option)
 
-    def get_default_namespace(self):
+    def get_default_namespace(self) -> str:
         config_res: config_pb2.GetConfigResponse = self.config_provider.get(key="namespace.default", config_type=config_pb2.ConfigTypeEnum.CONFIG_TYPE_USER)
         return config_res.body.config.value
 
-    def set_default_namespace(self, namespace_id: str):
+    def set_default_namespace(self, namespace_id: str) -> config_pb2.SetConfigResponse:
         return self.config_provider.set(key="namespace.default", value=namespace_id)
 
-    def search(self, page, page_size, condition):
+    def search(self, page: int, page_size: int, condition: SearchNamespaceCondition) -> namespace_pb2.SearchNamespaceResponse:
         body = namespace_pb2.SearchNamespaceRequestBody(condition=condition, page=message_pb2.RequestPage(page=page, pageSize=page_size))
         header = self.authenticate.create_header(body=body)
         request = namespace_pb2.SearchNamespaceRequest(header=header, body=body)
@@ -50,6 +50,8 @@ class NamespaceProvider(BaseProvider):
     def detail(
         self, uid: str
     ) -> namespace_pb2.NamespaceDetailResponse:
+        if not uid:
+            raise ValueError("uid is None")
         body = namespace_pb2.NamespaceDetailRequestBody(uid=uid)
         header = self.authenticate.create_header(body=body)
         request = namespace_pb2.NamespaceDetailRequest(header=header, body=body)
@@ -70,6 +72,8 @@ class NamespaceProvider(BaseProvider):
         return response
 
     def create(self, name: str, description: str, uid: str=None, participants: str=None) -> namespace_pb2.CreateNamespaceResponse:
+        if not name:
+            raise ValueError("name is None")
         namespace = namespace_pb2.NamespaceMetadata(
             owner=self.authenticate.get_did(),
             participants=participants,
