@@ -1,0 +1,39 @@
+name: SDK Docs Deployment
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - "src/**"      # 源代码变更时触发
+      - "docs/**"     # 文档配置变更时触发
+
+jobs:
+  build-deploy-docs:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write  # 允许推送至 gh-pages 分支
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      - name: Set up Python 3.12
+        uses: actions/setup-python@v4
+        with:
+          python-version: "3.12"
+
+      - name: Install dependencies
+        run: |
+          pip install -r requirements-docs.txt
+
+      - name: Build HTML docs
+        run: |
+          cd docs
+          make html  # 使用 Sphinx Makefile 构建
+
+      - name: Deploy to GitHub Pages
+        uses: peaceiris/actions-gh-pages@v3
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_dir: ./docs/build/html  # 生成文档的路径
+          keep_files: false  # 每次覆盖旧文档
