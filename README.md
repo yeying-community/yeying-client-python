@@ -15,7 +15,7 @@
 
 ## pytest 执行命令
 
-    bash script/unittest.sh
+    bash script/pytest.sh
 
 ## 资产仓库接口调用顺序
 
