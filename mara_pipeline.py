@@ -26,7 +26,7 @@ pipeline = Pipeline(id='sdk_release', description='SDK发布流水线')
 pipeline.add(Task(
     id='run_tests',
     description='运行单元测试',
-    commands=[RunBash('bash script/unittest.sh')]
+    commands=[RunBash('bash script/pytest.sh')]
 ))
 
 # 任务2: 构建SDK
