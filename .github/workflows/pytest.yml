@@ -42,21 +42,4 @@ jobs:
       env:
         WAREHOUSE_ENDPOINT: ${{ vars.WAREHOUSE_ENDPOINT }}
       run: |
-        pytest --cov=src --cov-report=xml --junitxml=test-results.xml -v
-
-    - name: Upload coverage to Codecov
-      uses: codecov/codecov-action@v3
-      with:
-        token: ${{ secrets.CODECOV_TOKEN }}
-        file: ./coverage.xml
-        flags: unittests
-        name: ${{ matrix.os }}-py${{ matrix.python-version }}
-
-    - name: Publish Test Results
-      uses: EnricoMi/publish-unit-test-result-action@v2
-      if: always()  # 即使测试失败也上传结果
-      with:
-        files: test-results.xml
-        github_token: ${{ secrets.GITHUB_TOKEN }}
-        check_name: Pytest Results (Python ${{ matrix.python-version }})
-        comment_mode: off
+        bash script/warehouse/pytest.sh
