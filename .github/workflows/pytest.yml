@@ -57,5 +57,6 @@ jobs:
       if: always()  # 即使测试失败也上传结果
       with:
         files: test-results.xml
+        github_token: ${{ secrets.GITHUB_TOKEN }}
         check_name: Pytest Results (Python ${{ matrix.python-version }})
         comment_mode: off

@@ -2,6 +2,7 @@ protobuf==5.29.2
 ecdsa==0.19.0
 pytest==8.4.1
 cryptography==43.0.3
+grpcio==1.71.0
 mnemonic
 web3
 bip44
