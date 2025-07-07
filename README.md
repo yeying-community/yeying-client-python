@@ -17,6 +17,10 @@
 
     bash script/pytest.sh
 
+## docs
+
+    sphinx-apidoc -o docs/source/ yeying
+
 ## 资产仓库接口调用顺序
 
     ### 申请资产空间 / 使用现有的资产空间
