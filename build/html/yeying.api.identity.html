@@ -1,0 +1,485 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" data-content_root="./">
+<head>
+  <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>yeying.api.identity package &mdash; yeying-client-python  documentation</title>
+      <link rel="stylesheet" type="text/css" href="_static/pygments.css?v=b86133f3" />
+      <link rel="stylesheet" type="text/css" href="_static/css/theme.css?v=e59714d7" />
+
+  
+      <script src="_static/jquery.js?v=5d32c60e"></script>
+      <script src="_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+      <script src="_static/documentation_options.js?v=5929fcd5"></script>
+      <script src="_static/doctools.js?v=9bcbadda"></script>
+      <script src="_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="index.html" class="icon icon-home">
+            yeying-client-python
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <!-- Local TOC -->
+              <div class="local-toc"><ul>
+<li><a class="reference internal" href="#">yeying.api.identity package</a><ul>
+<li><a class="reference internal" href="#submodules">Submodules</a></li>
+<li><a class="reference internal" href="#module-yeying.api.identity.identity_pb2">yeying.api.identity.identity_pb2 module</a><ul>
+<li><a class="reference internal" href="#yeying.api.identity.identity_pb2.CancelRequest"><code class="docutils literal notranslate"><span class="pre">CancelRequest</span></code></a><ul>
+<li><a class="reference internal" href="#yeying.api.identity.identity_pb2.CancelRequest.DESCRIPTOR"><code class="docutils literal notranslate"><span class="pre">CancelRequest.DESCRIPTOR</span></code></a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#yeying.api.identity.identity_pb2.CancelRequestBody"><code class="docutils literal notranslate"><span class="pre">CancelRequestBody</span></code></a><ul>
+<li><a class="reference internal" href="#yeying.api.identity.identity_pb2.CancelRequestBody.DESCRIPTOR"><code class="docutils literal notranslate"><span class="pre">CancelRequestBody.DESCRIPTOR</span></code></a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#yeying.api.identity.identity_pb2.CancelResponse"><code class="docutils literal notranslate"><span class="pre">CancelResponse</span></code></a><ul>
+<li><a class="reference internal" href="#yeying.api.identity.identity_pb2.CancelResponse.DESCRIPTOR"><code class="docutils literal notranslate"><span class="pre">CancelResponse.DESCRIPTOR</span></code></a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#yeying.api.identity.identity_pb2.CancelResponseBody"><code class="docutils literal notranslate"><span class="pre">CancelResponseBody</span></code></a><ul>
+<li><a class="reference internal" href="#yeying.api.identity.identity_pb2.CancelResponseBody.DESCRIPTOR"><code class="docutils literal notranslate"><span class="pre">CancelResponseBody.DESCRIPTOR</span></code></a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#yeying.api.identity.identity_pb2.DepositRequest"><code class="docutils literal notranslate"><span class="pre">DepositRequest</span></code></a><ul>
+<li><a class="reference internal" href="#yeying.api.identity.identity_pb2.DepositRequest.DESCRIPTOR"><code class="docutils literal notranslate"><span class="pre">DepositRequest.DESCRIPTOR</span></code></a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#yeying.api.identity.identity_pb2.DepositRequestBody"><code class="docutils literal notranslate"><span class="pre">DepositRequestBody</span></code></a><ul>
+<li><a class="reference internal" href="#yeying.api.identity.identity_pb2.DepositRequestBody.DESCRIPTOR"><code class="docutils literal notranslate"><span class="pre">DepositRequestBody.DESCRIPTOR</span></code></a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#yeying.api.identity.identity_pb2.DepositResponse"><code class="docutils literal notranslate"><span class="pre">DepositResponse</span></code></a><ul>
+<li><a class="reference internal" href="#yeying.api.identity.identity_pb2.DepositResponse.DESCRIPTOR"><code class="docutils literal notranslate"><span class="pre">DepositResponse.DESCRIPTOR</span></code></a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#yeying.api.identity.identity_pb2.DepositResponseBody"><code class="docutils literal notranslate"><span class="pre">DepositResponseBody</span></code></a><ul>
+<li><a class="reference internal" href="#yeying.api.identity.identity_pb2.DepositResponseBody.DESCRIPTOR"><code class="docutils literal notranslate"><span class="pre">DepositResponseBody.DESCRIPTOR</span></code></a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#yeying.api.identity.identity_pb2.QueryRequest"><code class="docutils literal notranslate"><span class="pre">QueryRequest</span></code></a><ul>
+<li><a class="reference internal" href="#yeying.api.identity.identity_pb2.QueryRequest.DESCRIPTOR"><code class="docutils literal notranslate"><span class="pre">QueryRequest.DESCRIPTOR</span></code></a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#yeying.api.identity.identity_pb2.QueryRequestBody"><code class="docutils literal notranslate"><span class="pre">QueryRequestBody</span></code></a><ul>
+<li><a class="reference internal" href="#yeying.api.identity.identity_pb2.QueryRequestBody.DESCRIPTOR"><code class="docutils literal notranslate"><span class="pre">QueryRequestBody.DESCRIPTOR</span></code></a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#yeying.api.identity.identity_pb2.QueryResponse"><code class="docutils literal notranslate"><span class="pre">QueryResponse</span></code></a><ul>
+<li><a class="reference internal" href="#yeying.api.identity.identity_pb2.QueryResponse.DESCRIPTOR"><code class="docutils literal notranslate"><span class="pre">QueryResponse.DESCRIPTOR</span></code></a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#yeying.api.identity.identity_pb2.QueryResponseBody"><code class="docutils literal notranslate"><span class="pre">QueryResponseBody</span></code></a><ul>
+<li><a class="reference internal" href="#yeying.api.identity.identity_pb2.QueryResponseBody.DESCRIPTOR"><code class="docutils literal notranslate"><span class="pre">QueryResponseBody.DESCRIPTOR</span></code></a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#yeying.api.identity.identity_pb2.RetrieveRequest"><code class="docutils literal notranslate"><span class="pre">RetrieveRequest</span></code></a><ul>
+<li><a class="reference internal" href="#yeying.api.identity.identity_pb2.RetrieveRequest.DESCRIPTOR"><code class="docutils literal notranslate"><span class="pre">RetrieveRequest.DESCRIPTOR</span></code></a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#yeying.api.identity.identity_pb2.RetrieveResponse"><code class="docutils literal notranslate"><span class="pre">RetrieveResponse</span></code></a><ul>
+<li><a class="reference internal" href="#yeying.api.identity.identity_pb2.RetrieveResponse.DESCRIPTOR"><code class="docutils literal notranslate"><span class="pre">RetrieveResponse.DESCRIPTOR</span></code></a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#yeying.api.identity.identity_pb2.ShareRequest"><code class="docutils literal notranslate"><span class="pre">ShareRequest</span></code></a><ul>
+<li><a class="reference internal" href="#yeying.api.identity.identity_pb2.ShareRequest.DESCRIPTOR"><code class="docutils literal notranslate"><span class="pre">ShareRequest.DESCRIPTOR</span></code></a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#yeying.api.identity.identity_pb2.ShareResponse"><code class="docutils literal notranslate"><span class="pre">ShareResponse</span></code></a><ul>
+<li><a class="reference internal" href="#yeying.api.identity.identity_pb2.ShareResponse.DESCRIPTOR"><code class="docutils literal notranslate"><span class="pre">ShareResponse.DESCRIPTOR</span></code></a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><a class="reference internal" href="#module-yeying.api.identity.identity_pb2_grpc">yeying.api.identity.identity_pb2_grpc module</a><ul>
+<li><a class="reference internal" href="#yeying.api.identity.identity_pb2_grpc.Identity"><code class="docutils literal notranslate"><span class="pre">Identity</span></code></a><ul>
+<li><a class="reference internal" href="#yeying.api.identity.identity_pb2_grpc.Identity.Cancel"><code class="docutils literal notranslate"><span class="pre">Identity.Cancel()</span></code></a></li>
+<li><a class="reference internal" href="#yeying.api.identity.identity_pb2_grpc.Identity.Deposit"><code class="docutils literal notranslate"><span class="pre">Identity.Deposit()</span></code></a></li>
+<li><a class="reference internal" href="#yeying.api.identity.identity_pb2_grpc.Identity.Query"><code class="docutils literal notranslate"><span class="pre">Identity.Query()</span></code></a></li>
+<li><a class="reference internal" href="#yeying.api.identity.identity_pb2_grpc.Identity.Retrieve"><code class="docutils literal notranslate"><span class="pre">Identity.Retrieve()</span></code></a></li>
+<li><a class="reference internal" href="#yeying.api.identity.identity_pb2_grpc.Identity.Share"><code class="docutils literal notranslate"><span class="pre">Identity.Share()</span></code></a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#yeying.api.identity.identity_pb2_grpc.IdentityServicer"><code class="docutils literal notranslate"><span class="pre">IdentityServicer</span></code></a><ul>
+<li><a class="reference internal" href="#yeying.api.identity.identity_pb2_grpc.IdentityServicer.Cancel"><code class="docutils literal notranslate"><span class="pre">IdentityServicer.Cancel()</span></code></a></li>
+<li><a class="reference internal" href="#yeying.api.identity.identity_pb2_grpc.IdentityServicer.Deposit"><code class="docutils literal notranslate"><span class="pre">IdentityServicer.Deposit()</span></code></a></li>
+<li><a class="reference internal" href="#yeying.api.identity.identity_pb2_grpc.IdentityServicer.Query"><code class="docutils literal notranslate"><span class="pre">IdentityServicer.Query()</span></code></a></li>
+<li><a class="reference internal" href="#yeying.api.identity.identity_pb2_grpc.IdentityServicer.Retrieve"><code class="docutils literal notranslate"><span class="pre">IdentityServicer.Retrieve()</span></code></a></li>
+<li><a class="reference internal" href="#yeying.api.identity.identity_pb2_grpc.IdentityServicer.Share"><code class="docutils literal notranslate"><span class="pre">IdentityServicer.Share()</span></code></a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#yeying.api.identity.identity_pb2_grpc.IdentityStub"><code class="docutils literal notranslate"><span class="pre">IdentityStub</span></code></a></li>
+<li><a class="reference internal" href="#yeying.api.identity.identity_pb2_grpc.add_IdentityServicer_to_server"><code class="docutils literal notranslate"><span class="pre">add_IdentityServicer_to_server()</span></code></a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#module-yeying.api.identity">Module contents</a></li>
+</ul>
+</li>
+</ul>
+</div>
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="index.html">yeying-client-python</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="index.html" class="icon icon-home" aria-label="Home"></a></li>
+      <li class="breadcrumb-item active">yeying.api.identity package</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="_sources/yeying.api.identity.rst.txt" rel="nofollow"> View page source</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="yeying-api-identity-package">
+<h1>yeying.api.identity package<a class="headerlink" href="#yeying-api-identity-package" title="Link to this heading"></a></h1>
+<section id="submodules">
+<h2>Submodules<a class="headerlink" href="#submodules" title="Link to this heading"></a></h2>
+</section>
+<section id="module-yeying.api.identity.identity_pb2">
+<span id="yeying-api-identity-identity-pb2-module"></span><h2>yeying.api.identity.identity_pb2 module<a class="headerlink" href="#module-yeying.api.identity.identity_pb2" title="Link to this heading"></a></h2>
+<p>Generated protocol buffer code.</p>
+<dl class="py class">
+<dt class="sig sig-object py" id="yeying.api.identity.identity_pb2.CancelRequest">
+<em class="property"><span class="k"><span class="pre">class</span></span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">yeying.api.identity.identity_pb2.</span></span><span class="sig-name descname"><span class="pre">CancelRequest</span></span><a class="headerlink" href="#yeying.api.identity.identity_pb2.CancelRequest" title="Link to this definition"></a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">Message</span></code>, <code class="xref py py-class docutils literal notranslate"><span class="pre">Message</span></code></p>
+<dl class="py attribute">
+<dt class="sig sig-object py" id="yeying.api.identity.identity_pb2.CancelRequest.DESCRIPTOR">
+<span class="sig-name descname"><span class="pre">DESCRIPTOR</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">&lt;google._upb._message.Descriptor</span> <span class="pre">object&gt;</span></em><a class="headerlink" href="#yeying.api.identity.identity_pb2.CancelRequest.DESCRIPTOR" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="yeying.api.identity.identity_pb2.CancelRequestBody">
+<em class="property"><span class="k"><span class="pre">class</span></span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">yeying.api.identity.identity_pb2.</span></span><span class="sig-name descname"><span class="pre">CancelRequestBody</span></span><a class="headerlink" href="#yeying.api.identity.identity_pb2.CancelRequestBody" title="Link to this definition"></a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">Message</span></code>, <code class="xref py py-class docutils literal notranslate"><span class="pre">Message</span></code></p>
+<dl class="py attribute">
+<dt class="sig sig-object py" id="yeying.api.identity.identity_pb2.CancelRequestBody.DESCRIPTOR">
+<span class="sig-name descname"><span class="pre">DESCRIPTOR</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">&lt;google._upb._message.Descriptor</span> <span class="pre">object&gt;</span></em><a class="headerlink" href="#yeying.api.identity.identity_pb2.CancelRequestBody.DESCRIPTOR" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="yeying.api.identity.identity_pb2.CancelResponse">
+<em class="property"><span class="k"><span class="pre">class</span></span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">yeying.api.identity.identity_pb2.</span></span><span class="sig-name descname"><span class="pre">CancelResponse</span></span><a class="headerlink" href="#yeying.api.identity.identity_pb2.CancelResponse" title="Link to this definition"></a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">Message</span></code>, <code class="xref py py-class docutils literal notranslate"><span class="pre">Message</span></code></p>
+<dl class="py attribute">
+<dt class="sig sig-object py" id="yeying.api.identity.identity_pb2.CancelResponse.DESCRIPTOR">
+<span class="sig-name descname"><span class="pre">DESCRIPTOR</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">&lt;google._upb._message.Descriptor</span> <span class="pre">object&gt;</span></em><a class="headerlink" href="#yeying.api.identity.identity_pb2.CancelResponse.DESCRIPTOR" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="yeying.api.identity.identity_pb2.CancelResponseBody">
+<em class="property"><span class="k"><span class="pre">class</span></span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">yeying.api.identity.identity_pb2.</span></span><span class="sig-name descname"><span class="pre">CancelResponseBody</span></span><a class="headerlink" href="#yeying.api.identity.identity_pb2.CancelResponseBody" title="Link to this definition"></a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">Message</span></code>, <code class="xref py py-class docutils literal notranslate"><span class="pre">Message</span></code></p>
+<dl class="py attribute">
+<dt class="sig sig-object py" id="yeying.api.identity.identity_pb2.CancelResponseBody.DESCRIPTOR">
+<span class="sig-name descname"><span class="pre">DESCRIPTOR</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">&lt;google._upb._message.Descriptor</span> <span class="pre">object&gt;</span></em><a class="headerlink" href="#yeying.api.identity.identity_pb2.CancelResponseBody.DESCRIPTOR" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="yeying.api.identity.identity_pb2.DepositRequest">
+<em class="property"><span class="k"><span class="pre">class</span></span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">yeying.api.identity.identity_pb2.</span></span><span class="sig-name descname"><span class="pre">DepositRequest</span></span><a class="headerlink" href="#yeying.api.identity.identity_pb2.DepositRequest" title="Link to this definition"></a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">Message</span></code>, <code class="xref py py-class docutils literal notranslate"><span class="pre">Message</span></code></p>
+<dl class="py attribute">
+<dt class="sig sig-object py" id="yeying.api.identity.identity_pb2.DepositRequest.DESCRIPTOR">
+<span class="sig-name descname"><span class="pre">DESCRIPTOR</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">&lt;google._upb._message.Descriptor</span> <span class="pre">object&gt;</span></em><a class="headerlink" href="#yeying.api.identity.identity_pb2.DepositRequest.DESCRIPTOR" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="yeying.api.identity.identity_pb2.DepositRequestBody">
+<em class="property"><span class="k"><span class="pre">class</span></span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">yeying.api.identity.identity_pb2.</span></span><span class="sig-name descname"><span class="pre">DepositRequestBody</span></span><a class="headerlink" href="#yeying.api.identity.identity_pb2.DepositRequestBody" title="Link to this definition"></a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">Message</span></code>, <code class="xref py py-class docutils literal notranslate"><span class="pre">Message</span></code></p>
+<dl class="py attribute">
+<dt class="sig sig-object py" id="yeying.api.identity.identity_pb2.DepositRequestBody.DESCRIPTOR">
+<span class="sig-name descname"><span class="pre">DESCRIPTOR</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">&lt;google._upb._message.Descriptor</span> <span class="pre">object&gt;</span></em><a class="headerlink" href="#yeying.api.identity.identity_pb2.DepositRequestBody.DESCRIPTOR" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="yeying.api.identity.identity_pb2.DepositResponse">
+<em class="property"><span class="k"><span class="pre">class</span></span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">yeying.api.identity.identity_pb2.</span></span><span class="sig-name descname"><span class="pre">DepositResponse</span></span><a class="headerlink" href="#yeying.api.identity.identity_pb2.DepositResponse" title="Link to this definition"></a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">Message</span></code>, <code class="xref py py-class docutils literal notranslate"><span class="pre">Message</span></code></p>
+<dl class="py attribute">
+<dt class="sig sig-object py" id="yeying.api.identity.identity_pb2.DepositResponse.DESCRIPTOR">
+<span class="sig-name descname"><span class="pre">DESCRIPTOR</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">&lt;google._upb._message.Descriptor</span> <span class="pre">object&gt;</span></em><a class="headerlink" href="#yeying.api.identity.identity_pb2.DepositResponse.DESCRIPTOR" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="yeying.api.identity.identity_pb2.DepositResponseBody">
+<em class="property"><span class="k"><span class="pre">class</span></span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">yeying.api.identity.identity_pb2.</span></span><span class="sig-name descname"><span class="pre">DepositResponseBody</span></span><a class="headerlink" href="#yeying.api.identity.identity_pb2.DepositResponseBody" title="Link to this definition"></a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">Message</span></code>, <code class="xref py py-class docutils literal notranslate"><span class="pre">Message</span></code></p>
+<dl class="py attribute">
+<dt class="sig sig-object py" id="yeying.api.identity.identity_pb2.DepositResponseBody.DESCRIPTOR">
+<span class="sig-name descname"><span class="pre">DESCRIPTOR</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">&lt;google._upb._message.Descriptor</span> <span class="pre">object&gt;</span></em><a class="headerlink" href="#yeying.api.identity.identity_pb2.DepositResponseBody.DESCRIPTOR" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="yeying.api.identity.identity_pb2.QueryRequest">
+<em class="property"><span class="k"><span class="pre">class</span></span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">yeying.api.identity.identity_pb2.</span></span><span class="sig-name descname"><span class="pre">QueryRequest</span></span><a class="headerlink" href="#yeying.api.identity.identity_pb2.QueryRequest" title="Link to this definition"></a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">Message</span></code>, <code class="xref py py-class docutils literal notranslate"><span class="pre">Message</span></code></p>
+<dl class="py attribute">
+<dt class="sig sig-object py" id="yeying.api.identity.identity_pb2.QueryRequest.DESCRIPTOR">
+<span class="sig-name descname"><span class="pre">DESCRIPTOR</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">&lt;google._upb._message.Descriptor</span> <span class="pre">object&gt;</span></em><a class="headerlink" href="#yeying.api.identity.identity_pb2.QueryRequest.DESCRIPTOR" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="yeying.api.identity.identity_pb2.QueryRequestBody">
+<em class="property"><span class="k"><span class="pre">class</span></span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">yeying.api.identity.identity_pb2.</span></span><span class="sig-name descname"><span class="pre">QueryRequestBody</span></span><a class="headerlink" href="#yeying.api.identity.identity_pb2.QueryRequestBody" title="Link to this definition"></a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">Message</span></code>, <code class="xref py py-class docutils literal notranslate"><span class="pre">Message</span></code></p>
+<dl class="py attribute">
+<dt class="sig sig-object py" id="yeying.api.identity.identity_pb2.QueryRequestBody.DESCRIPTOR">
+<span class="sig-name descname"><span class="pre">DESCRIPTOR</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">&lt;google._upb._message.Descriptor</span> <span class="pre">object&gt;</span></em><a class="headerlink" href="#yeying.api.identity.identity_pb2.QueryRequestBody.DESCRIPTOR" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="yeying.api.identity.identity_pb2.QueryResponse">
+<em class="property"><span class="k"><span class="pre">class</span></span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">yeying.api.identity.identity_pb2.</span></span><span class="sig-name descname"><span class="pre">QueryResponse</span></span><a class="headerlink" href="#yeying.api.identity.identity_pb2.QueryResponse" title="Link to this definition"></a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">Message</span></code>, <code class="xref py py-class docutils literal notranslate"><span class="pre">Message</span></code></p>
+<dl class="py attribute">
+<dt class="sig sig-object py" id="yeying.api.identity.identity_pb2.QueryResponse.DESCRIPTOR">
+<span class="sig-name descname"><span class="pre">DESCRIPTOR</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">&lt;google._upb._message.Descriptor</span> <span class="pre">object&gt;</span></em><a class="headerlink" href="#yeying.api.identity.identity_pb2.QueryResponse.DESCRIPTOR" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="yeying.api.identity.identity_pb2.QueryResponseBody">
+<em class="property"><span class="k"><span class="pre">class</span></span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">yeying.api.identity.identity_pb2.</span></span><span class="sig-name descname"><span class="pre">QueryResponseBody</span></span><a class="headerlink" href="#yeying.api.identity.identity_pb2.QueryResponseBody" title="Link to this definition"></a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">Message</span></code>, <code class="xref py py-class docutils literal notranslate"><span class="pre">Message</span></code></p>
+<dl class="py attribute">
+<dt class="sig sig-object py" id="yeying.api.identity.identity_pb2.QueryResponseBody.DESCRIPTOR">
+<span class="sig-name descname"><span class="pre">DESCRIPTOR</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">&lt;google._upb._message.Descriptor</span> <span class="pre">object&gt;</span></em><a class="headerlink" href="#yeying.api.identity.identity_pb2.QueryResponseBody.DESCRIPTOR" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="yeying.api.identity.identity_pb2.RetrieveRequest">
+<em class="property"><span class="k"><span class="pre">class</span></span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">yeying.api.identity.identity_pb2.</span></span><span class="sig-name descname"><span class="pre">RetrieveRequest</span></span><a class="headerlink" href="#yeying.api.identity.identity_pb2.RetrieveRequest" title="Link to this definition"></a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">Message</span></code>, <code class="xref py py-class docutils literal notranslate"><span class="pre">Message</span></code></p>
+<dl class="py attribute">
+<dt class="sig sig-object py" id="yeying.api.identity.identity_pb2.RetrieveRequest.DESCRIPTOR">
+<span class="sig-name descname"><span class="pre">DESCRIPTOR</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">&lt;google._upb._message.Descriptor</span> <span class="pre">object&gt;</span></em><a class="headerlink" href="#yeying.api.identity.identity_pb2.RetrieveRequest.DESCRIPTOR" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="yeying.api.identity.identity_pb2.RetrieveResponse">
+<em class="property"><span class="k"><span class="pre">class</span></span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">yeying.api.identity.identity_pb2.</span></span><span class="sig-name descname"><span class="pre">RetrieveResponse</span></span><a class="headerlink" href="#yeying.api.identity.identity_pb2.RetrieveResponse" title="Link to this definition"></a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">Message</span></code>, <code class="xref py py-class docutils literal notranslate"><span class="pre">Message</span></code></p>
+<dl class="py attribute">
+<dt class="sig sig-object py" id="yeying.api.identity.identity_pb2.RetrieveResponse.DESCRIPTOR">
+<span class="sig-name descname"><span class="pre">DESCRIPTOR</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">&lt;google._upb._message.Descriptor</span> <span class="pre">object&gt;</span></em><a class="headerlink" href="#yeying.api.identity.identity_pb2.RetrieveResponse.DESCRIPTOR" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="yeying.api.identity.identity_pb2.ShareRequest">
+<em class="property"><span class="k"><span class="pre">class</span></span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">yeying.api.identity.identity_pb2.</span></span><span class="sig-name descname"><span class="pre">ShareRequest</span></span><a class="headerlink" href="#yeying.api.identity.identity_pb2.ShareRequest" title="Link to this definition"></a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">Message</span></code>, <code class="xref py py-class docutils literal notranslate"><span class="pre">Message</span></code></p>
+<dl class="py attribute">
+<dt class="sig sig-object py" id="yeying.api.identity.identity_pb2.ShareRequest.DESCRIPTOR">
+<span class="sig-name descname"><span class="pre">DESCRIPTOR</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">&lt;google._upb._message.Descriptor</span> <span class="pre">object&gt;</span></em><a class="headerlink" href="#yeying.api.identity.identity_pb2.ShareRequest.DESCRIPTOR" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="yeying.api.identity.identity_pb2.ShareResponse">
+<em class="property"><span class="k"><span class="pre">class</span></span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">yeying.api.identity.identity_pb2.</span></span><span class="sig-name descname"><span class="pre">ShareResponse</span></span><a class="headerlink" href="#yeying.api.identity.identity_pb2.ShareResponse" title="Link to this definition"></a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">Message</span></code>, <code class="xref py py-class docutils literal notranslate"><span class="pre">Message</span></code></p>
+<dl class="py attribute">
+<dt class="sig sig-object py" id="yeying.api.identity.identity_pb2.ShareResponse.DESCRIPTOR">
+<span class="sig-name descname"><span class="pre">DESCRIPTOR</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">&lt;google._upb._message.Descriptor</span> <span class="pre">object&gt;</span></em><a class="headerlink" href="#yeying.api.identity.identity_pb2.ShareResponse.DESCRIPTOR" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+</section>
+<section id="module-yeying.api.identity.identity_pb2_grpc">
+<span id="yeying-api-identity-identity-pb2-grpc-module"></span><h2>yeying.api.identity.identity_pb2_grpc module<a class="headerlink" href="#module-yeying.api.identity.identity_pb2_grpc" title="Link to this heading"></a></h2>
+<p>Client and server classes corresponding to protobuf-defined services.</p>
+<dl class="py class">
+<dt class="sig sig-object py" id="yeying.api.identity.identity_pb2_grpc.Identity">
+<em class="property"><span class="k"><span class="pre">class</span></span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">yeying.api.identity.identity_pb2_grpc.</span></span><span class="sig-name descname"><span class="pre">Identity</span></span><a class="headerlink" href="#yeying.api.identity.identity_pb2_grpc.Identity" title="Link to this definition"></a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
+<p>提供身份托管和维护服务，目前还不支持托管加密的身份，需要有资质，需要补齐的能力；
+1、至少二要素身份认证；
+2、保护隐私零知识证名；
+2、支持密钥恢复；
+3、服务器故障导致丢失，需要支持分散式存储；
+4、支持加密硬件；
+5、至少要两把密钥，一把由身份所有者保管，一把是服务保管；</p>
+<dl class="py method">
+<dt class="sig sig-object py" id="yeying.api.identity.identity_pb2_grpc.Identity.Cancel">
+<em class="property"><span class="k"><span class="pre">static</span></span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">Cancel</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">request</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">target</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">options</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">()</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">channel_credentials</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">call_credentials</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">insecure</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">compression</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">wait_for_ready</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">timeout</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">metadata</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#yeying.api.identity.identity_pb2_grpc.Identity.Cancel" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="yeying.api.identity.identity_pb2_grpc.Identity.Deposit">
+<em class="property"><span class="k"><span class="pre">static</span></span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">Deposit</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">request</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">target</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">options</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">()</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">channel_credentials</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">call_credentials</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">insecure</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">compression</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">wait_for_ready</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">timeout</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">metadata</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#yeying.api.identity.identity_pb2_grpc.Identity.Deposit" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="yeying.api.identity.identity_pb2_grpc.Identity.Query">
+<em class="property"><span class="k"><span class="pre">static</span></span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">Query</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">request</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">target</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">options</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">()</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">channel_credentials</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">call_credentials</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">insecure</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">compression</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">wait_for_ready</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">timeout</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">metadata</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#yeying.api.identity.identity_pb2_grpc.Identity.Query" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="yeying.api.identity.identity_pb2_grpc.Identity.Retrieve">
+<em class="property"><span class="k"><span class="pre">static</span></span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">Retrieve</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">request</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">target</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">options</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">()</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">channel_credentials</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">call_credentials</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">insecure</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">compression</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">wait_for_ready</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">timeout</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">metadata</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#yeying.api.identity.identity_pb2_grpc.Identity.Retrieve" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="yeying.api.identity.identity_pb2_grpc.Identity.Share">
+<em class="property"><span class="k"><span class="pre">static</span></span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">Share</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">request</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">target</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">options</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">()</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">channel_credentials</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">call_credentials</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">insecure</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">compression</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">wait_for_ready</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">timeout</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">metadata</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#yeying.api.identity.identity_pb2_grpc.Identity.Share" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="yeying.api.identity.identity_pb2_grpc.IdentityServicer">
+<em class="property"><span class="k"><span class="pre">class</span></span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">yeying.api.identity.identity_pb2_grpc.</span></span><span class="sig-name descname"><span class="pre">IdentityServicer</span></span><a class="headerlink" href="#yeying.api.identity.identity_pb2_grpc.IdentityServicer" title="Link to this definition"></a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
+<p>提供身份托管和维护服务，目前还不支持托管加密的身份，需要有资质，需要补齐的能力；
+1、至少二要素身份认证；
+2、保护隐私零知识证名；
+2、支持密钥恢复；
+3、服务器故障导致丢失，需要支持分散式存储；
+4、支持加密硬件；
+5、至少要两把密钥，一把由身份所有者保管，一把是服务保管；</p>
+<dl class="py method">
+<dt class="sig sig-object py" id="yeying.api.identity.identity_pb2_grpc.IdentityServicer.Cancel">
+<span class="sig-name descname"><span class="pre">Cancel</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">request</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">context</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#yeying.api.identity.identity_pb2_grpc.IdentityServicer.Cancel" title="Link to this definition"></a></dt>
+<dd><p>取消托管</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="yeying.api.identity.identity_pb2_grpc.IdentityServicer.Deposit">
+<span class="sig-name descname"><span class="pre">Deposit</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">request</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">context</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#yeying.api.identity.identity_pb2_grpc.IdentityServicer.Deposit" title="Link to this definition"></a></dt>
+<dd><p>身份托管</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="yeying.api.identity.identity_pb2_grpc.IdentityServicer.Query">
+<span class="sig-name descname"><span class="pre">Query</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">request</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">context</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#yeying.api.identity.identity_pb2_grpc.IdentityServicer.Query" title="Link to this definition"></a></dt>
+<dd><p>查询身份名片</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="yeying.api.identity.identity_pb2_grpc.IdentityServicer.Retrieve">
+<span class="sig-name descname"><span class="pre">Retrieve</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">request</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">context</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#yeying.api.identity.identity_pb2_grpc.IdentityServicer.Retrieve" title="Link to this definition"></a></dt>
+<dd><p>取回身份</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="yeying.api.identity.identity_pb2_grpc.IdentityServicer.Share">
+<span class="sig-name descname"><span class="pre">Share</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">request</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">context</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#yeying.api.identity.identity_pb2_grpc.IdentityServicer.Share" title="Link to this definition"></a></dt>
+<dd><p>分享身份名片</p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="yeying.api.identity.identity_pb2_grpc.IdentityStub">
+<em class="property"><span class="k"><span class="pre">class</span></span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">yeying.api.identity.identity_pb2_grpc.</span></span><span class="sig-name descname"><span class="pre">IdentityStub</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">channel</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#yeying.api.identity.identity_pb2_grpc.IdentityStub" title="Link to this definition"></a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
+<p>提供身份托管和维护服务，目前还不支持托管加密的身份，需要有资质，需要补齐的能力；
+1、至少二要素身份认证；
+2、保护隐私零知识证名；
+2、支持密钥恢复；
+3、服务器故障导致丢失，需要支持分散式存储；
+4、支持加密硬件；
+5、至少要两把密钥，一把由身份所有者保管，一把是服务保管；</p>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="yeying.api.identity.identity_pb2_grpc.add_IdentityServicer_to_server">
+<span class="sig-prename descclassname"><span class="pre">yeying.api.identity.identity_pb2_grpc.</span></span><span class="sig-name descname"><span class="pre">add_IdentityServicer_to_server</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">servicer</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">server</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#yeying.api.identity.identity_pb2_grpc.add_IdentityServicer_to_server" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+</section>
+<section id="module-yeying.api.identity">
+<span id="module-contents"></span><h2>Module contents<a class="headerlink" href="#module-yeying.api.identity" title="Link to this heading"></a></h2>
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2025, yeying.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

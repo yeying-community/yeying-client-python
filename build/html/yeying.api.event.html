@@ -1,0 +1,458 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" data-content_root="./">
+<head>
+  <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>yeying.api.event package &mdash; yeying-client-python  documentation</title>
+      <link rel="stylesheet" type="text/css" href="_static/pygments.css?v=b86133f3" />
+      <link rel="stylesheet" type="text/css" href="_static/css/theme.css?v=e59714d7" />
+
+  
+      <script src="_static/jquery.js?v=5d32c60e"></script>
+      <script src="_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+      <script src="_static/documentation_options.js?v=5929fcd5"></script>
+      <script src="_static/doctools.js?v=9bcbadda"></script>
+      <script src="_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="index.html" class="icon icon-home">
+            yeying-client-python
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <!-- Local TOC -->
+              <div class="local-toc"><ul>
+<li><a class="reference internal" href="#">yeying.api.event package</a><ul>
+<li><a class="reference internal" href="#submodules">Submodules</a></li>
+<li><a class="reference internal" href="#module-yeying.api.event.event_pb2">yeying.api.event.event_pb2 module</a><ul>
+<li><a class="reference internal" href="#yeying.api.event.event_pb2.ApplyContent"><code class="docutils literal notranslate"><span class="pre">ApplyContent</span></code></a><ul>
+<li><a class="reference internal" href="#yeying.api.event.event_pb2.ApplyContent.DESCRIPTOR"><code class="docutils literal notranslate"><span class="pre">ApplyContent.DESCRIPTOR</span></code></a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#yeying.api.event.event_pb2.ApplyOpinion"><code class="docutils literal notranslate"><span class="pre">ApplyOpinion</span></code></a><ul>
+<li><a class="reference internal" href="#yeying.api.event.event_pb2.ApplyOpinion.DESCRIPTOR"><code class="docutils literal notranslate"><span class="pre">ApplyOpinion.DESCRIPTOR</span></code></a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#yeying.api.event.event_pb2.ConsumeRequest"><code class="docutils literal notranslate"><span class="pre">ConsumeRequest</span></code></a><ul>
+<li><a class="reference internal" href="#yeying.api.event.event_pb2.ConsumeRequest.DESCRIPTOR"><code class="docutils literal notranslate"><span class="pre">ConsumeRequest.DESCRIPTOR</span></code></a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#yeying.api.event.event_pb2.ConsumeRequestBody"><code class="docutils literal notranslate"><span class="pre">ConsumeRequestBody</span></code></a><ul>
+<li><a class="reference internal" href="#yeying.api.event.event_pb2.ConsumeRequestBody.DESCRIPTOR"><code class="docutils literal notranslate"><span class="pre">ConsumeRequestBody.DESCRIPTOR</span></code></a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#yeying.api.event.event_pb2.ConsumeResponse"><code class="docutils literal notranslate"><span class="pre">ConsumeResponse</span></code></a><ul>
+<li><a class="reference internal" href="#yeying.api.event.event_pb2.ConsumeResponse.DESCRIPTOR"><code class="docutils literal notranslate"><span class="pre">ConsumeResponse.DESCRIPTOR</span></code></a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#yeying.api.event.event_pb2.ConsumeResponseBody"><code class="docutils literal notranslate"><span class="pre">ConsumeResponseBody</span></code></a><ul>
+<li><a class="reference internal" href="#yeying.api.event.event_pb2.ConsumeResponseBody.DESCRIPTOR"><code class="docutils literal notranslate"><span class="pre">ConsumeResponseBody.DESCRIPTOR</span></code></a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#yeying.api.event.event_pb2.CustomContent"><code class="docutils literal notranslate"><span class="pre">CustomContent</span></code></a><ul>
+<li><a class="reference internal" href="#yeying.api.event.event_pb2.CustomContent.DESCRIPTOR"><code class="docutils literal notranslate"><span class="pre">CustomContent.DESCRIPTOR</span></code></a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#yeying.api.event.event_pb2.CustomOpinion"><code class="docutils literal notranslate"><span class="pre">CustomOpinion</span></code></a><ul>
+<li><a class="reference internal" href="#yeying.api.event.event_pb2.CustomOpinion.DESCRIPTOR"><code class="docutils literal notranslate"><span class="pre">CustomOpinion.DESCRIPTOR</span></code></a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#yeying.api.event.event_pb2.EventMetadata"><code class="docutils literal notranslate"><span class="pre">EventMetadata</span></code></a><ul>
+<li><a class="reference internal" href="#yeying.api.event.event_pb2.EventMetadata.DESCRIPTOR"><code class="docutils literal notranslate"><span class="pre">EventMetadata.DESCRIPTOR</span></code></a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#yeying.api.event.event_pb2.EventSignature"><code class="docutils literal notranslate"><span class="pre">EventSignature</span></code></a><ul>
+<li><a class="reference internal" href="#yeying.api.event.event_pb2.EventSignature.DESCRIPTOR"><code class="docutils literal notranslate"><span class="pre">EventSignature.DESCRIPTOR</span></code></a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#yeying.api.event.event_pb2.NotifyContent"><code class="docutils literal notranslate"><span class="pre">NotifyContent</span></code></a><ul>
+<li><a class="reference internal" href="#yeying.api.event.event_pb2.NotifyContent.DESCRIPTOR"><code class="docutils literal notranslate"><span class="pre">NotifyContent.DESCRIPTOR</span></code></a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#yeying.api.event.event_pb2.NotifyItem"><code class="docutils literal notranslate"><span class="pre">NotifyItem</span></code></a><ul>
+<li><a class="reference internal" href="#yeying.api.event.event_pb2.NotifyItem.DESCRIPTOR"><code class="docutils literal notranslate"><span class="pre">NotifyItem.DESCRIPTOR</span></code></a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#yeying.api.event.event_pb2.NotifyOpinion"><code class="docutils literal notranslate"><span class="pre">NotifyOpinion</span></code></a><ul>
+<li><a class="reference internal" href="#yeying.api.event.event_pb2.NotifyOpinion.DESCRIPTOR"><code class="docutils literal notranslate"><span class="pre">NotifyOpinion.DESCRIPTOR</span></code></a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#yeying.api.event.event_pb2.ProduceRequest"><code class="docutils literal notranslate"><span class="pre">ProduceRequest</span></code></a><ul>
+<li><a class="reference internal" href="#yeying.api.event.event_pb2.ProduceRequest.DESCRIPTOR"><code class="docutils literal notranslate"><span class="pre">ProduceRequest.DESCRIPTOR</span></code></a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#yeying.api.event.event_pb2.ProduceRequestBody"><code class="docutils literal notranslate"><span class="pre">ProduceRequestBody</span></code></a><ul>
+<li><a class="reference internal" href="#yeying.api.event.event_pb2.ProduceRequestBody.DESCRIPTOR"><code class="docutils literal notranslate"><span class="pre">ProduceRequestBody.DESCRIPTOR</span></code></a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#yeying.api.event.event_pb2.ProduceResponse"><code class="docutils literal notranslate"><span class="pre">ProduceResponse</span></code></a><ul>
+<li><a class="reference internal" href="#yeying.api.event.event_pb2.ProduceResponse.DESCRIPTOR"><code class="docutils literal notranslate"><span class="pre">ProduceResponse.DESCRIPTOR</span></code></a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#yeying.api.event.event_pb2.ProduceResponseBody"><code class="docutils literal notranslate"><span class="pre">ProduceResponseBody</span></code></a><ul>
+<li><a class="reference internal" href="#yeying.api.event.event_pb2.ProduceResponseBody.DESCRIPTOR"><code class="docutils literal notranslate"><span class="pre">ProduceResponseBody.DESCRIPTOR</span></code></a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#yeying.api.event.event_pb2.SignatureObject"><code class="docutils literal notranslate"><span class="pre">SignatureObject</span></code></a><ul>
+<li><a class="reference internal" href="#yeying.api.event.event_pb2.SignatureObject.DESCRIPTOR"><code class="docutils literal notranslate"><span class="pre">SignatureObject.DESCRIPTOR</span></code></a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><a class="reference internal" href="#module-yeying.api.event.event_pb2_grpc">yeying.api.event.event_pb2_grpc module</a><ul>
+<li><a class="reference internal" href="#yeying.api.event.event_pb2_grpc.Event"><code class="docutils literal notranslate"><span class="pre">Event</span></code></a><ul>
+<li><a class="reference internal" href="#yeying.api.event.event_pb2_grpc.Event.Consume"><code class="docutils literal notranslate"><span class="pre">Event.Consume()</span></code></a></li>
+<li><a class="reference internal" href="#yeying.api.event.event_pb2_grpc.Event.Produce"><code class="docutils literal notranslate"><span class="pre">Event.Produce()</span></code></a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#yeying.api.event.event_pb2_grpc.EventServicer"><code class="docutils literal notranslate"><span class="pre">EventServicer</span></code></a><ul>
+<li><a class="reference internal" href="#yeying.api.event.event_pb2_grpc.EventServicer.Consume"><code class="docutils literal notranslate"><span class="pre">EventServicer.Consume()</span></code></a></li>
+<li><a class="reference internal" href="#yeying.api.event.event_pb2_grpc.EventServicer.Produce"><code class="docutils literal notranslate"><span class="pre">EventServicer.Produce()</span></code></a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#yeying.api.event.event_pb2_grpc.EventStub"><code class="docutils literal notranslate"><span class="pre">EventStub</span></code></a></li>
+<li><a class="reference internal" href="#yeying.api.event.event_pb2_grpc.add_EventServicer_to_server"><code class="docutils literal notranslate"><span class="pre">add_EventServicer_to_server()</span></code></a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#module-yeying.api.event">Module contents</a></li>
+</ul>
+</li>
+</ul>
+</div>
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="index.html">yeying-client-python</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="index.html" class="icon icon-home" aria-label="Home"></a></li>
+      <li class="breadcrumb-item active">yeying.api.event package</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="_sources/yeying.api.event.rst.txt" rel="nofollow"> View page source</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="yeying-api-event-package">
+<h1>yeying.api.event package<a class="headerlink" href="#yeying-api-event-package" title="Link to this heading"></a></h1>
+<section id="submodules">
+<h2>Submodules<a class="headerlink" href="#submodules" title="Link to this heading"></a></h2>
+</section>
+<section id="module-yeying.api.event.event_pb2">
+<span id="yeying-api-event-event-pb2-module"></span><h2>yeying.api.event.event_pb2 module<a class="headerlink" href="#module-yeying.api.event.event_pb2" title="Link to this heading"></a></h2>
+<p>Generated protocol buffer code.</p>
+<dl class="py class">
+<dt class="sig sig-object py" id="yeying.api.event.event_pb2.ApplyContent">
+<em class="property"><span class="k"><span class="pre">class</span></span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">yeying.api.event.event_pb2.</span></span><span class="sig-name descname"><span class="pre">ApplyContent</span></span><a class="headerlink" href="#yeying.api.event.event_pb2.ApplyContent" title="Link to this definition"></a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">Message</span></code>, <code class="xref py py-class docutils literal notranslate"><span class="pre">Message</span></code></p>
+<dl class="py attribute">
+<dt class="sig sig-object py" id="yeying.api.event.event_pb2.ApplyContent.DESCRIPTOR">
+<span class="sig-name descname"><span class="pre">DESCRIPTOR</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">&lt;google._upb._message.Descriptor</span> <span class="pre">object&gt;</span></em><a class="headerlink" href="#yeying.api.event.event_pb2.ApplyContent.DESCRIPTOR" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="yeying.api.event.event_pb2.ApplyOpinion">
+<em class="property"><span class="k"><span class="pre">class</span></span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">yeying.api.event.event_pb2.</span></span><span class="sig-name descname"><span class="pre">ApplyOpinion</span></span><a class="headerlink" href="#yeying.api.event.event_pb2.ApplyOpinion" title="Link to this definition"></a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">Message</span></code>, <code class="xref py py-class docutils literal notranslate"><span class="pre">Message</span></code></p>
+<dl class="py attribute">
+<dt class="sig sig-object py" id="yeying.api.event.event_pb2.ApplyOpinion.DESCRIPTOR">
+<span class="sig-name descname"><span class="pre">DESCRIPTOR</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">&lt;google._upb._message.Descriptor</span> <span class="pre">object&gt;</span></em><a class="headerlink" href="#yeying.api.event.event_pb2.ApplyOpinion.DESCRIPTOR" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="yeying.api.event.event_pb2.ConsumeRequest">
+<em class="property"><span class="k"><span class="pre">class</span></span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">yeying.api.event.event_pb2.</span></span><span class="sig-name descname"><span class="pre">ConsumeRequest</span></span><a class="headerlink" href="#yeying.api.event.event_pb2.ConsumeRequest" title="Link to this definition"></a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">Message</span></code>, <code class="xref py py-class docutils literal notranslate"><span class="pre">Message</span></code></p>
+<dl class="py attribute">
+<dt class="sig sig-object py" id="yeying.api.event.event_pb2.ConsumeRequest.DESCRIPTOR">
+<span class="sig-name descname"><span class="pre">DESCRIPTOR</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">&lt;google._upb._message.Descriptor</span> <span class="pre">object&gt;</span></em><a class="headerlink" href="#yeying.api.event.event_pb2.ConsumeRequest.DESCRIPTOR" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="yeying.api.event.event_pb2.ConsumeRequestBody">
+<em class="property"><span class="k"><span class="pre">class</span></span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">yeying.api.event.event_pb2.</span></span><span class="sig-name descname"><span class="pre">ConsumeRequestBody</span></span><a class="headerlink" href="#yeying.api.event.event_pb2.ConsumeRequestBody" title="Link to this definition"></a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">Message</span></code>, <code class="xref py py-class docutils literal notranslate"><span class="pre">Message</span></code></p>
+<dl class="py attribute">
+<dt class="sig sig-object py" id="yeying.api.event.event_pb2.ConsumeRequestBody.DESCRIPTOR">
+<span class="sig-name descname"><span class="pre">DESCRIPTOR</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">&lt;google._upb._message.Descriptor</span> <span class="pre">object&gt;</span></em><a class="headerlink" href="#yeying.api.event.event_pb2.ConsumeRequestBody.DESCRIPTOR" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="yeying.api.event.event_pb2.ConsumeResponse">
+<em class="property"><span class="k"><span class="pre">class</span></span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">yeying.api.event.event_pb2.</span></span><span class="sig-name descname"><span class="pre">ConsumeResponse</span></span><a class="headerlink" href="#yeying.api.event.event_pb2.ConsumeResponse" title="Link to this definition"></a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">Message</span></code>, <code class="xref py py-class docutils literal notranslate"><span class="pre">Message</span></code></p>
+<dl class="py attribute">
+<dt class="sig sig-object py" id="yeying.api.event.event_pb2.ConsumeResponse.DESCRIPTOR">
+<span class="sig-name descname"><span class="pre">DESCRIPTOR</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">&lt;google._upb._message.Descriptor</span> <span class="pre">object&gt;</span></em><a class="headerlink" href="#yeying.api.event.event_pb2.ConsumeResponse.DESCRIPTOR" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="yeying.api.event.event_pb2.ConsumeResponseBody">
+<em class="property"><span class="k"><span class="pre">class</span></span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">yeying.api.event.event_pb2.</span></span><span class="sig-name descname"><span class="pre">ConsumeResponseBody</span></span><a class="headerlink" href="#yeying.api.event.event_pb2.ConsumeResponseBody" title="Link to this definition"></a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">Message</span></code>, <code class="xref py py-class docutils literal notranslate"><span class="pre">Message</span></code></p>
+<dl class="py attribute">
+<dt class="sig sig-object py" id="yeying.api.event.event_pb2.ConsumeResponseBody.DESCRIPTOR">
+<span class="sig-name descname"><span class="pre">DESCRIPTOR</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">&lt;google._upb._message.Descriptor</span> <span class="pre">object&gt;</span></em><a class="headerlink" href="#yeying.api.event.event_pb2.ConsumeResponseBody.DESCRIPTOR" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="yeying.api.event.event_pb2.CustomContent">
+<em class="property"><span class="k"><span class="pre">class</span></span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">yeying.api.event.event_pb2.</span></span><span class="sig-name descname"><span class="pre">CustomContent</span></span><a class="headerlink" href="#yeying.api.event.event_pb2.CustomContent" title="Link to this definition"></a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">Message</span></code>, <code class="xref py py-class docutils literal notranslate"><span class="pre">Message</span></code></p>
+<dl class="py attribute">
+<dt class="sig sig-object py" id="yeying.api.event.event_pb2.CustomContent.DESCRIPTOR">
+<span class="sig-name descname"><span class="pre">DESCRIPTOR</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">&lt;google._upb._message.Descriptor</span> <span class="pre">object&gt;</span></em><a class="headerlink" href="#yeying.api.event.event_pb2.CustomContent.DESCRIPTOR" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="yeying.api.event.event_pb2.CustomOpinion">
+<em class="property"><span class="k"><span class="pre">class</span></span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">yeying.api.event.event_pb2.</span></span><span class="sig-name descname"><span class="pre">CustomOpinion</span></span><a class="headerlink" href="#yeying.api.event.event_pb2.CustomOpinion" title="Link to this definition"></a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">Message</span></code>, <code class="xref py py-class docutils literal notranslate"><span class="pre">Message</span></code></p>
+<dl class="py attribute">
+<dt class="sig sig-object py" id="yeying.api.event.event_pb2.CustomOpinion.DESCRIPTOR">
+<span class="sig-name descname"><span class="pre">DESCRIPTOR</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">&lt;google._upb._message.Descriptor</span> <span class="pre">object&gt;</span></em><a class="headerlink" href="#yeying.api.event.event_pb2.CustomOpinion.DESCRIPTOR" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="yeying.api.event.event_pb2.EventMetadata">
+<em class="property"><span class="k"><span class="pre">class</span></span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">yeying.api.event.event_pb2.</span></span><span class="sig-name descname"><span class="pre">EventMetadata</span></span><a class="headerlink" href="#yeying.api.event.event_pb2.EventMetadata" title="Link to this definition"></a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">Message</span></code>, <code class="xref py py-class docutils literal notranslate"><span class="pre">Message</span></code></p>
+<dl class="py attribute">
+<dt class="sig sig-object py" id="yeying.api.event.event_pb2.EventMetadata.DESCRIPTOR">
+<span class="sig-name descname"><span class="pre">DESCRIPTOR</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">&lt;google._upb._message.Descriptor</span> <span class="pre">object&gt;</span></em><a class="headerlink" href="#yeying.api.event.event_pb2.EventMetadata.DESCRIPTOR" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="yeying.api.event.event_pb2.EventSignature">
+<em class="property"><span class="k"><span class="pre">class</span></span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">yeying.api.event.event_pb2.</span></span><span class="sig-name descname"><span class="pre">EventSignature</span></span><a class="headerlink" href="#yeying.api.event.event_pb2.EventSignature" title="Link to this definition"></a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">Message</span></code>, <code class="xref py py-class docutils literal notranslate"><span class="pre">Message</span></code></p>
+<dl class="py attribute">
+<dt class="sig sig-object py" id="yeying.api.event.event_pb2.EventSignature.DESCRIPTOR">
+<span class="sig-name descname"><span class="pre">DESCRIPTOR</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">&lt;google._upb._message.Descriptor</span> <span class="pre">object&gt;</span></em><a class="headerlink" href="#yeying.api.event.event_pb2.EventSignature.DESCRIPTOR" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="yeying.api.event.event_pb2.NotifyContent">
+<em class="property"><span class="k"><span class="pre">class</span></span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">yeying.api.event.event_pb2.</span></span><span class="sig-name descname"><span class="pre">NotifyContent</span></span><a class="headerlink" href="#yeying.api.event.event_pb2.NotifyContent" title="Link to this definition"></a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">Message</span></code>, <code class="xref py py-class docutils literal notranslate"><span class="pre">Message</span></code></p>
+<dl class="py attribute">
+<dt class="sig sig-object py" id="yeying.api.event.event_pb2.NotifyContent.DESCRIPTOR">
+<span class="sig-name descname"><span class="pre">DESCRIPTOR</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">&lt;google._upb._message.Descriptor</span> <span class="pre">object&gt;</span></em><a class="headerlink" href="#yeying.api.event.event_pb2.NotifyContent.DESCRIPTOR" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="yeying.api.event.event_pb2.NotifyItem">
+<em class="property"><span class="k"><span class="pre">class</span></span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">yeying.api.event.event_pb2.</span></span><span class="sig-name descname"><span class="pre">NotifyItem</span></span><a class="headerlink" href="#yeying.api.event.event_pb2.NotifyItem" title="Link to this definition"></a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">Message</span></code>, <code class="xref py py-class docutils literal notranslate"><span class="pre">Message</span></code></p>
+<dl class="py attribute">
+<dt class="sig sig-object py" id="yeying.api.event.event_pb2.NotifyItem.DESCRIPTOR">
+<span class="sig-name descname"><span class="pre">DESCRIPTOR</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">&lt;google._upb._message.Descriptor</span> <span class="pre">object&gt;</span></em><a class="headerlink" href="#yeying.api.event.event_pb2.NotifyItem.DESCRIPTOR" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="yeying.api.event.event_pb2.NotifyOpinion">
+<em class="property"><span class="k"><span class="pre">class</span></span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">yeying.api.event.event_pb2.</span></span><span class="sig-name descname"><span class="pre">NotifyOpinion</span></span><a class="headerlink" href="#yeying.api.event.event_pb2.NotifyOpinion" title="Link to this definition"></a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">Message</span></code>, <code class="xref py py-class docutils literal notranslate"><span class="pre">Message</span></code></p>
+<dl class="py attribute">
+<dt class="sig sig-object py" id="yeying.api.event.event_pb2.NotifyOpinion.DESCRIPTOR">
+<span class="sig-name descname"><span class="pre">DESCRIPTOR</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">&lt;google._upb._message.Descriptor</span> <span class="pre">object&gt;</span></em><a class="headerlink" href="#yeying.api.event.event_pb2.NotifyOpinion.DESCRIPTOR" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="yeying.api.event.event_pb2.ProduceRequest">
+<em class="property"><span class="k"><span class="pre">class</span></span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">yeying.api.event.event_pb2.</span></span><span class="sig-name descname"><span class="pre">ProduceRequest</span></span><a class="headerlink" href="#yeying.api.event.event_pb2.ProduceRequest" title="Link to this definition"></a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">Message</span></code>, <code class="xref py py-class docutils literal notranslate"><span class="pre">Message</span></code></p>
+<dl class="py attribute">
+<dt class="sig sig-object py" id="yeying.api.event.event_pb2.ProduceRequest.DESCRIPTOR">
+<span class="sig-name descname"><span class="pre">DESCRIPTOR</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">&lt;google._upb._message.Descriptor</span> <span class="pre">object&gt;</span></em><a class="headerlink" href="#yeying.api.event.event_pb2.ProduceRequest.DESCRIPTOR" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="yeying.api.event.event_pb2.ProduceRequestBody">
+<em class="property"><span class="k"><span class="pre">class</span></span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">yeying.api.event.event_pb2.</span></span><span class="sig-name descname"><span class="pre">ProduceRequestBody</span></span><a class="headerlink" href="#yeying.api.event.event_pb2.ProduceRequestBody" title="Link to this definition"></a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">Message</span></code>, <code class="xref py py-class docutils literal notranslate"><span class="pre">Message</span></code></p>
+<dl class="py attribute">
+<dt class="sig sig-object py" id="yeying.api.event.event_pb2.ProduceRequestBody.DESCRIPTOR">
+<span class="sig-name descname"><span class="pre">DESCRIPTOR</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">&lt;google._upb._message.Descriptor</span> <span class="pre">object&gt;</span></em><a class="headerlink" href="#yeying.api.event.event_pb2.ProduceRequestBody.DESCRIPTOR" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="yeying.api.event.event_pb2.ProduceResponse">
+<em class="property"><span class="k"><span class="pre">class</span></span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">yeying.api.event.event_pb2.</span></span><span class="sig-name descname"><span class="pre">ProduceResponse</span></span><a class="headerlink" href="#yeying.api.event.event_pb2.ProduceResponse" title="Link to this definition"></a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">Message</span></code>, <code class="xref py py-class docutils literal notranslate"><span class="pre">Message</span></code></p>
+<dl class="py attribute">
+<dt class="sig sig-object py" id="yeying.api.event.event_pb2.ProduceResponse.DESCRIPTOR">
+<span class="sig-name descname"><span class="pre">DESCRIPTOR</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">&lt;google._upb._message.Descriptor</span> <span class="pre">object&gt;</span></em><a class="headerlink" href="#yeying.api.event.event_pb2.ProduceResponse.DESCRIPTOR" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="yeying.api.event.event_pb2.ProduceResponseBody">
+<em class="property"><span class="k"><span class="pre">class</span></span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">yeying.api.event.event_pb2.</span></span><span class="sig-name descname"><span class="pre">ProduceResponseBody</span></span><a class="headerlink" href="#yeying.api.event.event_pb2.ProduceResponseBody" title="Link to this definition"></a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">Message</span></code>, <code class="xref py py-class docutils literal notranslate"><span class="pre">Message</span></code></p>
+<dl class="py attribute">
+<dt class="sig sig-object py" id="yeying.api.event.event_pb2.ProduceResponseBody.DESCRIPTOR">
+<span class="sig-name descname"><span class="pre">DESCRIPTOR</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">&lt;google._upb._message.Descriptor</span> <span class="pre">object&gt;</span></em><a class="headerlink" href="#yeying.api.event.event_pb2.ProduceResponseBody.DESCRIPTOR" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="yeying.api.event.event_pb2.SignatureObject">
+<em class="property"><span class="k"><span class="pre">class</span></span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">yeying.api.event.event_pb2.</span></span><span class="sig-name descname"><span class="pre">SignatureObject</span></span><a class="headerlink" href="#yeying.api.event.event_pb2.SignatureObject" title="Link to this definition"></a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">Message</span></code>, <code class="xref py py-class docutils literal notranslate"><span class="pre">Message</span></code></p>
+<dl class="py attribute">
+<dt class="sig sig-object py" id="yeying.api.event.event_pb2.SignatureObject.DESCRIPTOR">
+<span class="sig-name descname"><span class="pre">DESCRIPTOR</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">&lt;google._upb._message.Descriptor</span> <span class="pre">object&gt;</span></em><a class="headerlink" href="#yeying.api.event.event_pb2.SignatureObject.DESCRIPTOR" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+</section>
+<section id="module-yeying.api.event.event_pb2_grpc">
+<span id="yeying-api-event-event-pb2-grpc-module"></span><h2>yeying.api.event.event_pb2_grpc module<a class="headerlink" href="#module-yeying.api.event.event_pb2_grpc" title="Link to this heading"></a></h2>
+<p>Client and server classes corresponding to protobuf-defined services.</p>
+<dl class="py class">
+<dt class="sig sig-object py" id="yeying.api.event.event_pb2_grpc.Event">
+<em class="property"><span class="k"><span class="pre">class</span></span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">yeying.api.event.event_pb2_grpc.</span></span><span class="sig-name descname"><span class="pre">Event</span></span><a class="headerlink" href="#yeying.api.event.event_pb2_grpc.Event" title="Link to this definition"></a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
+<p>Missing associated documentation comment in .proto file.</p>
+<dl class="py method">
+<dt class="sig sig-object py" id="yeying.api.event.event_pb2_grpc.Event.Consume">
+<em class="property"><span class="k"><span class="pre">static</span></span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">Consume</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">request</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">target</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">options</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">()</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">channel_credentials</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">call_credentials</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">insecure</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">compression</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">wait_for_ready</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">timeout</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">metadata</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#yeying.api.event.event_pb2_grpc.Event.Consume" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="yeying.api.event.event_pb2_grpc.Event.Produce">
+<em class="property"><span class="k"><span class="pre">static</span></span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">Produce</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">request</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">target</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">options</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">()</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">channel_credentials</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">call_credentials</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">insecure</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">compression</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">wait_for_ready</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">timeout</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">metadata</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#yeying.api.event.event_pb2_grpc.Event.Produce" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="yeying.api.event.event_pb2_grpc.EventServicer">
+<em class="property"><span class="k"><span class="pre">class</span></span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">yeying.api.event.event_pb2_grpc.</span></span><span class="sig-name descname"><span class="pre">EventServicer</span></span><a class="headerlink" href="#yeying.api.event.event_pb2_grpc.EventServicer" title="Link to this definition"></a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
+<p>Missing associated documentation comment in .proto file.</p>
+<dl class="py method">
+<dt class="sig sig-object py" id="yeying.api.event.event_pb2_grpc.EventServicer.Consume">
+<span class="sig-name descname"><span class="pre">Consume</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">request</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">context</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#yeying.api.event.event_pb2_grpc.EventServicer.Consume" title="Link to this definition"></a></dt>
+<dd><p>用户直接向生成事件的服务消费并给出处理意见</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="yeying.api.event.event_pb2_grpc.EventServicer.Produce">
+<span class="sig-name descname"><span class="pre">Produce</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">request</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">context</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#yeying.api.event.event_pb2_grpc.EventServicer.Produce" title="Link to this definition"></a></dt>
+<dd><p>某个服务作为客户端生成了事件，通常node会实现服务端，然后同步给用户</p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="yeying.api.event.event_pb2_grpc.EventStub">
+<em class="property"><span class="k"><span class="pre">class</span></span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">yeying.api.event.event_pb2_grpc.</span></span><span class="sig-name descname"><span class="pre">EventStub</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">channel</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#yeying.api.event.event_pb2_grpc.EventStub" title="Link to this definition"></a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
+<p>Missing associated documentation comment in .proto file.</p>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="yeying.api.event.event_pb2_grpc.add_EventServicer_to_server">
+<span class="sig-prename descclassname"><span class="pre">yeying.api.event.event_pb2_grpc.</span></span><span class="sig-name descname"><span class="pre">add_EventServicer_to_server</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">servicer</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">server</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#yeying.api.event.event_pb2_grpc.add_EventServicer_to_server" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+</section>
+<section id="module-yeying.api.event">
+<span id="module-contents"></span><h2>Module contents<a class="headerlink" href="#module-yeying.api.event" title="Link to this heading"></a></h2>
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2025, yeying.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>
