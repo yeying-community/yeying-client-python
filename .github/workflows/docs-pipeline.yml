@@ -4,8 +4,8 @@ on:
   push:
     branches: [main]
     paths:
-      - "src/**"      # 源代码变更时触发
-      - "docs/**"     # 文档配置变更时触发
+      - "yeying/**"      # 源代码变更时触发
+      - "source/**"     # 文档配置变更时触发
 
 jobs:
   build-deploy-docs:
@@ -28,12 +28,12 @@ jobs:
 
       - name: Build HTML docs
         run: |
-          cd docs
+          sphinx-apidoc -o source yeying/
           make html  # 使用 Sphinx Makefile 构建
 
       - name: Deploy to GitHub Pages
         uses: peaceiris/actions-gh-pages@v3
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
-          publish_dir: ./docs/build/html  # 生成文档的路径
+          publish_dir: ./build/html  # 生成文档的路径
           keep_files: false  # 每次覆盖旧文档
