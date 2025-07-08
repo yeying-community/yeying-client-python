@@ -1,0 +1,253 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" data-content_root="./">
+<head>
+  <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>yeying.api.common package &mdash; yeying-client-python  documentation</title>
+      <link rel="stylesheet" type="text/css" href="_static/pygments.css?v=b86133f3" />
+      <link rel="stylesheet" type="text/css" href="_static/css/theme.css?v=e59714d7" />
+
+  
+      <script src="_static/jquery.js?v=5d32c60e"></script>
+      <script src="_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+      <script src="_static/documentation_options.js?v=5929fcd5"></script>
+      <script src="_static/doctools.js?v=9bcbadda"></script>
+      <script src="_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="index.html" class="icon icon-home">
+            yeying-client-python
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <!-- Local TOC -->
+              <div class="local-toc"><ul>
+<li><a class="reference internal" href="#">yeying.api.common package</a><ul>
+<li><a class="reference internal" href="#submodules">Submodules</a></li>
+<li><a class="reference internal" href="#module-yeying.api.common.code_pb2">yeying.api.common.code_pb2 module</a></li>
+<li><a class="reference internal" href="#module-yeying.api.common.code_pb2_grpc">yeying.api.common.code_pb2_grpc module</a></li>
+<li><a class="reference internal" href="#module-yeying.api.common.message_pb2">yeying.api.common.message_pb2 module</a><ul>
+<li><a class="reference internal" href="#yeying.api.common.message_pb2.MessageHeader"><code class="docutils literal notranslate"><span class="pre">MessageHeader</span></code></a><ul>
+<li><a class="reference internal" href="#yeying.api.common.message_pb2.MessageHeader.DESCRIPTOR"><code class="docutils literal notranslate"><span class="pre">MessageHeader.DESCRIPTOR</span></code></a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#yeying.api.common.message_pb2.RequestPage"><code class="docutils literal notranslate"><span class="pre">RequestPage</span></code></a><ul>
+<li><a class="reference internal" href="#yeying.api.common.message_pb2.RequestPage.DESCRIPTOR"><code class="docutils literal notranslate"><span class="pre">RequestPage.DESCRIPTOR</span></code></a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#yeying.api.common.message_pb2.ResponsePage"><code class="docutils literal notranslate"><span class="pre">ResponsePage</span></code></a><ul>
+<li><a class="reference internal" href="#yeying.api.common.message_pb2.ResponsePage.DESCRIPTOR"><code class="docutils literal notranslate"><span class="pre">ResponsePage.DESCRIPTOR</span></code></a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#yeying.api.common.message_pb2.ResponseStatus"><code class="docutils literal notranslate"><span class="pre">ResponseStatus</span></code></a><ul>
+<li><a class="reference internal" href="#yeying.api.common.message_pb2.ResponseStatus.DESCRIPTOR"><code class="docutils literal notranslate"><span class="pre">ResponseStatus.DESCRIPTOR</span></code></a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><a class="reference internal" href="#module-yeying.api.common.message_pb2_grpc">yeying.api.common.message_pb2_grpc module</a></li>
+<li><a class="reference internal" href="#module-yeying.api.common.model_pb2">yeying.api.common.model_pb2 module</a><ul>
+<li><a class="reference internal" href="#yeying.api.common.model_pb2.ApplicationMetadata"><code class="docutils literal notranslate"><span class="pre">ApplicationMetadata</span></code></a><ul>
+<li><a class="reference internal" href="#yeying.api.common.model_pb2.ApplicationMetadata.DESCRIPTOR"><code class="docutils literal notranslate"><span class="pre">ApplicationMetadata.DESCRIPTOR</span></code></a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#yeying.api.common.model_pb2.ServiceMetadata"><code class="docutils literal notranslate"><span class="pre">ServiceMetadata</span></code></a><ul>
+<li><a class="reference internal" href="#yeying.api.common.model_pb2.ServiceMetadata.DESCRIPTOR"><code class="docutils literal notranslate"><span class="pre">ServiceMetadata.DESCRIPTOR</span></code></a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#yeying.api.common.model_pb2.StateMetadata"><code class="docutils literal notranslate"><span class="pre">StateMetadata</span></code></a><ul>
+<li><a class="reference internal" href="#yeying.api.common.model_pb2.StateMetadata.DESCRIPTOR"><code class="docutils literal notranslate"><span class="pre">StateMetadata.DESCRIPTOR</span></code></a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><a class="reference internal" href="#module-yeying.api.common.model_pb2_grpc">yeying.api.common.model_pb2_grpc module</a></li>
+<li><a class="reference internal" href="#module-yeying.api.common">Module contents</a></li>
+</ul>
+</li>
+</ul>
+</div>
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="index.html">yeying-client-python</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="index.html" class="icon icon-home" aria-label="Home"></a></li>
+      <li class="breadcrumb-item active">yeying.api.common package</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="_sources/yeying.api.common.rst.txt" rel="nofollow"> View page source</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="yeying-api-common-package">
+<h1>yeying.api.common package<a class="headerlink" href="#yeying-api-common-package" title="Link to this heading"></a></h1>
+<section id="submodules">
+<h2>Submodules<a class="headerlink" href="#submodules" title="Link to this heading"></a></h2>
+</section>
+<section id="module-yeying.api.common.code_pb2">
+<span id="yeying-api-common-code-pb2-module"></span><h2>yeying.api.common.code_pb2 module<a class="headerlink" href="#module-yeying.api.common.code_pb2" title="Link to this heading"></a></h2>
+<p>Generated protocol buffer code.</p>
+</section>
+<section id="module-yeying.api.common.code_pb2_grpc">
+<span id="yeying-api-common-code-pb2-grpc-module"></span><h2>yeying.api.common.code_pb2_grpc module<a class="headerlink" href="#module-yeying.api.common.code_pb2_grpc" title="Link to this heading"></a></h2>
+<p>Client and server classes corresponding to protobuf-defined services.</p>
+</section>
+<section id="module-yeying.api.common.message_pb2">
+<span id="yeying-api-common-message-pb2-module"></span><h2>yeying.api.common.message_pb2 module<a class="headerlink" href="#module-yeying.api.common.message_pb2" title="Link to this heading"></a></h2>
+<p>Generated protocol buffer code.</p>
+<dl class="py class">
+<dt class="sig sig-object py" id="yeying.api.common.message_pb2.MessageHeader">
+<em class="property"><span class="k"><span class="pre">class</span></span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">yeying.api.common.message_pb2.</span></span><span class="sig-name descname"><span class="pre">MessageHeader</span></span><a class="headerlink" href="#yeying.api.common.message_pb2.MessageHeader" title="Link to this definition"></a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">Message</span></code>, <code class="xref py py-class docutils literal notranslate"><span class="pre">Message</span></code></p>
+<dl class="py attribute">
+<dt class="sig sig-object py" id="yeying.api.common.message_pb2.MessageHeader.DESCRIPTOR">
+<span class="sig-name descname"><span class="pre">DESCRIPTOR</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">&lt;google._upb._message.Descriptor</span> <span class="pre">object&gt;</span></em><a class="headerlink" href="#yeying.api.common.message_pb2.MessageHeader.DESCRIPTOR" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="yeying.api.common.message_pb2.RequestPage">
+<em class="property"><span class="k"><span class="pre">class</span></span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">yeying.api.common.message_pb2.</span></span><span class="sig-name descname"><span class="pre">RequestPage</span></span><a class="headerlink" href="#yeying.api.common.message_pb2.RequestPage" title="Link to this definition"></a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">Message</span></code>, <code class="xref py py-class docutils literal notranslate"><span class="pre">Message</span></code></p>
+<dl class="py attribute">
+<dt class="sig sig-object py" id="yeying.api.common.message_pb2.RequestPage.DESCRIPTOR">
+<span class="sig-name descname"><span class="pre">DESCRIPTOR</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">&lt;google._upb._message.Descriptor</span> <span class="pre">object&gt;</span></em><a class="headerlink" href="#yeying.api.common.message_pb2.RequestPage.DESCRIPTOR" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="yeying.api.common.message_pb2.ResponsePage">
+<em class="property"><span class="k"><span class="pre">class</span></span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">yeying.api.common.message_pb2.</span></span><span class="sig-name descname"><span class="pre">ResponsePage</span></span><a class="headerlink" href="#yeying.api.common.message_pb2.ResponsePage" title="Link to this definition"></a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">Message</span></code>, <code class="xref py py-class docutils literal notranslate"><span class="pre">Message</span></code></p>
+<dl class="py attribute">
+<dt class="sig sig-object py" id="yeying.api.common.message_pb2.ResponsePage.DESCRIPTOR">
+<span class="sig-name descname"><span class="pre">DESCRIPTOR</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">&lt;google._upb._message.Descriptor</span> <span class="pre">object&gt;</span></em><a class="headerlink" href="#yeying.api.common.message_pb2.ResponsePage.DESCRIPTOR" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="yeying.api.common.message_pb2.ResponseStatus">
+<em class="property"><span class="k"><span class="pre">class</span></span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">yeying.api.common.message_pb2.</span></span><span class="sig-name descname"><span class="pre">ResponseStatus</span></span><a class="headerlink" href="#yeying.api.common.message_pb2.ResponseStatus" title="Link to this definition"></a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">Message</span></code>, <code class="xref py py-class docutils literal notranslate"><span class="pre">Message</span></code></p>
+<dl class="py attribute">
+<dt class="sig sig-object py" id="yeying.api.common.message_pb2.ResponseStatus.DESCRIPTOR">
+<span class="sig-name descname"><span class="pre">DESCRIPTOR</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">&lt;google._upb._message.Descriptor</span> <span class="pre">object&gt;</span></em><a class="headerlink" href="#yeying.api.common.message_pb2.ResponseStatus.DESCRIPTOR" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+</section>
+<section id="module-yeying.api.common.message_pb2_grpc">
+<span id="yeying-api-common-message-pb2-grpc-module"></span><h2>yeying.api.common.message_pb2_grpc module<a class="headerlink" href="#module-yeying.api.common.message_pb2_grpc" title="Link to this heading"></a></h2>
+<p>Client and server classes corresponding to protobuf-defined services.</p>
+</section>
+<section id="module-yeying.api.common.model_pb2">
+<span id="yeying-api-common-model-pb2-module"></span><h2>yeying.api.common.model_pb2 module<a class="headerlink" href="#module-yeying.api.common.model_pb2" title="Link to this heading"></a></h2>
+<p>Generated protocol buffer code.</p>
+<dl class="py class">
+<dt class="sig sig-object py" id="yeying.api.common.model_pb2.ApplicationMetadata">
+<em class="property"><span class="k"><span class="pre">class</span></span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">yeying.api.common.model_pb2.</span></span><span class="sig-name descname"><span class="pre">ApplicationMetadata</span></span><a class="headerlink" href="#yeying.api.common.model_pb2.ApplicationMetadata" title="Link to this definition"></a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">Message</span></code>, <code class="xref py py-class docutils literal notranslate"><span class="pre">Message</span></code></p>
+<dl class="py attribute">
+<dt class="sig sig-object py" id="yeying.api.common.model_pb2.ApplicationMetadata.DESCRIPTOR">
+<span class="sig-name descname"><span class="pre">DESCRIPTOR</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">&lt;google._upb._message.Descriptor</span> <span class="pre">object&gt;</span></em><a class="headerlink" href="#yeying.api.common.model_pb2.ApplicationMetadata.DESCRIPTOR" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="yeying.api.common.model_pb2.ServiceMetadata">
+<em class="property"><span class="k"><span class="pre">class</span></span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">yeying.api.common.model_pb2.</span></span><span class="sig-name descname"><span class="pre">ServiceMetadata</span></span><a class="headerlink" href="#yeying.api.common.model_pb2.ServiceMetadata" title="Link to this definition"></a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">Message</span></code>, <code class="xref py py-class docutils literal notranslate"><span class="pre">Message</span></code></p>
+<dl class="py attribute">
+<dt class="sig sig-object py" id="yeying.api.common.model_pb2.ServiceMetadata.DESCRIPTOR">
+<span class="sig-name descname"><span class="pre">DESCRIPTOR</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">&lt;google._upb._message.Descriptor</span> <span class="pre">object&gt;</span></em><a class="headerlink" href="#yeying.api.common.model_pb2.ServiceMetadata.DESCRIPTOR" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="yeying.api.common.model_pb2.StateMetadata">
+<em class="property"><span class="k"><span class="pre">class</span></span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">yeying.api.common.model_pb2.</span></span><span class="sig-name descname"><span class="pre">StateMetadata</span></span><a class="headerlink" href="#yeying.api.common.model_pb2.StateMetadata" title="Link to this definition"></a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">Message</span></code>, <code class="xref py py-class docutils literal notranslate"><span class="pre">Message</span></code></p>
+<dl class="py attribute">
+<dt class="sig sig-object py" id="yeying.api.common.model_pb2.StateMetadata.DESCRIPTOR">
+<span class="sig-name descname"><span class="pre">DESCRIPTOR</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">&lt;google._upb._message.Descriptor</span> <span class="pre">object&gt;</span></em><a class="headerlink" href="#yeying.api.common.model_pb2.StateMetadata.DESCRIPTOR" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+</section>
+<section id="module-yeying.api.common.model_pb2_grpc">
+<span id="yeying-api-common-model-pb2-grpc-module"></span><h2>yeying.api.common.model_pb2_grpc module<a class="headerlink" href="#module-yeying.api.common.model_pb2_grpc" title="Link to this heading"></a></h2>
+<p>Client and server classes corresponding to protobuf-defined services.</p>
+</section>
+<section id="module-yeying.api.common">
+<span id="module-contents"></span><h2>Module contents<a class="headerlink" href="#module-yeying.api.common" title="Link to this heading"></a></h2>
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2025, yeying.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

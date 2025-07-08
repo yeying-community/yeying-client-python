@@ -25,6 +25,9 @@ jobs:
       - name: Install dependencies
         run: |
           pip install -r requirements-docs.txt
+          rm -rf dist
+          python setup.py bdist_wheel
+          pip uninstall -y yeying_client && pip install dist/yeying_client-0.0.1-py3-none-any.whl
 
       - name: Build HTML docs
         run: |

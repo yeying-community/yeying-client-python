@@ -1,0 +1,287 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" data-content_root="./">
+<head>
+  <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>yeying.api.node package &mdash; yeying-client-python  documentation</title>
+      <link rel="stylesheet" type="text/css" href="_static/pygments.css?v=b86133f3" />
+      <link rel="stylesheet" type="text/css" href="_static/css/theme.css?v=e59714d7" />
+
+  
+      <script src="_static/jquery.js?v=5d32c60e"></script>
+      <script src="_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+      <script src="_static/documentation_options.js?v=5929fcd5"></script>
+      <script src="_static/doctools.js?v=9bcbadda"></script>
+      <script src="_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="index.html" class="icon icon-home">
+            yeying-client-python
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <!-- Local TOC -->
+              <div class="local-toc"><ul>
+<li><a class="reference internal" href="#">yeying.api.node package</a><ul>
+<li><a class="reference internal" href="#submodules">Submodules</a></li>
+<li><a class="reference internal" href="#module-yeying.api.node.node_pb2">yeying.api.node.node_pb2 module</a><ul>
+<li><a class="reference internal" href="#yeying.api.node.node_pb2.HealthCheckRequest"><code class="docutils literal notranslate"><span class="pre">HealthCheckRequest</span></code></a><ul>
+<li><a class="reference internal" href="#yeying.api.node.node_pb2.HealthCheckRequest.DESCRIPTOR"><code class="docutils literal notranslate"><span class="pre">HealthCheckRequest.DESCRIPTOR</span></code></a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#yeying.api.node.node_pb2.HealthCheckResponse"><code class="docutils literal notranslate"><span class="pre">HealthCheckResponse</span></code></a><ul>
+<li><a class="reference internal" href="#yeying.api.node.node_pb2.HealthCheckResponse.DESCRIPTOR"><code class="docutils literal notranslate"><span class="pre">HealthCheckResponse.DESCRIPTOR</span></code></a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#yeying.api.node.node_pb2.HealthCheckResponseBody"><code class="docutils literal notranslate"><span class="pre">HealthCheckResponseBody</span></code></a><ul>
+<li><a class="reference internal" href="#yeying.api.node.node_pb2.HealthCheckResponseBody.DESCRIPTOR"><code class="docutils literal notranslate"><span class="pre">HealthCheckResponseBody.DESCRIPTOR</span></code></a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#yeying.api.node.node_pb2.WhoamiRequest"><code class="docutils literal notranslate"><span class="pre">WhoamiRequest</span></code></a><ul>
+<li><a class="reference internal" href="#yeying.api.node.node_pb2.WhoamiRequest.DESCRIPTOR"><code class="docutils literal notranslate"><span class="pre">WhoamiRequest.DESCRIPTOR</span></code></a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#yeying.api.node.node_pb2.WhoamiResponse"><code class="docutils literal notranslate"><span class="pre">WhoamiResponse</span></code></a><ul>
+<li><a class="reference internal" href="#yeying.api.node.node_pb2.WhoamiResponse.DESCRIPTOR"><code class="docutils literal notranslate"><span class="pre">WhoamiResponse.DESCRIPTOR</span></code></a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#yeying.api.node.node_pb2.WhoamiResponseBody"><code class="docutils literal notranslate"><span class="pre">WhoamiResponseBody</span></code></a><ul>
+<li><a class="reference internal" href="#yeying.api.node.node_pb2.WhoamiResponseBody.DESCRIPTOR"><code class="docutils literal notranslate"><span class="pre">WhoamiResponseBody.DESCRIPTOR</span></code></a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><a class="reference internal" href="#module-yeying.api.node.node_pb2_grpc">yeying.api.node.node_pb2_grpc module</a><ul>
+<li><a class="reference internal" href="#yeying.api.node.node_pb2_grpc.Node"><code class="docutils literal notranslate"><span class="pre">Node</span></code></a><ul>
+<li><a class="reference internal" href="#yeying.api.node.node_pb2_grpc.Node.HealthCheck"><code class="docutils literal notranslate"><span class="pre">Node.HealthCheck()</span></code></a></li>
+<li><a class="reference internal" href="#yeying.api.node.node_pb2_grpc.Node.Whoami"><code class="docutils literal notranslate"><span class="pre">Node.Whoami()</span></code></a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#yeying.api.node.node_pb2_grpc.NodeServicer"><code class="docutils literal notranslate"><span class="pre">NodeServicer</span></code></a><ul>
+<li><a class="reference internal" href="#yeying.api.node.node_pb2_grpc.NodeServicer.HealthCheck"><code class="docutils literal notranslate"><span class="pre">NodeServicer.HealthCheck()</span></code></a></li>
+<li><a class="reference internal" href="#yeying.api.node.node_pb2_grpc.NodeServicer.Whoami"><code class="docutils literal notranslate"><span class="pre">NodeServicer.Whoami()</span></code></a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#yeying.api.node.node_pb2_grpc.NodeStub"><code class="docutils literal notranslate"><span class="pre">NodeStub</span></code></a></li>
+<li><a class="reference internal" href="#yeying.api.node.node_pb2_grpc.add_NodeServicer_to_server"><code class="docutils literal notranslate"><span class="pre">add_NodeServicer_to_server()</span></code></a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#module-yeying.api.node">Module contents</a></li>
+</ul>
+</li>
+</ul>
+</div>
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="index.html">yeying-client-python</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="index.html" class="icon icon-home" aria-label="Home"></a></li>
+      <li class="breadcrumb-item active">yeying.api.node package</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="_sources/yeying.api.node.rst.txt" rel="nofollow"> View page source</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="yeying-api-node-package">
+<h1>yeying.api.node package<a class="headerlink" href="#yeying-api-node-package" title="Link to this heading"></a></h1>
+<section id="submodules">
+<h2>Submodules<a class="headerlink" href="#submodules" title="Link to this heading"></a></h2>
+</section>
+<section id="module-yeying.api.node.node_pb2">
+<span id="yeying-api-node-node-pb2-module"></span><h2>yeying.api.node.node_pb2 module<a class="headerlink" href="#module-yeying.api.node.node_pb2" title="Link to this heading"></a></h2>
+<p>Generated protocol buffer code.</p>
+<dl class="py class">
+<dt class="sig sig-object py" id="yeying.api.node.node_pb2.HealthCheckRequest">
+<em class="property"><span class="k"><span class="pre">class</span></span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">yeying.api.node.node_pb2.</span></span><span class="sig-name descname"><span class="pre">HealthCheckRequest</span></span><a class="headerlink" href="#yeying.api.node.node_pb2.HealthCheckRequest" title="Link to this definition"></a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">Message</span></code>, <code class="xref py py-class docutils literal notranslate"><span class="pre">Message</span></code></p>
+<dl class="py attribute">
+<dt class="sig sig-object py" id="yeying.api.node.node_pb2.HealthCheckRequest.DESCRIPTOR">
+<span class="sig-name descname"><span class="pre">DESCRIPTOR</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">&lt;google._upb._message.Descriptor</span> <span class="pre">object&gt;</span></em><a class="headerlink" href="#yeying.api.node.node_pb2.HealthCheckRequest.DESCRIPTOR" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="yeying.api.node.node_pb2.HealthCheckResponse">
+<em class="property"><span class="k"><span class="pre">class</span></span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">yeying.api.node.node_pb2.</span></span><span class="sig-name descname"><span class="pre">HealthCheckResponse</span></span><a class="headerlink" href="#yeying.api.node.node_pb2.HealthCheckResponse" title="Link to this definition"></a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">Message</span></code>, <code class="xref py py-class docutils literal notranslate"><span class="pre">Message</span></code></p>
+<dl class="py attribute">
+<dt class="sig sig-object py" id="yeying.api.node.node_pb2.HealthCheckResponse.DESCRIPTOR">
+<span class="sig-name descname"><span class="pre">DESCRIPTOR</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">&lt;google._upb._message.Descriptor</span> <span class="pre">object&gt;</span></em><a class="headerlink" href="#yeying.api.node.node_pb2.HealthCheckResponse.DESCRIPTOR" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="yeying.api.node.node_pb2.HealthCheckResponseBody">
+<em class="property"><span class="k"><span class="pre">class</span></span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">yeying.api.node.node_pb2.</span></span><span class="sig-name descname"><span class="pre">HealthCheckResponseBody</span></span><a class="headerlink" href="#yeying.api.node.node_pb2.HealthCheckResponseBody" title="Link to this definition"></a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">Message</span></code>, <code class="xref py py-class docutils literal notranslate"><span class="pre">Message</span></code></p>
+<dl class="py attribute">
+<dt class="sig sig-object py" id="yeying.api.node.node_pb2.HealthCheckResponseBody.DESCRIPTOR">
+<span class="sig-name descname"><span class="pre">DESCRIPTOR</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">&lt;google._upb._message.Descriptor</span> <span class="pre">object&gt;</span></em><a class="headerlink" href="#yeying.api.node.node_pb2.HealthCheckResponseBody.DESCRIPTOR" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="yeying.api.node.node_pb2.WhoamiRequest">
+<em class="property"><span class="k"><span class="pre">class</span></span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">yeying.api.node.node_pb2.</span></span><span class="sig-name descname"><span class="pre">WhoamiRequest</span></span><a class="headerlink" href="#yeying.api.node.node_pb2.WhoamiRequest" title="Link to this definition"></a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">Message</span></code>, <code class="xref py py-class docutils literal notranslate"><span class="pre">Message</span></code></p>
+<dl class="py attribute">
+<dt class="sig sig-object py" id="yeying.api.node.node_pb2.WhoamiRequest.DESCRIPTOR">
+<span class="sig-name descname"><span class="pre">DESCRIPTOR</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">&lt;google._upb._message.Descriptor</span> <span class="pre">object&gt;</span></em><a class="headerlink" href="#yeying.api.node.node_pb2.WhoamiRequest.DESCRIPTOR" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="yeying.api.node.node_pb2.WhoamiResponse">
+<em class="property"><span class="k"><span class="pre">class</span></span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">yeying.api.node.node_pb2.</span></span><span class="sig-name descname"><span class="pre">WhoamiResponse</span></span><a class="headerlink" href="#yeying.api.node.node_pb2.WhoamiResponse" title="Link to this definition"></a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">Message</span></code>, <code class="xref py py-class docutils literal notranslate"><span class="pre">Message</span></code></p>
+<dl class="py attribute">
+<dt class="sig sig-object py" id="yeying.api.node.node_pb2.WhoamiResponse.DESCRIPTOR">
+<span class="sig-name descname"><span class="pre">DESCRIPTOR</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">&lt;google._upb._message.Descriptor</span> <span class="pre">object&gt;</span></em><a class="headerlink" href="#yeying.api.node.node_pb2.WhoamiResponse.DESCRIPTOR" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="yeying.api.node.node_pb2.WhoamiResponseBody">
+<em class="property"><span class="k"><span class="pre">class</span></span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">yeying.api.node.node_pb2.</span></span><span class="sig-name descname"><span class="pre">WhoamiResponseBody</span></span><a class="headerlink" href="#yeying.api.node.node_pb2.WhoamiResponseBody" title="Link to this definition"></a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">Message</span></code>, <code class="xref py py-class docutils literal notranslate"><span class="pre">Message</span></code></p>
+<dl class="py attribute">
+<dt class="sig sig-object py" id="yeying.api.node.node_pb2.WhoamiResponseBody.DESCRIPTOR">
+<span class="sig-name descname"><span class="pre">DESCRIPTOR</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">&lt;google._upb._message.Descriptor</span> <span class="pre">object&gt;</span></em><a class="headerlink" href="#yeying.api.node.node_pb2.WhoamiResponseBody.DESCRIPTOR" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+</section>
+<section id="module-yeying.api.node.node_pb2_grpc">
+<span id="yeying-api-node-node-pb2-grpc-module"></span><h2>yeying.api.node.node_pb2_grpc module<a class="headerlink" href="#module-yeying.api.node.node_pb2_grpc" title="Link to this heading"></a></h2>
+<p>Client and server classes corresponding to protobuf-defined services.</p>
+<dl class="py class">
+<dt class="sig sig-object py" id="yeying.api.node.node_pb2_grpc.Node">
+<em class="property"><span class="k"><span class="pre">class</span></span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">yeying.api.node.node_pb2_grpc.</span></span><span class="sig-name descname"><span class="pre">Node</span></span><a class="headerlink" href="#yeying.api.node.node_pb2_grpc.Node" title="Link to this definition"></a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
+<ul class="simple">
+<li></li>
+</ul>
+<p>每一个服务都是一个节点，提供通用的接口</p>
+<dl class="py method">
+<dt class="sig sig-object py" id="yeying.api.node.node_pb2_grpc.Node.HealthCheck">
+<em class="property"><span class="k"><span class="pre">static</span></span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">HealthCheck</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">request</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">target</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">options</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">()</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">channel_credentials</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">call_credentials</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">insecure</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">compression</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">wait_for_ready</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">timeout</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">metadata</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#yeying.api.node.node_pb2_grpc.Node.HealthCheck" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="yeying.api.node.node_pb2_grpc.Node.Whoami">
+<em class="property"><span class="k"><span class="pre">static</span></span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">Whoami</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">request</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">target</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">options</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">()</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">channel_credentials</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">call_credentials</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">insecure</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">compression</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">wait_for_ready</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">timeout</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">metadata</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#yeying.api.node.node_pb2_grpc.Node.Whoami" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="yeying.api.node.node_pb2_grpc.NodeServicer">
+<em class="property"><span class="k"><span class="pre">class</span></span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">yeying.api.node.node_pb2_grpc.</span></span><span class="sig-name descname"><span class="pre">NodeServicer</span></span><a class="headerlink" href="#yeying.api.node.node_pb2_grpc.NodeServicer" title="Link to this definition"></a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
+<ul class="simple">
+<li></li>
+</ul>
+<p>每一个服务都是一个节点，提供通用的接口</p>
+<dl class="py method">
+<dt class="sig sig-object py" id="yeying.api.node.node_pb2_grpc.NodeServicer.HealthCheck">
+<span class="sig-name descname"><span class="pre">HealthCheck</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">request</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">context</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#yeying.api.node.node_pb2_grpc.NodeServicer.HealthCheck" title="Link to this definition"></a></dt>
+<dd><p>Missing associated documentation comment in .proto file.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="yeying.api.node.node_pb2_grpc.NodeServicer.Whoami">
+<span class="sig-name descname"><span class="pre">Whoami</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">request</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">context</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#yeying.api.node.node_pb2_grpc.NodeServicer.Whoami" title="Link to this definition"></a></dt>
+<dd><p>Missing associated documentation comment in .proto file.</p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="yeying.api.node.node_pb2_grpc.NodeStub">
+<em class="property"><span class="k"><span class="pre">class</span></span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">yeying.api.node.node_pb2_grpc.</span></span><span class="sig-name descname"><span class="pre">NodeStub</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">channel</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#yeying.api.node.node_pb2_grpc.NodeStub" title="Link to this definition"></a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
+<ul class="simple">
+<li></li>
+</ul>
+<p>每一个服务都是一个节点，提供通用的接口</p>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="yeying.api.node.node_pb2_grpc.add_NodeServicer_to_server">
+<span class="sig-prename descclassname"><span class="pre">yeying.api.node.node_pb2_grpc.</span></span><span class="sig-name descname"><span class="pre">add_NodeServicer_to_server</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">servicer</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">server</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#yeying.api.node.node_pb2_grpc.add_NodeServicer_to_server" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+</section>
+<section id="module-yeying.api.node">
+<span id="module-contents"></span><h2>Module contents<a class="headerlink" href="#module-yeying.api.node" title="Link to this heading"></a></h2>
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2025, yeying.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

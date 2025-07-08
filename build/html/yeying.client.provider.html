@@ -1,0 +1,477 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" data-content_root="./">
+<head>
+  <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>yeying.client.provider package &mdash; yeying-client-python  documentation</title>
+      <link rel="stylesheet" type="text/css" href="_static/pygments.css?v=b86133f3" />
+      <link rel="stylesheet" type="text/css" href="_static/css/theme.css?v=e59714d7" />
+
+  
+      <script src="_static/jquery.js?v=5d32c60e"></script>
+      <script src="_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+      <script src="_static/documentation_options.js?v=5929fcd5"></script>
+      <script src="_static/doctools.js?v=9bcbadda"></script>
+      <script src="_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="index.html" class="icon icon-home">
+            yeying-client-python
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <!-- Local TOC -->
+              <div class="local-toc"><ul>
+<li><a class="reference internal" href="#">yeying.client.provider package</a><ul>
+<li><a class="reference internal" href="#submodules">Submodules</a></li>
+<li><a class="reference internal" href="#module-yeying.client.provider.asset_provider">yeying.client.provider.asset_provider module</a><ul>
+<li><a class="reference internal" href="#yeying.client.provider.asset_provider.AssetProvider"><code class="docutils literal notranslate"><span class="pre">AssetProvider</span></code></a><ul>
+<li><a class="reference internal" href="#yeying.client.provider.asset_provider.AssetProvider.delete"><code class="docutils literal notranslate"><span class="pre">AssetProvider.delete()</span></code></a></li>
+<li><a class="reference internal" href="#yeying.client.provider.asset_provider.AssetProvider.detail"><code class="docutils literal notranslate"><span class="pre">AssetProvider.detail()</span></code></a></li>
+<li><a class="reference internal" href="#yeying.client.provider.asset_provider.AssetProvider.search"><code class="docutils literal notranslate"><span class="pre">AssetProvider.search()</span></code></a></li>
+<li><a class="reference internal" href="#yeying.client.provider.asset_provider.AssetProvider.sign"><code class="docutils literal notranslate"><span class="pre">AssetProvider.sign()</span></code></a></li>
+<li><a class="reference internal" href="#yeying.client.provider.asset_provider.AssetProvider.update"><code class="docutils literal notranslate"><span class="pre">AssetProvider.update()</span></code></a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#yeying.client.provider.asset_provider.log"><code class="docutils literal notranslate"><span class="pre">log</span></code></a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#module-yeying.client.provider.base_provider">yeying.client.provider.base_provider module</a><ul>
+<li><a class="reference internal" href="#yeying.client.provider.base_provider.BaseProvider"><code class="docutils literal notranslate"><span class="pre">BaseProvider</span></code></a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#module-yeying.client.provider.block_provider">yeying.client.provider.block_provider module</a><ul>
+<li><a class="reference internal" href="#yeying.client.provider.block_provider.BlockProvider"><code class="docutils literal notranslate"><span class="pre">BlockProvider</span></code></a><ul>
+<li><a class="reference internal" href="#yeying.client.provider.block_provider.BlockProvider.confirm"><code class="docutils literal notranslate"><span class="pre">BlockProvider.confirm()</span></code></a></li>
+<li><a class="reference internal" href="#yeying.client.provider.block_provider.BlockProvider.get"><code class="docutils literal notranslate"><span class="pre">BlockProvider.get()</span></code></a></li>
+<li><a class="reference internal" href="#yeying.client.provider.block_provider.BlockProvider.get_owner"><code class="docutils literal notranslate"><span class="pre">BlockProvider.get_owner()</span></code></a></li>
+<li><a class="reference internal" href="#yeying.client.provider.block_provider.BlockProvider.put"><code class="docutils literal notranslate"><span class="pre">BlockProvider.put()</span></code></a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#yeying.client.provider.block_provider.log"><code class="docutils literal notranslate"><span class="pre">log</span></code></a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#module-yeying.client.provider.config_provider">yeying.client.provider.config_provider module</a><ul>
+<li><a class="reference internal" href="#yeying.client.provider.config_provider.ConfigProvider"><code class="docutils literal notranslate"><span class="pre">ConfigProvider</span></code></a><ul>
+<li><a class="reference internal" href="#yeying.client.provider.config_provider.ConfigProvider.get"><code class="docutils literal notranslate"><span class="pre">ConfigProvider.get()</span></code></a></li>
+<li><a class="reference internal" href="#yeying.client.provider.config_provider.ConfigProvider.set"><code class="docutils literal notranslate"><span class="pre">ConfigProvider.set()</span></code></a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#yeying.client.provider.config_provider.log"><code class="docutils literal notranslate"><span class="pre">log</span></code></a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#module-yeying.client.provider.link_provider">yeying.client.provider.link_provider module</a><ul>
+<li><a class="reference internal" href="#yeying.client.provider.link_provider.LinkProvider"><code class="docutils literal notranslate"><span class="pre">LinkProvider</span></code></a><ul>
+<li><a class="reference internal" href="#yeying.client.provider.link_provider.LinkProvider.create"><code class="docutils literal notranslate"><span class="pre">LinkProvider.create()</span></code></a></li>
+<li><a class="reference internal" href="#yeying.client.provider.link_provider.LinkProvider.detail"><code class="docutils literal notranslate"><span class="pre">LinkProvider.detail()</span></code></a></li>
+<li><a class="reference internal" href="#yeying.client.provider.link_provider.LinkProvider.disable"><code class="docutils literal notranslate"><span class="pre">LinkProvider.disable()</span></code></a></li>
+<li><a class="reference internal" href="#yeying.client.provider.link_provider.LinkProvider.search"><code class="docutils literal notranslate"><span class="pre">LinkProvider.search()</span></code></a></li>
+<li><a class="reference internal" href="#yeying.client.provider.link_provider.LinkProvider.visitors"><code class="docutils literal notranslate"><span class="pre">LinkProvider.visitors()</span></code></a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#yeying.client.provider.link_provider.log"><code class="docutils literal notranslate"><span class="pre">log</span></code></a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#module-yeying.client.provider.namespace_provider">yeying.client.provider.namespace_provider module</a><ul>
+<li><a class="reference internal" href="#yeying.client.provider.namespace_provider.NamespaceProvider"><code class="docutils literal notranslate"><span class="pre">NamespaceProvider</span></code></a><ul>
+<li><a class="reference internal" href="#yeying.client.provider.namespace_provider.NamespaceProvider.create"><code class="docutils literal notranslate"><span class="pre">NamespaceProvider.create()</span></code></a></li>
+<li><a class="reference internal" href="#yeying.client.provider.namespace_provider.NamespaceProvider.delete"><code class="docutils literal notranslate"><span class="pre">NamespaceProvider.delete()</span></code></a></li>
+<li><a class="reference internal" href="#yeying.client.provider.namespace_provider.NamespaceProvider.detail"><code class="docutils literal notranslate"><span class="pre">NamespaceProvider.detail()</span></code></a></li>
+<li><a class="reference internal" href="#yeying.client.provider.namespace_provider.NamespaceProvider.get_default_namespace"><code class="docutils literal notranslate"><span class="pre">NamespaceProvider.get_default_namespace()</span></code></a></li>
+<li><a class="reference internal" href="#yeying.client.provider.namespace_provider.NamespaceProvider.search"><code class="docutils literal notranslate"><span class="pre">NamespaceProvider.search()</span></code></a></li>
+<li><a class="reference internal" href="#yeying.client.provider.namespace_provider.NamespaceProvider.set_default_namespace"><code class="docutils literal notranslate"><span class="pre">NamespaceProvider.set_default_namespace()</span></code></a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#yeying.client.provider.namespace_provider.log"><code class="docutils literal notranslate"><span class="pre">log</span></code></a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#module-yeying.client.provider.recycle_provider">yeying.client.provider.recycle_provider module</a><ul>
+<li><a class="reference internal" href="#yeying.client.provider.recycle_provider.RecycleProvider"><code class="docutils literal notranslate"><span class="pre">RecycleProvider</span></code></a><ul>
+<li><a class="reference internal" href="#yeying.client.provider.recycle_provider.RecycleProvider.recover"><code class="docutils literal notranslate"><span class="pre">RecycleProvider.recover()</span></code></a></li>
+<li><a class="reference internal" href="#yeying.client.provider.recycle_provider.RecycleProvider.remove"><code class="docutils literal notranslate"><span class="pre">RecycleProvider.remove()</span></code></a></li>
+<li><a class="reference internal" href="#yeying.client.provider.recycle_provider.RecycleProvider.search"><code class="docutils literal notranslate"><span class="pre">RecycleProvider.search()</span></code></a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#yeying.client.provider.recycle_provider.log"><code class="docutils literal notranslate"><span class="pre">log</span></code></a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#module-yeying.client.provider">Module contents</a></li>
+</ul>
+</li>
+</ul>
+</div>
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="index.html">yeying-client-python</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="index.html" class="icon icon-home" aria-label="Home"></a></li>
+      <li class="breadcrumb-item active">yeying.client.provider package</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="_sources/yeying.client.provider.rst.txt" rel="nofollow"> View page source</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="yeying-client-provider-package">
+<h1>yeying.client.provider package<a class="headerlink" href="#yeying-client-provider-package" title="Link to this heading"></a></h1>
+<section id="submodules">
+<h2>Submodules<a class="headerlink" href="#submodules" title="Link to this heading"></a></h2>
+</section>
+<section id="module-yeying.client.provider.asset_provider">
+<span id="yeying-client-provider-asset-provider-module"></span><h2>yeying.client.provider.asset_provider module<a class="headerlink" href="#module-yeying.client.provider.asset_provider" title="Link to this heading"></a></h2>
+<dl class="py class">
+<dt class="sig sig-object py" id="yeying.client.provider.asset_provider.AssetProvider">
+<em class="property"><span class="k"><span class="pre">class</span></span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">yeying.client.provider.asset_provider.</span></span><span class="sig-name descname"><span class="pre">AssetProvider</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kw</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#yeying.client.provider.asset_provider.AssetProvider" title="Link to this definition"></a></dt>
+<dd><p>Bases: <a class="reference internal" href="#yeying.client.provider.base_provider.BaseProvider" title="yeying.client.provider.base_provider.BaseProvider"><code class="xref py py-class docutils literal notranslate"><span class="pre">BaseProvider</span></code></a></p>
+<dl class="py method">
+<dt class="sig sig-object py" id="yeying.client.provider.asset_provider.AssetProvider.delete">
+<span class="sig-name descname"><span class="pre">delete</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">namespace_id</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">_hash</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference internal" href="yeying.api.asset.html#yeying.api.asset.asset_pb2.DeleteAssetResponse" title="yeying.api.asset.asset_pb2.DeleteAssetResponse"><span class="pre">DeleteAssetResponse</span></a></span></span><a class="headerlink" href="#yeying.client.provider.asset_provider.AssetProvider.delete" title="Link to this definition"></a></dt>
+<dd><p>删除资产，根据命名空间 ID 和哈希值删除资产
+:param namespace_id:命名空间 ID
+:param _hash:资产的哈希值
+:return:无返回</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="yeying.client.provider.asset_provider.AssetProvider.detail">
+<span class="sig-name descname"><span class="pre">detail</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">namespace_id</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">_hash</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference internal" href="yeying.api.asset.html#yeying.api.asset.asset_pb2.AssetDetailResponse" title="yeying.api.asset.asset_pb2.AssetDetailResponse"><span class="pre">AssetDetailResponse</span></a></span></span><a class="headerlink" href="#yeying.client.provider.asset_provider.AssetProvider.detail" title="Link to this definition"></a></dt>
+<dd><p>查询资产详情，根据命名空间 ID 和哈希值获取资产元数据
+:param namespace_id:命名空间 ID
+:param _hash:资产的哈希值
+:return:返回资产元数据</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="yeying.client.provider.asset_provider.AssetProvider.search">
+<span class="sig-name descname"><span class="pre">search</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">page</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">page_size</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">condition</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="yeying.api.asset.html#yeying.api.asset.asset_pb2.SearchAssetCondition" title="yeying.api.asset.asset_pb2.SearchAssetCondition"><span class="pre">SearchAssetCondition</span></a></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference internal" href="yeying.api.asset.html#yeying.api.asset.asset_pb2.SearchAssetResponse" title="yeying.api.asset.asset_pb2.SearchAssetResponse"><span class="pre">SearchAssetResponse</span></a></span></span><a class="headerlink" href="#yeying.client.provider.asset_provider.AssetProvider.search" title="Link to this definition"></a></dt>
+<dd><p>搜索资产，根据条件和分页参数查询资产列表
+:param page:当前页码
+:param page_size:每页显示的条目数
+:param condition:搜索条件（部分 <cite>SearchAssetCondition</cite> 对象）
+:return:返回搜索到的资产元数据列表</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="yeying.client.provider.asset_provider.AssetProvider.sign">
+<span class="sig-name descname"><span class="pre">sign</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">asset</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="yeying.api.asset.html#yeying.api.asset.asset_pb2.AssetMetadata" title="yeying.api.asset.asset_pb2.AssetMetadata"><span class="pre">AssetMetadata</span></a></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference internal" href="yeying.api.asset.html#yeying.api.asset.asset_pb2.SignAssetResponse" title="yeying.api.asset.asset_pb2.SignAssetResponse"><span class="pre">SignAssetResponse</span></a></span></span><a class="headerlink" href="#yeying.client.provider.asset_provider.AssetProvider.sign" title="Link to this definition"></a></dt>
+<dd><p>签名资产元数据，对资产元数据进行签名，并发送签名请求到后端服务。
+:param asset:签约资产元数据
+:returns 返回签名后的资产元数据
+:throws NoPermission 没有权限
+:throws NotFound 资产不存在
+:throws ServiceUnavailable 服务不可用</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="yeying.client.provider.asset_provider.AssetProvider.update">
+<span class="sig-name descname"><span class="pre">update</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">asset</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="yeying.api.asset.html#yeying.api.asset.asset_pb2.AssetMetadata" title="yeying.api.asset.asset_pb2.AssetMetadata"><span class="pre">AssetMetadata</span></a></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference internal" href="yeying.api.asset.html#yeying.api.asset.asset_pb2.UpdateAssetResponse" title="yeying.api.asset.asset_pb2.UpdateAssetResponse"><span class="pre">UpdateAssetResponse</span></a></span></span><a class="headerlink" href="#yeying.client.provider.asset_provider.AssetProvider.update" title="Link to this definition"></a></dt>
+<dd><p>更新资产的信息。
+:param asset:资产原数据
+:return:</p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="py data">
+<dt class="sig sig-object py" id="yeying.client.provider.asset_provider.log">
+<span class="sig-prename descclassname"><span class="pre">yeying.client.provider.asset_provider.</span></span><span class="sig-name descname"><span class="pre">log</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">&lt;Logger</span> <span class="pre">yeying.client.provider.asset_provider</span> <span class="pre">(INFO)&gt;</span></em><a class="headerlink" href="#yeying.client.provider.asset_provider.log" title="Link to this definition"></a></dt>
+<dd><p>提供对资产的管理，包括查询、版本获取、详情查看、删除等操作</p>
+</dd></dl>
+
+</section>
+<section id="module-yeying.client.provider.base_provider">
+<span id="yeying-client-provider-base-provider-module"></span><h2>yeying.client.provider.base_provider module<a class="headerlink" href="#module-yeying.client.provider.base_provider" title="Link to this heading"></a></h2>
+<dl class="py class">
+<dt class="sig sig-object py" id="yeying.client.provider.base_provider.BaseProvider">
+<em class="property"><span class="k"><span class="pre">class</span></span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">yeying.client.provider.base_provider.</span></span><span class="sig-name descname"><span class="pre">BaseProvider</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kw</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#yeying.client.provider.base_provider.BaseProvider" title="Link to this definition"></a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
+</dd></dl>
+
+</section>
+<section id="module-yeying.client.provider.block_provider">
+<span id="yeying-client-provider-block-provider-module"></span><h2>yeying.client.provider.block_provider module<a class="headerlink" href="#module-yeying.client.provider.block_provider" title="Link to this heading"></a></h2>
+<dl class="py class">
+<dt class="sig sig-object py" id="yeying.client.provider.block_provider.BlockProvider">
+<em class="property"><span class="k"><span class="pre">class</span></span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">yeying.client.provider.block_provider.</span></span><span class="sig-name descname"><span class="pre">BlockProvider</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kw</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#yeying.client.provider.block_provider.BlockProvider" title="Link to this definition"></a></dt>
+<dd><p>Bases: <a class="reference internal" href="#yeying.client.provider.base_provider.BaseProvider" title="yeying.client.provider.base_provider.BaseProvider"><code class="xref py py-class docutils literal notranslate"><span class="pre">BaseProvider</span></code></a></p>
+<dl class="py method">
+<dt class="sig sig-object py" id="yeying.client.provider.block_provider.BlockProvider.confirm">
+<span class="sig-name descname"><span class="pre">confirm</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">block</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="yeying.api.asset.html#yeying.api.asset.block_pb2.BlockMetadata" title="yeying.api.asset.block_pb2.BlockMetadata"><span class="pre">BlockMetadata</span></a></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference internal" href="yeying.api.asset.html#yeying.api.asset.block_pb2.ConfirmBlockResponse" title="yeying.api.asset.block_pb2.ConfirmBlockResponse"><span class="pre">ConfirmBlockResponse</span></a></span></span><a class="headerlink" href="#yeying.client.provider.block_provider.BlockProvider.confirm" title="Link to this definition"></a></dt>
+<dd><p>发送确认请求到后端服务，并验证返回的块元数据签名
+:param block:块元数据对象
+:return:返回确认块的响应体</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="yeying.client.provider.block_provider.BlockProvider.get">
+<span class="sig-name descname"><span class="pre">get</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">namespace_id</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">_hash</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference internal" href="yeying.api.asset.html#yeying.api.asset.block_pb2.GetBlockResponse" title="yeying.api.asset.block_pb2.GetBlockResponse"><span class="pre">GetBlockResponse</span></a></span></span><a class="headerlink" href="#yeying.client.provider.block_provider.BlockProvider.get" title="Link to this definition"></a></dt>
+<dd><p>获取资产块数据。
+:param namespace_id:资产块命名空间
+:param _hash:要获取的资产块哈希值
+:return:区块数据详情，包括数据和元数据</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="yeying.client.provider.block_provider.BlockProvider.get_owner">
+<span class="sig-name descname"><span class="pre">get_owner</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">str</span></span></span><a class="headerlink" href="#yeying.client.provider.block_provider.BlockProvider.get_owner" title="Link to this definition"></a></dt>
+<dd><p>获取当前用户的 DID（所有者）
+:return:返回当前用户的 DID</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="yeying.client.provider.block_provider.BlockProvider.put">
+<span class="sig-name descname"><span class="pre">put</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">namespace_id</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">data</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">bytes</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference internal" href="yeying.api.asset.html#yeying.api.asset.block_pb2.PutBlockResponse" title="yeying.api.asset.block_pb2.PutBlockResponse"><span class="pre">PutBlockResponse</span></a></span></span><a class="headerlink" href="#yeying.client.provider.block_provider.BlockProvider.put" title="Link to this definition"></a></dt>
+<dd><p>上传块数据,发送块数据和元数据到后端服务，并验证返回的块元数据签名
+:param namespace_id:命名空间ID
+:param data:块数据
+:return:资产块元信息</p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="py data">
+<dt class="sig sig-object py" id="yeying.client.provider.block_provider.log">
+<span class="sig-prename descclassname"><span class="pre">yeying.client.provider.block_provider.</span></span><span class="sig-name descname"><span class="pre">log</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">&lt;Logger</span> <span class="pre">yeying.client.provider.block_provider</span> <span class="pre">(INFO)&gt;</span></em><a class="headerlink" href="#yeying.client.provider.block_provider.log" title="Link to this definition"></a></dt>
+<dd><p>用于与区块链交互，提供数据的获取和存储功能</p>
+</dd></dl>
+
+</section>
+<section id="module-yeying.client.provider.config_provider">
+<span id="yeying-client-provider-config-provider-module"></span><h2>yeying.client.provider.config_provider module<a class="headerlink" href="#module-yeying.client.provider.config_provider" title="Link to this heading"></a></h2>
+<dl class="py class">
+<dt class="sig sig-object py" id="yeying.client.provider.config_provider.ConfigProvider">
+<em class="property"><span class="k"><span class="pre">class</span></span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">yeying.client.provider.config_provider.</span></span><span class="sig-name descname"><span class="pre">ConfigProvider</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kw</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#yeying.client.provider.config_provider.ConfigProvider" title="Link to this definition"></a></dt>
+<dd><p>Bases: <a class="reference internal" href="#yeying.client.provider.base_provider.BaseProvider" title="yeying.client.provider.base_provider.BaseProvider"><code class="xref py py-class docutils literal notranslate"><span class="pre">BaseProvider</span></code></a></p>
+<dl class="py method">
+<dt class="sig sig-object py" id="yeying.client.provider.config_provider.ConfigProvider.get">
+<span class="sig-name descname"><span class="pre">get</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">key:</span> <span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">config_type:</span> <span class="pre">&lt;google.protobuf.internal.enum_type_wrapper.EnumTypeWrapper</span> <span class="pre">object</span> <span class="pre">at</span> <span class="pre">0x119bc09b0&gt;</span> <span class="pre">=</span> <span class="pre">2</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference internal" href="yeying.api.config.html#yeying.api.config.config_pb2.GetConfigResponse" title="yeying.api.config.config_pb2.GetConfigResponse"><span class="pre">GetConfigResponse</span></a></span></span><a class="headerlink" href="#yeying.client.provider.config_provider.ConfigProvider.get" title="Link to this definition"></a></dt>
+<dd><p>kv 配置查询
+:param key: 键
+:param config_type: 配置类型 - 枚举 config_pb2.ConfigTypeEnum
+:return: config_pb2.GetConfigResponse</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="yeying.client.provider.config_provider.ConfigProvider.set">
+<span class="sig-name descname"><span class="pre">set</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">key</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">value</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference internal" href="yeying.api.config.html#yeying.api.config.config_pb2.SetConfigResponse" title="yeying.api.config.config_pb2.SetConfigResponse"><span class="pre">SetConfigResponse</span></a></span></span><a class="headerlink" href="#yeying.client.provider.config_provider.ConfigProvider.set" title="Link to this definition"></a></dt>
+<dd><p>kv 配置添加
+:param key: key 配置信息
+:param value: value 配置信息
+:return: config_pb2.GetConfigResponse</p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="py data">
+<dt class="sig sig-object py" id="yeying.client.provider.config_provider.log">
+<span class="sig-prename descclassname"><span class="pre">yeying.client.provider.config_provider.</span></span><span class="sig-name descname"><span class="pre">log</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">&lt;Logger</span> <span class="pre">yeying.client.provider.config_provider</span> <span class="pre">(INFO)&gt;</span></em><a class="headerlink" href="#yeying.client.provider.config_provider.log" title="Link to this definition"></a></dt>
+<dd><p>提供对资产的管理，包括查询、版本获取、详情查看、删除等操作</p>
+</dd></dl>
+
+</section>
+<section id="module-yeying.client.provider.link_provider">
+<span id="yeying-client-provider-link-provider-module"></span><h2>yeying.client.provider.link_provider module<a class="headerlink" href="#module-yeying.client.provider.link_provider" title="Link to this heading"></a></h2>
+<dl class="py class">
+<dt class="sig sig-object py" id="yeying.client.provider.link_provider.LinkProvider">
+<em class="property"><span class="k"><span class="pre">class</span></span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">yeying.client.provider.link_provider.</span></span><span class="sig-name descname"><span class="pre">LinkProvider</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kw</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#yeying.client.provider.link_provider.LinkProvider" title="Link to this definition"></a></dt>
+<dd><p>Bases: <a class="reference internal" href="#yeying.client.provider.base_provider.BaseProvider" title="yeying.client.provider.base_provider.BaseProvider"><code class="xref py py-class docutils literal notranslate"><span class="pre">BaseProvider</span></code></a></p>
+<dl class="py method">
+<dt class="sig sig-object py" id="yeying.client.provider.link_provider.LinkProvider.create">
+<span class="sig-name descname"><span class="pre">create</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="pre">namespaceId:</span> <span class="pre">str,</span> <span class="pre">name:</span> <span class="pre">str,</span> <span class="pre">_hash:</span> <span class="pre">str,</span> <span class="pre">duration:</span> <span class="pre">int,</span> <span class="pre">_type:</span> <span class="pre">&lt;google.protobuf.internal.enum_type_wrapper.EnumTypeWrapper</span> <span class="pre">object</span> <span class="pre">at</span> <span class="pre">0x118b1c530&gt;,</span> <span class="pre">visitors:</span> <span class="pre">list[str],</span> <span class="pre">description:</span> <span class="pre">str</span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference internal" href="yeying.api.asset.html#yeying.api.asset.link_pb2.CreateLinkResponse" title="yeying.api.asset.link_pb2.CreateLinkResponse"><span class="pre">CreateLinkResponse</span></a></span></span><a class="headerlink" href="#yeying.client.provider.link_provider.LinkProvider.create" title="Link to this definition"></a></dt>
+<dd><p>创建资产分享链接
+:param namespaceId:资产命名空间
+:param name:分享链接的名称
+:param _hash:要分享的资产哈希值
+:param duration:分享链接有效时长，单位是秒
+:param _type:分享链接类型
+:param visitors:指定具体的访问者
+:param description:描述
+:return:</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="yeying.client.provider.link_provider.LinkProvider.detail">
+<span class="sig-name descname"><span class="pre">detail</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">uid</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference internal" href="yeying.api.asset.html#yeying.api.asset.link_pb2.LinkDetailResponse" title="yeying.api.asset.link_pb2.LinkDetailResponse"><span class="pre">LinkDetailResponse</span></a></span></span><a class="headerlink" href="#yeying.client.provider.link_provider.LinkProvider.detail" title="Link to this definition"></a></dt>
+<dd><p>获得资产分享链接详情
+:param uid:分享链接唯一ID
+:return:分享链接详情</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="yeying.client.provider.link_provider.LinkProvider.disable">
+<span class="sig-name descname"><span class="pre">disable</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">uid</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference internal" href="yeying.api.asset.html#yeying.api.asset.link_pb2.DisableLinkResponse" title="yeying.api.asset.link_pb2.DisableLinkResponse"><span class="pre">DisableLinkResponse</span></a></span></span><a class="headerlink" href="#yeying.client.provider.link_provider.LinkProvider.disable" title="Link to this definition"></a></dt>
+<dd><p>取消资产分享
+:param uid:分享链接唯一ID
+:return:分享链接详情</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="yeying.client.provider.link_provider.LinkProvider.search">
+<span class="sig-name descname"><span class="pre">search</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">page</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">page_size</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">condition</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="yeying.api.asset.html#yeying.api.asset.link_pb2.SearchLinkCondition" title="yeying.api.asset.link_pb2.SearchLinkCondition"><span class="pre">SearchLinkCondition</span></a></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#yeying.client.provider.link_provider.LinkProvider.search" title="Link to this definition"></a></dt>
+<dd><p>搜索资产分享链接
+:param page:当前页码
+:param page_size:每页显示的条目数
+:param condition:可选，搜索某个资产的分享链接。
+:return:</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="yeying.client.provider.link_provider.LinkProvider.visitors">
+<span class="sig-name descname"><span class="pre">visitors</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">uid</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">page</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">page_size</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference internal" href="yeying.api.asset.html#yeying.api.asset.link_pb2.LinkVisitorResponse" title="yeying.api.asset.link_pb2.LinkVisitorResponse"><span class="pre">LinkVisitorResponse</span></a></span></span><a class="headerlink" href="#yeying.client.provider.link_provider.LinkProvider.visitors" title="Link to this definition"></a></dt>
+<dd><p>获得资产链接访问者
+:param uid:分享链接唯一ID
+:param page:当前页码
+:param page_size:每页显示的条目数
+:return:资产链接访问者列表</p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="py data">
+<dt class="sig sig-object py" id="yeying.client.provider.link_provider.log">
+<span class="sig-prename descclassname"><span class="pre">yeying.client.provider.link_provider.</span></span><span class="sig-name descname"><span class="pre">log</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">&lt;Logger</span> <span class="pre">yeying.client.provider.link_provider</span> <span class="pre">(INFO)&gt;</span></em><a class="headerlink" href="#yeying.client.provider.link_provider.log" title="Link to this definition"></a></dt>
+<dd><p>LinkProvider 类提供对资产分享链接的管理</p>
+</dd></dl>
+
+</section>
+<section id="module-yeying.client.provider.namespace_provider">
+<span id="yeying-client-provider-namespace-provider-module"></span><h2>yeying.client.provider.namespace_provider module<a class="headerlink" href="#module-yeying.client.provider.namespace_provider" title="Link to this heading"></a></h2>
+<dl class="py class">
+<dt class="sig sig-object py" id="yeying.client.provider.namespace_provider.NamespaceProvider">
+<em class="property"><span class="k"><span class="pre">class</span></span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">yeying.client.provider.namespace_provider.</span></span><span class="sig-name descname"><span class="pre">NamespaceProvider</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kw</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#yeying.client.provider.namespace_provider.NamespaceProvider" title="Link to this definition"></a></dt>
+<dd><p>Bases: <a class="reference internal" href="#yeying.client.provider.base_provider.BaseProvider" title="yeying.client.provider.base_provider.BaseProvider"><code class="xref py py-class docutils literal notranslate"><span class="pre">BaseProvider</span></code></a></p>
+<dl class="py method">
+<dt class="sig sig-object py" id="yeying.client.provider.namespace_provider.NamespaceProvider.create">
+<span class="sig-name descname"><span class="pre">create</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">name</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">description</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">uid</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">participants</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference internal" href="yeying.api.asset.html#yeying.api.asset.namespace_pb2.CreateNamespaceResponse" title="yeying.api.asset.namespace_pb2.CreateNamespaceResponse"><span class="pre">CreateNamespaceResponse</span></a></span></span><a class="headerlink" href="#yeying.client.provider.namespace_provider.NamespaceProvider.create" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="yeying.client.provider.namespace_provider.NamespaceProvider.delete">
+<span class="sig-name descname"><span class="pre">delete</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">uid</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference internal" href="yeying.api.asset.html#yeying.api.asset.namespace_pb2.DeleteNamespaceResponse" title="yeying.api.asset.namespace_pb2.DeleteNamespaceResponse"><span class="pre">DeleteNamespaceResponse</span></a></span></span><a class="headerlink" href="#yeying.client.provider.namespace_provider.NamespaceProvider.delete" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="yeying.client.provider.namespace_provider.NamespaceProvider.detail">
+<span class="sig-name descname"><span class="pre">detail</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">uid</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference internal" href="yeying.api.asset.html#yeying.api.asset.namespace_pb2.NamespaceDetailResponse" title="yeying.api.asset.namespace_pb2.NamespaceDetailResponse"><span class="pre">NamespaceDetailResponse</span></a></span></span><a class="headerlink" href="#yeying.client.provider.namespace_provider.NamespaceProvider.detail" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="yeying.client.provider.namespace_provider.NamespaceProvider.get_default_namespace">
+<span class="sig-name descname"><span class="pre">get_default_namespace</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">str</span></span></span><a class="headerlink" href="#yeying.client.provider.namespace_provider.NamespaceProvider.get_default_namespace" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="yeying.client.provider.namespace_provider.NamespaceProvider.search">
+<span class="sig-name descname"><span class="pre">search</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">page</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">page_size</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">condition</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="yeying.api.asset.html#yeying.api.asset.namespace_pb2.SearchNamespaceCondition" title="yeying.api.asset.namespace_pb2.SearchNamespaceCondition"><span class="pre">SearchNamespaceCondition</span></a></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference internal" href="yeying.api.asset.html#yeying.api.asset.namespace_pb2.SearchNamespaceResponse" title="yeying.api.asset.namespace_pb2.SearchNamespaceResponse"><span class="pre">SearchNamespaceResponse</span></a></span></span><a class="headerlink" href="#yeying.client.provider.namespace_provider.NamespaceProvider.search" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="yeying.client.provider.namespace_provider.NamespaceProvider.set_default_namespace">
+<span class="sig-name descname"><span class="pre">set_default_namespace</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">namespace_id</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference internal" href="yeying.api.config.html#yeying.api.config.config_pb2.SetConfigResponse" title="yeying.api.config.config_pb2.SetConfigResponse"><span class="pre">SetConfigResponse</span></a></span></span><a class="headerlink" href="#yeying.client.provider.namespace_provider.NamespaceProvider.set_default_namespace" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="py data">
+<dt class="sig sig-object py" id="yeying.client.provider.namespace_provider.log">
+<span class="sig-prename descclassname"><span class="pre">yeying.client.provider.namespace_provider.</span></span><span class="sig-name descname"><span class="pre">log</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">&lt;Logger</span> <span class="pre">yeying.client.provider.namespace_provider</span> <span class="pre">(INFO)&gt;</span></em><a class="headerlink" href="#yeying.client.provider.namespace_provider.log" title="Link to this definition"></a></dt>
+<dd><p>资产仓库资源管理空间 CURD</p>
+</dd></dl>
+
+</section>
+<section id="module-yeying.client.provider.recycle_provider">
+<span id="yeying-client-provider-recycle-provider-module"></span><h2>yeying.client.provider.recycle_provider module<a class="headerlink" href="#module-yeying.client.provider.recycle_provider" title="Link to this heading"></a></h2>
+<dl class="py class">
+<dt class="sig sig-object py" id="yeying.client.provider.recycle_provider.RecycleProvider">
+<em class="property"><span class="k"><span class="pre">class</span></span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">yeying.client.provider.recycle_provider.</span></span><span class="sig-name descname"><span class="pre">RecycleProvider</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kw</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#yeying.client.provider.recycle_provider.RecycleProvider" title="Link to this definition"></a></dt>
+<dd><p>Bases: <a class="reference internal" href="#yeying.client.provider.base_provider.BaseProvider" title="yeying.client.provider.base_provider.BaseProvider"><code class="xref py py-class docutils literal notranslate"><span class="pre">BaseProvider</span></code></a></p>
+<dl class="py method">
+<dt class="sig sig-object py" id="yeying.client.provider.recycle_provider.RecycleProvider.recover">
+<span class="sig-name descname"><span class="pre">recover</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">namespace_id</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">_hash</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference internal" href="yeying.api.asset.html#yeying.api.asset.recycle_pb2.RecoverDeletedAssetResponse" title="yeying.api.asset.recycle_pb2.RecoverDeletedAssetResponse"><span class="pre">RecoverDeletedAssetResponse</span></a></span></span><a class="headerlink" href="#yeying.client.provider.recycle_provider.RecycleProvider.recover" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="yeying.client.provider.recycle_provider.RecycleProvider.remove">
+<span class="sig-name descname"><span class="pre">remove</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">namespace_id</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">_hash</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference internal" href="yeying.api.asset.html#yeying.api.asset.recycle_pb2.RemoveDeletedAssetResponse" title="yeying.api.asset.recycle_pb2.RemoveDeletedAssetResponse"><span class="pre">RemoveDeletedAssetResponse</span></a></span></span><a class="headerlink" href="#yeying.client.provider.recycle_provider.RecycleProvider.remove" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="yeying.client.provider.recycle_provider.RecycleProvider.search">
+<span class="sig-name descname"><span class="pre">search</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">page</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">page_size</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">condition</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="yeying.api.asset.html#yeying.api.asset.asset_pb2.SearchAssetCondition" title="yeying.api.asset.asset_pb2.SearchAssetCondition"><span class="pre">SearchAssetCondition</span></a></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference internal" href="yeying.api.asset.html#yeying.api.asset.recycle_pb2.SearchDeletedAssetResponse" title="yeying.api.asset.recycle_pb2.SearchDeletedAssetResponse"><span class="pre">SearchDeletedAssetResponse</span></a></span></span><a class="headerlink" href="#yeying.client.provider.recycle_provider.RecycleProvider.search" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="py data">
+<dt class="sig sig-object py" id="yeying.client.provider.recycle_provider.log">
+<span class="sig-prename descclassname"><span class="pre">yeying.client.provider.recycle_provider.</span></span><span class="sig-name descname"><span class="pre">log</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">&lt;Logger</span> <span class="pre">yeying.client.provider.recycle_provider</span> <span class="pre">(INFO)&gt;</span></em><a class="headerlink" href="#yeying.client.provider.recycle_provider.log" title="Link to this definition"></a></dt>
+<dd><p>资产仓库资源回收站 CURD</p>
+</dd></dl>
+
+</section>
+<section id="module-yeying.client.provider">
+<span id="module-contents"></span><h2>Module contents<a class="headerlink" href="#module-yeying.client.provider" title="Link to this heading"></a></h2>
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2025, yeying.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

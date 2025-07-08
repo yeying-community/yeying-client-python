@@ -1,0 +1,624 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" data-content_root="./">
+<head>
+  <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>yeying.api.service package &mdash; yeying-client-python  documentation</title>
+      <link rel="stylesheet" type="text/css" href="_static/pygments.css?v=b86133f3" />
+      <link rel="stylesheet" type="text/css" href="_static/css/theme.css?v=e59714d7" />
+
+  
+      <script src="_static/jquery.js?v=5d32c60e"></script>
+      <script src="_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+      <script src="_static/documentation_options.js?v=5929fcd5"></script>
+      <script src="_static/doctools.js?v=9bcbadda"></script>
+      <script src="_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="index.html" class="icon icon-home">
+            yeying-client-python
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <!-- Local TOC -->
+              <div class="local-toc"><ul>
+<li><a class="reference internal" href="#">yeying.api.service package</a><ul>
+<li><a class="reference internal" href="#submodules">Submodules</a></li>
+<li><a class="reference internal" href="#module-yeying.api.service.service_pb2">yeying.api.service.service_pb2 module</a><ul>
+<li><a class="reference internal" href="#yeying.api.service.service_pb2.CreateServiceRequest"><code class="docutils literal notranslate"><span class="pre">CreateServiceRequest</span></code></a><ul>
+<li><a class="reference internal" href="#yeying.api.service.service_pb2.CreateServiceRequest.DESCRIPTOR"><code class="docutils literal notranslate"><span class="pre">CreateServiceRequest.DESCRIPTOR</span></code></a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#yeying.api.service.service_pb2.CreateServiceRequestBody"><code class="docutils literal notranslate"><span class="pre">CreateServiceRequestBody</span></code></a><ul>
+<li><a class="reference internal" href="#yeying.api.service.service_pb2.CreateServiceRequestBody.DESCRIPTOR"><code class="docutils literal notranslate"><span class="pre">CreateServiceRequestBody.DESCRIPTOR</span></code></a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#yeying.api.service.service_pb2.CreateServiceResponse"><code class="docutils literal notranslate"><span class="pre">CreateServiceResponse</span></code></a><ul>
+<li><a class="reference internal" href="#yeying.api.service.service_pb2.CreateServiceResponse.DESCRIPTOR"><code class="docutils literal notranslate"><span class="pre">CreateServiceResponse.DESCRIPTOR</span></code></a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#yeying.api.service.service_pb2.CreateServiceResponseBody"><code class="docutils literal notranslate"><span class="pre">CreateServiceResponseBody</span></code></a><ul>
+<li><a class="reference internal" href="#yeying.api.service.service_pb2.CreateServiceResponseBody.DESCRIPTOR"><code class="docutils literal notranslate"><span class="pre">CreateServiceResponseBody.DESCRIPTOR</span></code></a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#yeying.api.service.service_pb2.DeleteServiceRequest"><code class="docutils literal notranslate"><span class="pre">DeleteServiceRequest</span></code></a><ul>
+<li><a class="reference internal" href="#yeying.api.service.service_pb2.DeleteServiceRequest.DESCRIPTOR"><code class="docutils literal notranslate"><span class="pre">DeleteServiceRequest.DESCRIPTOR</span></code></a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#yeying.api.service.service_pb2.DeleteServiceRequestBody"><code class="docutils literal notranslate"><span class="pre">DeleteServiceRequestBody</span></code></a><ul>
+<li><a class="reference internal" href="#yeying.api.service.service_pb2.DeleteServiceRequestBody.DESCRIPTOR"><code class="docutils literal notranslate"><span class="pre">DeleteServiceRequestBody.DESCRIPTOR</span></code></a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#yeying.api.service.service_pb2.DeleteServiceResponse"><code class="docutils literal notranslate"><span class="pre">DeleteServiceResponse</span></code></a><ul>
+<li><a class="reference internal" href="#yeying.api.service.service_pb2.DeleteServiceResponse.DESCRIPTOR"><code class="docutils literal notranslate"><span class="pre">DeleteServiceResponse.DESCRIPTOR</span></code></a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#yeying.api.service.service_pb2.DeleteServiceResponseBody"><code class="docutils literal notranslate"><span class="pre">DeleteServiceResponseBody</span></code></a><ul>
+<li><a class="reference internal" href="#yeying.api.service.service_pb2.DeleteServiceResponseBody.DESCRIPTOR"><code class="docutils literal notranslate"><span class="pre">DeleteServiceResponseBody.DESCRIPTOR</span></code></a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#yeying.api.service.service_pb2.DetailServiceRequest"><code class="docutils literal notranslate"><span class="pre">DetailServiceRequest</span></code></a><ul>
+<li><a class="reference internal" href="#yeying.api.service.service_pb2.DetailServiceRequest.DESCRIPTOR"><code class="docutils literal notranslate"><span class="pre">DetailServiceRequest.DESCRIPTOR</span></code></a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#yeying.api.service.service_pb2.DetailServiceRequestBody"><code class="docutils literal notranslate"><span class="pre">DetailServiceRequestBody</span></code></a><ul>
+<li><a class="reference internal" href="#yeying.api.service.service_pb2.DetailServiceRequestBody.DESCRIPTOR"><code class="docutils literal notranslate"><span class="pre">DetailServiceRequestBody.DESCRIPTOR</span></code></a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#yeying.api.service.service_pb2.DetailServiceResponse"><code class="docutils literal notranslate"><span class="pre">DetailServiceResponse</span></code></a><ul>
+<li><a class="reference internal" href="#yeying.api.service.service_pb2.DetailServiceResponse.DESCRIPTOR"><code class="docutils literal notranslate"><span class="pre">DetailServiceResponse.DESCRIPTOR</span></code></a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#yeying.api.service.service_pb2.DetailServiceResponseBody"><code class="docutils literal notranslate"><span class="pre">DetailServiceResponseBody</span></code></a><ul>
+<li><a class="reference internal" href="#yeying.api.service.service_pb2.DetailServiceResponseBody.DESCRIPTOR"><code class="docutils literal notranslate"><span class="pre">DetailServiceResponseBody.DESCRIPTOR</span></code></a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#yeying.api.service.service_pb2.OfflineServiceRequest"><code class="docutils literal notranslate"><span class="pre">OfflineServiceRequest</span></code></a><ul>
+<li><a class="reference internal" href="#yeying.api.service.service_pb2.OfflineServiceRequest.DESCRIPTOR"><code class="docutils literal notranslate"><span class="pre">OfflineServiceRequest.DESCRIPTOR</span></code></a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#yeying.api.service.service_pb2.OfflineServiceRequestBody"><code class="docutils literal notranslate"><span class="pre">OfflineServiceRequestBody</span></code></a><ul>
+<li><a class="reference internal" href="#yeying.api.service.service_pb2.OfflineServiceRequestBody.DESCRIPTOR"><code class="docutils literal notranslate"><span class="pre">OfflineServiceRequestBody.DESCRIPTOR</span></code></a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#yeying.api.service.service_pb2.OfflineServiceResponse"><code class="docutils literal notranslate"><span class="pre">OfflineServiceResponse</span></code></a><ul>
+<li><a class="reference internal" href="#yeying.api.service.service_pb2.OfflineServiceResponse.DESCRIPTOR"><code class="docutils literal notranslate"><span class="pre">OfflineServiceResponse.DESCRIPTOR</span></code></a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#yeying.api.service.service_pb2.OfflineServiceResponseBody"><code class="docutils literal notranslate"><span class="pre">OfflineServiceResponseBody</span></code></a><ul>
+<li><a class="reference internal" href="#yeying.api.service.service_pb2.OfflineServiceResponseBody.DESCRIPTOR"><code class="docutils literal notranslate"><span class="pre">OfflineServiceResponseBody.DESCRIPTOR</span></code></a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#yeying.api.service.service_pb2.OnlineServiceRequest"><code class="docutils literal notranslate"><span class="pre">OnlineServiceRequest</span></code></a><ul>
+<li><a class="reference internal" href="#yeying.api.service.service_pb2.OnlineServiceRequest.DESCRIPTOR"><code class="docutils literal notranslate"><span class="pre">OnlineServiceRequest.DESCRIPTOR</span></code></a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#yeying.api.service.service_pb2.OnlineServiceRequestBody"><code class="docutils literal notranslate"><span class="pre">OnlineServiceRequestBody</span></code></a><ul>
+<li><a class="reference internal" href="#yeying.api.service.service_pb2.OnlineServiceRequestBody.DESCRIPTOR"><code class="docutils literal notranslate"><span class="pre">OnlineServiceRequestBody.DESCRIPTOR</span></code></a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#yeying.api.service.service_pb2.OnlineServiceResponse"><code class="docutils literal notranslate"><span class="pre">OnlineServiceResponse</span></code></a><ul>
+<li><a class="reference internal" href="#yeying.api.service.service_pb2.OnlineServiceResponse.DESCRIPTOR"><code class="docutils literal notranslate"><span class="pre">OnlineServiceResponse.DESCRIPTOR</span></code></a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#yeying.api.service.service_pb2.OnlineServiceResponseBody"><code class="docutils literal notranslate"><span class="pre">OnlineServiceResponseBody</span></code></a><ul>
+<li><a class="reference internal" href="#yeying.api.service.service_pb2.OnlineServiceResponseBody.DESCRIPTOR"><code class="docutils literal notranslate"><span class="pre">OnlineServiceResponseBody.DESCRIPTOR</span></code></a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#yeying.api.service.service_pb2.SearchServiceCondition"><code class="docutils literal notranslate"><span class="pre">SearchServiceCondition</span></code></a><ul>
+<li><a class="reference internal" href="#yeying.api.service.service_pb2.SearchServiceCondition.DESCRIPTOR"><code class="docutils literal notranslate"><span class="pre">SearchServiceCondition.DESCRIPTOR</span></code></a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#yeying.api.service.service_pb2.SearchServiceRequest"><code class="docutils literal notranslate"><span class="pre">SearchServiceRequest</span></code></a><ul>
+<li><a class="reference internal" href="#yeying.api.service.service_pb2.SearchServiceRequest.DESCRIPTOR"><code class="docutils literal notranslate"><span class="pre">SearchServiceRequest.DESCRIPTOR</span></code></a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#yeying.api.service.service_pb2.SearchServiceRequestBody"><code class="docutils literal notranslate"><span class="pre">SearchServiceRequestBody</span></code></a><ul>
+<li><a class="reference internal" href="#yeying.api.service.service_pb2.SearchServiceRequestBody.DESCRIPTOR"><code class="docutils literal notranslate"><span class="pre">SearchServiceRequestBody.DESCRIPTOR</span></code></a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#yeying.api.service.service_pb2.SearchServiceResponse"><code class="docutils literal notranslate"><span class="pre">SearchServiceResponse</span></code></a><ul>
+<li><a class="reference internal" href="#yeying.api.service.service_pb2.SearchServiceResponse.DESCRIPTOR"><code class="docutils literal notranslate"><span class="pre">SearchServiceResponse.DESCRIPTOR</span></code></a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#yeying.api.service.service_pb2.SearchServiceResponseBody"><code class="docutils literal notranslate"><span class="pre">SearchServiceResponseBody</span></code></a><ul>
+<li><a class="reference internal" href="#yeying.api.service.service_pb2.SearchServiceResponseBody.DESCRIPTOR"><code class="docutils literal notranslate"><span class="pre">SearchServiceResponseBody.DESCRIPTOR</span></code></a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><a class="reference internal" href="#module-yeying.api.service.service_pb2_grpc">yeying.api.service.service_pb2_grpc module</a><ul>
+<li><a class="reference internal" href="#yeying.api.service.service_pb2_grpc.Service"><code class="docutils literal notranslate"><span class="pre">Service</span></code></a><ul>
+<li><a class="reference internal" href="#yeying.api.service.service_pb2_grpc.Service.Create"><code class="docutils literal notranslate"><span class="pre">Service.Create()</span></code></a></li>
+<li><a class="reference internal" href="#yeying.api.service.service_pb2_grpc.Service.Delete"><code class="docutils literal notranslate"><span class="pre">Service.Delete()</span></code></a></li>
+<li><a class="reference internal" href="#yeying.api.service.service_pb2_grpc.Service.Detail"><code class="docutils literal notranslate"><span class="pre">Service.Detail()</span></code></a></li>
+<li><a class="reference internal" href="#yeying.api.service.service_pb2_grpc.Service.Offline"><code class="docutils literal notranslate"><span class="pre">Service.Offline()</span></code></a></li>
+<li><a class="reference internal" href="#yeying.api.service.service_pb2_grpc.Service.Online"><code class="docutils literal notranslate"><span class="pre">Service.Online()</span></code></a></li>
+<li><a class="reference internal" href="#yeying.api.service.service_pb2_grpc.Service.Search"><code class="docutils literal notranslate"><span class="pre">Service.Search()</span></code></a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#yeying.api.service.service_pb2_grpc.ServiceServicer"><code class="docutils literal notranslate"><span class="pre">ServiceServicer</span></code></a><ul>
+<li><a class="reference internal" href="#yeying.api.service.service_pb2_grpc.ServiceServicer.Create"><code class="docutils literal notranslate"><span class="pre">ServiceServicer.Create()</span></code></a></li>
+<li><a class="reference internal" href="#yeying.api.service.service_pb2_grpc.ServiceServicer.Delete"><code class="docutils literal notranslate"><span class="pre">ServiceServicer.Delete()</span></code></a></li>
+<li><a class="reference internal" href="#yeying.api.service.service_pb2_grpc.ServiceServicer.Detail"><code class="docutils literal notranslate"><span class="pre">ServiceServicer.Detail()</span></code></a></li>
+<li><a class="reference internal" href="#yeying.api.service.service_pb2_grpc.ServiceServicer.Offline"><code class="docutils literal notranslate"><span class="pre">ServiceServicer.Offline()</span></code></a></li>
+<li><a class="reference internal" href="#yeying.api.service.service_pb2_grpc.ServiceServicer.Online"><code class="docutils literal notranslate"><span class="pre">ServiceServicer.Online()</span></code></a></li>
+<li><a class="reference internal" href="#yeying.api.service.service_pb2_grpc.ServiceServicer.Search"><code class="docutils literal notranslate"><span class="pre">ServiceServicer.Search()</span></code></a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#yeying.api.service.service_pb2_grpc.ServiceStub"><code class="docutils literal notranslate"><span class="pre">ServiceStub</span></code></a></li>
+<li><a class="reference internal" href="#yeying.api.service.service_pb2_grpc.add_ServiceServicer_to_server"><code class="docutils literal notranslate"><span class="pre">add_ServiceServicer_to_server()</span></code></a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#module-yeying.api.service">Module contents</a></li>
+</ul>
+</li>
+</ul>
+</div>
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="index.html">yeying-client-python</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="index.html" class="icon icon-home" aria-label="Home"></a></li>
+      <li class="breadcrumb-item active">yeying.api.service package</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="_sources/yeying.api.service.rst.txt" rel="nofollow"> View page source</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="yeying-api-service-package">
+<h1>yeying.api.service package<a class="headerlink" href="#yeying-api-service-package" title="Link to this heading"></a></h1>
+<section id="submodules">
+<h2>Submodules<a class="headerlink" href="#submodules" title="Link to this heading"></a></h2>
+</section>
+<section id="module-yeying.api.service.service_pb2">
+<span id="yeying-api-service-service-pb2-module"></span><h2>yeying.api.service.service_pb2 module<a class="headerlink" href="#module-yeying.api.service.service_pb2" title="Link to this heading"></a></h2>
+<p>Generated protocol buffer code.</p>
+<dl class="py class">
+<dt class="sig sig-object py" id="yeying.api.service.service_pb2.CreateServiceRequest">
+<em class="property"><span class="k"><span class="pre">class</span></span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">yeying.api.service.service_pb2.</span></span><span class="sig-name descname"><span class="pre">CreateServiceRequest</span></span><a class="headerlink" href="#yeying.api.service.service_pb2.CreateServiceRequest" title="Link to this definition"></a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">Message</span></code>, <code class="xref py py-class docutils literal notranslate"><span class="pre">Message</span></code></p>
+<dl class="py attribute">
+<dt class="sig sig-object py" id="yeying.api.service.service_pb2.CreateServiceRequest.DESCRIPTOR">
+<span class="sig-name descname"><span class="pre">DESCRIPTOR</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">&lt;google._upb._message.Descriptor</span> <span class="pre">object&gt;</span></em><a class="headerlink" href="#yeying.api.service.service_pb2.CreateServiceRequest.DESCRIPTOR" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="yeying.api.service.service_pb2.CreateServiceRequestBody">
+<em class="property"><span class="k"><span class="pre">class</span></span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">yeying.api.service.service_pb2.</span></span><span class="sig-name descname"><span class="pre">CreateServiceRequestBody</span></span><a class="headerlink" href="#yeying.api.service.service_pb2.CreateServiceRequestBody" title="Link to this definition"></a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">Message</span></code>, <code class="xref py py-class docutils literal notranslate"><span class="pre">Message</span></code></p>
+<dl class="py attribute">
+<dt class="sig sig-object py" id="yeying.api.service.service_pb2.CreateServiceRequestBody.DESCRIPTOR">
+<span class="sig-name descname"><span class="pre">DESCRIPTOR</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">&lt;google._upb._message.Descriptor</span> <span class="pre">object&gt;</span></em><a class="headerlink" href="#yeying.api.service.service_pb2.CreateServiceRequestBody.DESCRIPTOR" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="yeying.api.service.service_pb2.CreateServiceResponse">
+<em class="property"><span class="k"><span class="pre">class</span></span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">yeying.api.service.service_pb2.</span></span><span class="sig-name descname"><span class="pre">CreateServiceResponse</span></span><a class="headerlink" href="#yeying.api.service.service_pb2.CreateServiceResponse" title="Link to this definition"></a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">Message</span></code>, <code class="xref py py-class docutils literal notranslate"><span class="pre">Message</span></code></p>
+<dl class="py attribute">
+<dt class="sig sig-object py" id="yeying.api.service.service_pb2.CreateServiceResponse.DESCRIPTOR">
+<span class="sig-name descname"><span class="pre">DESCRIPTOR</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">&lt;google._upb._message.Descriptor</span> <span class="pre">object&gt;</span></em><a class="headerlink" href="#yeying.api.service.service_pb2.CreateServiceResponse.DESCRIPTOR" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="yeying.api.service.service_pb2.CreateServiceResponseBody">
+<em class="property"><span class="k"><span class="pre">class</span></span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">yeying.api.service.service_pb2.</span></span><span class="sig-name descname"><span class="pre">CreateServiceResponseBody</span></span><a class="headerlink" href="#yeying.api.service.service_pb2.CreateServiceResponseBody" title="Link to this definition"></a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">Message</span></code>, <code class="xref py py-class docutils literal notranslate"><span class="pre">Message</span></code></p>
+<dl class="py attribute">
+<dt class="sig sig-object py" id="yeying.api.service.service_pb2.CreateServiceResponseBody.DESCRIPTOR">
+<span class="sig-name descname"><span class="pre">DESCRIPTOR</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">&lt;google._upb._message.Descriptor</span> <span class="pre">object&gt;</span></em><a class="headerlink" href="#yeying.api.service.service_pb2.CreateServiceResponseBody.DESCRIPTOR" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="yeying.api.service.service_pb2.DeleteServiceRequest">
+<em class="property"><span class="k"><span class="pre">class</span></span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">yeying.api.service.service_pb2.</span></span><span class="sig-name descname"><span class="pre">DeleteServiceRequest</span></span><a class="headerlink" href="#yeying.api.service.service_pb2.DeleteServiceRequest" title="Link to this definition"></a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">Message</span></code>, <code class="xref py py-class docutils literal notranslate"><span class="pre">Message</span></code></p>
+<dl class="py attribute">
+<dt class="sig sig-object py" id="yeying.api.service.service_pb2.DeleteServiceRequest.DESCRIPTOR">
+<span class="sig-name descname"><span class="pre">DESCRIPTOR</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">&lt;google._upb._message.Descriptor</span> <span class="pre">object&gt;</span></em><a class="headerlink" href="#yeying.api.service.service_pb2.DeleteServiceRequest.DESCRIPTOR" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="yeying.api.service.service_pb2.DeleteServiceRequestBody">
+<em class="property"><span class="k"><span class="pre">class</span></span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">yeying.api.service.service_pb2.</span></span><span class="sig-name descname"><span class="pre">DeleteServiceRequestBody</span></span><a class="headerlink" href="#yeying.api.service.service_pb2.DeleteServiceRequestBody" title="Link to this definition"></a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">Message</span></code>, <code class="xref py py-class docutils literal notranslate"><span class="pre">Message</span></code></p>
+<dl class="py attribute">
+<dt class="sig sig-object py" id="yeying.api.service.service_pb2.DeleteServiceRequestBody.DESCRIPTOR">
+<span class="sig-name descname"><span class="pre">DESCRIPTOR</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">&lt;google._upb._message.Descriptor</span> <span class="pre">object&gt;</span></em><a class="headerlink" href="#yeying.api.service.service_pb2.DeleteServiceRequestBody.DESCRIPTOR" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="yeying.api.service.service_pb2.DeleteServiceResponse">
+<em class="property"><span class="k"><span class="pre">class</span></span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">yeying.api.service.service_pb2.</span></span><span class="sig-name descname"><span class="pre">DeleteServiceResponse</span></span><a class="headerlink" href="#yeying.api.service.service_pb2.DeleteServiceResponse" title="Link to this definition"></a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">Message</span></code>, <code class="xref py py-class docutils literal notranslate"><span class="pre">Message</span></code></p>
+<dl class="py attribute">
+<dt class="sig sig-object py" id="yeying.api.service.service_pb2.DeleteServiceResponse.DESCRIPTOR">
+<span class="sig-name descname"><span class="pre">DESCRIPTOR</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">&lt;google._upb._message.Descriptor</span> <span class="pre">object&gt;</span></em><a class="headerlink" href="#yeying.api.service.service_pb2.DeleteServiceResponse.DESCRIPTOR" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="yeying.api.service.service_pb2.DeleteServiceResponseBody">
+<em class="property"><span class="k"><span class="pre">class</span></span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">yeying.api.service.service_pb2.</span></span><span class="sig-name descname"><span class="pre">DeleteServiceResponseBody</span></span><a class="headerlink" href="#yeying.api.service.service_pb2.DeleteServiceResponseBody" title="Link to this definition"></a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">Message</span></code>, <code class="xref py py-class docutils literal notranslate"><span class="pre">Message</span></code></p>
+<dl class="py attribute">
+<dt class="sig sig-object py" id="yeying.api.service.service_pb2.DeleteServiceResponseBody.DESCRIPTOR">
+<span class="sig-name descname"><span class="pre">DESCRIPTOR</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">&lt;google._upb._message.Descriptor</span> <span class="pre">object&gt;</span></em><a class="headerlink" href="#yeying.api.service.service_pb2.DeleteServiceResponseBody.DESCRIPTOR" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="yeying.api.service.service_pb2.DetailServiceRequest">
+<em class="property"><span class="k"><span class="pre">class</span></span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">yeying.api.service.service_pb2.</span></span><span class="sig-name descname"><span class="pre">DetailServiceRequest</span></span><a class="headerlink" href="#yeying.api.service.service_pb2.DetailServiceRequest" title="Link to this definition"></a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">Message</span></code>, <code class="xref py py-class docutils literal notranslate"><span class="pre">Message</span></code></p>
+<dl class="py attribute">
+<dt class="sig sig-object py" id="yeying.api.service.service_pb2.DetailServiceRequest.DESCRIPTOR">
+<span class="sig-name descname"><span class="pre">DESCRIPTOR</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">&lt;google._upb._message.Descriptor</span> <span class="pre">object&gt;</span></em><a class="headerlink" href="#yeying.api.service.service_pb2.DetailServiceRequest.DESCRIPTOR" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="yeying.api.service.service_pb2.DetailServiceRequestBody">
+<em class="property"><span class="k"><span class="pre">class</span></span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">yeying.api.service.service_pb2.</span></span><span class="sig-name descname"><span class="pre">DetailServiceRequestBody</span></span><a class="headerlink" href="#yeying.api.service.service_pb2.DetailServiceRequestBody" title="Link to this definition"></a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">Message</span></code>, <code class="xref py py-class docutils literal notranslate"><span class="pre">Message</span></code></p>
+<dl class="py attribute">
+<dt class="sig sig-object py" id="yeying.api.service.service_pb2.DetailServiceRequestBody.DESCRIPTOR">
+<span class="sig-name descname"><span class="pre">DESCRIPTOR</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">&lt;google._upb._message.Descriptor</span> <span class="pre">object&gt;</span></em><a class="headerlink" href="#yeying.api.service.service_pb2.DetailServiceRequestBody.DESCRIPTOR" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="yeying.api.service.service_pb2.DetailServiceResponse">
+<em class="property"><span class="k"><span class="pre">class</span></span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">yeying.api.service.service_pb2.</span></span><span class="sig-name descname"><span class="pre">DetailServiceResponse</span></span><a class="headerlink" href="#yeying.api.service.service_pb2.DetailServiceResponse" title="Link to this definition"></a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">Message</span></code>, <code class="xref py py-class docutils literal notranslate"><span class="pre">Message</span></code></p>
+<dl class="py attribute">
+<dt class="sig sig-object py" id="yeying.api.service.service_pb2.DetailServiceResponse.DESCRIPTOR">
+<span class="sig-name descname"><span class="pre">DESCRIPTOR</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">&lt;google._upb._message.Descriptor</span> <span class="pre">object&gt;</span></em><a class="headerlink" href="#yeying.api.service.service_pb2.DetailServiceResponse.DESCRIPTOR" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="yeying.api.service.service_pb2.DetailServiceResponseBody">
+<em class="property"><span class="k"><span class="pre">class</span></span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">yeying.api.service.service_pb2.</span></span><span class="sig-name descname"><span class="pre">DetailServiceResponseBody</span></span><a class="headerlink" href="#yeying.api.service.service_pb2.DetailServiceResponseBody" title="Link to this definition"></a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">Message</span></code>, <code class="xref py py-class docutils literal notranslate"><span class="pre">Message</span></code></p>
+<dl class="py attribute">
+<dt class="sig sig-object py" id="yeying.api.service.service_pb2.DetailServiceResponseBody.DESCRIPTOR">
+<span class="sig-name descname"><span class="pre">DESCRIPTOR</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">&lt;google._upb._message.Descriptor</span> <span class="pre">object&gt;</span></em><a class="headerlink" href="#yeying.api.service.service_pb2.DetailServiceResponseBody.DESCRIPTOR" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="yeying.api.service.service_pb2.OfflineServiceRequest">
+<em class="property"><span class="k"><span class="pre">class</span></span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">yeying.api.service.service_pb2.</span></span><span class="sig-name descname"><span class="pre">OfflineServiceRequest</span></span><a class="headerlink" href="#yeying.api.service.service_pb2.OfflineServiceRequest" title="Link to this definition"></a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">Message</span></code>, <code class="xref py py-class docutils literal notranslate"><span class="pre">Message</span></code></p>
+<dl class="py attribute">
+<dt class="sig sig-object py" id="yeying.api.service.service_pb2.OfflineServiceRequest.DESCRIPTOR">
+<span class="sig-name descname"><span class="pre">DESCRIPTOR</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">&lt;google._upb._message.Descriptor</span> <span class="pre">object&gt;</span></em><a class="headerlink" href="#yeying.api.service.service_pb2.OfflineServiceRequest.DESCRIPTOR" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="yeying.api.service.service_pb2.OfflineServiceRequestBody">
+<em class="property"><span class="k"><span class="pre">class</span></span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">yeying.api.service.service_pb2.</span></span><span class="sig-name descname"><span class="pre">OfflineServiceRequestBody</span></span><a class="headerlink" href="#yeying.api.service.service_pb2.OfflineServiceRequestBody" title="Link to this definition"></a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">Message</span></code>, <code class="xref py py-class docutils literal notranslate"><span class="pre">Message</span></code></p>
+<dl class="py attribute">
+<dt class="sig sig-object py" id="yeying.api.service.service_pb2.OfflineServiceRequestBody.DESCRIPTOR">
+<span class="sig-name descname"><span class="pre">DESCRIPTOR</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">&lt;google._upb._message.Descriptor</span> <span class="pre">object&gt;</span></em><a class="headerlink" href="#yeying.api.service.service_pb2.OfflineServiceRequestBody.DESCRIPTOR" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="yeying.api.service.service_pb2.OfflineServiceResponse">
+<em class="property"><span class="k"><span class="pre">class</span></span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">yeying.api.service.service_pb2.</span></span><span class="sig-name descname"><span class="pre">OfflineServiceResponse</span></span><a class="headerlink" href="#yeying.api.service.service_pb2.OfflineServiceResponse" title="Link to this definition"></a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">Message</span></code>, <code class="xref py py-class docutils literal notranslate"><span class="pre">Message</span></code></p>
+<dl class="py attribute">
+<dt class="sig sig-object py" id="yeying.api.service.service_pb2.OfflineServiceResponse.DESCRIPTOR">
+<span class="sig-name descname"><span class="pre">DESCRIPTOR</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">&lt;google._upb._message.Descriptor</span> <span class="pre">object&gt;</span></em><a class="headerlink" href="#yeying.api.service.service_pb2.OfflineServiceResponse.DESCRIPTOR" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="yeying.api.service.service_pb2.OfflineServiceResponseBody">
+<em class="property"><span class="k"><span class="pre">class</span></span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">yeying.api.service.service_pb2.</span></span><span class="sig-name descname"><span class="pre">OfflineServiceResponseBody</span></span><a class="headerlink" href="#yeying.api.service.service_pb2.OfflineServiceResponseBody" title="Link to this definition"></a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">Message</span></code>, <code class="xref py py-class docutils literal notranslate"><span class="pre">Message</span></code></p>
+<dl class="py attribute">
+<dt class="sig sig-object py" id="yeying.api.service.service_pb2.OfflineServiceResponseBody.DESCRIPTOR">
+<span class="sig-name descname"><span class="pre">DESCRIPTOR</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">&lt;google._upb._message.Descriptor</span> <span class="pre">object&gt;</span></em><a class="headerlink" href="#yeying.api.service.service_pb2.OfflineServiceResponseBody.DESCRIPTOR" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="yeying.api.service.service_pb2.OnlineServiceRequest">
+<em class="property"><span class="k"><span class="pre">class</span></span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">yeying.api.service.service_pb2.</span></span><span class="sig-name descname"><span class="pre">OnlineServiceRequest</span></span><a class="headerlink" href="#yeying.api.service.service_pb2.OnlineServiceRequest" title="Link to this definition"></a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">Message</span></code>, <code class="xref py py-class docutils literal notranslate"><span class="pre">Message</span></code></p>
+<dl class="py attribute">
+<dt class="sig sig-object py" id="yeying.api.service.service_pb2.OnlineServiceRequest.DESCRIPTOR">
+<span class="sig-name descname"><span class="pre">DESCRIPTOR</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">&lt;google._upb._message.Descriptor</span> <span class="pre">object&gt;</span></em><a class="headerlink" href="#yeying.api.service.service_pb2.OnlineServiceRequest.DESCRIPTOR" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="yeying.api.service.service_pb2.OnlineServiceRequestBody">
+<em class="property"><span class="k"><span class="pre">class</span></span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">yeying.api.service.service_pb2.</span></span><span class="sig-name descname"><span class="pre">OnlineServiceRequestBody</span></span><a class="headerlink" href="#yeying.api.service.service_pb2.OnlineServiceRequestBody" title="Link to this definition"></a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">Message</span></code>, <code class="xref py py-class docutils literal notranslate"><span class="pre">Message</span></code></p>
+<dl class="py attribute">
+<dt class="sig sig-object py" id="yeying.api.service.service_pb2.OnlineServiceRequestBody.DESCRIPTOR">
+<span class="sig-name descname"><span class="pre">DESCRIPTOR</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">&lt;google._upb._message.Descriptor</span> <span class="pre">object&gt;</span></em><a class="headerlink" href="#yeying.api.service.service_pb2.OnlineServiceRequestBody.DESCRIPTOR" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="yeying.api.service.service_pb2.OnlineServiceResponse">
+<em class="property"><span class="k"><span class="pre">class</span></span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">yeying.api.service.service_pb2.</span></span><span class="sig-name descname"><span class="pre">OnlineServiceResponse</span></span><a class="headerlink" href="#yeying.api.service.service_pb2.OnlineServiceResponse" title="Link to this definition"></a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">Message</span></code>, <code class="xref py py-class docutils literal notranslate"><span class="pre">Message</span></code></p>
+<dl class="py attribute">
+<dt class="sig sig-object py" id="yeying.api.service.service_pb2.OnlineServiceResponse.DESCRIPTOR">
+<span class="sig-name descname"><span class="pre">DESCRIPTOR</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">&lt;google._upb._message.Descriptor</span> <span class="pre">object&gt;</span></em><a class="headerlink" href="#yeying.api.service.service_pb2.OnlineServiceResponse.DESCRIPTOR" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="yeying.api.service.service_pb2.OnlineServiceResponseBody">
+<em class="property"><span class="k"><span class="pre">class</span></span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">yeying.api.service.service_pb2.</span></span><span class="sig-name descname"><span class="pre">OnlineServiceResponseBody</span></span><a class="headerlink" href="#yeying.api.service.service_pb2.OnlineServiceResponseBody" title="Link to this definition"></a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">Message</span></code>, <code class="xref py py-class docutils literal notranslate"><span class="pre">Message</span></code></p>
+<dl class="py attribute">
+<dt class="sig sig-object py" id="yeying.api.service.service_pb2.OnlineServiceResponseBody.DESCRIPTOR">
+<span class="sig-name descname"><span class="pre">DESCRIPTOR</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">&lt;google._upb._message.Descriptor</span> <span class="pre">object&gt;</span></em><a class="headerlink" href="#yeying.api.service.service_pb2.OnlineServiceResponseBody.DESCRIPTOR" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="yeying.api.service.service_pb2.SearchServiceCondition">
+<em class="property"><span class="k"><span class="pre">class</span></span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">yeying.api.service.service_pb2.</span></span><span class="sig-name descname"><span class="pre">SearchServiceCondition</span></span><a class="headerlink" href="#yeying.api.service.service_pb2.SearchServiceCondition" title="Link to this definition"></a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">Message</span></code>, <code class="xref py py-class docutils literal notranslate"><span class="pre">Message</span></code></p>
+<dl class="py attribute">
+<dt class="sig sig-object py" id="yeying.api.service.service_pb2.SearchServiceCondition.DESCRIPTOR">
+<span class="sig-name descname"><span class="pre">DESCRIPTOR</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">&lt;google._upb._message.Descriptor</span> <span class="pre">object&gt;</span></em><a class="headerlink" href="#yeying.api.service.service_pb2.SearchServiceCondition.DESCRIPTOR" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="yeying.api.service.service_pb2.SearchServiceRequest">
+<em class="property"><span class="k"><span class="pre">class</span></span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">yeying.api.service.service_pb2.</span></span><span class="sig-name descname"><span class="pre">SearchServiceRequest</span></span><a class="headerlink" href="#yeying.api.service.service_pb2.SearchServiceRequest" title="Link to this definition"></a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">Message</span></code>, <code class="xref py py-class docutils literal notranslate"><span class="pre">Message</span></code></p>
+<dl class="py attribute">
+<dt class="sig sig-object py" id="yeying.api.service.service_pb2.SearchServiceRequest.DESCRIPTOR">
+<span class="sig-name descname"><span class="pre">DESCRIPTOR</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">&lt;google._upb._message.Descriptor</span> <span class="pre">object&gt;</span></em><a class="headerlink" href="#yeying.api.service.service_pb2.SearchServiceRequest.DESCRIPTOR" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="yeying.api.service.service_pb2.SearchServiceRequestBody">
+<em class="property"><span class="k"><span class="pre">class</span></span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">yeying.api.service.service_pb2.</span></span><span class="sig-name descname"><span class="pre">SearchServiceRequestBody</span></span><a class="headerlink" href="#yeying.api.service.service_pb2.SearchServiceRequestBody" title="Link to this definition"></a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">Message</span></code>, <code class="xref py py-class docutils literal notranslate"><span class="pre">Message</span></code></p>
+<dl class="py attribute">
+<dt class="sig sig-object py" id="yeying.api.service.service_pb2.SearchServiceRequestBody.DESCRIPTOR">
+<span class="sig-name descname"><span class="pre">DESCRIPTOR</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">&lt;google._upb._message.Descriptor</span> <span class="pre">object&gt;</span></em><a class="headerlink" href="#yeying.api.service.service_pb2.SearchServiceRequestBody.DESCRIPTOR" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="yeying.api.service.service_pb2.SearchServiceResponse">
+<em class="property"><span class="k"><span class="pre">class</span></span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">yeying.api.service.service_pb2.</span></span><span class="sig-name descname"><span class="pre">SearchServiceResponse</span></span><a class="headerlink" href="#yeying.api.service.service_pb2.SearchServiceResponse" title="Link to this definition"></a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">Message</span></code>, <code class="xref py py-class docutils literal notranslate"><span class="pre">Message</span></code></p>
+<dl class="py attribute">
+<dt class="sig sig-object py" id="yeying.api.service.service_pb2.SearchServiceResponse.DESCRIPTOR">
+<span class="sig-name descname"><span class="pre">DESCRIPTOR</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">&lt;google._upb._message.Descriptor</span> <span class="pre">object&gt;</span></em><a class="headerlink" href="#yeying.api.service.service_pb2.SearchServiceResponse.DESCRIPTOR" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="yeying.api.service.service_pb2.SearchServiceResponseBody">
+<em class="property"><span class="k"><span class="pre">class</span></span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">yeying.api.service.service_pb2.</span></span><span class="sig-name descname"><span class="pre">SearchServiceResponseBody</span></span><a class="headerlink" href="#yeying.api.service.service_pb2.SearchServiceResponseBody" title="Link to this definition"></a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">Message</span></code>, <code class="xref py py-class docutils literal notranslate"><span class="pre">Message</span></code></p>
+<dl class="py attribute">
+<dt class="sig sig-object py" id="yeying.api.service.service_pb2.SearchServiceResponseBody.DESCRIPTOR">
+<span class="sig-name descname"><span class="pre">DESCRIPTOR</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">&lt;google._upb._message.Descriptor</span> <span class="pre">object&gt;</span></em><a class="headerlink" href="#yeying.api.service.service_pb2.SearchServiceResponseBody.DESCRIPTOR" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+</section>
+<section id="module-yeying.api.service.service_pb2_grpc">
+<span id="yeying-api-service-service-pb2-grpc-module"></span><h2>yeying.api.service.service_pb2_grpc module<a class="headerlink" href="#module-yeying.api.service.service_pb2_grpc" title="Link to this heading"></a></h2>
+<p>Client and server classes corresponding to protobuf-defined services.</p>
+<dl class="py class">
+<dt class="sig sig-object py" id="yeying.api.service.service_pb2_grpc.Service">
+<em class="property"><span class="k"><span class="pre">class</span></span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">yeying.api.service.service_pb2_grpc.</span></span><span class="sig-name descname"><span class="pre">Service</span></span><a class="headerlink" href="#yeying.api.service.service_pb2_grpc.Service" title="Link to this definition"></a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
+<ul class="simple">
+<li></li>
+</ul>
+<p>节点提供服务创建、上线、下线和查询的服务。</p>
+<dl class="py method">
+<dt class="sig sig-object py" id="yeying.api.service.service_pb2_grpc.Service.Create">
+<em class="property"><span class="k"><span class="pre">static</span></span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">Create</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">request</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">target</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">options</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">()</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">channel_credentials</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">call_credentials</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">insecure</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">compression</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">wait_for_ready</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">timeout</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">metadata</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#yeying.api.service.service_pb2_grpc.Service.Create" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="yeying.api.service.service_pb2_grpc.Service.Delete">
+<em class="property"><span class="k"><span class="pre">static</span></span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">Delete</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">request</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">target</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">options</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">()</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">channel_credentials</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">call_credentials</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">insecure</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">compression</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">wait_for_ready</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">timeout</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">metadata</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#yeying.api.service.service_pb2_grpc.Service.Delete" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="yeying.api.service.service_pb2_grpc.Service.Detail">
+<em class="property"><span class="k"><span class="pre">static</span></span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">Detail</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">request</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">target</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">options</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">()</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">channel_credentials</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">call_credentials</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">insecure</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">compression</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">wait_for_ready</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">timeout</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">metadata</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#yeying.api.service.service_pb2_grpc.Service.Detail" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="yeying.api.service.service_pb2_grpc.Service.Offline">
+<em class="property"><span class="k"><span class="pre">static</span></span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">Offline</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">request</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">target</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">options</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">()</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">channel_credentials</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">call_credentials</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">insecure</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">compression</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">wait_for_ready</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">timeout</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">metadata</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#yeying.api.service.service_pb2_grpc.Service.Offline" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="yeying.api.service.service_pb2_grpc.Service.Online">
+<em class="property"><span class="k"><span class="pre">static</span></span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">Online</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">request</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">target</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">options</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">()</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">channel_credentials</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">call_credentials</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">insecure</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">compression</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">wait_for_ready</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">timeout</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">metadata</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#yeying.api.service.service_pb2_grpc.Service.Online" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="yeying.api.service.service_pb2_grpc.Service.Search">
+<em class="property"><span class="k"><span class="pre">static</span></span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">Search</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">request</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">target</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">options</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">()</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">channel_credentials</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">call_credentials</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">insecure</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">compression</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">wait_for_ready</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">timeout</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">metadata</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#yeying.api.service.service_pb2_grpc.Service.Search" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="yeying.api.service.service_pb2_grpc.ServiceServicer">
+<em class="property"><span class="k"><span class="pre">class</span></span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">yeying.api.service.service_pb2_grpc.</span></span><span class="sig-name descname"><span class="pre">ServiceServicer</span></span><a class="headerlink" href="#yeying.api.service.service_pb2_grpc.ServiceServicer" title="Link to this definition"></a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
+<ul class="simple">
+<li></li>
+</ul>
+<p>节点提供服务创建、上线、下线和查询的服务。</p>
+<dl class="py method">
+<dt class="sig sig-object py" id="yeying.api.service.service_pb2_grpc.ServiceServicer.Create">
+<span class="sig-name descname"><span class="pre">Create</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">request</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">context</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#yeying.api.service.service_pb2_grpc.ServiceServicer.Create" title="Link to this definition"></a></dt>
+<dd><p>服务创建</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="yeying.api.service.service_pb2_grpc.ServiceServicer.Delete">
+<span class="sig-name descname"><span class="pre">Delete</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">request</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">context</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#yeying.api.service.service_pb2_grpc.ServiceServicer.Delete" title="Link to this definition"></a></dt>
+<dd><p>删除服务</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="yeying.api.service.service_pb2_grpc.ServiceServicer.Detail">
+<span class="sig-name descname"><span class="pre">Detail</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">request</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">context</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#yeying.api.service.service_pb2_grpc.ServiceServicer.Detail" title="Link to this definition"></a></dt>
+<dd><p>服务详情</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="yeying.api.service.service_pb2_grpc.ServiceServicer.Offline">
+<span class="sig-name descname"><span class="pre">Offline</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">request</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">context</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#yeying.api.service.service_pb2_grpc.ServiceServicer.Offline" title="Link to this definition"></a></dt>
+<dd><p>下线服务</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="yeying.api.service.service_pb2_grpc.ServiceServicer.Online">
+<span class="sig-name descname"><span class="pre">Online</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">request</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">context</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#yeying.api.service.service_pb2_grpc.ServiceServicer.Online" title="Link to this definition"></a></dt>
+<dd><p>上线服务</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="yeying.api.service.service_pb2_grpc.ServiceServicer.Search">
+<span class="sig-name descname"><span class="pre">Search</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">request</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">context</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#yeying.api.service.service_pb2_grpc.ServiceServicer.Search" title="Link to this definition"></a></dt>
+<dd><p>搜索服务</p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="yeying.api.service.service_pb2_grpc.ServiceStub">
+<em class="property"><span class="k"><span class="pre">class</span></span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">yeying.api.service.service_pb2_grpc.</span></span><span class="sig-name descname"><span class="pre">ServiceStub</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">channel</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#yeying.api.service.service_pb2_grpc.ServiceStub" title="Link to this definition"></a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
+<ul class="simple">
+<li></li>
+</ul>
+<p>节点提供服务创建、上线、下线和查询的服务。</p>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="yeying.api.service.service_pb2_grpc.add_ServiceServicer_to_server">
+<span class="sig-prename descclassname"><span class="pre">yeying.api.service.service_pb2_grpc.</span></span><span class="sig-name descname"><span class="pre">add_ServiceServicer_to_server</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">servicer</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">server</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#yeying.api.service.service_pb2_grpc.add_ServiceServicer_to_server" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+</section>
+<section id="module-yeying.api.service">
+<span id="module-contents"></span><h2>Module contents<a class="headerlink" href="#module-yeying.api.service" title="Link to this heading"></a></h2>
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2025, yeying.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>
