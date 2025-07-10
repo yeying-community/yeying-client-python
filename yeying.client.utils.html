@@ -44,13 +44,52 @@
               <div class="local-toc"><ul>
 <li><a class="reference internal" href="#">yeying.client.utils package</a><ul>
 <li><a class="reference internal" href="#submodules">Submodules</a></li>
-<li><a class="reference internal" href="#yeying-client-utils-date-utils-module">yeying.client.utils.date_utils module</a></li>
-<li><a class="reference internal" href="#yeying-client-utils-digital-format-utils-module">yeying.client.utils.digital_format_utils module</a></li>
-<li><a class="reference internal" href="#yeying-client-utils-log-utils-module">yeying.client.utils.log_utils module</a></li>
-<li><a class="reference internal" href="#yeying-client-utils-object-utils-module">yeying.client.utils.object_utils module</a></li>
-<li><a class="reference internal" href="#yeying-client-utils-signature-utils-module">yeying.client.utils.signature_utils module</a></li>
-<li><a class="reference internal" href="#yeying-client-utils-string-utils-module">yeying.client.utils.string_utils module</a></li>
-<li><a class="reference internal" href="#module-contents">Module contents</a></li>
+<li><a class="reference internal" href="#module-yeying.client.utils.date_utils">yeying.client.utils.date_utils module</a><ul>
+<li><a class="reference internal" href="#yeying.client.utils.date_utils.convert_to_local_datetime"><code class="docutils literal notranslate"><span class="pre">convert_to_local_datetime()</span></code></a></li>
+<li><a class="reference internal" href="#yeying.client.utils.date_utils.convert_to_utc_datetime"><code class="docutils literal notranslate"><span class="pre">convert_to_utc_datetime()</span></code></a></li>
+<li><a class="reference internal" href="#yeying.client.utils.date_utils.format_datetime"><code class="docutils literal notranslate"><span class="pre">format_datetime()</span></code></a></li>
+<li><a class="reference internal" href="#yeying.client.utils.date_utils.from_iso"><code class="docutils literal notranslate"><span class="pre">from_iso()</span></code></a></li>
+<li><a class="reference internal" href="#yeying.client.utils.date_utils.get_current_iso_string"><code class="docutils literal notranslate"><span class="pre">get_current_iso_string()</span></code></a></li>
+<li><a class="reference internal" href="#yeying.client.utils.date_utils.get_current_utc_datetime"><code class="docutils literal notranslate"><span class="pre">get_current_utc_datetime()</span></code></a></li>
+<li><a class="reference internal" href="#yeying.client.utils.date_utils.get_current_utc_string"><code class="docutils literal notranslate"><span class="pre">get_current_utc_string()</span></code></a></li>
+<li><a class="reference internal" href="#yeying.client.utils.date_utils.is_expired"><code class="docutils literal notranslate"><span class="pre">is_expired()</span></code></a></li>
+<li><a class="reference internal" href="#yeying.client.utils.date_utils.parse_datetime"><code class="docutils literal notranslate"><span class="pre">parse_datetime()</span></code></a></li>
+<li><a class="reference internal" href="#yeying.client.utils.date_utils.plus_second"><code class="docutils literal notranslate"><span class="pre">plus_second()</span></code></a></li>
+<li><a class="reference internal" href="#yeying.client.utils.date_utils.to_iso"><code class="docutils literal notranslate"><span class="pre">to_iso()</span></code></a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#module-yeying.client.utils.digital_format_utils">yeying.client.utils.digital_format_utils module</a><ul>
+<li><a class="reference internal" href="#yeying.client.utils.digital_format_utils.get_digital_format_by_name"><code class="docutils literal notranslate"><span class="pre">get_digital_format_by_name()</span></code></a></li>
+<li><a class="reference internal" href="#yeying.client.utils.digital_format_utils.get_ext_list_by_digital_format"><code class="docutils literal notranslate"><span class="pre">get_ext_list_by_digital_format()</span></code></a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#module-yeying.client.utils.log_utils">yeying.client.utils.log_utils module</a><ul>
+<li><a class="reference internal" href="#yeying.client.utils.log_utils.get_logger"><code class="docutils literal notranslate"><span class="pre">get_logger()</span></code></a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#module-yeying.client.utils.object_utils">yeying.client.utils.object_utils module</a><ul>
+<li><a class="reference internal" href="#yeying.client.utils.object_utils.composite"><code class="docutils literal notranslate"><span class="pre">composite()</span></code></a></li>
+<li><a class="reference internal" href="#yeying.client.utils.object_utils.concat"><code class="docutils literal notranslate"><span class="pre">concat()</span></code></a></li>
+<li><a class="reference internal" href="#yeying.client.utils.object_utils.safe_get"><code class="docutils literal notranslate"><span class="pre">safe_get()</span></code></a></li>
+<li><a class="reference internal" href="#yeying.client.utils.object_utils.sort_keys"><code class="docutils literal notranslate"><span class="pre">sort_keys()</span></code></a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#module-yeying.client.utils.signature_utils">yeying.client.utils.signature_utils module</a><ul>
+<li><a class="reference internal" href="#yeying.client.utils.signature_utils.decode_hex"><code class="docutils literal notranslate"><span class="pre">decode_hex()</span></code></a></li>
+<li><a class="reference internal" href="#yeying.client.utils.signature_utils.encode_hex"><code class="docutils literal notranslate"><span class="pre">encode_hex()</span></code></a></li>
+<li><a class="reference internal" href="#yeying.client.utils.signature_utils.sign"><code class="docutils literal notranslate"><span class="pre">sign()</span></code></a></li>
+<li><a class="reference internal" href="#yeying.client.utils.signature_utils.verify"><code class="docutils literal notranslate"><span class="pre">verify()</span></code></a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#module-yeying.client.utils.string_utils">yeying.client.utils.string_utils module</a><ul>
+<li><a class="reference internal" href="#yeying.client.utils.string_utils.decode_base64"><code class="docutils literal notranslate"><span class="pre">decode_base64()</span></code></a></li>
+<li><a class="reference internal" href="#yeying.client.utils.string_utils.generate_uuid"><code class="docutils literal notranslate"><span class="pre">generate_uuid()</span></code></a></li>
+<li><a class="reference internal" href="#yeying.client.utils.string_utils.is_empty"><code class="docutils literal notranslate"><span class="pre">is_empty()</span></code></a></li>
+<li><a class="reference internal" href="#yeying.client.utils.string_utils.unicode_decode"><code class="docutils literal notranslate"><span class="pre">unicode_decode()</span></code></a></li>
+<li><a class="reference internal" href="#yeying.client.utils.string_utils.unicode_encode"><code class="docutils literal notranslate"><span class="pre">unicode_encode()</span></code></a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#module-yeying.client.utils">Module contents</a></li>
 </ul>
 </li>
 </ul>
@@ -84,26 +123,237 @@
 <section id="submodules">
 <h2>Submodules<a class="headerlink" href="#submodules" title="Link to this heading"></a></h2>
 </section>
-<section id="yeying-client-utils-date-utils-module">
-<h2>yeying.client.utils.date_utils module<a class="headerlink" href="#yeying-client-utils-date-utils-module" title="Link to this heading"></a></h2>
+<section id="module-yeying.client.utils.date_utils">
+<span id="yeying-client-utils-date-utils-module"></span><h2>yeying.client.utils.date_utils module<a class="headerlink" href="#module-yeying.client.utils.date_utils" title="Link to this heading"></a></h2>
+<dl class="py function">
+<dt class="sig sig-object py" id="yeying.client.utils.date_utils.convert_to_local_datetime">
+<span class="sig-prename descclassname"><span class="pre">yeying.client.utils.date_utils.</span></span><span class="sig-name descname"><span class="pre">convert_to_local_datetime</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">dt</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#yeying.client.utils.date_utils.convert_to_local_datetime" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="yeying.client.utils.date_utils.convert_to_utc_datetime">
+<span class="sig-prename descclassname"><span class="pre">yeying.client.utils.date_utils.</span></span><span class="sig-name descname"><span class="pre">convert_to_utc_datetime</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">dt</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#yeying.client.utils.date_utils.convert_to_utc_datetime" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="yeying.client.utils.date_utils.format_datetime">
+<span class="sig-prename descclassname"><span class="pre">yeying.client.utils.date_utils.</span></span><span class="sig-name descname"><span class="pre">format_datetime</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">dt</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#yeying.client.utils.date_utils.format_datetime" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="yeying.client.utils.date_utils.from_iso">
+<span class="sig-prename descclassname"><span class="pre">yeying.client.utils.date_utils.</span></span><span class="sig-name descname"><span class="pre">from_iso</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">s</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">datetime</span></span></span><a class="headerlink" href="#yeying.client.utils.date_utils.from_iso" title="Link to this definition"></a></dt>
+<dd><p>从 ISO 字符串创建 datetime 对象</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>s</strong> – ISO 8601 格式的日期字符串</p>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>解析后的 datetime 对象</p>
+</dd>
+<dt class="field-odd">Raises<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>ValueError</strong> – 如果字符串无法解析则抛出错误</p>
+</dd>
+<dt class="field-even">Example<span class="colon">:</span></dt>
+<dd class="field-even"><p>dt = from_iso(“2023-05-15T12:34:56.789+00:00”)</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="yeying.client.utils.date_utils.get_current_iso_string">
+<span class="sig-prename descclassname"><span class="pre">yeying.client.utils.date_utils.</span></span><span class="sig-name descname"><span class="pre">get_current_iso_string</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#yeying.client.utils.date_utils.get_current_iso_string" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="yeying.client.utils.date_utils.get_current_utc_datetime">
+<span class="sig-prename descclassname"><span class="pre">yeying.client.utils.date_utils.</span></span><span class="sig-name descname"><span class="pre">get_current_utc_datetime</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#yeying.client.utils.date_utils.get_current_utc_datetime" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="yeying.client.utils.date_utils.get_current_utc_string">
+<span class="sig-prename descclassname"><span class="pre">yeying.client.utils.date_utils.</span></span><span class="sig-name descname"><span class="pre">get_current_utc_string</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#yeying.client.utils.date_utils.get_current_utc_string" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="yeying.client.utils.date_utils.is_expired">
+<span class="sig-prename descclassname"><span class="pre">yeying.client.utils.date_utils.</span></span><span class="sig-name descname"><span class="pre">is_expired</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">s</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">minutes</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#yeying.client.utils.date_utils.is_expired" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="yeying.client.utils.date_utils.parse_datetime">
+<span class="sig-prename descclassname"><span class="pre">yeying.client.utils.date_utils.</span></span><span class="sig-name descname"><span class="pre">parse_datetime</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">s</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#yeying.client.utils.date_utils.parse_datetime" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="yeying.client.utils.date_utils.plus_second">
+<span class="sig-prename descclassname"><span class="pre">yeying.client.utils.date_utils.</span></span><span class="sig-name descname"><span class="pre">plus_second</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">dt</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">datetime</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">seconds</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">datetime</span></span></span><a class="headerlink" href="#yeying.client.utils.date_utils.plus_second" title="Link to this definition"></a></dt>
+<dd><p>向 datetime 对象添加指定的秒数</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>dt</strong> – 原始 datetime 对象</p></li>
+<li><p><strong>seconds</strong> – 要添加的秒数</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>添加秒数后的新 datetime 对象</p>
+</dd>
+</dl>
+<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">now</span> <span class="o">=</span> <span class="n">datetime</span><span class="o">.</span><span class="n">utcnow</span><span class="p">()</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">future</span> <span class="o">=</span> <span class="n">plus_second</span><span class="p">(</span><span class="n">now</span><span class="p">,</span> <span class="mi">3600</span><span class="p">)</span>  <span class="c1"># 添加 1 小时（3600 秒）</span>
+</pre></div>
+</div>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="yeying.client.utils.date_utils.to_iso">
+<span class="sig-prename descclassname"><span class="pre">yeying.client.utils.date_utils.</span></span><span class="sig-name descname"><span class="pre">to_iso</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">dt</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">datetime</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">str</span></span></span><a class="headerlink" href="#yeying.client.utils.date_utils.to_iso" title="Link to this definition"></a></dt>
+<dd><p>将 datetime 对象转换为 ISO 8601 格式字符串</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>dt</strong> – 要转换的 datetime 对象</p>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>ISO 8601 格式的字符串表示</p>
+</dd>
+<dt class="field-odd">Example<span class="colon">:</span></dt>
+<dd class="field-odd"><p>now = datetime.now(timezone.utc)
+iso_str = to_iso(now)  # 返回 “2023-05-15T12:34:56.789+00:00”</p>
+</dd>
+</dl>
+</dd></dl>
+
 </section>
-<section id="yeying-client-utils-digital-format-utils-module">
-<h2>yeying.client.utils.digital_format_utils module<a class="headerlink" href="#yeying-client-utils-digital-format-utils-module" title="Link to this heading"></a></h2>
+<section id="module-yeying.client.utils.digital_format_utils">
+<span id="yeying-client-utils-digital-format-utils-module"></span><h2>yeying.client.utils.digital_format_utils module<a class="headerlink" href="#module-yeying.client.utils.digital_format_utils" title="Link to this heading"></a></h2>
+<dl class="py function">
+<dt class="sig sig-object py" id="yeying.client.utils.digital_format_utils.get_digital_format_by_name">
+<span class="sig-prename descclassname"><span class="pre">yeying.client.utils.digital_format_utils.</span></span><span class="sig-name descname"><span class="pre">get_digital_format_by_name</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">name</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">&lt;google.protobuf.internal.enum_type_wrapper.EnumTypeWrapper</span> <span class="pre">object</span> <span class="pre">at</span> <span class="pre">0x7f3df6a91730&gt;</span></span></span><a class="headerlink" href="#yeying.client.utils.digital_format_utils.get_digital_format_by_name" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="yeying.client.utils.digital_format_utils.get_ext_list_by_digital_format">
+<span class="sig-prename descclassname"><span class="pre">yeying.client.utils.digital_format_utils.</span></span><span class="sig-name descname"><span class="pre">get_ext_list_by_digital_format</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">digital_format:</span> <span class="pre">&lt;google.protobuf.internal.enum_type_wrapper.EnumTypeWrapper</span> <span class="pre">object</span> <span class="pre">at</span> <span class="pre">0x7f3df6a91730&gt;</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#yeying.client.utils.digital_format_utils.get_ext_list_by_digital_format" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
 </section>
-<section id="yeying-client-utils-log-utils-module">
-<h2>yeying.client.utils.log_utils module<a class="headerlink" href="#yeying-client-utils-log-utils-module" title="Link to this heading"></a></h2>
+<section id="module-yeying.client.utils.log_utils">
+<span id="yeying-client-utils-log-utils-module"></span><h2>yeying.client.utils.log_utils module<a class="headerlink" href="#module-yeying.client.utils.log_utils" title="Link to this heading"></a></h2>
+<dl class="py function">
+<dt class="sig sig-object py" id="yeying.client.utils.log_utils.get_logger">
+<span class="sig-prename descclassname"><span class="pre">yeying.client.utils.log_utils.</span></span><span class="sig-name descname"><span class="pre">get_logger</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">name</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#yeying.client.utils.log_utils.get_logger" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
 </section>
-<section id="yeying-client-utils-object-utils-module">
-<h2>yeying.client.utils.object_utils module<a class="headerlink" href="#yeying-client-utils-object-utils-module" title="Link to this heading"></a></h2>
+<section id="module-yeying.client.utils.object_utils">
+<span id="yeying-client-utils-object-utils-module"></span><h2>yeying.client.utils.object_utils module<a class="headerlink" href="#module-yeying.client.utils.object_utils" title="Link to this heading"></a></h2>
+<dl class="py function">
+<dt class="sig sig-object py" id="yeying.client.utils.object_utils.composite">
+<span class="sig-prename descclassname"><span class="pre">yeying.client.utils.object_utils.</span></span><span class="sig-name descname"><span class="pre">composite</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">byte_arrays</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#yeying.client.utils.object_utils.composite" title="Link to this definition"></a></dt>
+<dd><p>将多个字节数组拼接成一个新的字节数组。</p>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="yeying.client.utils.object_utils.concat">
+<span class="sig-prename descclassname"><span class="pre">yeying.client.utils.object_utils.</span></span><span class="sig-name descname"><span class="pre">concat</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">args</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#yeying.client.utils.object_utils.concat" title="Link to this definition"></a></dt>
+<dd><p>接受变长参数，将各种类型按顺序拼接成字符串，并编码成字节。</p>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="yeying.client.utils.object_utils.safe_get">
+<span class="sig-prename descclassname"><span class="pre">yeying.client.utils.object_utils.</span></span><span class="sig-name descname"><span class="pre">safe_get</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">d</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">args</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#yeying.client.utils.object_utils.safe_get" title="Link to this definition"></a></dt>
+<dd><p>安全地获取嵌套JSON对象中的值。
+:param d: 待查询的字典或JSON对象
+:param args: 键的列表，表示要查询的路径
+:return: 如果找到指定路径的值，则返回该值；否则，返回None</p>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="yeying.client.utils.object_utils.sort_keys">
+<span class="sig-prename descclassname"><span class="pre">yeying.client.utils.object_utils.</span></span><span class="sig-name descname"><span class="pre">sort_keys</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">json</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#yeying.client.utils.object_utils.sort_keys" title="Link to this definition"></a></dt>
+<dd><p>排序JSON数据的函数，包括其嵌套的对象和数组, 默认会移除值为None的健</p>
+</dd></dl>
+
 </section>
-<section id="yeying-client-utils-signature-utils-module">
-<h2>yeying.client.utils.signature_utils module<a class="headerlink" href="#yeying-client-utils-signature-utils-module" title="Link to this heading"></a></h2>
+<section id="module-yeying.client.utils.signature_utils">
+<span id="yeying-client-utils-signature-utils-module"></span><h2>yeying.client.utils.signature_utils module<a class="headerlink" href="#module-yeying.client.utils.signature_utils" title="Link to this heading"></a></h2>
+<dl class="py function">
+<dt class="sig sig-object py" id="yeying.client.utils.signature_utils.decode_hex">
+<span class="sig-prename descclassname"><span class="pre">yeying.client.utils.signature_utils.</span></span><span class="sig-name descname"><span class="pre">decode_hex</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">hex_str</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">bytes</span></span></span><a class="headerlink" href="#yeying.client.utils.signature_utils.decode_hex" title="Link to this definition"></a></dt>
+<dd><p>将十六进制字符串解码为字节数组</p>
+<dl class="simple">
+<dt>参数:</dt><dd><p>hex_str: 十六进制格式的字符串</p>
+</dd>
+<dt>返回:</dt><dd><p>bytes: 解码后的字节数组</p>
+</dd>
+<dt>异常:</dt><dd><p>ValueError: 如果输入包含非十六进制字符或长度为奇数</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="yeying.client.utils.signature_utils.encode_hex">
+<span class="sig-prename descclassname"><span class="pre">yeying.client.utils.signature_utils.</span></span><span class="sig-name descname"><span class="pre">encode_hex</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">data</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">bytes</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">bytearray</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">memoryview</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">str</span></span></span><a class="headerlink" href="#yeying.client.utils.signature_utils.encode_hex" title="Link to this definition"></a></dt>
+<dd><p>将字节数据编码为十六进制字符串</p>
+<dl class="simple">
+<dt>参数:</dt><dd><p>data: 字节数据，支持 bytes、bytearray 或 memoryview 类型</p>
+</dd>
+<dt>返回:</dt><dd><p>str: 小写十六进制字符串</p>
+</dd>
+<dt>异常:</dt><dd><p>TypeError: 如果输入不是字节类型</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="yeying.client.utils.signature_utils.sign">
+<span class="sig-prename descclassname"><span class="pre">yeying.client.utils.signature_utils.</span></span><span class="sig-name descname"><span class="pre">sign</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">private_key</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">data</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">sigencode=&lt;function</span> <span class="pre">sigencode_der&gt;</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#yeying.client.utils.signature_utils.sign" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="yeying.client.utils.signature_utils.verify">
+<span class="sig-prename descclassname"><span class="pre">yeying.client.utils.signature_utils.</span></span><span class="sig-name descname"><span class="pre">verify</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">public_key:</span> <span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">data:</span> <span class="pre">bytes</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">signature:</span> <span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">sigdecode=&lt;function</span> <span class="pre">sigdecode_der&gt;</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#yeying.client.utils.signature_utils.verify" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
 </section>
-<section id="yeying-client-utils-string-utils-module">
-<h2>yeying.client.utils.string_utils module<a class="headerlink" href="#yeying-client-utils-string-utils-module" title="Link to this heading"></a></h2>
+<section id="module-yeying.client.utils.string_utils">
+<span id="yeying-client-utils-string-utils-module"></span><h2>yeying.client.utils.string_utils module<a class="headerlink" href="#module-yeying.client.utils.string_utils" title="Link to this heading"></a></h2>
+<dl class="py function">
+<dt class="sig sig-object py" id="yeying.client.utils.string_utils.decode_base64">
+<span class="sig-prename descclassname"><span class="pre">yeying.client.utils.string_utils.</span></span><span class="sig-name descname"><span class="pre">decode_base64</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">data</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">bytes</span></span></span><a class="headerlink" href="#yeying.client.utils.string_utils.decode_base64" title="Link to this definition"></a></dt>
+<dd><p>解码 Base64 字符串为字节数组</p>
+<dl class="simple">
+<dt>参数:</dt><dd><p>data: Base64 编码的字符串</p>
+</dd>
+<dt>返回:</dt><dd><p>bytes: 解码后的字节数组</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="yeying.client.utils.string_utils.generate_uuid">
+<span class="sig-prename descclassname"><span class="pre">yeying.client.utils.string_utils.</span></span><span class="sig-name descname"><span class="pre">generate_uuid</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#yeying.client.utils.string_utils.generate_uuid" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="yeying.client.utils.string_utils.is_empty">
+<span class="sig-prename descclassname"><span class="pre">yeying.client.utils.string_utils.</span></span><span class="sig-name descname"><span class="pre">is_empty</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">s</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#yeying.client.utils.string_utils.is_empty" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="yeying.client.utils.string_utils.unicode_decode">
+<span class="sig-prename descclassname"><span class="pre">yeying.client.utils.string_utils.</span></span><span class="sig-name descname"><span class="pre">unicode_decode</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">name</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#yeying.client.utils.string_utils.unicode_decode" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="yeying.client.utils.string_utils.unicode_encode">
+<span class="sig-prename descclassname"><span class="pre">yeying.client.utils.string_utils.</span></span><span class="sig-name descname"><span class="pre">unicode_encode</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">name</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#yeying.client.utils.string_utils.unicode_encode" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
 </section>
-<section id="module-contents">
-<h2>Module contents<a class="headerlink" href="#module-contents" title="Link to this heading"></a></h2>
+<section id="module-yeying.client.utils">
+<span id="module-contents"></span><h2>Module contents<a class="headerlink" href="#module-yeying.client.utils" title="Link to this heading"></a></h2>
 </section>
 </section>
 

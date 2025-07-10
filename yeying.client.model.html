@@ -44,12 +44,57 @@
               <div class="local-toc"><ul>
 <li><a class="reference internal" href="#">yeying.client.model package</a><ul>
 <li><a class="reference internal" href="#submodules">Submodules</a></li>
-<li><a class="reference internal" href="#yeying-client-model-digest-module">yeying.client.model.digest module</a></li>
-<li><a class="reference internal" href="#yeying-client-model-exception-module">yeying.client.model.exception module</a></li>
-<li><a class="reference internal" href="#yeying-client-model-file-module">yeying.client.model.file module</a></li>
-<li><a class="reference internal" href="#yeying-client-model-identity-module">yeying.client.model.identity module</a></li>
-<li><a class="reference internal" href="#yeying-client-model-option-module">yeying.client.model.option module</a></li>
-<li><a class="reference internal" href="#module-contents">Module contents</a></li>
+<li><a class="reference internal" href="#module-yeying.client.model.digest">yeying.client.model.digest module</a><ul>
+<li><a class="reference internal" href="#yeying.client.model.digest.Digest"><code class="docutils literal notranslate"><span class="pre">Digest</span></code></a><ul>
+<li><a class="reference internal" href="#yeying.client.model.digest.Digest.digest"><code class="docutils literal notranslate"><span class="pre">Digest.digest()</span></code></a></li>
+<li><a class="reference internal" href="#yeying.client.model.digest.Digest.update"><code class="docutils literal notranslate"><span class="pre">Digest.update()</span></code></a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><a class="reference internal" href="#module-yeying.client.model.exception">yeying.client.model.exception module</a><ul>
+<li><a class="reference internal" href="#yeying.client.model.exception.AlreadyExistException"><code class="docutils literal notranslate"><span class="pre">AlreadyExistException</span></code></a></li>
+<li><a class="reference internal" href="#yeying.client.model.exception.InvalidArgumentException"><code class="docutils literal notranslate"><span class="pre">InvalidArgumentException</span></code></a></li>
+<li><a class="reference internal" href="#yeying.client.model.exception.LimitExceededException"><code class="docutils literal notranslate"><span class="pre">LimitExceededException</span></code></a></li>
+<li><a class="reference internal" href="#yeying.client.model.exception.NotFoundException"><code class="docutils literal notranslate"><span class="pre">NotFoundException</span></code></a></li>
+<li><a class="reference internal" href="#yeying.client.model.exception.PermissionDeniedException"><code class="docutils literal notranslate"><span class="pre">PermissionDeniedException</span></code></a></li>
+<li><a class="reference internal" href="#yeying.client.model.exception.UnauthenticatedException"><code class="docutils literal notranslate"><span class="pre">UnauthenticatedException</span></code></a></li>
+<li><a class="reference internal" href="#yeying.client.model.exception.UnavailableException"><code class="docutils literal notranslate"><span class="pre">UnavailableException</span></code></a></li>
+<li><a class="reference internal" href="#yeying.client.model.exception.UserCustomException"><code class="docutils literal notranslate"><span class="pre">UserCustomException</span></code></a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#module-yeying.client.model.file">yeying.client.model.file module</a><ul>
+<li><a class="reference internal" href="#yeying.client.model.file.File"><code class="docutils literal notranslate"><span class="pre">File</span></code></a><ul>
+<li><a class="reference internal" href="#yeying.client.model.file.File.get_last_modified"><code class="docutils literal notranslate"><span class="pre">File.get_last_modified()</span></code></a></li>
+<li><a class="reference internal" href="#yeying.client.model.file.File.read"><code class="docutils literal notranslate"><span class="pre">File.read()</span></code></a></li>
+<li><a class="reference internal" href="#yeying.client.model.file.File.seek"><code class="docutils literal notranslate"><span class="pre">File.seek()</span></code></a></li>
+<li><a class="reference internal" href="#yeying.client.model.file.File.slice"><code class="docutils literal notranslate"><span class="pre">File.slice()</span></code></a></li>
+<li><a class="reference internal" href="#yeying.client.model.file.File.tell"><code class="docutils literal notranslate"><span class="pre">File.tell()</span></code></a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#yeying.client.model.file.FileSlice"><code class="docutils literal notranslate"><span class="pre">FileSlice</span></code></a><ul>
+<li><a class="reference internal" href="#yeying.client.model.file.FileSlice.get_last_modified"><code class="docutils literal notranslate"><span class="pre">FileSlice.get_last_modified()</span></code></a></li>
+<li><a class="reference internal" href="#yeying.client.model.file.FileSlice.read"><code class="docutils literal notranslate"><span class="pre">FileSlice.read()</span></code></a></li>
+<li><a class="reference internal" href="#yeying.client.model.file.FileSlice.save"><code class="docutils literal notranslate"><span class="pre">FileSlice.save()</span></code></a></li>
+<li><a class="reference internal" href="#yeying.client.model.file.FileSlice.seek"><code class="docutils literal notranslate"><span class="pre">FileSlice.seek()</span></code></a></li>
+<li><a class="reference internal" href="#yeying.client.model.file.FileSlice.stream"><code class="docutils literal notranslate"><span class="pre">FileSlice.stream()</span></code></a></li>
+<li><a class="reference internal" href="#yeying.client.model.file.FileSlice.tell"><code class="docutils literal notranslate"><span class="pre">FileSlice.tell()</span></code></a></li>
+<li><a class="reference internal" href="#yeying.client.model.file.FileSlice.text"><code class="docutils literal notranslate"><span class="pre">FileSlice.text()</span></code></a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><a class="reference internal" href="#module-yeying.client.model.identity">yeying.client.model.identity module</a><ul>
+<li><a class="reference internal" href="#yeying.client.model.identity.convert_did_to_publickey"><code class="docutils literal notranslate"><span class="pre">convert_did_to_publickey()</span></code></a></li>
+<li><a class="reference internal" href="#yeying.client.model.identity.encode_key"><code class="docutils literal notranslate"><span class="pre">encode_key()</span></code></a></li>
+<li><a class="reference internal" href="#yeying.client.model.identity.verify_identity"><code class="docutils literal notranslate"><span class="pre">verify_identity()</span></code></a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#module-yeying.client.model.option">yeying.client.model.option module</a><ul>
+<li><a class="reference internal" href="#yeying.client.model.option.ProviderOption"><code class="docutils literal notranslate"><span class="pre">ProviderOption</span></code></a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#module-yeying.client.model">Module contents</a></li>
 </ul>
 </li>
 </ul>
@@ -83,23 +128,204 @@
 <section id="submodules">
 <h2>Submodules<a class="headerlink" href="#submodules" title="Link to this heading"></a></h2>
 </section>
-<section id="yeying-client-model-digest-module">
-<h2>yeying.client.model.digest module<a class="headerlink" href="#yeying-client-model-digest-module" title="Link to this heading"></a></h2>
+<section id="module-yeying.client.model.digest">
+<span id="yeying-client-model-digest-module"></span><h2>yeying.client.model.digest module<a class="headerlink" href="#module-yeying.client.model.digest" title="Link to this heading"></a></h2>
+<p>用于更新和计算数据的哈希值，并最终返回计算结果。</p>
+<dl class="py class">
+<dt class="sig sig-object py" id="yeying.client.model.digest.Digest">
+<em class="property"><span class="k"><span class="pre">class</span></span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">yeying.client.model.digest.</span></span><span class="sig-name descname"><span class="pre">Digest</span></span><a class="headerlink" href="#yeying.client.model.digest.Digest" title="Link to this definition"></a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
+<dl class="py method">
+<dt class="sig sig-object py" id="yeying.client.model.digest.Digest.digest">
+<span class="sig-name descname"><span class="pre">digest</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#yeying.client.model.digest.Digest.digest" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="yeying.client.model.digest.Digest.update">
+<span class="sig-name descname"><span class="pre">update</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">data</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">bytes</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#yeying.client.model.digest.Digest.update" title="Link to this definition"></a></dt>
+<dd><p>更新哈希计算过程。</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>data</strong> – 新的数据块，用于更新哈希值</p>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>当前实例，便于链式调用</p>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
 </section>
-<section id="yeying-client-model-exception-module">
-<h2>yeying.client.model.exception module<a class="headerlink" href="#yeying-client-model-exception-module" title="Link to this heading"></a></h2>
+<section id="module-yeying.client.model.exception">
+<span id="yeying-client-model-exception-module"></span><h2>yeying.client.model.exception module<a class="headerlink" href="#module-yeying.client.model.exception" title="Link to this heading"></a></h2>
+<dl class="py exception">
+<dt class="sig sig-object py" id="yeying.client.model.exception.AlreadyExistException">
+<em class="property"><span class="k"><span class="pre">exception</span></span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">yeying.client.model.exception.</span></span><span class="sig-name descname"><span class="pre">AlreadyExistException</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">message</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#yeying.client.model.exception.AlreadyExistException" title="Link to this definition"></a></dt>
+<dd><p>Bases: <a class="reference internal" href="#yeying.client.model.exception.UserCustomException" title="yeying.client.model.exception.UserCustomException"><code class="xref py py-class docutils literal notranslate"><span class="pre">UserCustomException</span></code></a></p>
+</dd></dl>
+
+<dl class="py exception">
+<dt class="sig sig-object py" id="yeying.client.model.exception.InvalidArgumentException">
+<em class="property"><span class="k"><span class="pre">exception</span></span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">yeying.client.model.exception.</span></span><span class="sig-name descname"><span class="pre">InvalidArgumentException</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">message</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#yeying.client.model.exception.InvalidArgumentException" title="Link to this definition"></a></dt>
+<dd><p>Bases: <a class="reference internal" href="#yeying.client.model.exception.UserCustomException" title="yeying.client.model.exception.UserCustomException"><code class="xref py py-class docutils literal notranslate"><span class="pre">UserCustomException</span></code></a></p>
+</dd></dl>
+
+<dl class="py exception">
+<dt class="sig sig-object py" id="yeying.client.model.exception.LimitExceededException">
+<em class="property"><span class="k"><span class="pre">exception</span></span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">yeying.client.model.exception.</span></span><span class="sig-name descname"><span class="pre">LimitExceededException</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">message</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#yeying.client.model.exception.LimitExceededException" title="Link to this definition"></a></dt>
+<dd><p>Bases: <a class="reference internal" href="#yeying.client.model.exception.UserCustomException" title="yeying.client.model.exception.UserCustomException"><code class="xref py py-class docutils literal notranslate"><span class="pre">UserCustomException</span></code></a></p>
+</dd></dl>
+
+<dl class="py exception">
+<dt class="sig sig-object py" id="yeying.client.model.exception.NotFoundException">
+<em class="property"><span class="k"><span class="pre">exception</span></span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">yeying.client.model.exception.</span></span><span class="sig-name descname"><span class="pre">NotFoundException</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">message</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#yeying.client.model.exception.NotFoundException" title="Link to this definition"></a></dt>
+<dd><p>Bases: <a class="reference internal" href="#yeying.client.model.exception.UserCustomException" title="yeying.client.model.exception.UserCustomException"><code class="xref py py-class docutils literal notranslate"><span class="pre">UserCustomException</span></code></a></p>
+</dd></dl>
+
+<dl class="py exception">
+<dt class="sig sig-object py" id="yeying.client.model.exception.PermissionDeniedException">
+<em class="property"><span class="k"><span class="pre">exception</span></span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">yeying.client.model.exception.</span></span><span class="sig-name descname"><span class="pre">PermissionDeniedException</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">message</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#yeying.client.model.exception.PermissionDeniedException" title="Link to this definition"></a></dt>
+<dd><p>Bases: <a class="reference internal" href="#yeying.client.model.exception.UserCustomException" title="yeying.client.model.exception.UserCustomException"><code class="xref py py-class docutils literal notranslate"><span class="pre">UserCustomException</span></code></a></p>
+</dd></dl>
+
+<dl class="py exception">
+<dt class="sig sig-object py" id="yeying.client.model.exception.UnauthenticatedException">
+<em class="property"><span class="k"><span class="pre">exception</span></span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">yeying.client.model.exception.</span></span><span class="sig-name descname"><span class="pre">UnauthenticatedException</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">message</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#yeying.client.model.exception.UnauthenticatedException" title="Link to this definition"></a></dt>
+<dd><p>Bases: <a class="reference internal" href="#yeying.client.model.exception.UserCustomException" title="yeying.client.model.exception.UserCustomException"><code class="xref py py-class docutils literal notranslate"><span class="pre">UserCustomException</span></code></a></p>
+</dd></dl>
+
+<dl class="py exception">
+<dt class="sig sig-object py" id="yeying.client.model.exception.UnavailableException">
+<em class="property"><span class="k"><span class="pre">exception</span></span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">yeying.client.model.exception.</span></span><span class="sig-name descname"><span class="pre">UnavailableException</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">message</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#yeying.client.model.exception.UnavailableException" title="Link to this definition"></a></dt>
+<dd><p>Bases: <a class="reference internal" href="#yeying.client.model.exception.UserCustomException" title="yeying.client.model.exception.UserCustomException"><code class="xref py py-class docutils literal notranslate"><span class="pre">UserCustomException</span></code></a></p>
+</dd></dl>
+
+<dl class="py exception">
+<dt class="sig sig-object py" id="yeying.client.model.exception.UserCustomException">
+<em class="property"><span class="k"><span class="pre">exception</span></span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">yeying.client.model.exception.</span></span><span class="sig-name descname"><span class="pre">UserCustomException</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">message</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#yeying.client.model.exception.UserCustomException" title="Link to this definition"></a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">Exception</span></code></p>
+</dd></dl>
+
 </section>
-<section id="yeying-client-model-file-module">
-<h2>yeying.client.model.file module<a class="headerlink" href="#yeying-client-model-file-module" title="Link to this heading"></a></h2>
+<section id="module-yeying.client.model.file">
+<span id="yeying-client-model-file-module"></span><h2>yeying.client.model.file module<a class="headerlink" href="#module-yeying.client.model.file" title="Link to this heading"></a></h2>
+<dl class="py class">
+<dt class="sig sig-object py" id="yeying.client.model.file.File">
+<em class="property"><span class="k"><span class="pre">class</span></span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">yeying.client.model.file.</span></span><span class="sig-name descname"><span class="pre">File</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">name</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">size</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">stream</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">last_modified</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#yeying.client.model.file.File" title="Link to this definition"></a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
+<p>模拟 JavaScript File 对象的 Python 实现</p>
+<dl class="py method">
+<dt class="sig sig-object py" id="yeying.client.model.file.File.get_last_modified">
+<span class="sig-name descname"><span class="pre">get_last_modified</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">int</span></span></span><a class="headerlink" href="#yeying.client.model.file.File.get_last_modified" title="Link to this definition"></a></dt>
+<dd><p>获取文件最后修改时间戳（毫秒）</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="yeying.client.model.file.File.read">
+<span class="sig-name descname"><span class="pre">read</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">size</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">-1</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">bytes</span></span></span><a class="headerlink" href="#yeying.client.model.file.File.read" title="Link to this definition"></a></dt>
+<dd><p>从当前位置读取数据</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="yeying.client.model.file.File.seek">
+<span class="sig-name descname"><span class="pre">seek</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">offset</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">whence</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">0</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">int</span></span></span><a class="headerlink" href="#yeying.client.model.file.File.seek" title="Link to this definition"></a></dt>
+<dd><p>移动文件指针</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="yeying.client.model.file.File.slice">
+<span class="sig-name descname"><span class="pre">slice</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">start</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">end</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">content_type</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference internal" href="#yeying.client.model.file.FileSlice" title="yeying.client.model.file.FileSlice"><span class="pre">FileSlice</span></a></span></span><a class="headerlink" href="#yeying.client.model.file.File.slice" title="Link to this definition"></a></dt>
+<dd><p>创建文件切片，模拟 File.slice()</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="yeying.client.model.file.File.tell">
+<span class="sig-name descname"><span class="pre">tell</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">int</span></span></span><a class="headerlink" href="#yeying.client.model.file.File.tell" title="Link to this definition"></a></dt>
+<dd><p>获取当前文件指针位置</p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="yeying.client.model.file.FileSlice">
+<em class="property"><span class="k"><span class="pre">class</span></span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">yeying.client.model.file.</span></span><span class="sig-name descname"><span class="pre">FileSlice</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">data</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">bytes</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">content_type</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">last_modified</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#yeying.client.model.file.FileSlice" title="Link to this definition"></a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
+<p>表示文件切片的类</p>
+<dl class="py method">
+<dt class="sig sig-object py" id="yeying.client.model.file.FileSlice.get_last_modified">
+<span class="sig-name descname"><span class="pre">get_last_modified</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">int</span></span></span><a class="headerlink" href="#yeying.client.model.file.FileSlice.get_last_modified" title="Link to this definition"></a></dt>
+<dd><p>获取切片最后修改时间戳（毫秒）</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="yeying.client.model.file.FileSlice.read">
+<span class="sig-name descname"><span class="pre">read</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">size</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">-1</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">bytes</span></span></span><a class="headerlink" href="#yeying.client.model.file.FileSlice.read" title="Link to this definition"></a></dt>
+<dd><p>从切片中读取数据</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="yeying.client.model.file.FileSlice.save">
+<span class="sig-name descname"><span class="pre">save</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">file_path</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#yeying.client.model.file.FileSlice.save" title="Link to this definition"></a></dt>
+<dd><p>保存切片到文件</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="yeying.client.model.file.FileSlice.seek">
+<span class="sig-name descname"><span class="pre">seek</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">offset</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">whence</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">0</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">int</span></span></span><a class="headerlink" href="#yeying.client.model.file.FileSlice.seek" title="Link to this definition"></a></dt>
+<dd><p>移动切片指针</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="yeying.client.model.file.FileSlice.stream">
+<span class="sig-name descname"><span class="pre">stream</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">bytes</span></span></span><a class="headerlink" href="#yeying.client.model.file.FileSlice.stream" title="Link to this definition"></a></dt>
+<dd><p>以文本形式读取切片内容</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="yeying.client.model.file.FileSlice.tell">
+<span class="sig-name descname"><span class="pre">tell</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">int</span></span></span><a class="headerlink" href="#yeying.client.model.file.FileSlice.tell" title="Link to this definition"></a></dt>
+<dd><p>获取当前切片指针位置</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="yeying.client.model.file.FileSlice.text">
+<span class="sig-name descname"><span class="pre">text</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">encoding</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">'utf-8'</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">str</span></span></span><a class="headerlink" href="#yeying.client.model.file.FileSlice.text" title="Link to this definition"></a></dt>
+<dd><p>以文本形式读取切片内容</p>
+</dd></dl>
+
+</dd></dl>
+
 </section>
-<section id="yeying-client-model-identity-module">
-<h2>yeying.client.model.identity module<a class="headerlink" href="#yeying-client-model-identity-module" title="Link to this heading"></a></h2>
+<section id="module-yeying.client.model.identity">
+<span id="yeying-client-model-identity-module"></span><h2>yeying.client.model.identity module<a class="headerlink" href="#module-yeying.client.model.identity" title="Link to this heading"></a></h2>
+<dl class="py function">
+<dt class="sig sig-object py" id="yeying.client.model.identity.convert_did_to_publickey">
+<span class="sig-prename descclassname"><span class="pre">yeying.client.model.identity.</span></span><span class="sig-name descname"><span class="pre">convert_did_to_publickey</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">did</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#yeying.client.model.identity.convert_did_to_publickey" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="yeying.client.model.identity.encode_key">
+<span class="sig-prename descclassname"><span class="pre">yeying.client.model.identity.</span></span><span class="sig-name descname"><span class="pre">encode_key</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">key</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#yeying.client.model.identity.encode_key" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="yeying.client.model.identity.verify_identity">
+<span class="sig-prename descclassname"><span class="pre">yeying.client.model.identity.</span></span><span class="sig-name descname"><span class="pre">verify_identity</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">identity</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#yeying.client.model.identity.verify_identity" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
 </section>
-<section id="yeying-client-model-option-module">
-<h2>yeying.client.model.option module<a class="headerlink" href="#yeying-client-model-option-module" title="Link to this heading"></a></h2>
+<section id="module-yeying.client.model.option">
+<span id="yeying-client-model-option-module"></span><h2>yeying.client.model.option module<a class="headerlink" href="#module-yeying.client.model.option" title="Link to this heading"></a></h2>
+<dl class="py class">
+<dt class="sig sig-object py" id="yeying.client.model.option.ProviderOption">
+<em class="property"><span class="k"><span class="pre">class</span></span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">yeying.client.model.option.</span></span><span class="sig-name descname"><span class="pre">ProviderOption</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">proxy</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">block_address</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="yeying.api.web3.html#yeying.api.web3.web3_pb2.BlockAddress" title="yeying.api.web3.web3_pb2.BlockAddress"><span class="pre">BlockAddress</span></a></span></em><span class="sig-paren">)</span><a class="headerlink" href="#yeying.client.model.option.ProviderOption" title="Link to this definition"></a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
+</dd></dl>
+
 </section>
-<section id="module-contents">
-<h2>Module contents<a class="headerlink" href="#module-contents" title="Link to this heading"></a></h2>
+<section id="module-yeying.client.model">
+<span id="module-contents"></span><h2>Module contents<a class="headerlink" href="#module-yeying.client.model" title="Link to this heading"></a></h2>
 </section>
 </section>
 

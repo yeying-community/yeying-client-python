@@ -44,9 +44,57 @@
               <div class="local-toc"><ul>
 <li><a class="reference internal" href="#">yeying.api.certificate package</a><ul>
 <li><a class="reference internal" href="#submodules">Submodules</a></li>
-<li><a class="reference internal" href="#yeying-api-certificate-certificate-pb2-module">yeying.api.certificate.certificate_pb2 module</a></li>
-<li><a class="reference internal" href="#yeying-api-certificate-certificate-pb2-grpc-module">yeying.api.certificate.certificate_pb2_grpc module</a></li>
-<li><a class="reference internal" href="#module-contents">Module contents</a></li>
+<li><a class="reference internal" href="#module-yeying.api.certificate.certificate_pb2">yeying.api.certificate.certificate_pb2 module</a><ul>
+<li><a class="reference internal" href="#yeying.api.certificate.certificate_pb2.CertificateMetadata"><code class="docutils literal notranslate"><span class="pre">CertificateMetadata</span></code></a><ul>
+<li><a class="reference internal" href="#yeying.api.certificate.certificate_pb2.CertificateMetadata.DESCRIPTOR"><code class="docutils literal notranslate"><span class="pre">CertificateMetadata.DESCRIPTOR</span></code></a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#yeying.api.certificate.certificate_pb2.GetRequest"><code class="docutils literal notranslate"><span class="pre">GetRequest</span></code></a><ul>
+<li><a class="reference internal" href="#yeying.api.certificate.certificate_pb2.GetRequest.DESCRIPTOR"><code class="docutils literal notranslate"><span class="pre">GetRequest.DESCRIPTOR</span></code></a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#yeying.api.certificate.certificate_pb2.GetResponse"><code class="docutils literal notranslate"><span class="pre">GetResponse</span></code></a><ul>
+<li><a class="reference internal" href="#yeying.api.certificate.certificate_pb2.GetResponse.DESCRIPTOR"><code class="docutils literal notranslate"><span class="pre">GetResponse.DESCRIPTOR</span></code></a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#yeying.api.certificate.certificate_pb2.GetResponseBody"><code class="docutils literal notranslate"><span class="pre">GetResponseBody</span></code></a><ul>
+<li><a class="reference internal" href="#yeying.api.certificate.certificate_pb2.GetResponseBody.DESCRIPTOR"><code class="docutils literal notranslate"><span class="pre">GetResponseBody.DESCRIPTOR</span></code></a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#yeying.api.certificate.certificate_pb2.SignRequest"><code class="docutils literal notranslate"><span class="pre">SignRequest</span></code></a><ul>
+<li><a class="reference internal" href="#yeying.api.certificate.certificate_pb2.SignRequest.DESCRIPTOR"><code class="docutils literal notranslate"><span class="pre">SignRequest.DESCRIPTOR</span></code></a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#yeying.api.certificate.certificate_pb2.SignRequestBody"><code class="docutils literal notranslate"><span class="pre">SignRequestBody</span></code></a><ul>
+<li><a class="reference internal" href="#yeying.api.certificate.certificate_pb2.SignRequestBody.DESCRIPTOR"><code class="docutils literal notranslate"><span class="pre">SignRequestBody.DESCRIPTOR</span></code></a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#yeying.api.certificate.certificate_pb2.SignResponse"><code class="docutils literal notranslate"><span class="pre">SignResponse</span></code></a><ul>
+<li><a class="reference internal" href="#yeying.api.certificate.certificate_pb2.SignResponse.DESCRIPTOR"><code class="docutils literal notranslate"><span class="pre">SignResponse.DESCRIPTOR</span></code></a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#yeying.api.certificate.certificate_pb2.SignResponseBody"><code class="docutils literal notranslate"><span class="pre">SignResponseBody</span></code></a><ul>
+<li><a class="reference internal" href="#yeying.api.certificate.certificate_pb2.SignResponseBody.DESCRIPTOR"><code class="docutils literal notranslate"><span class="pre">SignResponseBody.DESCRIPTOR</span></code></a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><a class="reference internal" href="#module-yeying.api.certificate.certificate_pb2_grpc">yeying.api.certificate.certificate_pb2_grpc module</a><ul>
+<li><a class="reference internal" href="#yeying.api.certificate.certificate_pb2_grpc.Certificate"><code class="docutils literal notranslate"><span class="pre">Certificate</span></code></a><ul>
+<li><a class="reference internal" href="#yeying.api.certificate.certificate_pb2_grpc.Certificate.Get"><code class="docutils literal notranslate"><span class="pre">Certificate.Get()</span></code></a></li>
+<li><a class="reference internal" href="#yeying.api.certificate.certificate_pb2_grpc.Certificate.Sign"><code class="docutils literal notranslate"><span class="pre">Certificate.Sign()</span></code></a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#yeying.api.certificate.certificate_pb2_grpc.CertificateServicer"><code class="docutils literal notranslate"><span class="pre">CertificateServicer</span></code></a><ul>
+<li><a class="reference internal" href="#yeying.api.certificate.certificate_pb2_grpc.CertificateServicer.Get"><code class="docutils literal notranslate"><span class="pre">CertificateServicer.Get()</span></code></a></li>
+<li><a class="reference internal" href="#yeying.api.certificate.certificate_pb2_grpc.CertificateServicer.Sign"><code class="docutils literal notranslate"><span class="pre">CertificateServicer.Sign()</span></code></a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#yeying.api.certificate.certificate_pb2_grpc.CertificateStub"><code class="docutils literal notranslate"><span class="pre">CertificateStub</span></code></a></li>
+<li><a class="reference internal" href="#yeying.api.certificate.certificate_pb2_grpc.add_CertificateServicer_to_server"><code class="docutils literal notranslate"><span class="pre">add_CertificateServicer_to_server()</span></code></a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#module-yeying.api.certificate">Module contents</a></li>
 </ul>
 </li>
 </ul>
@@ -80,14 +128,152 @@
 <section id="submodules">
 <h2>Submodules<a class="headerlink" href="#submodules" title="Link to this heading"></a></h2>
 </section>
-<section id="yeying-api-certificate-certificate-pb2-module">
-<h2>yeying.api.certificate.certificate_pb2 module<a class="headerlink" href="#yeying-api-certificate-certificate-pb2-module" title="Link to this heading"></a></h2>
+<section id="module-yeying.api.certificate.certificate_pb2">
+<span id="yeying-api-certificate-certificate-pb2-module"></span><h2>yeying.api.certificate.certificate_pb2 module<a class="headerlink" href="#module-yeying.api.certificate.certificate_pb2" title="Link to this heading"></a></h2>
+<p>Generated protocol buffer code.</p>
+<dl class="py class">
+<dt class="sig sig-object py" id="yeying.api.certificate.certificate_pb2.CertificateMetadata">
+<em class="property"><span class="k"><span class="pre">class</span></span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">yeying.api.certificate.certificate_pb2.</span></span><span class="sig-name descname"><span class="pre">CertificateMetadata</span></span><a class="headerlink" href="#yeying.api.certificate.certificate_pb2.CertificateMetadata" title="Link to this definition"></a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">Message</span></code>, <code class="xref py py-class docutils literal notranslate"><span class="pre">Message</span></code></p>
+<dl class="py attribute">
+<dt class="sig sig-object py" id="yeying.api.certificate.certificate_pb2.CertificateMetadata.DESCRIPTOR">
+<span class="sig-name descname"><span class="pre">DESCRIPTOR</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">&lt;google._upb._message.Descriptor</span> <span class="pre">object&gt;</span></em><a class="headerlink" href="#yeying.api.certificate.certificate_pb2.CertificateMetadata.DESCRIPTOR" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="yeying.api.certificate.certificate_pb2.GetRequest">
+<em class="property"><span class="k"><span class="pre">class</span></span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">yeying.api.certificate.certificate_pb2.</span></span><span class="sig-name descname"><span class="pre">GetRequest</span></span><a class="headerlink" href="#yeying.api.certificate.certificate_pb2.GetRequest" title="Link to this definition"></a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">Message</span></code>, <code class="xref py py-class docutils literal notranslate"><span class="pre">Message</span></code></p>
+<dl class="py attribute">
+<dt class="sig sig-object py" id="yeying.api.certificate.certificate_pb2.GetRequest.DESCRIPTOR">
+<span class="sig-name descname"><span class="pre">DESCRIPTOR</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">&lt;google._upb._message.Descriptor</span> <span class="pre">object&gt;</span></em><a class="headerlink" href="#yeying.api.certificate.certificate_pb2.GetRequest.DESCRIPTOR" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="yeying.api.certificate.certificate_pb2.GetResponse">
+<em class="property"><span class="k"><span class="pre">class</span></span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">yeying.api.certificate.certificate_pb2.</span></span><span class="sig-name descname"><span class="pre">GetResponse</span></span><a class="headerlink" href="#yeying.api.certificate.certificate_pb2.GetResponse" title="Link to this definition"></a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">Message</span></code>, <code class="xref py py-class docutils literal notranslate"><span class="pre">Message</span></code></p>
+<dl class="py attribute">
+<dt class="sig sig-object py" id="yeying.api.certificate.certificate_pb2.GetResponse.DESCRIPTOR">
+<span class="sig-name descname"><span class="pre">DESCRIPTOR</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">&lt;google._upb._message.Descriptor</span> <span class="pre">object&gt;</span></em><a class="headerlink" href="#yeying.api.certificate.certificate_pb2.GetResponse.DESCRIPTOR" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="yeying.api.certificate.certificate_pb2.GetResponseBody">
+<em class="property"><span class="k"><span class="pre">class</span></span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">yeying.api.certificate.certificate_pb2.</span></span><span class="sig-name descname"><span class="pre">GetResponseBody</span></span><a class="headerlink" href="#yeying.api.certificate.certificate_pb2.GetResponseBody" title="Link to this definition"></a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">Message</span></code>, <code class="xref py py-class docutils literal notranslate"><span class="pre">Message</span></code></p>
+<dl class="py attribute">
+<dt class="sig sig-object py" id="yeying.api.certificate.certificate_pb2.GetResponseBody.DESCRIPTOR">
+<span class="sig-name descname"><span class="pre">DESCRIPTOR</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">&lt;google._upb._message.Descriptor</span> <span class="pre">object&gt;</span></em><a class="headerlink" href="#yeying.api.certificate.certificate_pb2.GetResponseBody.DESCRIPTOR" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="yeying.api.certificate.certificate_pb2.SignRequest">
+<em class="property"><span class="k"><span class="pre">class</span></span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">yeying.api.certificate.certificate_pb2.</span></span><span class="sig-name descname"><span class="pre">SignRequest</span></span><a class="headerlink" href="#yeying.api.certificate.certificate_pb2.SignRequest" title="Link to this definition"></a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">Message</span></code>, <code class="xref py py-class docutils literal notranslate"><span class="pre">Message</span></code></p>
+<dl class="py attribute">
+<dt class="sig sig-object py" id="yeying.api.certificate.certificate_pb2.SignRequest.DESCRIPTOR">
+<span class="sig-name descname"><span class="pre">DESCRIPTOR</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">&lt;google._upb._message.Descriptor</span> <span class="pre">object&gt;</span></em><a class="headerlink" href="#yeying.api.certificate.certificate_pb2.SignRequest.DESCRIPTOR" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="yeying.api.certificate.certificate_pb2.SignRequestBody">
+<em class="property"><span class="k"><span class="pre">class</span></span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">yeying.api.certificate.certificate_pb2.</span></span><span class="sig-name descname"><span class="pre">SignRequestBody</span></span><a class="headerlink" href="#yeying.api.certificate.certificate_pb2.SignRequestBody" title="Link to this definition"></a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">Message</span></code>, <code class="xref py py-class docutils literal notranslate"><span class="pre">Message</span></code></p>
+<dl class="py attribute">
+<dt class="sig sig-object py" id="yeying.api.certificate.certificate_pb2.SignRequestBody.DESCRIPTOR">
+<span class="sig-name descname"><span class="pre">DESCRIPTOR</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">&lt;google._upb._message.Descriptor</span> <span class="pre">object&gt;</span></em><a class="headerlink" href="#yeying.api.certificate.certificate_pb2.SignRequestBody.DESCRIPTOR" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="yeying.api.certificate.certificate_pb2.SignResponse">
+<em class="property"><span class="k"><span class="pre">class</span></span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">yeying.api.certificate.certificate_pb2.</span></span><span class="sig-name descname"><span class="pre">SignResponse</span></span><a class="headerlink" href="#yeying.api.certificate.certificate_pb2.SignResponse" title="Link to this definition"></a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">Message</span></code>, <code class="xref py py-class docutils literal notranslate"><span class="pre">Message</span></code></p>
+<dl class="py attribute">
+<dt class="sig sig-object py" id="yeying.api.certificate.certificate_pb2.SignResponse.DESCRIPTOR">
+<span class="sig-name descname"><span class="pre">DESCRIPTOR</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">&lt;google._upb._message.Descriptor</span> <span class="pre">object&gt;</span></em><a class="headerlink" href="#yeying.api.certificate.certificate_pb2.SignResponse.DESCRIPTOR" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="yeying.api.certificate.certificate_pb2.SignResponseBody">
+<em class="property"><span class="k"><span class="pre">class</span></span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">yeying.api.certificate.certificate_pb2.</span></span><span class="sig-name descname"><span class="pre">SignResponseBody</span></span><a class="headerlink" href="#yeying.api.certificate.certificate_pb2.SignResponseBody" title="Link to this definition"></a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">Message</span></code>, <code class="xref py py-class docutils literal notranslate"><span class="pre">Message</span></code></p>
+<dl class="py attribute">
+<dt class="sig sig-object py" id="yeying.api.certificate.certificate_pb2.SignResponseBody.DESCRIPTOR">
+<span class="sig-name descname"><span class="pre">DESCRIPTOR</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">&lt;google._upb._message.Descriptor</span> <span class="pre">object&gt;</span></em><a class="headerlink" href="#yeying.api.certificate.certificate_pb2.SignResponseBody.DESCRIPTOR" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
 </section>
-<section id="yeying-api-certificate-certificate-pb2-grpc-module">
-<h2>yeying.api.certificate.certificate_pb2_grpc module<a class="headerlink" href="#yeying-api-certificate-certificate-pb2-grpc-module" title="Link to this heading"></a></h2>
+<section id="module-yeying.api.certificate.certificate_pb2_grpc">
+<span id="yeying-api-certificate-certificate-pb2-grpc-module"></span><h2>yeying.api.certificate.certificate_pb2_grpc module<a class="headerlink" href="#module-yeying.api.certificate.certificate_pb2_grpc" title="Link to this heading"></a></h2>
+<p>Client and server classes corresponding to protobuf-defined services.</p>
+<dl class="py class">
+<dt class="sig sig-object py" id="yeying.api.certificate.certificate_pb2_grpc.Certificate">
+<em class="property"><span class="k"><span class="pre">class</span></span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">yeying.api.certificate.certificate_pb2_grpc.</span></span><span class="sig-name descname"><span class="pre">Certificate</span></span><a class="headerlink" href="#yeying.api.certificate.certificate_pb2_grpc.Certificate" title="Link to this definition"></a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
+<p>Missing associated documentation comment in .proto file.</p>
+<dl class="py method">
+<dt class="sig sig-object py" id="yeying.api.certificate.certificate_pb2_grpc.Certificate.Get">
+<em class="property"><span class="k"><span class="pre">static</span></span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">Get</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">request</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">target</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">options</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">()</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">channel_credentials</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">call_credentials</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">insecure</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">compression</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">wait_for_ready</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">timeout</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">metadata</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#yeying.api.certificate.certificate_pb2_grpc.Certificate.Get" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="yeying.api.certificate.certificate_pb2_grpc.Certificate.Sign">
+<em class="property"><span class="k"><span class="pre">static</span></span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">Sign</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">request</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">target</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">options</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">()</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">channel_credentials</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">call_credentials</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">insecure</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">compression</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">wait_for_ready</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">timeout</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">metadata</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#yeying.api.certificate.certificate_pb2_grpc.Certificate.Sign" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="yeying.api.certificate.certificate_pb2_grpc.CertificateServicer">
+<em class="property"><span class="k"><span class="pre">class</span></span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">yeying.api.certificate.certificate_pb2_grpc.</span></span><span class="sig-name descname"><span class="pre">CertificateServicer</span></span><a class="headerlink" href="#yeying.api.certificate.certificate_pb2_grpc.CertificateServicer" title="Link to this definition"></a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
+<p>Missing associated documentation comment in .proto file.</p>
+<dl class="py method">
+<dt class="sig sig-object py" id="yeying.api.certificate.certificate_pb2_grpc.CertificateServicer.Get">
+<span class="sig-name descname"><span class="pre">Get</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">request</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">context</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#yeying.api.certificate.certificate_pb2_grpc.CertificateServicer.Get" title="Link to this definition"></a></dt>
+<dd><p>Missing associated documentation comment in .proto file.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="yeying.api.certificate.certificate_pb2_grpc.CertificateServicer.Sign">
+<span class="sig-name descname"><span class="pre">Sign</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">request</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">context</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#yeying.api.certificate.certificate_pb2_grpc.CertificateServicer.Sign" title="Link to this definition"></a></dt>
+<dd><p>Missing associated documentation comment in .proto file.</p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="yeying.api.certificate.certificate_pb2_grpc.CertificateStub">
+<em class="property"><span class="k"><span class="pre">class</span></span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">yeying.api.certificate.certificate_pb2_grpc.</span></span><span class="sig-name descname"><span class="pre">CertificateStub</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">channel</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#yeying.api.certificate.certificate_pb2_grpc.CertificateStub" title="Link to this definition"></a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
+<p>Missing associated documentation comment in .proto file.</p>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="yeying.api.certificate.certificate_pb2_grpc.add_CertificateServicer_to_server">
+<span class="sig-prename descclassname"><span class="pre">yeying.api.certificate.certificate_pb2_grpc.</span></span><span class="sig-name descname"><span class="pre">add_CertificateServicer_to_server</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">servicer</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">server</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#yeying.api.certificate.certificate_pb2_grpc.add_CertificateServicer_to_server" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
 </section>
-<section id="module-contents">
-<h2>Module contents<a class="headerlink" href="#module-contents" title="Link to this heading"></a></h2>
+<section id="module-yeying.api.certificate">
+<span id="module-contents"></span><h2>Module contents<a class="headerlink" href="#module-yeying.api.certificate" title="Link to this heading"></a></h2>
 </section>
 </section>
 

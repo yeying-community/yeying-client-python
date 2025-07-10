@@ -44,9 +44,57 @@
               <div class="local-toc"><ul>
 <li><a class="reference internal" href="#">yeying.api.mail package</a><ul>
 <li><a class="reference internal" href="#submodules">Submodules</a></li>
-<li><a class="reference internal" href="#yeying-api-mail-mail-pb2-module">yeying.api.mail.mail_pb2 module</a></li>
-<li><a class="reference internal" href="#yeying-api-mail-mail-pb2-grpc-module">yeying.api.mail.mail_pb2_grpc module</a></li>
-<li><a class="reference internal" href="#module-contents">Module contents</a></li>
+<li><a class="reference internal" href="#module-yeying.api.mail.mail_pb2">yeying.api.mail.mail_pb2 module</a><ul>
+<li><a class="reference internal" href="#yeying.api.mail.mail_pb2.SendMailRequest"><code class="docutils literal notranslate"><span class="pre">SendMailRequest</span></code></a><ul>
+<li><a class="reference internal" href="#yeying.api.mail.mail_pb2.SendMailRequest.DESCRIPTOR"><code class="docutils literal notranslate"><span class="pre">SendMailRequest.DESCRIPTOR</span></code></a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#yeying.api.mail.mail_pb2.SendMailRequestBody"><code class="docutils literal notranslate"><span class="pre">SendMailRequestBody</span></code></a><ul>
+<li><a class="reference internal" href="#yeying.api.mail.mail_pb2.SendMailRequestBody.DESCRIPTOR"><code class="docutils literal notranslate"><span class="pre">SendMailRequestBody.DESCRIPTOR</span></code></a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#yeying.api.mail.mail_pb2.SendMailResponse"><code class="docutils literal notranslate"><span class="pre">SendMailResponse</span></code></a><ul>
+<li><a class="reference internal" href="#yeying.api.mail.mail_pb2.SendMailResponse.DESCRIPTOR"><code class="docutils literal notranslate"><span class="pre">SendMailResponse.DESCRIPTOR</span></code></a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#yeying.api.mail.mail_pb2.SendMailResponseBody"><code class="docutils literal notranslate"><span class="pre">SendMailResponseBody</span></code></a><ul>
+<li><a class="reference internal" href="#yeying.api.mail.mail_pb2.SendMailResponseBody.DESCRIPTOR"><code class="docutils literal notranslate"><span class="pre">SendMailResponseBody.DESCRIPTOR</span></code></a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#yeying.api.mail.mail_pb2.VerifyMailRequest"><code class="docutils literal notranslate"><span class="pre">VerifyMailRequest</span></code></a><ul>
+<li><a class="reference internal" href="#yeying.api.mail.mail_pb2.VerifyMailRequest.DESCRIPTOR"><code class="docutils literal notranslate"><span class="pre">VerifyMailRequest.DESCRIPTOR</span></code></a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#yeying.api.mail.mail_pb2.VerifyMailRequestBody"><code class="docutils literal notranslate"><span class="pre">VerifyMailRequestBody</span></code></a><ul>
+<li><a class="reference internal" href="#yeying.api.mail.mail_pb2.VerifyMailRequestBody.DESCRIPTOR"><code class="docutils literal notranslate"><span class="pre">VerifyMailRequestBody.DESCRIPTOR</span></code></a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#yeying.api.mail.mail_pb2.VerifyMailResponse"><code class="docutils literal notranslate"><span class="pre">VerifyMailResponse</span></code></a><ul>
+<li><a class="reference internal" href="#yeying.api.mail.mail_pb2.VerifyMailResponse.DESCRIPTOR"><code class="docutils literal notranslate"><span class="pre">VerifyMailResponse.DESCRIPTOR</span></code></a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#yeying.api.mail.mail_pb2.VerifyMailResponseBody"><code class="docutils literal notranslate"><span class="pre">VerifyMailResponseBody</span></code></a><ul>
+<li><a class="reference internal" href="#yeying.api.mail.mail_pb2.VerifyMailResponseBody.DESCRIPTOR"><code class="docutils literal notranslate"><span class="pre">VerifyMailResponseBody.DESCRIPTOR</span></code></a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><a class="reference internal" href="#module-yeying.api.mail.mail_pb2_grpc">yeying.api.mail.mail_pb2_grpc module</a><ul>
+<li><a class="reference internal" href="#yeying.api.mail.mail_pb2_grpc.Mail"><code class="docutils literal notranslate"><span class="pre">Mail</span></code></a><ul>
+<li><a class="reference internal" href="#yeying.api.mail.mail_pb2_grpc.Mail.Send"><code class="docutils literal notranslate"><span class="pre">Mail.Send()</span></code></a></li>
+<li><a class="reference internal" href="#yeying.api.mail.mail_pb2_grpc.Mail.Verify"><code class="docutils literal notranslate"><span class="pre">Mail.Verify()</span></code></a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#yeying.api.mail.mail_pb2_grpc.MailServicer"><code class="docutils literal notranslate"><span class="pre">MailServicer</span></code></a><ul>
+<li><a class="reference internal" href="#yeying.api.mail.mail_pb2_grpc.MailServicer.Send"><code class="docutils literal notranslate"><span class="pre">MailServicer.Send()</span></code></a></li>
+<li><a class="reference internal" href="#yeying.api.mail.mail_pb2_grpc.MailServicer.Verify"><code class="docutils literal notranslate"><span class="pre">MailServicer.Verify()</span></code></a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#yeying.api.mail.mail_pb2_grpc.MailStub"><code class="docutils literal notranslate"><span class="pre">MailStub</span></code></a></li>
+<li><a class="reference internal" href="#yeying.api.mail.mail_pb2_grpc.add_MailServicer_to_server"><code class="docutils literal notranslate"><span class="pre">add_MailServicer_to_server()</span></code></a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#module-yeying.api.mail">Module contents</a></li>
 </ul>
 </li>
 </ul>
@@ -80,14 +128,161 @@
 <section id="submodules">
 <h2>Submodules<a class="headerlink" href="#submodules" title="Link to this heading"></a></h2>
 </section>
-<section id="yeying-api-mail-mail-pb2-module">
-<h2>yeying.api.mail.mail_pb2 module<a class="headerlink" href="#yeying-api-mail-mail-pb2-module" title="Link to this heading"></a></h2>
+<section id="module-yeying.api.mail.mail_pb2">
+<span id="yeying-api-mail-mail-pb2-module"></span><h2>yeying.api.mail.mail_pb2 module<a class="headerlink" href="#module-yeying.api.mail.mail_pb2" title="Link to this heading"></a></h2>
+<p>Generated protocol buffer code.</p>
+<dl class="py class">
+<dt class="sig sig-object py" id="yeying.api.mail.mail_pb2.SendMailRequest">
+<em class="property"><span class="k"><span class="pre">class</span></span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">yeying.api.mail.mail_pb2.</span></span><span class="sig-name descname"><span class="pre">SendMailRequest</span></span><a class="headerlink" href="#yeying.api.mail.mail_pb2.SendMailRequest" title="Link to this definition"></a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">Message</span></code>, <code class="xref py py-class docutils literal notranslate"><span class="pre">Message</span></code></p>
+<dl class="py attribute">
+<dt class="sig sig-object py" id="yeying.api.mail.mail_pb2.SendMailRequest.DESCRIPTOR">
+<span class="sig-name descname"><span class="pre">DESCRIPTOR</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">&lt;google._upb._message.Descriptor</span> <span class="pre">object&gt;</span></em><a class="headerlink" href="#yeying.api.mail.mail_pb2.SendMailRequest.DESCRIPTOR" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="yeying.api.mail.mail_pb2.SendMailRequestBody">
+<em class="property"><span class="k"><span class="pre">class</span></span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">yeying.api.mail.mail_pb2.</span></span><span class="sig-name descname"><span class="pre">SendMailRequestBody</span></span><a class="headerlink" href="#yeying.api.mail.mail_pb2.SendMailRequestBody" title="Link to this definition"></a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">Message</span></code>, <code class="xref py py-class docutils literal notranslate"><span class="pre">Message</span></code></p>
+<dl class="py attribute">
+<dt class="sig sig-object py" id="yeying.api.mail.mail_pb2.SendMailRequestBody.DESCRIPTOR">
+<span class="sig-name descname"><span class="pre">DESCRIPTOR</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">&lt;google._upb._message.Descriptor</span> <span class="pre">object&gt;</span></em><a class="headerlink" href="#yeying.api.mail.mail_pb2.SendMailRequestBody.DESCRIPTOR" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="yeying.api.mail.mail_pb2.SendMailResponse">
+<em class="property"><span class="k"><span class="pre">class</span></span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">yeying.api.mail.mail_pb2.</span></span><span class="sig-name descname"><span class="pre">SendMailResponse</span></span><a class="headerlink" href="#yeying.api.mail.mail_pb2.SendMailResponse" title="Link to this definition"></a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">Message</span></code>, <code class="xref py py-class docutils literal notranslate"><span class="pre">Message</span></code></p>
+<dl class="py attribute">
+<dt class="sig sig-object py" id="yeying.api.mail.mail_pb2.SendMailResponse.DESCRIPTOR">
+<span class="sig-name descname"><span class="pre">DESCRIPTOR</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">&lt;google._upb._message.Descriptor</span> <span class="pre">object&gt;</span></em><a class="headerlink" href="#yeying.api.mail.mail_pb2.SendMailResponse.DESCRIPTOR" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="yeying.api.mail.mail_pb2.SendMailResponseBody">
+<em class="property"><span class="k"><span class="pre">class</span></span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">yeying.api.mail.mail_pb2.</span></span><span class="sig-name descname"><span class="pre">SendMailResponseBody</span></span><a class="headerlink" href="#yeying.api.mail.mail_pb2.SendMailResponseBody" title="Link to this definition"></a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">Message</span></code>, <code class="xref py py-class docutils literal notranslate"><span class="pre">Message</span></code></p>
+<dl class="py attribute">
+<dt class="sig sig-object py" id="yeying.api.mail.mail_pb2.SendMailResponseBody.DESCRIPTOR">
+<span class="sig-name descname"><span class="pre">DESCRIPTOR</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">&lt;google._upb._message.Descriptor</span> <span class="pre">object&gt;</span></em><a class="headerlink" href="#yeying.api.mail.mail_pb2.SendMailResponseBody.DESCRIPTOR" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="yeying.api.mail.mail_pb2.VerifyMailRequest">
+<em class="property"><span class="k"><span class="pre">class</span></span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">yeying.api.mail.mail_pb2.</span></span><span class="sig-name descname"><span class="pre">VerifyMailRequest</span></span><a class="headerlink" href="#yeying.api.mail.mail_pb2.VerifyMailRequest" title="Link to this definition"></a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">Message</span></code>, <code class="xref py py-class docutils literal notranslate"><span class="pre">Message</span></code></p>
+<dl class="py attribute">
+<dt class="sig sig-object py" id="yeying.api.mail.mail_pb2.VerifyMailRequest.DESCRIPTOR">
+<span class="sig-name descname"><span class="pre">DESCRIPTOR</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">&lt;google._upb._message.Descriptor</span> <span class="pre">object&gt;</span></em><a class="headerlink" href="#yeying.api.mail.mail_pb2.VerifyMailRequest.DESCRIPTOR" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="yeying.api.mail.mail_pb2.VerifyMailRequestBody">
+<em class="property"><span class="k"><span class="pre">class</span></span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">yeying.api.mail.mail_pb2.</span></span><span class="sig-name descname"><span class="pre">VerifyMailRequestBody</span></span><a class="headerlink" href="#yeying.api.mail.mail_pb2.VerifyMailRequestBody" title="Link to this definition"></a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">Message</span></code>, <code class="xref py py-class docutils literal notranslate"><span class="pre">Message</span></code></p>
+<dl class="py attribute">
+<dt class="sig sig-object py" id="yeying.api.mail.mail_pb2.VerifyMailRequestBody.DESCRIPTOR">
+<span class="sig-name descname"><span class="pre">DESCRIPTOR</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">&lt;google._upb._message.Descriptor</span> <span class="pre">object&gt;</span></em><a class="headerlink" href="#yeying.api.mail.mail_pb2.VerifyMailRequestBody.DESCRIPTOR" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="yeying.api.mail.mail_pb2.VerifyMailResponse">
+<em class="property"><span class="k"><span class="pre">class</span></span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">yeying.api.mail.mail_pb2.</span></span><span class="sig-name descname"><span class="pre">VerifyMailResponse</span></span><a class="headerlink" href="#yeying.api.mail.mail_pb2.VerifyMailResponse" title="Link to this definition"></a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">Message</span></code>, <code class="xref py py-class docutils literal notranslate"><span class="pre">Message</span></code></p>
+<dl class="py attribute">
+<dt class="sig sig-object py" id="yeying.api.mail.mail_pb2.VerifyMailResponse.DESCRIPTOR">
+<span class="sig-name descname"><span class="pre">DESCRIPTOR</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">&lt;google._upb._message.Descriptor</span> <span class="pre">object&gt;</span></em><a class="headerlink" href="#yeying.api.mail.mail_pb2.VerifyMailResponse.DESCRIPTOR" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="yeying.api.mail.mail_pb2.VerifyMailResponseBody">
+<em class="property"><span class="k"><span class="pre">class</span></span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">yeying.api.mail.mail_pb2.</span></span><span class="sig-name descname"><span class="pre">VerifyMailResponseBody</span></span><a class="headerlink" href="#yeying.api.mail.mail_pb2.VerifyMailResponseBody" title="Link to this definition"></a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">Message</span></code>, <code class="xref py py-class docutils literal notranslate"><span class="pre">Message</span></code></p>
+<dl class="py attribute">
+<dt class="sig sig-object py" id="yeying.api.mail.mail_pb2.VerifyMailResponseBody.DESCRIPTOR">
+<span class="sig-name descname"><span class="pre">DESCRIPTOR</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">&lt;google._upb._message.Descriptor</span> <span class="pre">object&gt;</span></em><a class="headerlink" href="#yeying.api.mail.mail_pb2.VerifyMailResponseBody.DESCRIPTOR" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
 </section>
-<section id="yeying-api-mail-mail-pb2-grpc-module">
-<h2>yeying.api.mail.mail_pb2_grpc module<a class="headerlink" href="#yeying-api-mail-mail-pb2-grpc-module" title="Link to this heading"></a></h2>
+<section id="module-yeying.api.mail.mail_pb2_grpc">
+<span id="yeying-api-mail-mail-pb2-grpc-module"></span><h2>yeying.api.mail.mail_pb2_grpc module<a class="headerlink" href="#module-yeying.api.mail.mail_pb2_grpc" title="Link to this heading"></a></h2>
+<p>Client and server classes corresponding to protobuf-defined services.</p>
+<dl class="py class">
+<dt class="sig sig-object py" id="yeying.api.mail.mail_pb2_grpc.Mail">
+<em class="property"><span class="k"><span class="pre">class</span></span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">yeying.api.mail.mail_pb2_grpc.</span></span><span class="sig-name descname"><span class="pre">Mail</span></span><a class="headerlink" href="#yeying.api.mail.mail_pb2_grpc.Mail" title="Link to this definition"></a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
+<ul class="simple">
+<li></li>
+</ul>
+<p>定义一个邮件服务</p>
+<dl class="py method">
+<dt class="sig sig-object py" id="yeying.api.mail.mail_pb2_grpc.Mail.Send">
+<em class="property"><span class="k"><span class="pre">static</span></span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">Send</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">request</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">target</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">options</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">()</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">channel_credentials</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">call_credentials</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">insecure</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">compression</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">wait_for_ready</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">timeout</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">metadata</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#yeying.api.mail.mail_pb2_grpc.Mail.Send" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="yeying.api.mail.mail_pb2_grpc.Mail.Verify">
+<em class="property"><span class="k"><span class="pre">static</span></span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">Verify</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">request</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">target</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">options</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">()</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">channel_credentials</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">call_credentials</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">insecure</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">compression</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">wait_for_ready</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">timeout</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">metadata</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#yeying.api.mail.mail_pb2_grpc.Mail.Verify" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="yeying.api.mail.mail_pb2_grpc.MailServicer">
+<em class="property"><span class="k"><span class="pre">class</span></span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">yeying.api.mail.mail_pb2_grpc.</span></span><span class="sig-name descname"><span class="pre">MailServicer</span></span><a class="headerlink" href="#yeying.api.mail.mail_pb2_grpc.MailServicer" title="Link to this definition"></a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
+<ul class="simple">
+<li></li>
+</ul>
+<p>定义一个邮件服务</p>
+<dl class="py method">
+<dt class="sig sig-object py" id="yeying.api.mail.mail_pb2_grpc.MailServicer.Send">
+<span class="sig-name descname"><span class="pre">Send</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">request</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">context</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#yeying.api.mail.mail_pb2_grpc.MailServicer.Send" title="Link to this definition"></a></dt>
+<dd><p>Missing associated documentation comment in .proto file.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="yeying.api.mail.mail_pb2_grpc.MailServicer.Verify">
+<span class="sig-name descname"><span class="pre">Verify</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">request</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">context</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#yeying.api.mail.mail_pb2_grpc.MailServicer.Verify" title="Link to this definition"></a></dt>
+<dd><p>Missing associated documentation comment in .proto file.</p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="yeying.api.mail.mail_pb2_grpc.MailStub">
+<em class="property"><span class="k"><span class="pre">class</span></span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">yeying.api.mail.mail_pb2_grpc.</span></span><span class="sig-name descname"><span class="pre">MailStub</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">channel</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#yeying.api.mail.mail_pb2_grpc.MailStub" title="Link to this definition"></a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
+<ul class="simple">
+<li></li>
+</ul>
+<p>定义一个邮件服务</p>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="yeying.api.mail.mail_pb2_grpc.add_MailServicer_to_server">
+<span class="sig-prename descclassname"><span class="pre">yeying.api.mail.mail_pb2_grpc.</span></span><span class="sig-name descname"><span class="pre">add_MailServicer_to_server</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">servicer</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">server</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#yeying.api.mail.mail_pb2_grpc.add_MailServicer_to_server" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
 </section>
-<section id="module-contents">
-<h2>Module contents<a class="headerlink" href="#module-contents" title="Link to this heading"></a></h2>
+<section id="module-yeying.api.mail">
+<span id="module-contents"></span><h2>Module contents<a class="headerlink" href="#module-yeying.api.mail" title="Link to this heading"></a></h2>
 </section>
 </section>
 

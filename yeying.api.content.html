@@ -44,9 +44,31 @@
               <div class="local-toc"><ul>
 <li><a class="reference internal" href="#">yeying.api.content package</a><ul>
 <li><a class="reference internal" href="#submodules">Submodules</a></li>
-<li><a class="reference internal" href="#yeying-api-content-content-pb2-module">yeying.api.content.content_pb2 module</a></li>
-<li><a class="reference internal" href="#yeying-api-content-content-pb2-grpc-module">yeying.api.content.content_pb2_grpc module</a></li>
-<li><a class="reference internal" href="#module-contents">Module contents</a></li>
+<li><a class="reference internal" href="#module-yeying.api.content.content_pb2">yeying.api.content.content_pb2 module</a><ul>
+<li><a class="reference internal" href="#yeying.api.content.content_pb2.ValidateRequest"><code class="docutils literal notranslate"><span class="pre">ValidateRequest</span></code></a><ul>
+<li><a class="reference internal" href="#yeying.api.content.content_pb2.ValidateRequest.DESCRIPTOR"><code class="docutils literal notranslate"><span class="pre">ValidateRequest.DESCRIPTOR</span></code></a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#yeying.api.content.content_pb2.ValidateResponse"><code class="docutils literal notranslate"><span class="pre">ValidateResponse</span></code></a><ul>
+<li><a class="reference internal" href="#yeying.api.content.content_pb2.ValidateResponse.DESCRIPTOR"><code class="docutils literal notranslate"><span class="pre">ValidateResponse.DESCRIPTOR</span></code></a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><a class="reference internal" href="#module-yeying.api.content.content_pb2_grpc">yeying.api.content.content_pb2_grpc module</a><ul>
+<li><a class="reference internal" href="#yeying.api.content.content_pb2_grpc.Content"><code class="docutils literal notranslate"><span class="pre">Content</span></code></a><ul>
+<li><a class="reference internal" href="#yeying.api.content.content_pb2_grpc.Content.validate"><code class="docutils literal notranslate"><span class="pre">Content.validate()</span></code></a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#yeying.api.content.content_pb2_grpc.ContentServicer"><code class="docutils literal notranslate"><span class="pre">ContentServicer</span></code></a><ul>
+<li><a class="reference internal" href="#yeying.api.content.content_pb2_grpc.ContentServicer.validate"><code class="docutils literal notranslate"><span class="pre">ContentServicer.validate()</span></code></a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#yeying.api.content.content_pb2_grpc.ContentStub"><code class="docutils literal notranslate"><span class="pre">ContentStub</span></code></a></li>
+<li><a class="reference internal" href="#yeying.api.content.content_pb2_grpc.add_ContentServicer_to_server"><code class="docutils literal notranslate"><span class="pre">add_ContentServicer_to_server()</span></code></a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#module-yeying.api.content">Module contents</a></li>
 </ul>
 </li>
 </ul>
@@ -80,14 +102,75 @@
 <section id="submodules">
 <h2>Submodules<a class="headerlink" href="#submodules" title="Link to this heading"></a></h2>
 </section>
-<section id="yeying-api-content-content-pb2-module">
-<h2>yeying.api.content.content_pb2 module<a class="headerlink" href="#yeying-api-content-content-pb2-module" title="Link to this heading"></a></h2>
+<section id="module-yeying.api.content.content_pb2">
+<span id="yeying-api-content-content-pb2-module"></span><h2>yeying.api.content.content_pb2 module<a class="headerlink" href="#module-yeying.api.content.content_pb2" title="Link to this heading"></a></h2>
+<p>Generated protocol buffer code.</p>
+<dl class="py class">
+<dt class="sig sig-object py" id="yeying.api.content.content_pb2.ValidateRequest">
+<em class="property"><span class="k"><span class="pre">class</span></span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">yeying.api.content.content_pb2.</span></span><span class="sig-name descname"><span class="pre">ValidateRequest</span></span><a class="headerlink" href="#yeying.api.content.content_pb2.ValidateRequest" title="Link to this definition"></a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">Message</span></code>, <code class="xref py py-class docutils literal notranslate"><span class="pre">Message</span></code></p>
+<dl class="py attribute">
+<dt class="sig sig-object py" id="yeying.api.content.content_pb2.ValidateRequest.DESCRIPTOR">
+<span class="sig-name descname"><span class="pre">DESCRIPTOR</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">&lt;google._upb._message.Descriptor</span> <span class="pre">object&gt;</span></em><a class="headerlink" href="#yeying.api.content.content_pb2.ValidateRequest.DESCRIPTOR" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="yeying.api.content.content_pb2.ValidateResponse">
+<em class="property"><span class="k"><span class="pre">class</span></span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">yeying.api.content.content_pb2.</span></span><span class="sig-name descname"><span class="pre">ValidateResponse</span></span><a class="headerlink" href="#yeying.api.content.content_pb2.ValidateResponse" title="Link to this definition"></a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">Message</span></code>, <code class="xref py py-class docutils literal notranslate"><span class="pre">Message</span></code></p>
+<dl class="py attribute">
+<dt class="sig sig-object py" id="yeying.api.content.content_pb2.ValidateResponse.DESCRIPTOR">
+<span class="sig-name descname"><span class="pre">DESCRIPTOR</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">&lt;google._upb._message.Descriptor</span> <span class="pre">object&gt;</span></em><a class="headerlink" href="#yeying.api.content.content_pb2.ValidateResponse.DESCRIPTOR" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
 </section>
-<section id="yeying-api-content-content-pb2-grpc-module">
-<h2>yeying.api.content.content_pb2_grpc module<a class="headerlink" href="#yeying-api-content-content-pb2-grpc-module" title="Link to this heading"></a></h2>
+<section id="module-yeying.api.content.content_pb2_grpc">
+<span id="yeying-api-content-content-pb2-grpc-module"></span><h2>yeying.api.content.content_pb2_grpc module<a class="headerlink" href="#module-yeying.api.content.content_pb2_grpc" title="Link to this heading"></a></h2>
+<p>Client and server classes corresponding to protobuf-defined services.</p>
+<dl class="py class">
+<dt class="sig sig-object py" id="yeying.api.content.content_pb2_grpc.Content">
+<em class="property"><span class="k"><span class="pre">class</span></span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">yeying.api.content.content_pb2_grpc.</span></span><span class="sig-name descname"><span class="pre">Content</span></span><a class="headerlink" href="#yeying.api.content.content_pb2_grpc.Content" title="Link to this definition"></a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
+<p>检查内容是否合规，为了保护数据隐私，要么是tee，要么是同态</p>
+<dl class="py method">
+<dt class="sig sig-object py" id="yeying.api.content.content_pb2_grpc.Content.validate">
+<em class="property"><span class="k"><span class="pre">static</span></span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">validate</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">request</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">target</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">options</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">()</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">channel_credentials</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">call_credentials</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">insecure</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">compression</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">wait_for_ready</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">timeout</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">metadata</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#yeying.api.content.content_pb2_grpc.Content.validate" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="yeying.api.content.content_pb2_grpc.ContentServicer">
+<em class="property"><span class="k"><span class="pre">class</span></span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">yeying.api.content.content_pb2_grpc.</span></span><span class="sig-name descname"><span class="pre">ContentServicer</span></span><a class="headerlink" href="#yeying.api.content.content_pb2_grpc.ContentServicer" title="Link to this definition"></a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
+<p>检查内容是否合规，为了保护数据隐私，要么是tee，要么是同态</p>
+<dl class="py method">
+<dt class="sig sig-object py" id="yeying.api.content.content_pb2_grpc.ContentServicer.validate">
+<span class="sig-name descname"><span class="pre">validate</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">request</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">context</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#yeying.api.content.content_pb2_grpc.ContentServicer.validate" title="Link to this definition"></a></dt>
+<dd><p>身份托管</p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="yeying.api.content.content_pb2_grpc.ContentStub">
+<em class="property"><span class="k"><span class="pre">class</span></span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">yeying.api.content.content_pb2_grpc.</span></span><span class="sig-name descname"><span class="pre">ContentStub</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">channel</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#yeying.api.content.content_pb2_grpc.ContentStub" title="Link to this definition"></a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
+<p>检查内容是否合规，为了保护数据隐私，要么是tee，要么是同态</p>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="yeying.api.content.content_pb2_grpc.add_ContentServicer_to_server">
+<span class="sig-prename descclassname"><span class="pre">yeying.api.content.content_pb2_grpc.</span></span><span class="sig-name descname"><span class="pre">add_ContentServicer_to_server</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">servicer</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">server</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#yeying.api.content.content_pb2_grpc.add_ContentServicer_to_server" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
 </section>
-<section id="module-contents">
-<h2>Module contents<a class="headerlink" href="#module-contents" title="Link to this heading"></a></h2>
+<section id="module-yeying.api.content">
+<span id="module-contents"></span><h2>Module contents<a class="headerlink" href="#module-yeying.api.content" title="Link to this heading"></a></h2>
 </section>
 </section>
 

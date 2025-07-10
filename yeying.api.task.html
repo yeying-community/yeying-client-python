@@ -44,9 +44,39 @@
               <div class="local-toc"><ul>
 <li><a class="reference internal" href="#">yeying.api.task package</a><ul>
 <li><a class="reference internal" href="#submodules">Submodules</a></li>
-<li><a class="reference internal" href="#yeying-api-task-task-pb2-module">yeying.api.task.task_pb2 module</a></li>
-<li><a class="reference internal" href="#yeying-api-task-task-pb2-grpc-module">yeying.api.task.task_pb2_grpc module</a></li>
-<li><a class="reference internal" href="#module-contents">Module contents</a></li>
+<li><a class="reference internal" href="#module-yeying.api.task.task_pb2">yeying.api.task.task_pb2 module</a><ul>
+<li><a class="reference internal" href="#yeying.api.task.task_pb2.CreateTaskRequest"><code class="docutils literal notranslate"><span class="pre">CreateTaskRequest</span></code></a><ul>
+<li><a class="reference internal" href="#yeying.api.task.task_pb2.CreateTaskRequest.DESCRIPTOR"><code class="docutils literal notranslate"><span class="pre">CreateTaskRequest.DESCRIPTOR</span></code></a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#yeying.api.task.task_pb2.CreateTaskResponse"><code class="docutils literal notranslate"><span class="pre">CreateTaskResponse</span></code></a><ul>
+<li><a class="reference internal" href="#yeying.api.task.task_pb2.CreateTaskResponse.DESCRIPTOR"><code class="docutils literal notranslate"><span class="pre">CreateTaskResponse.DESCRIPTOR</span></code></a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#yeying.api.task.task_pb2.FetchTaskResponse"><code class="docutils literal notranslate"><span class="pre">FetchTaskResponse</span></code></a><ul>
+<li><a class="reference internal" href="#yeying.api.task.task_pb2.FetchTaskResponse.DESCRIPTOR"><code class="docutils literal notranslate"><span class="pre">FetchTaskResponse.DESCRIPTOR</span></code></a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#yeying.api.task.task_pb2.TaskMetadata"><code class="docutils literal notranslate"><span class="pre">TaskMetadata</span></code></a><ul>
+<li><a class="reference internal" href="#yeying.api.task.task_pb2.TaskMetadata.DESCRIPTOR"><code class="docutils literal notranslate"><span class="pre">TaskMetadata.DESCRIPTOR</span></code></a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><a class="reference internal" href="#module-yeying.api.task.task_pb2_grpc">yeying.api.task.task_pb2_grpc module</a><ul>
+<li><a class="reference internal" href="#yeying.api.task.task_pb2_grpc.Task"><code class="docutils literal notranslate"><span class="pre">Task</span></code></a><ul>
+<li><a class="reference internal" href="#yeying.api.task.task_pb2_grpc.Task.Create"><code class="docutils literal notranslate"><span class="pre">Task.Create()</span></code></a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#yeying.api.task.task_pb2_grpc.TaskServicer"><code class="docutils literal notranslate"><span class="pre">TaskServicer</span></code></a><ul>
+<li><a class="reference internal" href="#yeying.api.task.task_pb2_grpc.TaskServicer.Create"><code class="docutils literal notranslate"><span class="pre">TaskServicer.Create()</span></code></a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#yeying.api.task.task_pb2_grpc.TaskStub"><code class="docutils literal notranslate"><span class="pre">TaskStub</span></code></a></li>
+<li><a class="reference internal" href="#yeying.api.task.task_pb2_grpc.add_TaskServicer_to_server"><code class="docutils literal notranslate"><span class="pre">add_TaskServicer_to_server()</span></code></a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#module-yeying.api.task">Module contents</a></li>
 </ul>
 </li>
 </ul>
@@ -80,14 +110,100 @@
 <section id="submodules">
 <h2>Submodules<a class="headerlink" href="#submodules" title="Link to this heading"></a></h2>
 </section>
-<section id="yeying-api-task-task-pb2-module">
-<h2>yeying.api.task.task_pb2 module<a class="headerlink" href="#yeying-api-task-task-pb2-module" title="Link to this heading"></a></h2>
+<section id="module-yeying.api.task.task_pb2">
+<span id="yeying-api-task-task-pb2-module"></span><h2>yeying.api.task.task_pb2 module<a class="headerlink" href="#module-yeying.api.task.task_pb2" title="Link to this heading"></a></h2>
+<p>Generated protocol buffer code.</p>
+<dl class="py class">
+<dt class="sig sig-object py" id="yeying.api.task.task_pb2.CreateTaskRequest">
+<em class="property"><span class="k"><span class="pre">class</span></span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">yeying.api.task.task_pb2.</span></span><span class="sig-name descname"><span class="pre">CreateTaskRequest</span></span><a class="headerlink" href="#yeying.api.task.task_pb2.CreateTaskRequest" title="Link to this definition"></a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">Message</span></code>, <code class="xref py py-class docutils literal notranslate"><span class="pre">Message</span></code></p>
+<dl class="py attribute">
+<dt class="sig sig-object py" id="yeying.api.task.task_pb2.CreateTaskRequest.DESCRIPTOR">
+<span class="sig-name descname"><span class="pre">DESCRIPTOR</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">&lt;google._upb._message.Descriptor</span> <span class="pre">object&gt;</span></em><a class="headerlink" href="#yeying.api.task.task_pb2.CreateTaskRequest.DESCRIPTOR" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="yeying.api.task.task_pb2.CreateTaskResponse">
+<em class="property"><span class="k"><span class="pre">class</span></span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">yeying.api.task.task_pb2.</span></span><span class="sig-name descname"><span class="pre">CreateTaskResponse</span></span><a class="headerlink" href="#yeying.api.task.task_pb2.CreateTaskResponse" title="Link to this definition"></a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">Message</span></code>, <code class="xref py py-class docutils literal notranslate"><span class="pre">Message</span></code></p>
+<dl class="py attribute">
+<dt class="sig sig-object py" id="yeying.api.task.task_pb2.CreateTaskResponse.DESCRIPTOR">
+<span class="sig-name descname"><span class="pre">DESCRIPTOR</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">&lt;google._upb._message.Descriptor</span> <span class="pre">object&gt;</span></em><a class="headerlink" href="#yeying.api.task.task_pb2.CreateTaskResponse.DESCRIPTOR" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="yeying.api.task.task_pb2.FetchTaskResponse">
+<em class="property"><span class="k"><span class="pre">class</span></span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">yeying.api.task.task_pb2.</span></span><span class="sig-name descname"><span class="pre">FetchTaskResponse</span></span><a class="headerlink" href="#yeying.api.task.task_pb2.FetchTaskResponse" title="Link to this definition"></a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">Message</span></code>, <code class="xref py py-class docutils literal notranslate"><span class="pre">Message</span></code></p>
+<dl class="py attribute">
+<dt class="sig sig-object py" id="yeying.api.task.task_pb2.FetchTaskResponse.DESCRIPTOR">
+<span class="sig-name descname"><span class="pre">DESCRIPTOR</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">&lt;google._upb._message.Descriptor</span> <span class="pre">object&gt;</span></em><a class="headerlink" href="#yeying.api.task.task_pb2.FetchTaskResponse.DESCRIPTOR" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="yeying.api.task.task_pb2.TaskMetadata">
+<em class="property"><span class="k"><span class="pre">class</span></span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">yeying.api.task.task_pb2.</span></span><span class="sig-name descname"><span class="pre">TaskMetadata</span></span><a class="headerlink" href="#yeying.api.task.task_pb2.TaskMetadata" title="Link to this definition"></a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">Message</span></code>, <code class="xref py py-class docutils literal notranslate"><span class="pre">Message</span></code></p>
+<dl class="py attribute">
+<dt class="sig sig-object py" id="yeying.api.task.task_pb2.TaskMetadata.DESCRIPTOR">
+<span class="sig-name descname"><span class="pre">DESCRIPTOR</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">&lt;google._upb._message.Descriptor</span> <span class="pre">object&gt;</span></em><a class="headerlink" href="#yeying.api.task.task_pb2.TaskMetadata.DESCRIPTOR" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
 </section>
-<section id="yeying-api-task-task-pb2-grpc-module">
-<h2>yeying.api.task.task_pb2_grpc module<a class="headerlink" href="#yeying-api-task-task-pb2-grpc-module" title="Link to this heading"></a></h2>
+<section id="module-yeying.api.task.task_pb2_grpc">
+<span id="yeying-api-task-task-pb2-grpc-module"></span><h2>yeying.api.task.task_pb2_grpc module<a class="headerlink" href="#module-yeying.api.task.task_pb2_grpc" title="Link to this heading"></a></h2>
+<p>Client and server classes corresponding to protobuf-defined services.</p>
+<dl class="py class">
+<dt class="sig sig-object py" id="yeying.api.task.task_pb2_grpc.Task">
+<em class="property"><span class="k"><span class="pre">class</span></span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">yeying.api.task.task_pb2_grpc.</span></span><span class="sig-name descname"><span class="pre">Task</span></span><a class="headerlink" href="#yeying.api.task.task_pb2_grpc.Task" title="Link to this definition"></a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
+<p>做任务，转灯油，任务创建者签名任务，做任务的人签名任务和任务结果，类似发起一笔交易，但是内容是有着本质不一样的；
+任务创建者、任务内容、任务行动者三者之间的关系：</p>
+<dl class="py method">
+<dt class="sig sig-object py" id="yeying.api.task.task_pb2_grpc.Task.Create">
+<em class="property"><span class="k"><span class="pre">static</span></span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">Create</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">request</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">target</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">options</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">()</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">channel_credentials</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">call_credentials</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">insecure</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">compression</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">wait_for_ready</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">timeout</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">metadata</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#yeying.api.task.task_pb2_grpc.Task.Create" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="yeying.api.task.task_pb2_grpc.TaskServicer">
+<em class="property"><span class="k"><span class="pre">class</span></span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">yeying.api.task.task_pb2_grpc.</span></span><span class="sig-name descname"><span class="pre">TaskServicer</span></span><a class="headerlink" href="#yeying.api.task.task_pb2_grpc.TaskServicer" title="Link to this definition"></a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
+<p>做任务，转灯油，任务创建者签名任务，做任务的人签名任务和任务结果，类似发起一笔交易，但是内容是有着本质不一样的；
+任务创建者、任务内容、任务行动者三者之间的关系：</p>
+<dl class="py method">
+<dt class="sig sig-object py" id="yeying.api.task.task_pb2_grpc.TaskServicer.Create">
+<span class="sig-name descname"><span class="pre">Create</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">request</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">context</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#yeying.api.task.task_pb2_grpc.TaskServicer.Create" title="Link to this definition"></a></dt>
+<dd><p>Missing associated documentation comment in .proto file.</p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="yeying.api.task.task_pb2_grpc.TaskStub">
+<em class="property"><span class="k"><span class="pre">class</span></span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">yeying.api.task.task_pb2_grpc.</span></span><span class="sig-name descname"><span class="pre">TaskStub</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">channel</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#yeying.api.task.task_pb2_grpc.TaskStub" title="Link to this definition"></a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
+<p>做任务，转灯油，任务创建者签名任务，做任务的人签名任务和任务结果，类似发起一笔交易，但是内容是有着本质不一样的；
+任务创建者、任务内容、任务行动者三者之间的关系：</p>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="yeying.api.task.task_pb2_grpc.add_TaskServicer_to_server">
+<span class="sig-prename descclassname"><span class="pre">yeying.api.task.task_pb2_grpc.</span></span><span class="sig-name descname"><span class="pre">add_TaskServicer_to_server</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">servicer</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">server</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#yeying.api.task.task_pb2_grpc.add_TaskServicer_to_server" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
 </section>
-<section id="module-contents">
-<h2>Module contents<a class="headerlink" href="#module-contents" title="Link to this heading"></a></h2>
+<section id="module-yeying.api.task">
+<span id="module-contents"></span><h2>Module contents<a class="headerlink" href="#module-yeying.api.task" title="Link to this heading"></a></h2>
 </section>
 </section>
 

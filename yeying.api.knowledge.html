@@ -44,9 +44,49 @@
               <div class="local-toc"><ul>
 <li><a class="reference internal" href="#">yeying.api.knowledge package</a><ul>
 <li><a class="reference internal" href="#submodules">Submodules</a></li>
-<li><a class="reference internal" href="#yeying-api-knowledge-knowledge-pb2-module">yeying.api.knowledge.knowledge_pb2 module</a></li>
-<li><a class="reference internal" href="#yeying-api-knowledge-knowledge-pb2-grpc-module">yeying.api.knowledge.knowledge_pb2_grpc module</a></li>
-<li><a class="reference internal" href="#module-contents">Module contents</a></li>
+<li><a class="reference internal" href="#module-yeying.api.knowledge.knowledge_pb2">yeying.api.knowledge.knowledge_pb2 module</a><ul>
+<li><a class="reference internal" href="#yeying.api.knowledge.knowledge_pb2.AppendMetadata"><code class="docutils literal notranslate"><span class="pre">AppendMetadata</span></code></a><ul>
+<li><a class="reference internal" href="#yeying.api.knowledge.knowledge_pb2.AppendMetadata.DESCRIPTOR"><code class="docutils literal notranslate"><span class="pre">AppendMetadata.DESCRIPTOR</span></code></a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#yeying.api.knowledge.knowledge_pb2.AppendRequest"><code class="docutils literal notranslate"><span class="pre">AppendRequest</span></code></a><ul>
+<li><a class="reference internal" href="#yeying.api.knowledge.knowledge_pb2.AppendRequest.DESCRIPTOR"><code class="docutils literal notranslate"><span class="pre">AppendRequest.DESCRIPTOR</span></code></a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#yeying.api.knowledge.knowledge_pb2.AppendResponse"><code class="docutils literal notranslate"><span class="pre">AppendResponse</span></code></a><ul>
+<li><a class="reference internal" href="#yeying.api.knowledge.knowledge_pb2.AppendResponse.DESCRIPTOR"><code class="docutils literal notranslate"><span class="pre">AppendResponse.DESCRIPTOR</span></code></a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#yeying.api.knowledge.knowledge_pb2.KnowledgeMetadata"><code class="docutils literal notranslate"><span class="pre">KnowledgeMetadata</span></code></a><ul>
+<li><a class="reference internal" href="#yeying.api.knowledge.knowledge_pb2.KnowledgeMetadata.DESCRIPTOR"><code class="docutils literal notranslate"><span class="pre">KnowledgeMetadata.DESCRIPTOR</span></code></a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#yeying.api.knowledge.knowledge_pb2.SearchRequest"><code class="docutils literal notranslate"><span class="pre">SearchRequest</span></code></a><ul>
+<li><a class="reference internal" href="#yeying.api.knowledge.knowledge_pb2.SearchRequest.DESCRIPTOR"><code class="docutils literal notranslate"><span class="pre">SearchRequest.DESCRIPTOR</span></code></a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#yeying.api.knowledge.knowledge_pb2.SearchResponse"><code class="docutils literal notranslate"><span class="pre">SearchResponse</span></code></a><ul>
+<li><a class="reference internal" href="#yeying.api.knowledge.knowledge_pb2.SearchResponse.DESCRIPTOR"><code class="docutils literal notranslate"><span class="pre">SearchResponse.DESCRIPTOR</span></code></a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><a class="reference internal" href="#module-yeying.api.knowledge.knowledge_pb2_grpc">yeying.api.knowledge.knowledge_pb2_grpc module</a><ul>
+<li><a class="reference internal" href="#yeying.api.knowledge.knowledge_pb2_grpc.Knowledge"><code class="docutils literal notranslate"><span class="pre">Knowledge</span></code></a><ul>
+<li><a class="reference internal" href="#yeying.api.knowledge.knowledge_pb2_grpc.Knowledge.Append"><code class="docutils literal notranslate"><span class="pre">Knowledge.Append()</span></code></a></li>
+<li><a class="reference internal" href="#yeying.api.knowledge.knowledge_pb2_grpc.Knowledge.Search"><code class="docutils literal notranslate"><span class="pre">Knowledge.Search()</span></code></a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#yeying.api.knowledge.knowledge_pb2_grpc.KnowledgeServicer"><code class="docutils literal notranslate"><span class="pre">KnowledgeServicer</span></code></a><ul>
+<li><a class="reference internal" href="#yeying.api.knowledge.knowledge_pb2_grpc.KnowledgeServicer.Append"><code class="docutils literal notranslate"><span class="pre">KnowledgeServicer.Append()</span></code></a></li>
+<li><a class="reference internal" href="#yeying.api.knowledge.knowledge_pb2_grpc.KnowledgeServicer.Search"><code class="docutils literal notranslate"><span class="pre">KnowledgeServicer.Search()</span></code></a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#yeying.api.knowledge.knowledge_pb2_grpc.KnowledgeStub"><code class="docutils literal notranslate"><span class="pre">KnowledgeStub</span></code></a></li>
+<li><a class="reference internal" href="#yeying.api.knowledge.knowledge_pb2_grpc.add_KnowledgeServicer_to_server"><code class="docutils literal notranslate"><span class="pre">add_KnowledgeServicer_to_server()</span></code></a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#module-yeying.api.knowledge">Module contents</a></li>
 </ul>
 </li>
 </ul>
@@ -80,14 +120,154 @@
 <section id="submodules">
 <h2>Submodules<a class="headerlink" href="#submodules" title="Link to this heading"></a></h2>
 </section>
-<section id="yeying-api-knowledge-knowledge-pb2-module">
-<h2>yeying.api.knowledge.knowledge_pb2 module<a class="headerlink" href="#yeying-api-knowledge-knowledge-pb2-module" title="Link to this heading"></a></h2>
+<section id="module-yeying.api.knowledge.knowledge_pb2">
+<span id="yeying-api-knowledge-knowledge-pb2-module"></span><h2>yeying.api.knowledge.knowledge_pb2 module<a class="headerlink" href="#module-yeying.api.knowledge.knowledge_pb2" title="Link to this heading"></a></h2>
+<p>Generated protocol buffer code.</p>
+<dl class="py class">
+<dt class="sig sig-object py" id="yeying.api.knowledge.knowledge_pb2.AppendMetadata">
+<em class="property"><span class="k"><span class="pre">class</span></span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">yeying.api.knowledge.knowledge_pb2.</span></span><span class="sig-name descname"><span class="pre">AppendMetadata</span></span><a class="headerlink" href="#yeying.api.knowledge.knowledge_pb2.AppendMetadata" title="Link to this definition"></a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">Message</span></code>, <code class="xref py py-class docutils literal notranslate"><span class="pre">Message</span></code></p>
+<dl class="py attribute">
+<dt class="sig sig-object py" id="yeying.api.knowledge.knowledge_pb2.AppendMetadata.DESCRIPTOR">
+<span class="sig-name descname"><span class="pre">DESCRIPTOR</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">&lt;google._upb._message.Descriptor</span> <span class="pre">object&gt;</span></em><a class="headerlink" href="#yeying.api.knowledge.knowledge_pb2.AppendMetadata.DESCRIPTOR" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="yeying.api.knowledge.knowledge_pb2.AppendRequest">
+<em class="property"><span class="k"><span class="pre">class</span></span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">yeying.api.knowledge.knowledge_pb2.</span></span><span class="sig-name descname"><span class="pre">AppendRequest</span></span><a class="headerlink" href="#yeying.api.knowledge.knowledge_pb2.AppendRequest" title="Link to this definition"></a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">Message</span></code>, <code class="xref py py-class docutils literal notranslate"><span class="pre">Message</span></code></p>
+<dl class="py attribute">
+<dt class="sig sig-object py" id="yeying.api.knowledge.knowledge_pb2.AppendRequest.DESCRIPTOR">
+<span class="sig-name descname"><span class="pre">DESCRIPTOR</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">&lt;google._upb._message.Descriptor</span> <span class="pre">object&gt;</span></em><a class="headerlink" href="#yeying.api.knowledge.knowledge_pb2.AppendRequest.DESCRIPTOR" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="yeying.api.knowledge.knowledge_pb2.AppendResponse">
+<em class="property"><span class="k"><span class="pre">class</span></span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">yeying.api.knowledge.knowledge_pb2.</span></span><span class="sig-name descname"><span class="pre">AppendResponse</span></span><a class="headerlink" href="#yeying.api.knowledge.knowledge_pb2.AppendResponse" title="Link to this definition"></a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">Message</span></code>, <code class="xref py py-class docutils literal notranslate"><span class="pre">Message</span></code></p>
+<dl class="py attribute">
+<dt class="sig sig-object py" id="yeying.api.knowledge.knowledge_pb2.AppendResponse.DESCRIPTOR">
+<span class="sig-name descname"><span class="pre">DESCRIPTOR</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">&lt;google._upb._message.Descriptor</span> <span class="pre">object&gt;</span></em><a class="headerlink" href="#yeying.api.knowledge.knowledge_pb2.AppendResponse.DESCRIPTOR" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="yeying.api.knowledge.knowledge_pb2.KnowledgeMetadata">
+<em class="property"><span class="k"><span class="pre">class</span></span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">yeying.api.knowledge.knowledge_pb2.</span></span><span class="sig-name descname"><span class="pre">KnowledgeMetadata</span></span><a class="headerlink" href="#yeying.api.knowledge.knowledge_pb2.KnowledgeMetadata" title="Link to this definition"></a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">Message</span></code>, <code class="xref py py-class docutils literal notranslate"><span class="pre">Message</span></code></p>
+<dl class="py attribute">
+<dt class="sig sig-object py" id="yeying.api.knowledge.knowledge_pb2.KnowledgeMetadata.DESCRIPTOR">
+<span class="sig-name descname"><span class="pre">DESCRIPTOR</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">&lt;google._upb._message.Descriptor</span> <span class="pre">object&gt;</span></em><a class="headerlink" href="#yeying.api.knowledge.knowledge_pb2.KnowledgeMetadata.DESCRIPTOR" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="yeying.api.knowledge.knowledge_pb2.SearchRequest">
+<em class="property"><span class="k"><span class="pre">class</span></span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">yeying.api.knowledge.knowledge_pb2.</span></span><span class="sig-name descname"><span class="pre">SearchRequest</span></span><a class="headerlink" href="#yeying.api.knowledge.knowledge_pb2.SearchRequest" title="Link to this definition"></a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">Message</span></code>, <code class="xref py py-class docutils literal notranslate"><span class="pre">Message</span></code></p>
+<dl class="py attribute">
+<dt class="sig sig-object py" id="yeying.api.knowledge.knowledge_pb2.SearchRequest.DESCRIPTOR">
+<span class="sig-name descname"><span class="pre">DESCRIPTOR</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">&lt;google._upb._message.Descriptor</span> <span class="pre">object&gt;</span></em><a class="headerlink" href="#yeying.api.knowledge.knowledge_pb2.SearchRequest.DESCRIPTOR" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="yeying.api.knowledge.knowledge_pb2.SearchResponse">
+<em class="property"><span class="k"><span class="pre">class</span></span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">yeying.api.knowledge.knowledge_pb2.</span></span><span class="sig-name descname"><span class="pre">SearchResponse</span></span><a class="headerlink" href="#yeying.api.knowledge.knowledge_pb2.SearchResponse" title="Link to this definition"></a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">Message</span></code>, <code class="xref py py-class docutils literal notranslate"><span class="pre">Message</span></code></p>
+<dl class="py attribute">
+<dt class="sig sig-object py" id="yeying.api.knowledge.knowledge_pb2.SearchResponse.DESCRIPTOR">
+<span class="sig-name descname"><span class="pre">DESCRIPTOR</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">&lt;google._upb._message.Descriptor</span> <span class="pre">object&gt;</span></em><a class="headerlink" href="#yeying.api.knowledge.knowledge_pb2.SearchResponse.DESCRIPTOR" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
 </section>
-<section id="yeying-api-knowledge-knowledge-pb2-grpc-module">
-<h2>yeying.api.knowledge.knowledge_pb2_grpc module<a class="headerlink" href="#yeying-api-knowledge-knowledge-pb2-grpc-module" title="Link to this heading"></a></h2>
+<section id="module-yeying.api.knowledge.knowledge_pb2_grpc">
+<span id="yeying-api-knowledge-knowledge-pb2-grpc-module"></span><h2>yeying.api.knowledge.knowledge_pb2_grpc module<a class="headerlink" href="#module-yeying.api.knowledge.knowledge_pb2_grpc" title="Link to this heading"></a></h2>
+<p>Client and server classes corresponding to protobuf-defined services.</p>
+<dl class="py class">
+<dt class="sig sig-object py" id="yeying.api.knowledge.knowledge_pb2_grpc.Knowledge">
+<em class="property"><span class="k"><span class="pre">class</span></span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">yeying.api.knowledge.knowledge_pb2_grpc.</span></span><span class="sig-name descname"><span class="pre">Knowledge</span></span><a class="headerlink" href="#yeying.api.knowledge.knowledge_pb2_grpc.Knowledge" title="Link to this definition"></a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
+<ul class="simple">
+<li></li>
+</ul>
+<p>数字内容的流动采用生产、存储、服务分离的技术，也就是采归采、存归存、取归取方式。以文本内容为例，爬取内容、创作内容、分发内容、以及阅读内容，独立
+运作，只要接口版本匹配就能工作，然后以创作和阅读作为网络驱动力和激励核心因素，主要目的有两个：
+1、促进在分散式网络（web3网络中）中从新分配网络资源和流量；
+2、减少重复工作，协作保持内容新鲜度；</p>
+<dl class="py method">
+<dt class="sig sig-object py" id="yeying.api.knowledge.knowledge_pb2_grpc.Knowledge.Append">
+<em class="property"><span class="k"><span class="pre">static</span></span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">Append</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">request</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">target</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">options</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">()</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">channel_credentials</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">call_credentials</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">insecure</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">compression</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">wait_for_ready</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">timeout</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">metadata</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#yeying.api.knowledge.knowledge_pb2_grpc.Knowledge.Append" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="yeying.api.knowledge.knowledge_pb2_grpc.Knowledge.Search">
+<em class="property"><span class="k"><span class="pre">static</span></span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">Search</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">request</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">target</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">options</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">()</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">channel_credentials</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">call_credentials</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">insecure</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">compression</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">wait_for_ready</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">timeout</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">metadata</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#yeying.api.knowledge.knowledge_pb2_grpc.Knowledge.Search" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="yeying.api.knowledge.knowledge_pb2_grpc.KnowledgeServicer">
+<em class="property"><span class="k"><span class="pre">class</span></span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">yeying.api.knowledge.knowledge_pb2_grpc.</span></span><span class="sig-name descname"><span class="pre">KnowledgeServicer</span></span><a class="headerlink" href="#yeying.api.knowledge.knowledge_pb2_grpc.KnowledgeServicer" title="Link to this definition"></a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
+<ul class="simple">
+<li></li>
+</ul>
+<p>数字内容的流动采用生产、存储、服务分离的技术，也就是采归采、存归存、取归取方式。以文本内容为例，爬取内容、创作内容、分发内容、以及阅读内容，独立
+运作，只要接口版本匹配就能工作，然后以创作和阅读作为网络驱动力和激励核心因素，主要目的有两个：
+1、促进在分散式网络（web3网络中）中从新分配网络资源和流量；
+2、减少重复工作，协作保持内容新鲜度；</p>
+<dl class="py method">
+<dt class="sig sig-object py" id="yeying.api.knowledge.knowledge_pb2_grpc.KnowledgeServicer.Append">
+<span class="sig-name descname"><span class="pre">Append</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">request</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">context</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#yeying.api.knowledge.knowledge_pb2_grpc.KnowledgeServicer.Append" title="Link to this definition"></a></dt>
+<dd><ul class="simple">
+<li></li>
+</ul>
+<p>内容保鲜</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="yeying.api.knowledge.knowledge_pb2_grpc.KnowledgeServicer.Search">
+<span class="sig-name descname"><span class="pre">Search</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">request</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">context</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#yeying.api.knowledge.knowledge_pb2_grpc.KnowledgeServicer.Search" title="Link to this definition"></a></dt>
+<dd><ul class="simple">
+<li></li>
+</ul>
+<p>内容通知</p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="yeying.api.knowledge.knowledge_pb2_grpc.KnowledgeStub">
+<em class="property"><span class="k"><span class="pre">class</span></span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">yeying.api.knowledge.knowledge_pb2_grpc.</span></span><span class="sig-name descname"><span class="pre">KnowledgeStub</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">channel</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#yeying.api.knowledge.knowledge_pb2_grpc.KnowledgeStub" title="Link to this definition"></a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
+<ul class="simple">
+<li></li>
+</ul>
+<p>数字内容的流动采用生产、存储、服务分离的技术，也就是采归采、存归存、取归取方式。以文本内容为例，爬取内容、创作内容、分发内容、以及阅读内容，独立
+运作，只要接口版本匹配就能工作，然后以创作和阅读作为网络驱动力和激励核心因素，主要目的有两个：
+1、促进在分散式网络（web3网络中）中从新分配网络资源和流量；
+2、减少重复工作，协作保持内容新鲜度；</p>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="yeying.api.knowledge.knowledge_pb2_grpc.add_KnowledgeServicer_to_server">
+<span class="sig-prename descclassname"><span class="pre">yeying.api.knowledge.knowledge_pb2_grpc.</span></span><span class="sig-name descname"><span class="pre">add_KnowledgeServicer_to_server</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">servicer</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">server</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#yeying.api.knowledge.knowledge_pb2_grpc.add_KnowledgeServicer_to_server" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
 </section>
-<section id="module-contents">
-<h2>Module contents<a class="headerlink" href="#module-contents" title="Link to this heading"></a></h2>
+<section id="module-yeying.api.knowledge">
+<span id="module-contents"></span><h2>Module contents<a class="headerlink" href="#module-yeying.api.knowledge" title="Link to this heading"></a></h2>
 </section>
 </section>
 

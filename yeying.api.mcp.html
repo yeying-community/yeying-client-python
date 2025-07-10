@@ -44,13 +44,31 @@
               <div class="local-toc"><ul>
 <li><a class="reference internal" href="#">yeying.api.mcp package</a><ul>
 <li><a class="reference internal" href="#submodules">Submodules</a></li>
-<li><a class="reference internal" href="#yeying-api-mcp-prompt-pb2-module">yeying.api.mcp.prompt_pb2 module</a></li>
-<li><a class="reference internal" href="#yeying-api-mcp-prompt-pb2-grpc-module">yeying.api.mcp.prompt_pb2_grpc module</a></li>
-<li><a class="reference internal" href="#yeying-api-mcp-resource-pb2-module">yeying.api.mcp.resource_pb2 module</a></li>
-<li><a class="reference internal" href="#yeying-api-mcp-resource-pb2-grpc-module">yeying.api.mcp.resource_pb2_grpc module</a></li>
-<li><a class="reference internal" href="#yeying-api-mcp-tool-pb2-module">yeying.api.mcp.tool_pb2 module</a></li>
-<li><a class="reference internal" href="#yeying-api-mcp-tool-pb2-grpc-module">yeying.api.mcp.tool_pb2_grpc module</a></li>
-<li><a class="reference internal" href="#module-contents">Module contents</a></li>
+<li><a class="reference internal" href="#module-yeying.api.mcp.prompt_pb2">yeying.api.mcp.prompt_pb2 module</a></li>
+<li><a class="reference internal" href="#module-yeying.api.mcp.prompt_pb2_grpc">yeying.api.mcp.prompt_pb2_grpc module</a><ul>
+<li><a class="reference internal" href="#yeying.api.mcp.prompt_pb2_grpc.Prompt"><code class="docutils literal notranslate"><span class="pre">Prompt</span></code></a></li>
+<li><a class="reference internal" href="#yeying.api.mcp.prompt_pb2_grpc.PromptServicer"><code class="docutils literal notranslate"><span class="pre">PromptServicer</span></code></a></li>
+<li><a class="reference internal" href="#yeying.api.mcp.prompt_pb2_grpc.PromptStub"><code class="docutils literal notranslate"><span class="pre">PromptStub</span></code></a></li>
+<li><a class="reference internal" href="#yeying.api.mcp.prompt_pb2_grpc.add_PromptServicer_to_server"><code class="docutils literal notranslate"><span class="pre">add_PromptServicer_to_server()</span></code></a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#module-yeying.api.mcp.resource_pb2">yeying.api.mcp.resource_pb2 module</a></li>
+<li><a class="reference internal" href="#module-yeying.api.mcp.resource_pb2_grpc">yeying.api.mcp.resource_pb2_grpc module</a><ul>
+<li><a class="reference internal" href="#yeying.api.mcp.resource_pb2_grpc.Resource"><code class="docutils literal notranslate"><span class="pre">Resource</span></code></a></li>
+<li><a class="reference internal" href="#yeying.api.mcp.resource_pb2_grpc.ResourceServicer"><code class="docutils literal notranslate"><span class="pre">ResourceServicer</span></code></a></li>
+<li><a class="reference internal" href="#yeying.api.mcp.resource_pb2_grpc.ResourceStub"><code class="docutils literal notranslate"><span class="pre">ResourceStub</span></code></a></li>
+<li><a class="reference internal" href="#yeying.api.mcp.resource_pb2_grpc.add_ResourceServicer_to_server"><code class="docutils literal notranslate"><span class="pre">add_ResourceServicer_to_server()</span></code></a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#module-yeying.api.mcp.tool_pb2">yeying.api.mcp.tool_pb2 module</a></li>
+<li><a class="reference internal" href="#module-yeying.api.mcp.tool_pb2_grpc">yeying.api.mcp.tool_pb2_grpc module</a><ul>
+<li><a class="reference internal" href="#yeying.api.mcp.tool_pb2_grpc.Tool"><code class="docutils literal notranslate"><span class="pre">Tool</span></code></a></li>
+<li><a class="reference internal" href="#yeying.api.mcp.tool_pb2_grpc.ToolServicer"><code class="docutils literal notranslate"><span class="pre">ToolServicer</span></code></a></li>
+<li><a class="reference internal" href="#yeying.api.mcp.tool_pb2_grpc.ToolStub"><code class="docutils literal notranslate"><span class="pre">ToolStub</span></code></a></li>
+<li><a class="reference internal" href="#yeying.api.mcp.tool_pb2_grpc.add_ToolServicer_to_server"><code class="docutils literal notranslate"><span class="pre">add_ToolServicer_to_server()</span></code></a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#module-yeying.api.mcp">Module contents</a></li>
 </ul>
 </li>
 </ul>
@@ -84,26 +102,110 @@
 <section id="submodules">
 <h2>Submodules<a class="headerlink" href="#submodules" title="Link to this heading"></a></h2>
 </section>
-<section id="yeying-api-mcp-prompt-pb2-module">
-<h2>yeying.api.mcp.prompt_pb2 module<a class="headerlink" href="#yeying-api-mcp-prompt-pb2-module" title="Link to this heading"></a></h2>
+<section id="module-yeying.api.mcp.prompt_pb2">
+<span id="yeying-api-mcp-prompt-pb2-module"></span><h2>yeying.api.mcp.prompt_pb2 module<a class="headerlink" href="#module-yeying.api.mcp.prompt_pb2" title="Link to this heading"></a></h2>
+<p>Generated protocol buffer code.</p>
 </section>
-<section id="yeying-api-mcp-prompt-pb2-grpc-module">
-<h2>yeying.api.mcp.prompt_pb2_grpc module<a class="headerlink" href="#yeying-api-mcp-prompt-pb2-grpc-module" title="Link to this heading"></a></h2>
+<section id="module-yeying.api.mcp.prompt_pb2_grpc">
+<span id="yeying-api-mcp-prompt-pb2-grpc-module"></span><h2>yeying.api.mcp.prompt_pb2_grpc module<a class="headerlink" href="#module-yeying.api.mcp.prompt_pb2_grpc" title="Link to this heading"></a></h2>
+<p>Client and server classes corresponding to protobuf-defined services.</p>
+<dl class="py class">
+<dt class="sig sig-object py" id="yeying.api.mcp.prompt_pb2_grpc.Prompt">
+<em class="property"><span class="k"><span class="pre">class</span></span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">yeying.api.mcp.prompt_pb2_grpc.</span></span><span class="sig-name descname"><span class="pre">Prompt</span></span><a class="headerlink" href="#yeying.api.mcp.prompt_pb2_grpc.Prompt" title="Link to this definition"></a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
+<p>Missing associated documentation comment in .proto file.</p>
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="yeying.api.mcp.prompt_pb2_grpc.PromptServicer">
+<em class="property"><span class="k"><span class="pre">class</span></span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">yeying.api.mcp.prompt_pb2_grpc.</span></span><span class="sig-name descname"><span class="pre">PromptServicer</span></span><a class="headerlink" href="#yeying.api.mcp.prompt_pb2_grpc.PromptServicer" title="Link to this definition"></a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
+<p>Missing associated documentation comment in .proto file.</p>
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="yeying.api.mcp.prompt_pb2_grpc.PromptStub">
+<em class="property"><span class="k"><span class="pre">class</span></span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">yeying.api.mcp.prompt_pb2_grpc.</span></span><span class="sig-name descname"><span class="pre">PromptStub</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">channel</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#yeying.api.mcp.prompt_pb2_grpc.PromptStub" title="Link to this definition"></a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
+<p>Missing associated documentation comment in .proto file.</p>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="yeying.api.mcp.prompt_pb2_grpc.add_PromptServicer_to_server">
+<span class="sig-prename descclassname"><span class="pre">yeying.api.mcp.prompt_pb2_grpc.</span></span><span class="sig-name descname"><span class="pre">add_PromptServicer_to_server</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">servicer</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">server</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#yeying.api.mcp.prompt_pb2_grpc.add_PromptServicer_to_server" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
 </section>
-<section id="yeying-api-mcp-resource-pb2-module">
-<h2>yeying.api.mcp.resource_pb2 module<a class="headerlink" href="#yeying-api-mcp-resource-pb2-module" title="Link to this heading"></a></h2>
+<section id="module-yeying.api.mcp.resource_pb2">
+<span id="yeying-api-mcp-resource-pb2-module"></span><h2>yeying.api.mcp.resource_pb2 module<a class="headerlink" href="#module-yeying.api.mcp.resource_pb2" title="Link to this heading"></a></h2>
+<p>Generated protocol buffer code.</p>
 </section>
-<section id="yeying-api-mcp-resource-pb2-grpc-module">
-<h2>yeying.api.mcp.resource_pb2_grpc module<a class="headerlink" href="#yeying-api-mcp-resource-pb2-grpc-module" title="Link to this heading"></a></h2>
+<section id="module-yeying.api.mcp.resource_pb2_grpc">
+<span id="yeying-api-mcp-resource-pb2-grpc-module"></span><h2>yeying.api.mcp.resource_pb2_grpc module<a class="headerlink" href="#module-yeying.api.mcp.resource_pb2_grpc" title="Link to this heading"></a></h2>
+<p>Client and server classes corresponding to protobuf-defined services.</p>
+<dl class="py class">
+<dt class="sig sig-object py" id="yeying.api.mcp.resource_pb2_grpc.Resource">
+<em class="property"><span class="k"><span class="pre">class</span></span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">yeying.api.mcp.resource_pb2_grpc.</span></span><span class="sig-name descname"><span class="pre">Resource</span></span><a class="headerlink" href="#yeying.api.mcp.resource_pb2_grpc.Resource" title="Link to this definition"></a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
+<p>Missing associated documentation comment in .proto file.</p>
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="yeying.api.mcp.resource_pb2_grpc.ResourceServicer">
+<em class="property"><span class="k"><span class="pre">class</span></span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">yeying.api.mcp.resource_pb2_grpc.</span></span><span class="sig-name descname"><span class="pre">ResourceServicer</span></span><a class="headerlink" href="#yeying.api.mcp.resource_pb2_grpc.ResourceServicer" title="Link to this definition"></a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
+<p>Missing associated documentation comment in .proto file.</p>
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="yeying.api.mcp.resource_pb2_grpc.ResourceStub">
+<em class="property"><span class="k"><span class="pre">class</span></span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">yeying.api.mcp.resource_pb2_grpc.</span></span><span class="sig-name descname"><span class="pre">ResourceStub</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">channel</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#yeying.api.mcp.resource_pb2_grpc.ResourceStub" title="Link to this definition"></a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
+<p>Missing associated documentation comment in .proto file.</p>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="yeying.api.mcp.resource_pb2_grpc.add_ResourceServicer_to_server">
+<span class="sig-prename descclassname"><span class="pre">yeying.api.mcp.resource_pb2_grpc.</span></span><span class="sig-name descname"><span class="pre">add_ResourceServicer_to_server</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">servicer</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">server</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#yeying.api.mcp.resource_pb2_grpc.add_ResourceServicer_to_server" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
 </section>
-<section id="yeying-api-mcp-tool-pb2-module">
-<h2>yeying.api.mcp.tool_pb2 module<a class="headerlink" href="#yeying-api-mcp-tool-pb2-module" title="Link to this heading"></a></h2>
+<section id="module-yeying.api.mcp.tool_pb2">
+<span id="yeying-api-mcp-tool-pb2-module"></span><h2>yeying.api.mcp.tool_pb2 module<a class="headerlink" href="#module-yeying.api.mcp.tool_pb2" title="Link to this heading"></a></h2>
+<p>Generated protocol buffer code.</p>
 </section>
-<section id="yeying-api-mcp-tool-pb2-grpc-module">
-<h2>yeying.api.mcp.tool_pb2_grpc module<a class="headerlink" href="#yeying-api-mcp-tool-pb2-grpc-module" title="Link to this heading"></a></h2>
+<section id="module-yeying.api.mcp.tool_pb2_grpc">
+<span id="yeying-api-mcp-tool-pb2-grpc-module"></span><h2>yeying.api.mcp.tool_pb2_grpc module<a class="headerlink" href="#module-yeying.api.mcp.tool_pb2_grpc" title="Link to this heading"></a></h2>
+<p>Client and server classes corresponding to protobuf-defined services.</p>
+<dl class="py class">
+<dt class="sig sig-object py" id="yeying.api.mcp.tool_pb2_grpc.Tool">
+<em class="property"><span class="k"><span class="pre">class</span></span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">yeying.api.mcp.tool_pb2_grpc.</span></span><span class="sig-name descname"><span class="pre">Tool</span></span><a class="headerlink" href="#yeying.api.mcp.tool_pb2_grpc.Tool" title="Link to this definition"></a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
+<p>Missing associated documentation comment in .proto file.</p>
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="yeying.api.mcp.tool_pb2_grpc.ToolServicer">
+<em class="property"><span class="k"><span class="pre">class</span></span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">yeying.api.mcp.tool_pb2_grpc.</span></span><span class="sig-name descname"><span class="pre">ToolServicer</span></span><a class="headerlink" href="#yeying.api.mcp.tool_pb2_grpc.ToolServicer" title="Link to this definition"></a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
+<p>Missing associated documentation comment in .proto file.</p>
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="yeying.api.mcp.tool_pb2_grpc.ToolStub">
+<em class="property"><span class="k"><span class="pre">class</span></span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">yeying.api.mcp.tool_pb2_grpc.</span></span><span class="sig-name descname"><span class="pre">ToolStub</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">channel</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#yeying.api.mcp.tool_pb2_grpc.ToolStub" title="Link to this definition"></a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
+<p>Missing associated documentation comment in .proto file.</p>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="yeying.api.mcp.tool_pb2_grpc.add_ToolServicer_to_server">
+<span class="sig-prename descclassname"><span class="pre">yeying.api.mcp.tool_pb2_grpc.</span></span><span class="sig-name descname"><span class="pre">add_ToolServicer_to_server</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">servicer</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">server</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#yeying.api.mcp.tool_pb2_grpc.add_ToolServicer_to_server" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
 </section>
-<section id="module-contents">
-<h2>Module contents<a class="headerlink" href="#module-contents" title="Link to this heading"></a></h2>
+<section id="module-yeying.api.mcp">
+<span id="module-contents"></span><h2>Module contents<a class="headerlink" href="#module-yeying.api.mcp" title="Link to this heading"></a></h2>
 </section>
 </section>
 

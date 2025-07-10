@@ -44,9 +44,65 @@
               <div class="local-toc"><ul>
 <li><a class="reference internal" href="#">yeying.api.contract package</a><ul>
 <li><a class="reference internal" href="#submodules">Submodules</a></li>
-<li><a class="reference internal" href="#yeying-api-contract-contract-pb2-module">yeying.api.contract.contract_pb2 module</a></li>
-<li><a class="reference internal" href="#yeying-api-contract-contract-pb2-grpc-module">yeying.api.contract.contract_pb2_grpc module</a></li>
-<li><a class="reference internal" href="#module-contents">Module contents</a></li>
+<li><a class="reference internal" href="#module-yeying.api.contract.contract_pb2">yeying.api.contract.contract_pb2 module</a><ul>
+<li><a class="reference internal" href="#yeying.api.contract.contract_pb2.BalanceRequest"><code class="docutils literal notranslate"><span class="pre">BalanceRequest</span></code></a><ul>
+<li><a class="reference internal" href="#yeying.api.contract.contract_pb2.BalanceRequest.DESCRIPTOR"><code class="docutils literal notranslate"><span class="pre">BalanceRequest.DESCRIPTOR</span></code></a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#yeying.api.contract.contract_pb2.BalanceResponse"><code class="docutils literal notranslate"><span class="pre">BalanceResponse</span></code></a><ul>
+<li><a class="reference internal" href="#yeying.api.contract.contract_pb2.BalanceResponse.DESCRIPTOR"><code class="docutils literal notranslate"><span class="pre">BalanceResponse.DESCRIPTOR</span></code></a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#yeying.api.contract.contract_pb2.CreateAddressRequest"><code class="docutils literal notranslate"><span class="pre">CreateAddressRequest</span></code></a><ul>
+<li><a class="reference internal" href="#yeying.api.contract.contract_pb2.CreateAddressRequest.DESCRIPTOR"><code class="docutils literal notranslate"><span class="pre">CreateAddressRequest.DESCRIPTOR</span></code></a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#yeying.api.contract.contract_pb2.CreateAddressResponse"><code class="docutils literal notranslate"><span class="pre">CreateAddressResponse</span></code></a><ul>
+<li><a class="reference internal" href="#yeying.api.contract.contract_pb2.CreateAddressResponse.DESCRIPTOR"><code class="docutils literal notranslate"><span class="pre">CreateAddressResponse.DESCRIPTOR</span></code></a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#yeying.api.contract.contract_pb2.Transaction"><code class="docutils literal notranslate"><span class="pre">Transaction</span></code></a><ul>
+<li><a class="reference internal" href="#yeying.api.contract.contract_pb2.Transaction.DESCRIPTOR"><code class="docutils literal notranslate"><span class="pre">Transaction.DESCRIPTOR</span></code></a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#yeying.api.contract.contract_pb2.TransactionRequest"><code class="docutils literal notranslate"><span class="pre">TransactionRequest</span></code></a><ul>
+<li><a class="reference internal" href="#yeying.api.contract.contract_pb2.TransactionRequest.DESCRIPTOR"><code class="docutils literal notranslate"><span class="pre">TransactionRequest.DESCRIPTOR</span></code></a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#yeying.api.contract.contract_pb2.TransactionResponse"><code class="docutils literal notranslate"><span class="pre">TransactionResponse</span></code></a><ul>
+<li><a class="reference internal" href="#yeying.api.contract.contract_pb2.TransactionResponse.DESCRIPTOR"><code class="docutils literal notranslate"><span class="pre">TransactionResponse.DESCRIPTOR</span></code></a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#yeying.api.contract.contract_pb2.WalletInfoRequest"><code class="docutils literal notranslate"><span class="pre">WalletInfoRequest</span></code></a><ul>
+<li><a class="reference internal" href="#yeying.api.contract.contract_pb2.WalletInfoRequest.DESCRIPTOR"><code class="docutils literal notranslate"><span class="pre">WalletInfoRequest.DESCRIPTOR</span></code></a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#yeying.api.contract.contract_pb2.WalletInfoResponse"><code class="docutils literal notranslate"><span class="pre">WalletInfoResponse</span></code></a><ul>
+<li><a class="reference internal" href="#yeying.api.contract.contract_pb2.WalletInfoResponse.DESCRIPTOR"><code class="docutils literal notranslate"><span class="pre">WalletInfoResponse.DESCRIPTOR</span></code></a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><a class="reference internal" href="#module-yeying.api.contract.contract_pb2_grpc">yeying.api.contract.contract_pb2_grpc module</a><ul>
+<li><a class="reference internal" href="#yeying.api.contract.contract_pb2_grpc.Wallet"><code class="docutils literal notranslate"><span class="pre">Wallet</span></code></a><ul>
+<li><a class="reference internal" href="#yeying.api.contract.contract_pb2_grpc.Wallet.balance"><code class="docutils literal notranslate"><span class="pre">Wallet.balance()</span></code></a></li>
+<li><a class="reference internal" href="#yeying.api.contract.contract_pb2_grpc.Wallet.createAddress"><code class="docutils literal notranslate"><span class="pre">Wallet.createAddress()</span></code></a></li>
+<li><a class="reference internal" href="#yeying.api.contract.contract_pb2_grpc.Wallet.transaction"><code class="docutils literal notranslate"><span class="pre">Wallet.transaction()</span></code></a></li>
+<li><a class="reference internal" href="#yeying.api.contract.contract_pb2_grpc.Wallet.walletInfo"><code class="docutils literal notranslate"><span class="pre">Wallet.walletInfo()</span></code></a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#yeying.api.contract.contract_pb2_grpc.WalletServicer"><code class="docutils literal notranslate"><span class="pre">WalletServicer</span></code></a><ul>
+<li><a class="reference internal" href="#yeying.api.contract.contract_pb2_grpc.WalletServicer.balance"><code class="docutils literal notranslate"><span class="pre">WalletServicer.balance()</span></code></a></li>
+<li><a class="reference internal" href="#yeying.api.contract.contract_pb2_grpc.WalletServicer.createAddress"><code class="docutils literal notranslate"><span class="pre">WalletServicer.createAddress()</span></code></a></li>
+<li><a class="reference internal" href="#yeying.api.contract.contract_pb2_grpc.WalletServicer.transaction"><code class="docutils literal notranslate"><span class="pre">WalletServicer.transaction()</span></code></a></li>
+<li><a class="reference internal" href="#yeying.api.contract.contract_pb2_grpc.WalletServicer.walletInfo"><code class="docutils literal notranslate"><span class="pre">WalletServicer.walletInfo()</span></code></a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#yeying.api.contract.contract_pb2_grpc.WalletStub"><code class="docutils literal notranslate"><span class="pre">WalletStub</span></code></a></li>
+<li><a class="reference internal" href="#yeying.api.contract.contract_pb2_grpc.add_WalletServicer_to_server"><code class="docutils literal notranslate"><span class="pre">add_WalletServicer_to_server()</span></code></a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#module-yeying.api.contract">Module contents</a></li>
 </ul>
 </li>
 </ul>
@@ -80,14 +136,185 @@
 <section id="submodules">
 <h2>Submodules<a class="headerlink" href="#submodules" title="Link to this heading"></a></h2>
 </section>
-<section id="yeying-api-contract-contract-pb2-module">
-<h2>yeying.api.contract.contract_pb2 module<a class="headerlink" href="#yeying-api-contract-contract-pb2-module" title="Link to this heading"></a></h2>
+<section id="module-yeying.api.contract.contract_pb2">
+<span id="yeying-api-contract-contract-pb2-module"></span><h2>yeying.api.contract.contract_pb2 module<a class="headerlink" href="#module-yeying.api.contract.contract_pb2" title="Link to this heading"></a></h2>
+<p>Generated protocol buffer code.</p>
+<dl class="py class">
+<dt class="sig sig-object py" id="yeying.api.contract.contract_pb2.BalanceRequest">
+<em class="property"><span class="k"><span class="pre">class</span></span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">yeying.api.contract.contract_pb2.</span></span><span class="sig-name descname"><span class="pre">BalanceRequest</span></span><a class="headerlink" href="#yeying.api.contract.contract_pb2.BalanceRequest" title="Link to this definition"></a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">Message</span></code>, <code class="xref py py-class docutils literal notranslate"><span class="pre">Message</span></code></p>
+<dl class="py attribute">
+<dt class="sig sig-object py" id="yeying.api.contract.contract_pb2.BalanceRequest.DESCRIPTOR">
+<span class="sig-name descname"><span class="pre">DESCRIPTOR</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">&lt;google._upb._message.Descriptor</span> <span class="pre">object&gt;</span></em><a class="headerlink" href="#yeying.api.contract.contract_pb2.BalanceRequest.DESCRIPTOR" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="yeying.api.contract.contract_pb2.BalanceResponse">
+<em class="property"><span class="k"><span class="pre">class</span></span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">yeying.api.contract.contract_pb2.</span></span><span class="sig-name descname"><span class="pre">BalanceResponse</span></span><a class="headerlink" href="#yeying.api.contract.contract_pb2.BalanceResponse" title="Link to this definition"></a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">Message</span></code>, <code class="xref py py-class docutils literal notranslate"><span class="pre">Message</span></code></p>
+<dl class="py attribute">
+<dt class="sig sig-object py" id="yeying.api.contract.contract_pb2.BalanceResponse.DESCRIPTOR">
+<span class="sig-name descname"><span class="pre">DESCRIPTOR</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">&lt;google._upb._message.Descriptor</span> <span class="pre">object&gt;</span></em><a class="headerlink" href="#yeying.api.contract.contract_pb2.BalanceResponse.DESCRIPTOR" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="yeying.api.contract.contract_pb2.CreateAddressRequest">
+<em class="property"><span class="k"><span class="pre">class</span></span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">yeying.api.contract.contract_pb2.</span></span><span class="sig-name descname"><span class="pre">CreateAddressRequest</span></span><a class="headerlink" href="#yeying.api.contract.contract_pb2.CreateAddressRequest" title="Link to this definition"></a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">Message</span></code>, <code class="xref py py-class docutils literal notranslate"><span class="pre">Message</span></code></p>
+<dl class="py attribute">
+<dt class="sig sig-object py" id="yeying.api.contract.contract_pb2.CreateAddressRequest.DESCRIPTOR">
+<span class="sig-name descname"><span class="pre">DESCRIPTOR</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">&lt;google._upb._message.Descriptor</span> <span class="pre">object&gt;</span></em><a class="headerlink" href="#yeying.api.contract.contract_pb2.CreateAddressRequest.DESCRIPTOR" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="yeying.api.contract.contract_pb2.CreateAddressResponse">
+<em class="property"><span class="k"><span class="pre">class</span></span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">yeying.api.contract.contract_pb2.</span></span><span class="sig-name descname"><span class="pre">CreateAddressResponse</span></span><a class="headerlink" href="#yeying.api.contract.contract_pb2.CreateAddressResponse" title="Link to this definition"></a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">Message</span></code>, <code class="xref py py-class docutils literal notranslate"><span class="pre">Message</span></code></p>
+<dl class="py attribute">
+<dt class="sig sig-object py" id="yeying.api.contract.contract_pb2.CreateAddressResponse.DESCRIPTOR">
+<span class="sig-name descname"><span class="pre">DESCRIPTOR</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">&lt;google._upb._message.Descriptor</span> <span class="pre">object&gt;</span></em><a class="headerlink" href="#yeying.api.contract.contract_pb2.CreateAddressResponse.DESCRIPTOR" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="yeying.api.contract.contract_pb2.Transaction">
+<em class="property"><span class="k"><span class="pre">class</span></span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">yeying.api.contract.contract_pb2.</span></span><span class="sig-name descname"><span class="pre">Transaction</span></span><a class="headerlink" href="#yeying.api.contract.contract_pb2.Transaction" title="Link to this definition"></a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">Message</span></code>, <code class="xref py py-class docutils literal notranslate"><span class="pre">Message</span></code></p>
+<dl class="py attribute">
+<dt class="sig sig-object py" id="yeying.api.contract.contract_pb2.Transaction.DESCRIPTOR">
+<span class="sig-name descname"><span class="pre">DESCRIPTOR</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">&lt;google._upb._message.Descriptor</span> <span class="pre">object&gt;</span></em><a class="headerlink" href="#yeying.api.contract.contract_pb2.Transaction.DESCRIPTOR" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="yeying.api.contract.contract_pb2.TransactionRequest">
+<em class="property"><span class="k"><span class="pre">class</span></span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">yeying.api.contract.contract_pb2.</span></span><span class="sig-name descname"><span class="pre">TransactionRequest</span></span><a class="headerlink" href="#yeying.api.contract.contract_pb2.TransactionRequest" title="Link to this definition"></a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">Message</span></code>, <code class="xref py py-class docutils literal notranslate"><span class="pre">Message</span></code></p>
+<dl class="py attribute">
+<dt class="sig sig-object py" id="yeying.api.contract.contract_pb2.TransactionRequest.DESCRIPTOR">
+<span class="sig-name descname"><span class="pre">DESCRIPTOR</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">&lt;google._upb._message.Descriptor</span> <span class="pre">object&gt;</span></em><a class="headerlink" href="#yeying.api.contract.contract_pb2.TransactionRequest.DESCRIPTOR" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="yeying.api.contract.contract_pb2.TransactionResponse">
+<em class="property"><span class="k"><span class="pre">class</span></span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">yeying.api.contract.contract_pb2.</span></span><span class="sig-name descname"><span class="pre">TransactionResponse</span></span><a class="headerlink" href="#yeying.api.contract.contract_pb2.TransactionResponse" title="Link to this definition"></a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">Message</span></code>, <code class="xref py py-class docutils literal notranslate"><span class="pre">Message</span></code></p>
+<dl class="py attribute">
+<dt class="sig sig-object py" id="yeying.api.contract.contract_pb2.TransactionResponse.DESCRIPTOR">
+<span class="sig-name descname"><span class="pre">DESCRIPTOR</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">&lt;google._upb._message.Descriptor</span> <span class="pre">object&gt;</span></em><a class="headerlink" href="#yeying.api.contract.contract_pb2.TransactionResponse.DESCRIPTOR" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="yeying.api.contract.contract_pb2.WalletInfoRequest">
+<em class="property"><span class="k"><span class="pre">class</span></span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">yeying.api.contract.contract_pb2.</span></span><span class="sig-name descname"><span class="pre">WalletInfoRequest</span></span><a class="headerlink" href="#yeying.api.contract.contract_pb2.WalletInfoRequest" title="Link to this definition"></a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">Message</span></code>, <code class="xref py py-class docutils literal notranslate"><span class="pre">Message</span></code></p>
+<dl class="py attribute">
+<dt class="sig sig-object py" id="yeying.api.contract.contract_pb2.WalletInfoRequest.DESCRIPTOR">
+<span class="sig-name descname"><span class="pre">DESCRIPTOR</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">&lt;google._upb._message.Descriptor</span> <span class="pre">object&gt;</span></em><a class="headerlink" href="#yeying.api.contract.contract_pb2.WalletInfoRequest.DESCRIPTOR" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="yeying.api.contract.contract_pb2.WalletInfoResponse">
+<em class="property"><span class="k"><span class="pre">class</span></span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">yeying.api.contract.contract_pb2.</span></span><span class="sig-name descname"><span class="pre">WalletInfoResponse</span></span><a class="headerlink" href="#yeying.api.contract.contract_pb2.WalletInfoResponse" title="Link to this definition"></a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">Message</span></code>, <code class="xref py py-class docutils literal notranslate"><span class="pre">Message</span></code></p>
+<dl class="py attribute">
+<dt class="sig sig-object py" id="yeying.api.contract.contract_pb2.WalletInfoResponse.DESCRIPTOR">
+<span class="sig-name descname"><span class="pre">DESCRIPTOR</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">&lt;google._upb._message.Descriptor</span> <span class="pre">object&gt;</span></em><a class="headerlink" href="#yeying.api.contract.contract_pb2.WalletInfoResponse.DESCRIPTOR" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
 </section>
-<section id="yeying-api-contract-contract-pb2-grpc-module">
-<h2>yeying.api.contract.contract_pb2_grpc module<a class="headerlink" href="#yeying-api-contract-contract-pb2-grpc-module" title="Link to this heading"></a></h2>
+<section id="module-yeying.api.contract.contract_pb2_grpc">
+<span id="yeying-api-contract-contract-pb2-grpc-module"></span><h2>yeying.api.contract.contract_pb2_grpc module<a class="headerlink" href="#module-yeying.api.contract.contract_pb2_grpc" title="Link to this heading"></a></h2>
+<p>Client and server classes corresponding to protobuf-defined services.</p>
+<dl class="py class">
+<dt class="sig sig-object py" id="yeying.api.contract.contract_pb2_grpc.Wallet">
+<em class="property"><span class="k"><span class="pre">class</span></span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">yeying.api.contract.contract_pb2_grpc.</span></span><span class="sig-name descname"><span class="pre">Wallet</span></span><a class="headerlink" href="#yeying.api.contract.contract_pb2_grpc.Wallet" title="Link to this definition"></a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
+<p>Missing associated documentation comment in .proto file.</p>
+<dl class="py method">
+<dt class="sig sig-object py" id="yeying.api.contract.contract_pb2_grpc.Wallet.balance">
+<em class="property"><span class="k"><span class="pre">static</span></span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">balance</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">request</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">target</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">options</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">()</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">channel_credentials</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">call_credentials</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">insecure</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">compression</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">wait_for_ready</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">timeout</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">metadata</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#yeying.api.contract.contract_pb2_grpc.Wallet.balance" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="yeying.api.contract.contract_pb2_grpc.Wallet.createAddress">
+<em class="property"><span class="k"><span class="pre">static</span></span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">createAddress</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">request</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">target</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">options</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">()</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">channel_credentials</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">call_credentials</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">insecure</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">compression</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">wait_for_ready</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">timeout</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">metadata</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#yeying.api.contract.contract_pb2_grpc.Wallet.createAddress" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="yeying.api.contract.contract_pb2_grpc.Wallet.transaction">
+<em class="property"><span class="k"><span class="pre">static</span></span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">transaction</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">request</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">target</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">options</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">()</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">channel_credentials</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">call_credentials</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">insecure</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">compression</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">wait_for_ready</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">timeout</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">metadata</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#yeying.api.contract.contract_pb2_grpc.Wallet.transaction" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="yeying.api.contract.contract_pb2_grpc.Wallet.walletInfo">
+<em class="property"><span class="k"><span class="pre">static</span></span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">walletInfo</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">request</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">target</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">options</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">()</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">channel_credentials</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">call_credentials</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">insecure</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">compression</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">wait_for_ready</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">timeout</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">metadata</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#yeying.api.contract.contract_pb2_grpc.Wallet.walletInfo" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="yeying.api.contract.contract_pb2_grpc.WalletServicer">
+<em class="property"><span class="k"><span class="pre">class</span></span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">yeying.api.contract.contract_pb2_grpc.</span></span><span class="sig-name descname"><span class="pre">WalletServicer</span></span><a class="headerlink" href="#yeying.api.contract.contract_pb2_grpc.WalletServicer" title="Link to this definition"></a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
+<p>Missing associated documentation comment in .proto file.</p>
+<dl class="py method">
+<dt class="sig sig-object py" id="yeying.api.contract.contract_pb2_grpc.WalletServicer.balance">
+<span class="sig-name descname"><span class="pre">balance</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">request</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">context</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#yeying.api.contract.contract_pb2_grpc.WalletServicer.balance" title="Link to this definition"></a></dt>
+<dd><p>Missing associated documentation comment in .proto file.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="yeying.api.contract.contract_pb2_grpc.WalletServicer.createAddress">
+<span class="sig-name descname"><span class="pre">createAddress</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">request</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">context</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#yeying.api.contract.contract_pb2_grpc.WalletServicer.createAddress" title="Link to this definition"></a></dt>
+<dd><p>Missing associated documentation comment in .proto file.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="yeying.api.contract.contract_pb2_grpc.WalletServicer.transaction">
+<span class="sig-name descname"><span class="pre">transaction</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">request</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">context</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#yeying.api.contract.contract_pb2_grpc.WalletServicer.transaction" title="Link to this definition"></a></dt>
+<dd><p>Missing associated documentation comment in .proto file.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="yeying.api.contract.contract_pb2_grpc.WalletServicer.walletInfo">
+<span class="sig-name descname"><span class="pre">walletInfo</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">request</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">context</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#yeying.api.contract.contract_pb2_grpc.WalletServicer.walletInfo" title="Link to this definition"></a></dt>
+<dd><p>Missing associated documentation comment in .proto file.</p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="yeying.api.contract.contract_pb2_grpc.WalletStub">
+<em class="property"><span class="k"><span class="pre">class</span></span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">yeying.api.contract.contract_pb2_grpc.</span></span><span class="sig-name descname"><span class="pre">WalletStub</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">channel</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#yeying.api.contract.contract_pb2_grpc.WalletStub" title="Link to this definition"></a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
+<p>Missing associated documentation comment in .proto file.</p>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="yeying.api.contract.contract_pb2_grpc.add_WalletServicer_to_server">
+<span class="sig-prename descclassname"><span class="pre">yeying.api.contract.contract_pb2_grpc.</span></span><span class="sig-name descname"><span class="pre">add_WalletServicer_to_server</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">servicer</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">server</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#yeying.api.contract.contract_pb2_grpc.add_WalletServicer_to_server" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
 </section>
-<section id="module-contents">
-<h2>Module contents<a class="headerlink" href="#module-contents" title="Link to this heading"></a></h2>
+<section id="module-yeying.api.contract">
+<span id="module-contents"></span><h2>Module contents<a class="headerlink" href="#module-yeying.api.contract" title="Link to this heading"></a></h2>
 </section>
 </section>
 

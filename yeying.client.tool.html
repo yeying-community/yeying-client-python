@@ -45,10 +45,48 @@
 <li><a class="reference internal" href="#">yeying.client.tool package</a><ul>
 <li><a class="reference internal" href="#subpackages">Subpackages</a></li>
 <li><a class="reference internal" href="#submodules">Submodules</a></li>
-<li><a class="reference internal" href="#yeying-client-tool-authenticate-module">yeying.client.tool.authenticate module</a></li>
-<li><a class="reference internal" href="#yeying-client-tool-crypto-service-module">yeying.client.tool.crypto_service module</a></li>
-<li><a class="reference internal" href="#yeying-client-tool-identity-service-module">yeying.client.tool.identity_service module</a></li>
-<li><a class="reference internal" href="#module-contents">Module contents</a></li>
+<li><a class="reference internal" href="#module-yeying.client.tool.authenticate">yeying.client.tool.authenticate module</a><ul>
+<li><a class="reference internal" href="#yeying.client.tool.authenticate.Authenticate"><code class="docutils literal notranslate"><span class="pre">Authenticate</span></code></a><ul>
+<li><a class="reference internal" href="#yeying.client.tool.authenticate.Authenticate.create_header"><code class="docutils literal notranslate"><span class="pre">Authenticate.create_header()</span></code></a></li>
+<li><a class="reference internal" href="#yeying.client.tool.authenticate.Authenticate.get_did"><code class="docutils literal notranslate"><span class="pre">Authenticate.get_did()</span></code></a></li>
+<li><a class="reference internal" href="#yeying.client.tool.authenticate.Authenticate.sign_data"><code class="docutils literal notranslate"><span class="pre">Authenticate.sign_data()</span></code></a></li>
+<li><a class="reference internal" href="#yeying.client.tool.authenticate.Authenticate.verify_header"><code class="docutils literal notranslate"><span class="pre">Authenticate.verify_header()</span></code></a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#yeying.client.tool.authenticate.verify_data"><code class="docutils literal notranslate"><span class="pre">verify_data()</span></code></a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#module-yeying.client.tool.crypto_service">yeying.client.tool.crypto_service module</a><ul>
+<li><a class="reference internal" href="#yeying.client.tool.crypto_service.AssetCipher"><code class="docutils literal notranslate"><span class="pre">AssetCipher</span></code></a><ul>
+<li><a class="reference internal" href="#yeying.client.tool.crypto_service.AssetCipher.decrypt"><code class="docutils literal notranslate"><span class="pre">AssetCipher.decrypt()</span></code></a></li>
+<li><a class="reference internal" href="#yeying.client.tool.crypto_service.AssetCipher.encrypt"><code class="docutils literal notranslate"><span class="pre">AssetCipher.encrypt()</span></code></a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#yeying.client.tool.crypto_service.CipherTypeEnum"><code class="docutils literal notranslate"><span class="pre">CipherTypeEnum</span></code></a><ul>
+<li><a class="reference internal" href="#yeying.client.tool.crypto_service.CipherTypeEnum.CIPHER_TYPE_AES_GCM_256"><code class="docutils literal notranslate"><span class="pre">CipherTypeEnum.CIPHER_TYPE_AES_GCM_256</span></code></a></li>
+<li><a class="reference internal" href="#yeying.client.tool.crypto_service.CipherTypeEnum.CIPHER_TYPE_UNKNOWN"><code class="docutils literal notranslate"><span class="pre">CipherTypeEnum.CIPHER_TYPE_UNKNOWN</span></code></a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#yeying.client.tool.crypto_service.InvalidPassword"><code class="docutils literal notranslate"><span class="pre">InvalidPassword</span></code></a></li>
+<li><a class="reference internal" href="#yeying.client.tool.crypto_service.convert_to_algorithm_name"><code class="docutils literal notranslate"><span class="pre">convert_to_algorithm_name()</span></code></a></li>
+<li><a class="reference internal" href="#yeying.client.tool.crypto_service.decode_base64"><code class="docutils literal notranslate"><span class="pre">decode_base64()</span></code></a></li>
+<li><a class="reference internal" href="#yeying.client.tool.crypto_service.decrypt"><code class="docutils literal notranslate"><span class="pre">decrypt()</span></code></a></li>
+<li><a class="reference internal" href="#yeying.client.tool.crypto_service.derive_from_block_address"><code class="docutils literal notranslate"><span class="pre">derive_from_block_address()</span></code></a></li>
+<li><a class="reference internal" href="#yeying.client.tool.crypto_service.encrypt"><code class="docutils literal notranslate"><span class="pre">encrypt()</span></code></a></li>
+<li><a class="reference internal" href="#yeying.client.tool.crypto_service.trim_left"><code class="docutils literal notranslate"><span class="pre">trim_left()</span></code></a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#module-yeying.client.tool.identity_service">yeying.client.tool.identity_service module</a><ul>
+<li><a class="reference internal" href="#yeying.client.tool.identity_service.compute_hash"><code class="docutils literal notranslate"><span class="pre">compute_hash()</span></code></a></li>
+<li><a class="reference internal" href="#yeying.client.tool.identity_service.convert_cipher_type_from"><code class="docutils literal notranslate"><span class="pre">convert_cipher_type_from()</span></code></a></li>
+<li><a class="reference internal" href="#yeying.client.tool.identity_service.convert_to_algorithm_name"><code class="docutils literal notranslate"><span class="pre">convert_to_algorithm_name()</span></code></a></li>
+<li><a class="reference internal" href="#yeying.client.tool.identity_service.decrypt"><code class="docutils literal notranslate"><span class="pre">decrypt()</span></code></a></li>
+<li><a class="reference internal" href="#yeying.client.tool.identity_service.decrypt_block_address"><code class="docutils literal notranslate"><span class="pre">decrypt_block_address()</span></code></a></li>
+<li><a class="reference internal" href="#yeying.client.tool.identity_service.derive_raw_key_from_string"><code class="docutils literal notranslate"><span class="pre">derive_raw_key_from_string()</span></code></a></li>
+<li><a class="reference internal" href="#yeying.client.tool.identity_service.load"><code class="docutils literal notranslate"><span class="pre">load()</span></code></a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#module-yeying.client.tool">Module contents</a></li>
 </ul>
 </li>
 </ul>
@@ -84,7 +122,7 @@
 <div class="toctree-wrapper compound">
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="yeying.client.tool.cmd.html">yeying.client.tool.cmd package</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="yeying.client.tool.cmd.html#module-contents">Module contents</a></li>
+<li class="toctree-l2"><a class="reference internal" href="yeying.client.tool.cmd.html#module-yeying.client.tool.cmd">Module contents</a></li>
 </ul>
 </li>
 </ul>
@@ -93,17 +131,172 @@
 <section id="submodules">
 <h2>Submodules<a class="headerlink" href="#submodules" title="Link to this heading"></a></h2>
 </section>
-<section id="yeying-client-tool-authenticate-module">
-<h2>yeying.client.tool.authenticate module<a class="headerlink" href="#yeying-client-tool-authenticate-module" title="Link to this heading"></a></h2>
+<section id="module-yeying.client.tool.authenticate">
+<span id="yeying-client-tool-authenticate-module"></span><h2>yeying.client.tool.authenticate module<a class="headerlink" href="#module-yeying.client.tool.authenticate" title="Link to this heading"></a></h2>
+<dl class="py class">
+<dt class="sig sig-object py" id="yeying.client.tool.authenticate.Authenticate">
+<em class="property"><span class="k"><span class="pre">class</span></span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">yeying.client.tool.authenticate.</span></span><span class="sig-name descname"><span class="pre">Authenticate</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">block_address</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="yeying.api.web3.html#yeying.api.web3.web3_pb2.BlockAddress" title="yeying.api.web3.web3_pb2.BlockAddress"><span class="pre">BlockAddress</span></a></span></em><span class="sig-paren">)</span><a class="headerlink" href="#yeying.client.tool.authenticate.Authenticate" title="Link to this definition"></a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
+<dl class="py method">
+<dt class="sig sig-object py" id="yeying.client.tool.authenticate.Authenticate.create_header">
+<span class="sig-name descname"><span class="pre">create_header</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">body</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#yeying.client.tool.authenticate.Authenticate.create_header" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="yeying.client.tool.authenticate.Authenticate.get_did">
+<span class="sig-name descname"><span class="pre">get_did</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#yeying.client.tool.authenticate.Authenticate.get_did" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="yeying.client.tool.authenticate.Authenticate.sign_data">
+<span class="sig-name descname"><span class="pre">sign_data</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">data</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">bytes</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#yeying.client.tool.authenticate.Authenticate.sign_data" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="yeying.client.tool.authenticate.Authenticate.verify_header">
+<span class="sig-name descname"><span class="pre">verify_header</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">header</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">body</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#yeying.client.tool.authenticate.Authenticate.verify_header" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="yeying.client.tool.authenticate.verify_data">
+<span class="sig-prename descclassname"><span class="pre">yeying.client.tool.authenticate.</span></span><span class="sig-name descname"><span class="pre">verify_data</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">did</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">data</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">bytes</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">signature</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#yeying.client.tool.authenticate.verify_data" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
 </section>
-<section id="yeying-client-tool-crypto-service-module">
-<h2>yeying.client.tool.crypto_service module<a class="headerlink" href="#yeying-client-tool-crypto-service-module" title="Link to this heading"></a></h2>
+<section id="module-yeying.client.tool.crypto_service">
+<span id="yeying-client-tool-crypto-service-module"></span><h2>yeying.client.tool.crypto_service module<a class="headerlink" href="#module-yeying.client.tool.crypto_service" title="Link to this heading"></a></h2>
+<dl class="py class">
+<dt class="sig sig-object py" id="yeying.client.tool.crypto_service.AssetCipher">
+<em class="property"><span class="k"><span class="pre">class</span></span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">yeying.client.tool.crypto_service.</span></span><span class="sig-name descname"><span class="pre">AssetCipher</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">block_address</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="yeying.api.web3.html#yeying.api.web3.web3_pb2.BlockAddress" title="yeying.api.web3.web3_pb2.BlockAddress"><span class="pre">BlockAddress</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">security_algorithm</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="yeying.api.web3.html#yeying.api.web3.web3_pb2.SecurityAlgorithm" title="yeying.api.web3.web3_pb2.SecurityAlgorithm"><span class="pre">SecurityAlgorithm</span></a></span></em><span class="sig-paren">)</span><a class="headerlink" href="#yeying.client.tool.crypto_service.AssetCipher" title="Link to this definition"></a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
+<p>提供资产加密和解密功能</p>
+<dl class="py method">
+<dt class="sig sig-object py" id="yeying.client.tool.crypto_service.AssetCipher.decrypt">
+<span class="sig-name descname"><span class="pre">decrypt</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">data</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">bytes</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">bytes</span></span></span><a class="headerlink" href="#yeying.client.tool.crypto_service.AssetCipher.decrypt" title="Link to this definition"></a></dt>
+<dd><p>解密数据</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="yeying.client.tool.crypto_service.AssetCipher.encrypt">
+<span class="sig-name descname"><span class="pre">encrypt</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">data</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">bytes</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">bytes</span></span></span><a class="headerlink" href="#yeying.client.tool.crypto_service.AssetCipher.encrypt" title="Link to this definition"></a></dt>
+<dd><p>加密数据</p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="yeying.client.tool.crypto_service.CipherTypeEnum">
+<em class="property"><span class="k"><span class="pre">class</span></span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">yeying.client.tool.crypto_service.</span></span><span class="sig-name descname"><span class="pre">CipherTypeEnum</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">values</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#yeying.client.tool.crypto_service.CipherTypeEnum" title="Link to this definition"></a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">Enum</span></code></p>
+<dl class="py attribute">
+<dt class="sig sig-object py" id="yeying.client.tool.crypto_service.CipherTypeEnum.CIPHER_TYPE_AES_GCM_256">
+<span class="sig-name descname"><span class="pre">CIPHER_TYPE_AES_GCM_256</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">1</span></em><a class="headerlink" href="#yeying.client.tool.crypto_service.CipherTypeEnum.CIPHER_TYPE_AES_GCM_256" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="yeying.client.tool.crypto_service.CipherTypeEnum.CIPHER_TYPE_UNKNOWN">
+<span class="sig-name descname"><span class="pre">CIPHER_TYPE_UNKNOWN</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">0</span></em><a class="headerlink" href="#yeying.client.tool.crypto_service.CipherTypeEnum.CIPHER_TYPE_UNKNOWN" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="py exception">
+<dt class="sig sig-object py" id="yeying.client.tool.crypto_service.InvalidPassword">
+<em class="property"><span class="k"><span class="pre">exception</span></span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">yeying.client.tool.crypto_service.</span></span><span class="sig-name descname"><span class="pre">InvalidPassword</span></span><a class="headerlink" href="#yeying.client.tool.crypto_service.InvalidPassword" title="Link to this definition"></a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">Exception</span></code></p>
+<p>无效密码异常</p>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="yeying.client.tool.crypto_service.convert_to_algorithm_name">
+<span class="sig-prename descclassname"><span class="pre">yeying.client.tool.crypto_service.</span></span><span class="sig-name descname"><span class="pre">convert_to_algorithm_name</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">cipher_type</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#yeying.client.tool.crypto_service.CipherTypeEnum" title="yeying.client.tool.crypto_service.CipherTypeEnum"><span class="pre">CipherTypeEnum</span></a></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">str</span></span></span><a class="headerlink" href="#yeying.client.tool.crypto_service.convert_to_algorithm_name" title="Link to this definition"></a></dt>
+<dd><p>将密码类型转换为算法名称</p>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="yeying.client.tool.crypto_service.decode_base64">
+<span class="sig-prename descclassname"><span class="pre">yeying.client.tool.crypto_service.</span></span><span class="sig-name descname"><span class="pre">decode_base64</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">data</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">bytes</span></span></span><a class="headerlink" href="#yeying.client.tool.crypto_service.decode_base64" title="Link to this definition"></a></dt>
+<dd><p>Base64解码</p>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="yeying.client.tool.crypto_service.decrypt">
+<span class="sig-prename descclassname"><span class="pre">yeying.client.tool.crypto_service.</span></span><span class="sig-name descname"><span class="pre">decrypt</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">key</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">bytes</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">data</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">bytes</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">iv</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">bytes</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">algorithm</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">'AES-GCM'</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">bytes</span></span></span><a class="headerlink" href="#yeying.client.tool.crypto_service.decrypt" title="Link to this definition"></a></dt>
+<dd><p>使用AES-GCM解密数据</p>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="yeying.client.tool.crypto_service.derive_from_block_address">
+<span class="sig-prename descclassname"><span class="pre">yeying.client.tool.crypto_service.</span></span><span class="sig-name descname"><span class="pre">derive_from_block_address</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">block_address</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="yeying.api.web3.html#yeying.api.web3.web3_pb2.BlockAddress" title="yeying.api.web3.web3_pb2.BlockAddress"><span class="pre">BlockAddress</span></a></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">bytes</span></span></span><a class="headerlink" href="#yeying.client.tool.crypto_service.derive_from_block_address" title="Link to this definition"></a></dt>
+<dd><p>使用私钥和公钥通过ECDH派生密钥</p>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="yeying.client.tool.crypto_service.encrypt">
+<span class="sig-prename descclassname"><span class="pre">yeying.client.tool.crypto_service.</span></span><span class="sig-name descname"><span class="pre">encrypt</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">key</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">bytes</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">data</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">bytes</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">iv</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">bytes</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">algorithm</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">'AES-GCM'</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">bytes</span></span></span><a class="headerlink" href="#yeying.client.tool.crypto_service.encrypt" title="Link to this definition"></a></dt>
+<dd><p>使用AES-GCM加密数据</p>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="yeying.client.tool.crypto_service.trim_left">
+<span class="sig-prename descclassname"><span class="pre">yeying.client.tool.crypto_service.</span></span><span class="sig-name descname"><span class="pre">trim_left</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">s</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">trim_str</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">str</span></span></span><a class="headerlink" href="#yeying.client.tool.crypto_service.trim_left" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
 </section>
-<section id="yeying-client-tool-identity-service-module">
-<h2>yeying.client.tool.identity_service module<a class="headerlink" href="#yeying-client-tool-identity-service-module" title="Link to this heading"></a></h2>
+<section id="module-yeying.client.tool.identity_service">
+<span id="yeying-client-tool-identity-service-module"></span><h2>yeying.client.tool.identity_service module<a class="headerlink" href="#module-yeying.client.tool.identity_service" title="Link to this heading"></a></h2>
+<dl class="py function">
+<dt class="sig sig-object py" id="yeying.client.tool.identity_service.compute_hash">
+<span class="sig-prename descclassname"><span class="pre">yeying.client.tool.identity_service.</span></span><span class="sig-name descname"><span class="pre">compute_hash</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">content</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">bytes</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">bytes</span></span></span><a class="headerlink" href="#yeying.client.tool.identity_service.compute_hash" title="Link to this definition"></a></dt>
+<dd><p>计算 SHA-256 哈希值</p>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="yeying.client.tool.identity_service.convert_cipher_type_from">
+<span class="sig-prename descclassname"><span class="pre">yeying.client.tool.identity_service.</span></span><span class="sig-name descname"><span class="pre">convert_cipher_type_from</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">type_str</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">&lt;google.protobuf.internal.enum_type_wrapper.EnumTypeWrapper</span> <span class="pre">object</span> <span class="pre">at</span> <span class="pre">0x7f3df6a91880&gt;</span></span></span><a class="headerlink" href="#yeying.client.tool.identity_service.convert_cipher_type_from" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="yeying.client.tool.identity_service.convert_to_algorithm_name">
+<span class="sig-prename descclassname"><span class="pre">yeying.client.tool.identity_service.</span></span><span class="sig-name descname"><span class="pre">convert_to_algorithm_name</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">cipher_type:</span> <span class="pre">&lt;google.protobuf.internal.enum_type_wrapper.EnumTypeWrapper</span> <span class="pre">object</span> <span class="pre">at</span> <span class="pre">0x7f3df6a91880&gt;</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">str</span></span></span><a class="headerlink" href="#yeying.client.tool.identity_service.convert_to_algorithm_name" title="Link to this definition"></a></dt>
+<dd><p>将加密类型枚举转换为对应的算法名称</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>cipher_type</strong> – 加密类型枚举值</p>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>对应的算法名称字符串</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="yeying.client.tool.identity_service.decrypt">
+<span class="sig-prename descclassname"><span class="pre">yeying.client.tool.identity_service.</span></span><span class="sig-name descname"><span class="pre">decrypt</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">name</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">key</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">bytes</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">iv</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">bytes</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">content</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">bytes</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">bytes</span></span></span><a class="headerlink" href="#yeying.client.tool.identity_service.decrypt" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="yeying.client.tool.identity_service.decrypt_block_address">
+<span class="sig-prename descclassname"><span class="pre">yeying.client.tool.identity_service.</span></span><span class="sig-name descname"><span class="pre">decrypt_block_address</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">block_address</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">security_algorithm</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="yeying.api.web3.html#yeying.api.web3.web3_pb2.SecurityAlgorithm" title="yeying.api.web3.web3_pb2.SecurityAlgorithm"><span class="pre">SecurityAlgorithm</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">password</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference internal" href="yeying.api.web3.html#yeying.api.web3.web3_pb2.BlockAddress" title="yeying.api.web3.web3_pb2.BlockAddress"><span class="pre">BlockAddress</span></a></span></span><a class="headerlink" href="#yeying.client.tool.identity_service.decrypt_block_address" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="yeying.client.tool.identity_service.derive_raw_key_from_string">
+<span class="sig-prename descclassname"><span class="pre">yeying.client.tool.identity_service.</span></span><span class="sig-name descname"><span class="pre">derive_raw_key_from_string</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">algorithm_name</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">password</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">bytes</span></span></span><a class="headerlink" href="#yeying.client.tool.identity_service.derive_raw_key_from_string" title="Link to this definition"></a></dt>
+<dd><p>从字符串派生原始密钥
+注意：Python 中通常直接返回密钥字节，而不是密钥对象</p>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="yeying.client.tool.identity_service.load">
+<span class="sig-prename descclassname"><span class="pre">yeying.client.tool.identity_service.</span></span><span class="sig-name descname"><span class="pre">load</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">identity_str</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference internal" href="yeying.api.web3.html#yeying.api.web3.web3_pb2.Identity" title="yeying.api.web3.web3_pb2.Identity"><span class="pre">Identity</span></a></span></span><a class="headerlink" href="#yeying.client.tool.identity_service.load" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
 </section>
-<section id="module-contents">
-<h2>Module contents<a class="headerlink" href="#module-contents" title="Link to this heading"></a></h2>
+<section id="module-yeying.client.tool">
+<span id="module-contents"></span><h2>Module contents<a class="headerlink" href="#module-yeying.client.tool" title="Link to this heading"></a></h2>
 </section>
 </section>
 
