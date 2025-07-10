@@ -121,7 +121,7 @@ def download(args, option, algorithm: SecurityAlgorithm):
 
 
 def get_proxy(args):
-    return args.proxy if args.proxy else os.getenv("SERVICE_PROXY_ADDRESS", "http://localhost:8641")
+    return args.proxy if args.proxy else os.getenv("WAREHOUSE_ENDPOINT", "http://localhost:8641")
 
 
 def delete(args, option):
