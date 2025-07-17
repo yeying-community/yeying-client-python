@@ -5,7 +5,7 @@ rm -rf yeying_client.egg-info
 
 python setup.py bdist_wheel
 
-pip uninstall -y yeying_client && pip install dist/yeying_client-0.1.0-py3-none-any.whl
+pip uninstall -y yeying_client && pip install dist/yeying_client-0.0.2-py3-none-any.whl
 
 # 指定服务端 WAREHOUSE_ENDPOINT
 # 资产仓库服务端 API 地址
