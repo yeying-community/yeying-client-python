@@ -7,12 +7,13 @@
 import argparse
 import ast
 import os.path
-from yeying.api.asset import asset_pb2
+from yeying.api.asset import asset_pb2, namespace_pb2
 from yeying.api.web3 import Identity, SecurityAlgorithm
 from yeying.client.downloader import DownloadResult
 from yeying.client.model.file import File
 from yeying.client.model.option import ProviderOption
 from yeying.client.provider.asset_provider import AssetProvider
+from yeying.client.provider.namespace_provider import NamespaceProvider
 from yeying.client.tool.identity_service import load, decrypt_block_address
 from yeying.client.uploader import UploadResult
 from yeying.client import uploader, downloader
@@ -54,6 +55,15 @@ def arg_parse():
     delete_parser.add_argument(dest="hash", help="hash")
     delete_parser.add_argument(dest="identity_file", help="identity file")
     delete_parser.add_argument(dest="password", help="password")
+
+    # 创建 namespace
+    create_namespace_parser = sub_parser.add_parser("createNamespace", help="创建 namespace")
+    # proxy 参数可选，默认连接本地服务
+    create_namespace_parser.add_argument(dest="proxy", help="envoy proxy address (optional), default value http://localhost:8641", nargs="?", default="http://localhost:8641")
+    create_namespace_parser.add_argument(dest="name", help="namespace name")
+    create_namespace_parser.add_argument(dest="description", help="description")
+    create_namespace_parser.add_argument(dest="identity_file", help="identity file")
+    create_namespace_parser.add_argument(dest="password", help="password")
 
 
     args = parser.parse_args()
@@ -134,6 +144,16 @@ def delete(args, option):
     print(f"delete success. code={response.body.status.code}")
 
 
+def create_namespace(args, option):
+    print("start create namespace")
+    print(f"namespace name={args.name}")
+    print(f"description={args.description}")
+    print(f"proxy={option.proxy}")
+    namespace_client = NamespaceProvider(option=option)
+    res: namespace_pb2.CreateNamespaceResponse = namespace_client.create(args.name, args.description)
+    print(f"create namespace success. namespace={MessageToJson(res.body.namespace)}")
+
+
 def main():
     args, parser = arg_parse()
     identity_file = args.identity_file
@@ -153,6 +173,8 @@ def main():
         download(args, option, identity.securityConfig.algorithm)
     elif args.command == "delete":
         delete(args, option)
+    elif args.command == "createNamespace":
+        create_namespace(args, option)
     else:
         parser.print_help()
 
