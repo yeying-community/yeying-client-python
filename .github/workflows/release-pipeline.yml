@@ -22,6 +22,7 @@ jobs:
     - name: Install dependencies
       run: |
         pip install -r requirements.txt
+        bash script/update_version.sh 
 
     - name: Build project
       run: python setup.py sdist bdist_wheel
