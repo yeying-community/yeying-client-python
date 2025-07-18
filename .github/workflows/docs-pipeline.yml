@@ -26,8 +26,12 @@ jobs:
         run: |
           pip install -r requirements-docs.txt
           rm -rf dist
+          current_path=$(pwd)
+          file_path=$current_path/yeying/version.py
+          # 获取版本号
+          version=$(awk -F"['\"]" '/__version__/{print $2; exit}' "$file_path")
           python setup.py bdist_wheel
-          pip uninstall -y yeying_client && pip install dist/yeying_client-0.0.1-py3-none-any.whl
+          pip uninstall -y yeying_client && pip install "dist/yeying_client-$version-py3-none-any.whl"
 
       - name: Build HTML docs
         run: |
