@@ -8,27 +8,13 @@ on:
       - 'setup.py'
 
 jobs:
-  run_mara_pipeline:
+  build_and_publish:
     runs-on: ubuntu-latest
-    services:
-      postgres:
-        image: postgres:14
-        env:
-          POSTGRES_DB: mara_db
-          POSTGRES_USER: runner
-          POSTGRES_PASSWORD: ${{ secrets.DB_PASSWORD }}
-        ports: ['5432:5432']
-        options: >-
-          --health-cmd pg_isready
-          --health-interval 10s
-          --health-timeout 5s
-          --health-retries 5
-
     steps:
     - name: Checkout code
       uses: actions/checkout@v4
 
-    - name: Set up Python 3.10
+    - name: Set up Python 3.12
       uses: actions/setup-python@v4
       with:
         python-version: '3.12'
@@ -36,41 +22,9 @@ jobs:
     - name: Install dependencies
       run: |
         pip install -r requirements.txt
-        pip install mara-pipelines psycopg2-binary pytest
 
-    - name: Initialize database
-      env:
-        DB_HOST: localhost
-        DB_USER: runner
-        DB_PASSWORD: ${{ secrets.DB_PASSWORD }}
-        DB_NAME: mara_db
-      run: |
-        python -c "from mara_db import dbs; db = dbs.PostgreSQLDB(host='$DB_HOST', user='$DB_USER', password='$DB_PASSWORD', database='$DB_NAME'); db.create_database()"
-    - name: Run Mara Pipeline
-      env:
-        DB_HOST: localhost
-        DB_USER: runner
-        DB_PASSWORD: ${{ secrets.DB_PASSWORD }}
-        DB_NAME: mara_db
-      run: |
-        python -c "from mara_db import dbs, migration; \
-                   from mara_pipelines.config import default_metadata_storage; \
-                   db = dbs.PostgreSQLDB(host='$DB_HOST', user='$DB_USER', password='$DB_PASSWORD', database='$DB_NAME'); \
-                   db.create_database(); \
-                   migration.migrate(); \
-                   default_metadata_storage.initialize_metadata_storage()"
-        
-        python -c "from mara_pipeline import pipeline; from mara_pipelines.ui.cli import run_pipeline; run_pipeline(pipeline, nodes_separately=False, force=True)"
-
-  publish_sdk:
-    needs: run_mara_pipeline
-    runs-on: ubuntu-latest
-    steps:
-    - uses: actions/checkout@v4
-    - uses: actions/setup-python@v4
-      with:
-        python-version: '3.10'
-
+    - name: Build project
+      run: python setup.py sdist bdist_wheel
     - name: Download built artifacts
       uses: actions/download-artifact@v3
       with:
@@ -84,23 +38,3 @@ jobs:
       run: |
         pip install twine
         twine upload dist/*
-
-  deploy_docs:
-    needs: run_mara_pipeline
-    runs-on: ubuntu-latest
-    steps:
-    - name: Checkout code
-      uses: actions/checkout@v4
-
-    - name: Download built docs
-      uses: actions/download-artifact@v3
-      with:
-        name: docs
-        path: _build/docs
-
-    - name: Deploy to GitHub Pages
-      uses: peaceiris/actions-gh-pages@v3
-      with:
-        github_token: ${{ secrets.GITHUB_TOKEN }}
-        publish_dir: _build/docs
-        keep_files: true
