@@ -27,7 +27,7 @@ jobs:
     - name: Build project
       run: python setup.py sdist bdist_wheel
     - name: Download built artifacts
-      uses: actions/download-artifact@v3
+      uses: actions/download-artifact@v4
       with:
         name: dist
         path: dist
