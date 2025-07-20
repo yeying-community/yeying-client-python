@@ -28,5 +28,5 @@ setup(
     entry_points={"console_scripts": [
         "yeying_cmd=yeying.client.tool.cmd.__main__:main",  # noqa
     ]},
-    python_requires='>=3.12',
+    python_requires='>=3.11',
 )
