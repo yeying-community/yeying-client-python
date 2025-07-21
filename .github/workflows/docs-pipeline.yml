@@ -3,9 +3,6 @@ name: SDK Docs Deployment
 on:
   push:
     branches: [main]
-    paths:
-      - "yeying/**"      # 源代码变更时触发
-      - "source/**"     # 文档配置变更时触发
 
 jobs:
   build-deploy-docs:
