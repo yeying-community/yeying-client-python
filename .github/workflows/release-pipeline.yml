@@ -3,9 +3,6 @@ name: SDK Release Pipeline
 on:
   push:
     branches: [main]
-    paths:
-      - 'yeying/**'
-      - 'setup.py'
 
 jobs:
   build_and_publish:
