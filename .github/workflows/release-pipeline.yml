@@ -34,6 +34,8 @@ jobs:
         rm -rf build
         rm -rf dist
         rm -rf yeying_client.egg-info
+        git config --global user.email "yeying.community@gmail.com"
+        git config --global user.name "yeying.community"
         git add .
         git commit -m "upgrade version"
         git push origin main
