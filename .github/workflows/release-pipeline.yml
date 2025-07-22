@@ -31,3 +31,9 @@ jobs:
       run: |
         pip install twine
         twine upload dist/*
+        rm -rf build
+        rm -rf dist
+        rm -rf yeying_client.egg-info
+        git add .
+        git commit -m "upgrade version"
+        git push origin main
