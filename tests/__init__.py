@@ -7,7 +7,7 @@ current_dir = os.path.dirname(__file__)
 print(current_dir)
 
 
-id_file_path = os.path.join(current_dir, "id/tiger.id")
+id_file_path = os.path.join(current_dir, "id/lyz1010.id")
 print(id_file_path)
 test_file_path = os.path.join(current_dir, "data/test.txt")
 print(test_file_path)

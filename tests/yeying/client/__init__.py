@@ -1,2 +1,2 @@
 # -*- coding:utf-8 -*-
-output_file = "/tmp/test.txt"
+output_file = "/root/yeying/tmp/test.txt"
